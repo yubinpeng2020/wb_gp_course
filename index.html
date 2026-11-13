@@ -706,6 +706,11 @@
     }
     .result-table { font-size:11px !important; }
 
+    /* ---- 流程条:横向排不下就改成竖排 ---- */
+    .slide .flow-row { flex-wrap:wrap !important; justify-content:flex-start !important; gap:6px !important; }
+    .slide .flow-item { flex:1 1 100% !important; white-space:normal !important; padding:11px 14px !important; font-size:13px !important; }
+    .slide .flow-arrow { display:none !important; }
+
     /* ---- 图片自适应 ---- */
     .slide img { max-width:100% !important; height:auto !important; }
 
@@ -1532,7 +1537,7 @@
   <div class="sep"></div>
   <div class="nav-title">第 4 章 · 路线与准备</div>
   <a href="#roadmap">4.1 四步法路线图</a>
-  <a href="#kickoff" title="4.2 开工准备(设档案+规则)"><span class="nav-op">实操</span>4.2 开工准备(档案+规则)</a>
+  <a href="#kickoff" title="4.2 实操 0(调成你的助教)"><span class="nav-op">实操</span>4.2 实操 0(调成你的助教)</a>
   <div class="sep"></div>
   <div class="nav-title">第 5 章 · 课程诊断</div>
   <a href="#diag-intro">5.1 课程诊断是什么</a>
@@ -3129,6 +3134,7 @@
   .ba-mid::before{content:'';position:absolute;left:0;right:0;top:50%;border-top:2px dashed rgba(var(--green-rgb),0.28);}
   .ba-arrow{position:relative;z-index:2;width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:25px;font-weight:800;color:#fff;background:linear-gradient(135deg,var(--accent-green),var(--accent-blue));animation:baPulse 2.6s ease-in-out infinite;}
   @keyframes baPulse{0%,100%{transform:scale(1);box-shadow:0 0 0 6px rgba(var(--green-rgb),0.14),0 6px 18px rgba(var(--green-rgb),0.45);}50%{transform:scale(1.07);box-shadow:0 0 0 13px rgba(var(--green-rgb),0.05),0 8px 26px rgba(var(--green-rgb),0.6);}}
+  .step-ref{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.3px;margin-left:5px;opacity:.8;vertical-align:middle;position:relative;top:-1px;}
   </style>
   <div class="ba-wrap">
     <div class="ba-card ba-before">
@@ -3163,7 +3169,7 @@
   <div style="display:flex; gap:14px; margin-bottom:16px;">
     <div class="card tap-card" style="flex:1; border-top:3px solid var(--accent-green); text-align:center;">
       <div style="font-size:28px; margin-bottom:6px;">🔍</div>
-      <h4 style="color:var(--accent-green);">第一步 · 课程诊断</h4>
+      <h4 style="color:var(--accent-green);">第一步 · 课程诊断<span class="step-ref" style="color:var(--accent-green);">↳ 5.2</span></h4>
       <div style="color:var(--text-body); font-size:13px; line-height:1.8; text-align:left;">
         提供课程标准+教材信息<br>AI 联网搜索行业需求<br>对比找出薄弱模块
       </div>
@@ -3174,7 +3180,7 @@
     </div>
     <div class="card tap-card" style="flex:1; border-top:3px solid var(--accent-sky); text-align:center;">
       <div style="font-size:28px; margin-bottom:6px;">👥</div>
-      <h4 style="color:var(--accent-sky);">第二步 · 学情分析</h4>
+      <h4 style="color:var(--accent-sky);">第二步 · 学情分析<span class="step-ref" style="color:var(--accent-sky);">↳ 6.2</span></h4>
       <div style="color:var(--text-body); font-size:13px; line-height:1.8; text-align:left;">
         上传学生成绩数据<br>AI 分析薄弱点+分层<br>输出学情报告
       </div>
@@ -3185,7 +3191,7 @@
     </div>
     <div class="card tap-card" style="flex:1; border-top:3px solid var(--accent-blue); text-align:center;">
       <div style="font-size:28px; margin-bottom:6px;">🚀</div>
-      <h4 style="color:var(--accent-blue);">第三步 · 教学设计升级</h4>
+      <h4 style="color:var(--accent-blue);">第三步 · 教学设计升级<span class="step-ref" style="color:var(--accent-blue);">↳ 7.2</span></h4>
       <div style="color:var(--text-body); font-size:13px; line-height:1.8; text-align:left;">
         结合诊断+学情<br>传统→项目式<br>AI 生成升级方案
       </div>
@@ -3196,7 +3202,7 @@
     </div>
     <div class="card tap-card" style="flex:1; border-top:3px solid var(--accent-purple); text-align:center;">
       <div style="font-size:28px; margin-bottom:6px;">📝</div>
-      <h4 style="color:var(--accent-purple);">第四步 · 资源一键生成</h4>
+      <h4 style="color:var(--accent-purple);">第四步 · 资源一键生成<span class="step-ref" style="color:var(--accent-purple);">↳ 8.2</span></h4>
       <div style="color:var(--text-body); font-size:13px; line-height:1.8; text-align:left;">
         基于升级方案<br>AI 生成教案+PPT+练习题<br>课程焕新完成
       </div>
@@ -3217,9 +3223,9 @@
 
 </section>
 <!-- 演讲备注:路线图和点题都看清楚了。动手之前,先花两分钟把「你是谁、教什么课、什么风格」一次性告诉 AI,它会记进长期记忆,后面每一步都自动套用,不用每次重复交代。这是所有实操的前提。 -->
-<!-- ========== 4.2 开工准备 ========== -->
+<!-- ========== 4.2 实操 0:调成你的助教 ========== -->
 <section class="slide" id="kickoff">
-  <h2>4.2 🧰 开工准备--把基本情况一次性告诉 AI</h2>
+  <h2>4.2 🧰 实操 0:把 AI 调成你的助教</h2>
   <div class="highlight" style="margin-bottom:18px;">
     💡 <strong>这是所有实操的前提!</strong>把基本情况告诉 AI 一次,它会记到<strong>长期记忆</strong>里--以后所有任务都自动套用,不用每次重复说「我教什么课、几年级、什么风格」。<strong>用户档案</strong>告诉 AI「你是谁」,<strong>协作规则</strong>告诉 AI「怎么跟你配合」。两条都设好,后续实操更顺畅。
   </div>
@@ -3294,6 +3300,12 @@
 <!-- ========== 5.1 课程诊断是什么 ========== -->
 <section class="slide" id="diag-intro">
   <h2>5.1 🔍 课程诊断--找出你的课程短板</h2>
+  <div style="display:flex; align-items:center; gap:10px; margin:0 0 14px; padding:9px 14px; background:rgba(var(--blue-rgb),0.08); border-left:3px solid var(--accent-blue); border-radius:9px; font-size:13px; color:var(--text-body); line-height:1.7;">
+    <span style="font-size:16px; flex-shrink:0;">🧭</span>
+    <div style="flex:1; min-width:0;">
+      <strong style="color:var(--accent-blue);">这一章是后面三站的模板</strong>:是什么 → 怎么做 → 做出什么样。第 6 / 7 / 8 章完全同构,跟完这一站,剩下三站照着走就行。
+    </div>
+  </div>
   <div class="highlight" style="margin-bottom:20px;">
     💡 <strong>定义</strong>:用 AI 帮你找出课程中哪些模块最需要升级<br>
     💡 <strong>你需要提供</strong>:课程信息越全,AI 诊断越准(具体需要哪些见下方提示词模板)<br>
