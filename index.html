@@ -3253,7 +3253,7 @@
 <section class="slide" id="kickoff">
   <h2>4.2 🧰 实操 0:把 AI 调成你的助教</h2>
   <div class="highlight" style="margin-bottom:18px;">
-    💡 <strong>这是所有实操的前提!</strong>把基本情况告诉 AI 一次,它会记到<strong>长期记忆</strong>里--以后所有任务都自动套用,不用每次重复说「我教什么课、几年级、什么风格」。<strong>用户档案</strong>告诉 AI「你是谁」,<strong>协作规则</strong>告诉 AI「怎么跟你配合」。两条都设好,后续实操更顺畅。
+    💡 <strong>这是所有实操的前提!</strong>把基本情况告诉 AI 一次,它会记到<strong>长期记忆</strong>里--以后所有任务都自动套用,不用每次重复说「我教什么课、几年级、什么风格」。<strong>用户档案</strong>告诉 AI「你是谁」,<strong>协作规则</strong>告诉 AI「怎么跟你配合」。<strong>不设的话,AI 每次给的都是通用模板--学段、专业、输出格式全对不上你的课。</strong>
   </div>
 
   <div class="two-col">
@@ -3314,14 +3314,23 @@
     </div>
   </div>
 
-  <div class="highlight" style="margin-top:16px;">
-    💡 <strong>为什么要设协作规则?</strong><br>
-    • AI 不会主动追问 → 设了规则后,遇到不确定的地方 AI 会<strong>先问你</strong><br>
-    • AI 可能一次性改很多文件 → 设了规则后,批量操作前会<strong>先备份并让你确认</strong><br>
-    • 复杂任务 AI 可能直接做 → 设了规则后,会<strong>先列计划让你确认再执行</strong>
+  <div style="margin-top:16px; padding:12px 16px; background:rgba(var(--green-rgb),0.06); border:1px solid rgba(var(--green-rgb),0.25); border-left:3px solid var(--accent-green); border-radius:10px;">
+    <div style="font-size:13px; font-weight:700; color:var(--accent-green); margin-bottom:6px;">💡 这 12 条不是在给 AI 提要求,是在堵三类坑</div>
+    <div style="display:flex; flex-direction:column; gap:5px; font-size:12.5px; line-height:1.6; color:var(--text-body);">
+      <div><strong style="color:var(--accent-blue);">💬 沟通 3 条 → 防它自作主张</strong>:不写,它遇到不确定的地方就自己猜着往下做,做完你才发现方向错了,只能返工</div>
+      <div><strong style="color:var(--accent-red);">🛡️ 安全 3 条 → 防它惹祸</strong>:不写,它可能覆盖掉你的原件、把没脱敏的学生名单写进输出--这些事后都补不回来</div>
+      <div><strong style="color:var(--accent-orange2);">📁 工作 5 条 → 防成果没法用</strong>:不写,文件存到哪儿你找不到、命名乱到分不清哪版是最终稿、汇报写一大篇你抓不住重点</div>
+    </div>
   </div>
 </section>
-<!-- 演讲备注:两条设好,AI 就记住了你是谁、怎么配合你。接下来进入第一个实操--课程诊断。记住:这门课还没设计好没关系,诊断就是给你做体检,先看清楚问题在哪。 -->
+<!-- 演讲备注(4.2):
+为什么要先做这一步:AI 每开一个新对话都是"失忆"的,你不说,它就不知道你教什么、教几年级。设进长期记忆,等于一次交代、以后都省。
+【身份四行为什么不能省】学段差一级,方案深度差很远。你说"中职二年级",它给的是能上手操作的例子、术语要解释;你说"本科三年级",它默认你会自学。专业方向同理--同样一门编程课,计算机专业和数媒专业,项目选题完全两回事。
+【工作目录为什么要写】不写,AI 默认存到它自己的当前目录,你回头找不到。而且四步走完是四份成果,不指定子目录和编号,一学期后你分不清哪版是最终稿。
+【安全三条为什么最要紧】学生姓名、学号、成绩,一旦原样出现在 AI 的输出里、你又把这份东西发到群里,就是教学事故。所以写"见到敏感信息先提醒我脱敏"。这条不是形式主义--学生信息一旦外泄,责任在任课老师身上。
+【"汇报不超过 5 行"这种小事为什么要写】不写,AI 干完活能给你写一屏总结,你根本不想看,久而久之就不看它的汇报了--那才是最危险的:你开始不看它做了什么。
+【收尾】这套规则是你的,不是标准答案。你不喜欢啰嗦就改成"回答不超过 200 字";你常改文件就加一条"改前先给我看 diff"。带回去按自己习惯改,改完让它重新记一遍。
+接下来进入第一个实操--课程诊断。这门课还没设计好没关系,诊断就是做体检,先看清楚问题在哪。 -->
 
 
 <!-- ========== 5.1 课程诊断是什么 ========== -->
