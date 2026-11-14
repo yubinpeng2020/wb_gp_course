@@ -3177,6 +3177,7 @@
       <div class="pk-tree">
         <div class="pk-row"><span class="ic">📁</span><span><strong style="color:var(--text-primary);">学员资料包</strong></span></div>
         <div class="pk-row" style="padding-left:20px;"><span class="ic">📄</span><span><code>学生成绩.csv</code> <span style="color:var(--text-muted);">-- 第 2 章练手用</span></span></div>
+        <div class="pk-row" style="padding-left:20px;"><span class="ic">📄</span><span><code>成绩汇总_脱敏.csv</code> <span style="color:var(--text-muted);">-- 第 6 章学情分析用</span></span></div>
         <div class="pk-row" style="padding-left:20px;"><span class="ic">📁</span><span>存量课程原始资料(改造前) <span style="color:var(--accent-green); font-weight:700;">-- 四步实操用</span></span></div>
         <div class="pk-row" style="padding-left:42px;"><span class="ic">📁</span><span>知识点与教学大纲</span></div>
         <div class="pk-row" style="padding-left:42px;"><span class="ic">📁</span><span>教学设计_8 章 <span style="color:var(--text-muted);">(Word + PDF)</span></span></div>
@@ -3885,14 +3886,16 @@
 
         <div class="prompt-box" id="p-analysis" style="margin-top:14px;"><span style="color:var(--accent-blue);font-weight:bold;">这是课程焕新四步法的第二步。刚才第一步课程诊断已完成,优先升级模块是「Flutter 项目实战」。现在需要分析学生成绩,为第三步教学设计升级提供数据支撑。</span>
 
-我上传了一份学生成绩文件 <code>学生成绩_手机编程应用.csv</code>,这是「手机编程应用」课程2026学期的真实成绩数据(已脱敏),包含2个班级97名学生的考勤分(占30%)、随堂作业分(占30%)和期末大作业分(占40%),总分为三者之和。
+我上传了一份学生成绩文件 <code>成绩汇总_脱敏.csv</code>,这是「手机编程应用」课程2026学期的成绩数据(已脱敏),包含2个班级97名学生的<strong>原始分</strong>:考勤原始分(出勤次数,满分15)、日常作业原始分(满分81)、期末大作业原始分(满分155.1)。
+
+三项先按各自满分折算成百分制得分率,再按 考勤30% + 作业30% + 期末大作业40% 加权得到总评。
 
 请帮我做学情分析:
 1. 整体情况:2个班级的平均分、最高分、最低分、及格率,对比两班差异
 2. 成绩结构:将学生分为优秀(≥80)、合格(60-79)、待提升(<60)三档,统计各档人数和占比
-3. 占比分析:分别按考勤分、随堂作业分、期末大作业分三列,统计各列的平均得分率(得分/满分占比),找出学生最薄弱的环节
-4. 关联分析:随堂作业分与期末大作业分的相关性--找出作业完成差但大作业尚可、或两者都差的学生群体
-5. 重点关注:列出待提升档学生的编号、考勤分、作业分、大作业分,分析不及格的可能原因
+3. 占比分析:分别按 考勤原始分、日常作业原始分、期末大作业原始分 三列,统计各列的平均得分率(得分/满分占比),找出学生最薄弱的环节
+4. 关联分析:日常作业原始分与期末大作业原始分的相关性--找出作业完成差但大作业尚可、或两者都差的学生群体
+5. 重点关注:列出待提升档学生的学号、考勤分、作业分、大作业分,分析不及格的可能原因
 6. 教学建议:基于以上分析,给出3条针对性的教学策略建议
 
 输出格式:
@@ -3993,7 +3996,7 @@
         <div class="card" style="border-left:4px solid var(--accent-green);margin:0;">
           <h4>📋 操作步骤</h4>
           <div class="step"><div class="num">1</div><div class="text">在原对话中继续,复制<strong>提示词模板</strong>,根据自己课程实际情况修改<strong>【请填...】</strong>部分</div></div>
-          <div class="step"><div class="num">2</div><div class="text">用 <strong>添加本地文件</strong> 方式添加学生成绩单文件(没有自己的数据可用演示文件 <code>学生成绩_手机编程应用.csv</code>)</div></div>
+          <div class="step"><div class="num">2</div><div class="text">用 <strong>添加本地文件</strong> 方式添加 <code>成绩汇总_脱敏.csv</code>(在自己课的班上用,就换成你的成绩表)</div></div>
           <div class="step"><div class="num">3</div><div class="text">按回车发送</div></div>
           <div class="step"><div class="num">4</div><div class="text">确认输出:统计概览 + 占比分析 + 分层统计 + 关联分析 + 重点关注名单 + 教学建议</div></div>
         </div>
