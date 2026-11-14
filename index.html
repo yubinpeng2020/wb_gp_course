@@ -607,6 +607,14 @@
     transition:all 0.2s;
   }
   .nav-btn:hover { background:rgba(var(--green-rgb),0.4); color:var(--text-strong); }
+  /* 字体档位按钮：默认不占位，调过字体才出现 */
+  #font-reset { display:none; padding:4px 9px; font-size:12.5px; letter-spacing:.3px; }
+  #font-reset.font-on {
+    display:inline-block;
+    background:rgba(var(--orange2-rgb),0.22);
+    color:var(--accent-orange2);
+  }
+  #font-reset.font-on:hover { background:rgba(var(--orange2-rgb),0.4); color:var(--text-strong); }
 
   /* ========== 响应式 ========== */
   @media (max-width: 1366px) {
@@ -5219,6 +5227,7 @@
   &nbsp;|&nbsp;
   <button class="nav-btn" onclick="fontAdjust(-1)" title="缩小字体">A-</button>
   <button class="nav-btn" onclick="fontAdjust(1)" title="放大字体">A+</button>
+  <button class="nav-btn" onclick="fontReset()" id="font-reset">A</button>
   <button class="nav-btn" onclick="toggleTheme()" title="切换深色/浅色主题" id="theme-btn">🌙 深色</button>
 </div>
 
@@ -5243,7 +5252,7 @@ function showSlide(id) {
     // Scroll slide to top
     target.scrollTop = 0;
     // 应用当前字体缩放
-    const zoom = 1 + fontScale * 0.06;
+    const zoom = 1 + fontScale * FONT_STEP;
     target.style.zoom = zoom;
     target.style.height = 'calc(100vh / ' + zoom + ')';
     // Scroll nav to active link
@@ -5252,14 +5261,47 @@ function showSlide(id) {
 }
 
 // ========== 字体大小调节 ==========
+const FONT_MIN = -3, FONT_MAX = 4, FONT_STEP = 0.06;
 let fontScale = 0;
+// 恢复上次的字体档位
+(function(){
+  let saved = null;
+  try { saved = localStorage.getItem('wb-font'); } catch(e){}
+  if (saved !== null) {
+    const n = parseInt(saved, 10);
+    if (!isNaN(n)) fontScale = Math.max(FONT_MIN, Math.min(FONT_MAX, n));
+  }
+})();
+
 function fontAdjust(delta) {
-  fontScale = Math.max(-3, Math.min(4, fontScale + delta));
-  const zoom = 1 + fontScale * 0.06;
+  fontScale = Math.max(FONT_MIN, Math.min(FONT_MAX, fontScale + delta));
+  applyFontScale();
+  try { localStorage.setItem('wb-font', String(fontScale)); } catch(e){}
+  updateFontHint();
+}
+
+function applyFontScale() {
+  const zoom = 1 + fontScale * FONT_STEP;
   document.querySelectorAll('.slide.active').forEach(s => {
     s.style.zoom = zoom;
     s.style.height = 'calc(100vh / ' + zoom + ')';
   });
+  updateFontHint();
+}
+
+function updateFontHint() {
+  const btn = document.getElementById('font-reset');
+  if (!btn) return;
+  btn.textContent = fontScale === 0 ? 'A' : Math.round((1 + fontScale * FONT_STEP) * 100) + '%';
+  btn.title = fontScale === 0 ? '字体:默认(点击可恢复)' : '字体:' + Math.round((1 + fontScale * FONT_STEP) * 100) + '%(点击恢复默认)';
+  btn.classList.toggle('font-on', fontScale !== 0);
+}
+
+function fontReset() {
+  if (fontScale === 0) return;
+  fontScale = 0;
+  applyFontScale();
+  try { localStorage.setItem('wb-font', '0'); } catch(e){}
 }
 
 function toggleTheme(){
@@ -5342,6 +5384,9 @@ showSlide(initId);
   if (saved === 'light' || urlLight === '1') document.body.classList.add('light');
   updateThemeBtn();
 })();
+
+// 字体档位初始化(档位在脚本开头已从 localStorage 恢复)
+updateFontHint();
 
 // Copy button
 function copyPrompt(id, btn){
