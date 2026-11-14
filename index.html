@@ -3252,6 +3252,36 @@
 <!-- ========== 4.2 实操 0:调成你的助教 ========== -->
 <section class="slide" id="kickoff">
   <h2>4.2 🧰 实操 0:把 AI 调成你的助教</h2>
+  <style>
+  .why-card{position:relative;border-radius:12px;padding:13px 16px 10px;overflow:hidden;
+    background:linear-gradient(135deg,rgba(var(--blue-rgb),0.13) 0%,rgba(var(--purple-rgb),0.03) 100%);
+    border:1px solid rgba(var(--blue-rgb),0.32);animation:whyIn .55s cubic-bezier(.22,.9,.3,1) both;transition:transform .25s,box-shadow .25s;}
+  .why-card.why-orange{background:linear-gradient(135deg,rgba(var(--orange2-rgb),0.15) 0%,rgba(var(--red-rgb),0.03) 100%);border-color:rgba(var(--orange2-rgb),0.34);}
+  .why-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;z-index:2;background:linear-gradient(180deg,var(--accent-blue),var(--accent-purple));}
+  .why-card.why-orange::before{background:linear-gradient(180deg,var(--accent-orange2),var(--accent-red));}
+  .why-card::after{content:'';position:absolute;right:-44px;top:-48px;width:132px;height:132px;border-radius:50%;pointer-events:none;z-index:0;
+    background:radial-gradient(circle,rgba(var(--blue-rgb),0.26) 0%,transparent 68%);}
+  .why-card.why-orange::after{background:radial-gradient(circle,rgba(var(--orange2-rgb),0.24) 0%,transparent 68%);}
+  @keyframes whyIn{from{transform:translateY(10px) scale(.99);}to{transform:none;}}
+  .why-head{position:relative;z-index:1;display:flex;align-items:center;gap:8px;font-size:12.5px;font-weight:800;letter-spacing:.4px;margin-bottom:7px;color:var(--accent-blue);}
+  .why-card.why-orange .why-head{color:var(--accent-orange2);}
+  .why-badge{flex:0 0 auto;width:20px;height:20px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:900;color:#fff;
+    background:linear-gradient(135deg,var(--accent-blue),var(--accent-purple));box-shadow:0 2px 10px rgba(var(--blue-rgb),0.45);}
+  .why-card.why-orange .why-badge{background:linear-gradient(135deg,var(--accent-orange2),var(--accent-red));box-shadow:0 2px 10px rgba(var(--orange2-rgb),0.45);}
+  .why-wrap{display:grid;gap:12px;align-content:start;align-self:start;}
+  .two-col > .why-wrap > .card{height:auto;margin:0;}
+  .why-card{flex:0 0 auto;}
+  .why-item{position:relative;z-index:1;display:flex;gap:8px;align-items:flex-start;padding:6px 0;}
+  .why-item + .why-item{border-top:1px dashed rgba(var(--white-rgb),0.11);}
+  .why-k{flex:0 0 auto;font-size:10.5px;font-weight:800;padding:1.5px 6px;border-radius:5px;margin-top:1px;white-space:nowrap;
+    background:rgba(var(--blue-rgb),0.18);color:var(--accent-blue);}
+  .why-card.why-orange .why-k{background:rgba(var(--orange2-rgb),0.18);color:var(--accent-orange2);}
+  .why-t{font-size:12.5px;line-height:1.6;color:var(--text-body);}
+  .why-t b{color:var(--text-primary);}
+  .why-card:hover{transform:translateY(-2px);box-shadow:0 8px 26px rgba(var(--blue-rgb),0.18);}
+  .why-card.why-orange:hover{box-shadow:0 8px 26px rgba(var(--orange2-rgb),0.18);}
+  @media (max-width:768px){.why-head{font-size:12px;}.why-t{font-size:12px;line-height:1.55;}}
+  </style>
   <div class="highlight" style="margin-bottom:18px;">
     💡 <strong>这是所有实操的前提!</strong>把基本情况告诉 AI 一次,它会记到<strong>长期记忆</strong>里--以后所有任务都自动套用,不用每次重复说「我教什么课、几年级、什么风格」。<strong>用户档案</strong>告诉 AI「你是谁」,<strong>协作规则</strong>告诉 AI「怎么跟你配合」。<strong>不设的话,AI 每次给的都是通用模板--学段、专业、输出格式全对不上你的课。</strong>
   </div>
@@ -3272,13 +3302,19 @@
 
 记完之后回复"已记住"。
 <button class="copy-btn" onclick="copyPrompt('p-profile',this)">复制</button></div>
-    <div style="display:flex;flex-direction:column;gap:12px;">
+    <div class="why-wrap">
       <div class="card" style="margin:0;">
         <h4>📋 第一步:设用户档案</h4>
         <div class="step"><div class="num">1</div><div class="text">打开 WorkBuddy,新建一个对话</div></div>
         <div class="step"><div class="num">2</div><div class="text">复制左边的提示词,粘贴到输入框</div></div>
         <div class="step"><div class="num">3</div><div class="text">把<strong>【请填 XXX】</strong>替换成你的真实信息;<strong>工作目录要先在电脑上建好这个文件夹</strong></div></div>
         <div class="step"><div class="num">4</div><div class="text">按回车发送,等 WorkBuddy 回复<strong>"已记住"</strong></div></div>
+      </div>
+      <div class="why-card why-blue">
+        <div class="why-head"><span class="why-badge">?</span>这 5 行为什么非写不可</div>
+        <div class="why-item"><span class="why-k">身份</span><span class="why-t">学段差一级,方案深度差很远--写"中职二年级",它给的例子要能直接上手、术语还得解释;换成"本科三年级",它默认你会自学</span></div>
+        <div class="why-item"><span class="why-k">风格</span><span class="why-t">不写"直接简洁",它默认给你一大段铺垫加一大段总结,你要的那句结论埋在最中间</span></div>
+        <div class="why-item"><span class="why-k">目录</span><span class="why-t">不写工作目录,四步走完的<b>四份成果</b>会散在默认目录里--一学期后你分不清哪版是最终稿</span></div>
       </div>
     </div>
   </div>
@@ -3305,23 +3341,23 @@
 
 记完之后回复"已记住,开始干活"。
 <button class="copy-btn" onclick="copyPrompt('p-profile-rules',this)">复制</button></div>
-    <div class="card" style="margin:0;">
+    <div class="why-wrap">
+      <div class="card" style="margin:0;">
       <h4>📋 第二步:设协作规则</h4>
       <div class="step"><div class="num">1</div><div class="text">在<strong>同一个对话中</strong>继续</div></div>
       <div class="step"><div class="num">2</div><div class="text">复制左边的提示词,粘贴到输入框</div></div>
       <div class="step"><div class="num">3</div><div class="text">按回车发送</div></div>
       <div class="step"><div class="num">4</div><div class="text">等待 WorkBuddy 回复<strong>"已记住,开始干活"</strong></div></div>
+      </div>
+      <div class="why-card why-orange">
+        <div class="why-head"><span class="why-badge">!</span>这 12 条不是在提要求,是在堵三类坑</div>
+        <div class="why-item"><span class="why-k">沟通 3 条</span><span class="why-t">防它自作主张--它默认会猜,猜完还不告诉你猜了什么;等你发现方向错了,一轮活已经干完</span></div>
+        <div class="why-item"><span class="why-k">安全 3 条</span><span class="why-t">防它惹祸--覆盖原件、把没脱敏的学生名单写进输出,这些<b>事后补不回来</b></span></div>
+        <div class="why-item"><span class="why-k">工作 5 条</span><span class="why-t">防成果没法用--存哪找不到、命名乱、汇报一大篇你不看;<b>一旦不看,等于没监督</b></span></div>
+      </div>
     </div>
   </div>
 
-  <div style="margin-top:16px; padding:12px 16px; background:rgba(var(--green-rgb),0.06); border:1px solid rgba(var(--green-rgb),0.25); border-left:3px solid var(--accent-green); border-radius:10px;">
-    <div style="font-size:13px; font-weight:700; color:var(--accent-green); margin-bottom:6px;">💡 这 12 条不是在给 AI 提要求,是在堵三类坑</div>
-    <div style="display:flex; flex-direction:column; gap:5px; font-size:12.5px; line-height:1.6; color:var(--text-body);">
-      <div><strong style="color:var(--accent-blue);">💬 沟通 3 条 → 防它自作主张</strong>:不写,它遇到不确定的地方就自己猜着往下做,做完你才发现方向错了,只能返工</div>
-      <div><strong style="color:var(--accent-red);">🛡️ 安全 3 条 → 防它惹祸</strong>:不写,它可能覆盖掉你的原件、把没脱敏的学生名单写进输出--这些事后都补不回来</div>
-      <div><strong style="color:var(--accent-orange2);">📁 工作 5 条 → 防成果没法用</strong>:不写,文件存到哪儿你找不到、命名乱到分不清哪版是最终稿、汇报写一大篇你抓不住重点</div>
-    </div>
-  </div>
 </section>
 <!-- 演讲备注(4.2):
 为什么要先做这一步:AI 每开一个新对话都是"失忆"的,你不说,它就不知道你教什么、教几年级。设进长期记忆,等于一次交代、以后都省。
