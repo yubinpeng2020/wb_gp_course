@@ -3583,7 +3583,7 @@
     <div style="display:grid;grid-template-columns:58% 42%;gap:16px;">
       <div>
         <div class="prompt-box" id="p-diag-do"><span style="color:var(--accent-blue);font-weight:bold;">这是课程焕新四步法的第一步。我教一门课程「<span class="ph">【请填你的课程名称】</span>」,课程信息:</span>
-- 主要内容:【请简要描述你的课程教什么,列出主要模块】
+- 主要内容:<span class="ph">【请简要描述你的课程教什么,列出主要模块】</span>
 - 前序课程:<span class="ph">【请填前序课程,没有可删掉这行】</span>
 - 教材:<span class="ph">【请填教材名称和出版年份,没有可删掉这行】</span>
 - 教材在线地址:<span class="ph">【请填教材链接,没有可删掉这行】</span>
@@ -3612,9 +3612,9 @@
         <div class="card" style="border-left:4px solid var(--accent-green);margin:0;">
           <h4>📋 操作步骤</h4>
           <div class="step"><div class="num">1</div><div class="text"><strong>新建对话</strong></div></div>
-          <div class="step"><div class="num">2</div><div class="text"><strong>选择工作空间</strong> → 打开本地工作空间(<code>D:\WorkBuddy国培</code>)</div></div>
+          <div class="step"><div class="num">2</div><div class="text"><strong>选择工作空间</strong> → 选你自己建的工作目录(4.2 那一步建好的文件夹,不是讲师的路径)</div></div>
           <div class="step"><div class="num">3</div><div class="text">模式保持<strong>默认(Agent)</strong>即可(直接执行)</div></div>
-          <div class="step"><div class="num">4</div><div class="text">复制<strong>提示词模板</strong>(不是示例提示词!),替换<strong>【请填...】</strong>为你的课程信息(有教材填教材,没有删掉那几行;前序课程同理)</div></div>
+          <div class="step"><div class="num">4</div><div class="text">复制<strong>提示词模板</strong>(不是示例提示词!),替换<b style="color:var(--accent-orange2);">橙色</b>的<strong>【请填…】</strong>为你的课程信息(有教材填教材,没有删掉那几行;前序课程同理)</div></div>
           <div class="step"><div class="num">5</div><div class="text">按回车发送</div></div>
           <div class="step"><div class="num">6</div><div class="text">确认输出:行业需求摘要(5条) + 教材评估 + 诊断表格(5模块) + 可行性评估(三优先级)</div></div>
         </div>
@@ -3771,7 +3771,7 @@
           </div>
           <div style="padding:10px;border-radius:6px;background:rgba(var(--blue-rgb),0.06);border-left:3px solid var(--accent-blue);">
             <div style="font-size:14px;color:var(--text-body);"><strong>4 第四部分:可行性评估结合课时和学生基础</strong></div>
-            <div style="font-size:13px;color:var(--text-muted);margin-top:4px;">"72 学时全实训,学生仅有 C 语言基础,第一优先级 Kotlin + Git,前 12 学时"--有具体安排</div>
+            <div style="font-size:13px;color:var(--text-muted);margin-top:4px;">"67 学时里只有 39 学时上机,第一优先级 Kotlin + Git 占前 12 学时"--有具体安排</div>
           </div>
         </div>
       </div>
@@ -3796,7 +3796,7 @@
       💡 <strong>讲师案例</strong>:AI 给出优先级--第一 Kotlin+Git,第二 Compose,第三 协同开发。用四个维度逐个检查:<br>
       <ul style="margin:8px 0 4px;padding-left:18px;line-height:1.9;list-style:none;">
         <li>✅ <strong>合理性</strong>:Kotlin 替代 Java 确实是行业主流,判断合理</li>
-        <li>❌ <strong>可行性</strong>:学生仅有 C 语言基础,Kotlin 是全新编程语言范式,学期内能否跟上存疑</li>
+        <li>❌ <strong>可行性</strong>:学生属"照抄能跑、离书不会"的基础,67 学时里只有 39 学时上机--Kotlin 的函数式写法 + Git + Compose 三样一起上,课时和接受度都吃紧</li>
         <li>❌ <strong>渐进性</strong>:AI 建议 XML 全部换成 Compose,一刀切没有过渡期,应保留 XML 逐步引入 Compose</li>
         <li>✅ <strong>相关性</strong>:建议聚焦课程升级,没有跑题</li>
       </ul>
@@ -3804,7 +3804,7 @@
     </div>
     <div style="margin-top:12px;padding:10px 14px;background:rgba(var(--orange-rgb),0.06);border:1px solid rgba(var(--orange-rgb),0.15);border-radius:8px;font-size:14px;">
       💬 <strong>不合理就追问 AI</strong>:把你的约束告诉 AI,让它重新排--<br>
-      <code style="display:block;margin:8px 0;padding:10px 14px;background:rgba(0,0,0,0.3);border-radius:6px;color:var(--accent-orange);font-size:13px;">"学生只有C语言基础,Kotlin跨度太大。请调整:1先只学Kotlin基础,Git融入后续项目;2Compose保留XML过渡,不要一刀切"</code>
+      <code style="display:block;margin:8px 0;padding:10px 14px;background:rgba(0,0,0,0.3);border-radius:6px;color:var(--accent-orange);font-size:13px;">"学生是照抄能跑、离书不会的基础,67学时只有39学时上机。请调整:1先只学Kotlin基础,Git融入后续项目;2Compose保留XML过渡,不要一刀切"</code>
       追问后 AI 调整:第一优先级先 Kotlin 基础(前12学时),Git 融入后续项目实操,Compose 第二优先级下学期引入
     </div>
     <div style="margin-top:12px;padding:10px 14px;background:rgba(var(--red2-rgb),0.08);border-radius:8px;font-size:13px;">
@@ -3946,7 +3946,7 @@
           </div>
         </div>
 
-        <div class="prompt-box" id="p-analysis" style="margin-top:14px;"><span style="color:var(--accent-blue);font-weight:bold;">这是课程焕新四步法的第二步。刚才第一步课程诊断已完成,优先升级模块是「Flutter 项目实战」。现在需要分析学生成绩,为第三步教学设计升级提供数据支撑。</span>
+        <div class="prompt-box" id="p-analysis" style="margin-top:14px;"><span style="color:var(--accent-blue);font-weight:bold;">这是课程焕新四步法的第二步。刚才第一步课程诊断已完成,优先升级模块是「Kotlin 基础」。现在需要分析学生成绩,为第三步教学设计升级提供数据支撑。</span>
 
 我上传了一份学生成绩文件 <code>成绩汇总_脱敏.csv</code>,这是「手机编程应用」课程2026学期的成绩数据(已脱敏),包含2个班级97名学生:考勤分(满分30,占30%)、日常作业分(满分30,占30%)、期末大作业分(满分40,占40%),总评 = 三项之和(满分100)。表里另有一列「缺勤次数」,可用来解释考勤失分。
 
@@ -4194,6 +4194,11 @@
             <div style="font-size:13px;color:var(--accent-green);margin-top:2px;">→ <code>"请分班级统计,对比两班差异"</code></div>
           </div>
           <div style="padding:10px;border-radius:6px;background:rgba(var(--orange-rgb),0.06);border-left:3px solid var(--accent-orange);">
+            <div style="font-size:14px;color:var(--text-body);"><strong>第二部分:成绩结构分层——给了人数没给占比</strong></div>
+            <div style="font-size:13px;color:var(--text-muted);margin-top:4px;">只说"待提升 38 人",没给占比,也看不出分化到什么程度</div>
+            <div style="font-size:13px;color:var(--accent-green);margin-top:2px;">→ <code>"请给出各档人数和占比,并说明两极分化程度"</code></div>
+          </div>
+          <div style="padding:10px;border-radius:6px;background:rgba(var(--orange-rgb),0.06);border-left:3px solid var(--accent-orange);">
             <div style="font-size:14px;color:var(--text-body);"><strong>第三部分:各维度得分率占比分析——只列数字没解读</strong></div>
             <div style="font-size:13px;color:var(--text-muted);margin-top:4px;">"考勤95.7%、作业56.6%、大作业39.9%"--没说哪个是薄弱环节</div>
             <div style="font-size:13px;color:var(--accent-green);margin-top:2px;">→ <code>"请指出得分率最低的环节并分析原因"</code></div>
@@ -4221,6 +4226,10 @@
           <div style="padding:10px;border-radius:6px;background:rgba(var(--blue-rgb),0.06);border-left:3px solid var(--accent-blue);">
             <div style="font-size:14px;color:var(--text-body);"><strong>1 第一部分:整体情况统计概览表格——分班对比有差异</strong></div>
             <div style="font-size:13px;color:var(--text-muted);margin-top:4px;">1班均62.9、2班均60.5,明确指出2班更弱--不是只给一个总数</div>
+          </div>
+          <div style="padding:10px;border-radius:6px;background:rgba(var(--blue-rgb),0.06);border-left:3px solid var(--accent-blue);">
+            <div style="font-size:14px;color:var(--text-body);"><strong>2 第二部分:成绩结构分层——三档清楚且点出结构问题</strong></div>
+            <div style="font-size:13px;color:var(--text-muted);margin-top:4px;">优秀 17.5% / 合格 43.3% / 待提升 39.2%,并明确"待提升接近四成、两级分化明显"--不是只罗列三个数字</div>
           </div>
           <div style="padding:10px;border-radius:6px;background:rgba(var(--blue-rgb),0.06);border-left:3px solid var(--accent-blue);">
             <div style="font-size:14px;color:var(--text-body);"><strong>3 第三部分:各维度得分率占比分析——指出最薄弱环节</strong></div>
@@ -4505,11 +4514,11 @@
       <div>
         <div class="prompt-box" id="p-upgrade-do"><span style="color:var(--accent-blue);font-weight:bold;">这是课程焕新四步法的第三步。请基于前两步(课程诊断+学情分析)的结果,把诊断报告中优先升级的模块从传统讲授式升级为项目式教学。</span>
 
-关键信息补充(把你在6.3步学情分析中提炼的四条填入):
-- 最薄弱环节:<span style="color:var(--accent-orange2);"><span class="ph">【请填6.3步提炼的最薄弱环节】</span></span>
-- 分层比例:<span style="color:var(--accent-orange2);"><span class="ph">【请填6.3步提炼的分层比例】</span></span>
-- 关键发现:<span style="color:var(--accent-orange2);"><span class="ph">【请填6.3步提炼的关键发现】</span></span>
-- AI 建议:<span style="color:var(--accent-orange2);"><span class="ph">【请填6.3步提炼的AI建议】</span></span>
+关键信息补充(把你在 6.3 步学情分析中提炼的四条填入):
+- 最薄弱环节:<span class="ph">【请填6.3步提炼的最薄弱环节】</span>
+- 分层比例:<span class="ph">【请填6.3步提炼的分层比例】</span>
+- 关键发现:<span class="ph">【请填6.3步提炼的关键发现】</span>
+- AI 建议:<span class="ph">【请填6.3步提炼的AI建议】</span>
 
 请按以下四部分输出升级版教学方案:
 1. 教学目标(3条:知识目标 + 能力目标 + 素养目标)
@@ -4830,7 +4839,7 @@
    - 学生任务书:项目背景(约 200 字,贴近中职学生日常生活)、学习目标(3 条:知识+能力+素养)、任务要求(分步骤,每步写清做什么+交付什么)、提交规范(文件命名+格式+截止时间)
    - 教师指导书:解题思路(分步骤提示)、参考方案要点(关键步骤指引)、评分标准(每项任务配分值+评分细则)、常见问题预判(3 个学生可能遇到的坑+应对建议)
 
-全部保存到当前工作目录。
+全部保存到「课程焕新/04_教学资源」目录。
 <button class="copy-btn" onclick="copyPrompt('p-resource-all',this)">复制</button></div>
 
         <div class="why-card why-orange" style="margin-top:12px;">
@@ -4843,7 +4852,7 @@
         <div class="card" style="border-left:4px solid var(--accent-orange);margin:0;flex:1;">
           <h4>📸 示例结果参考</h4>
           <div class="step-img" style="text-align:center;"><!-- 截图占位:资源生成结果 --><img src="images/wb_resource_result.png" alt="资源生成结果示例" class="zoom-img" style="max-width:80%;margin:0 auto;" onerror="imgMissing(this)"></div>
-          <p style="margin:8px 0 0;text-align:center;">AI 自动调用文档工具,逐个生成:教案(Word) → PPT(8-10页) → 练习题(5道) → 实训案例(2个Word),全部保存到工作目录</p>
+          <p style="margin:8px 0 0;text-align:center;">AI 自动调用文档工具,逐个生成:教案(Word) → PPT(8-10页) → 练习题(5道) → 实训案例(2个Word),全部保存到「课程焕新/04_教学资源」目录</p>
         </div>
         <div class="card" style="border-left:4px solid var(--accent-purple);margin:0;flex:1;">
           <h4>☁️ 产物分享与云端同步</h4>
@@ -4870,7 +4879,7 @@
 
     <div style="display:grid;grid-template-columns:58% 42%;gap:16px;">
       <div>
-        <div class="prompt-box" id="p-resource-all2"><span style="color:var(--accent-blue);font-weight:bold;">这是课程焕新四步法的第四步。请帮我生成以下 4 种配套教学资源:</span>
+        <div class="prompt-box" id="p-resource-all2"><span style="color:var(--accent-blue);font-weight:bold;">这是课程焕新四步法的第四步。请按第三步确定的教学设计方案(我自己的课程、我自己的项目主题),生成以下 4 种配套教学资源:</span>
 
 1. 教案(Word 文档):教学目标、教学重点难点、教学过程(导入→讲授→实践→总结)、板书设计,标准教案格式含时间标注
 2. 课件 PPT(PPT 文件):8-10 页,含封面、教学目标、项目介绍、分课时教学流程、评价标准、总结,现代简洁蓝色调
@@ -4879,7 +4888,7 @@
    - 学生任务书:项目背景(约 200 字,贴近中职学生日常生活)、学习目标(3 条:知识+能力+素养)、任务要求(分步骤,每步写清做什么+交付什么)、提交规范(文件命名+格式+截止时间)
    - 教师指导书:解题思路(分步骤提示)、参考方案要点(关键步骤指引)、评分标准(每项任务配分值+评分细则)、常见问题预判(3 个学生可能遇到的坑+应对建议)
 
-全部保存到当前工作目录。
+全部保存到「课程焕新/04_教学资源」目录。
 <button class="copy-btn" onclick="copyPrompt('p-resource-all2',this)">复制</button></div>
 
         <div class="card" style="margin-top:14px;">
@@ -4901,7 +4910,7 @@
             <li>PPT 是否<strong>8-10 页</strong>?内容是否与教学设计一致?</li>
             <li>练习题是否<strong>分层</strong>(基础+应用+拓展)?答案准确?</li>
             <li>实训案例是否含<strong>学生任务书+教师指导书</strong>?</li>
-            <li>所有文件是否保存到<strong>工作目录</strong>?</li>
+            <li>所有文件是否保存到<strong>04_教学资源</strong>目录?</li>
           </ul>
         </div>
         <div class="card" style="border-left:4px solid var(--accent-red);margin:0;flex:1;">
@@ -4931,7 +4940,7 @@
       <li>拿到了 4 种资源:教案 / PPT / 练习题 / 实训案例</li>
       <li>教案有<strong>时间标注</strong>,PPT 是 <strong>8-10 页蓝色调</strong></li>
       <li>练习题<strong>分层</strong>(基础/应用/拓展),实训案例含<strong>坑预判</strong></li>
-      <li>文件都保存到了工作目录,能<strong>分享/上传腾讯文档</strong></li>
+      <li>文件都保存到了 04_教学资源 目录,能<strong>分享/上传腾讯文档</strong></li>
     </ul>
   </div>
 
@@ -4980,8 +4989,8 @@
     <div class="warn-box">
       <div class="title">3 不要忽略学情</div>
       <div class="text">
-        AI 不知道你的学生是谁--在提示词中如实描述<strong>学生基础水平和困难点</strong>,AI 会据此调整教学策略(如分步引导 vs 开放式项目)<br>
-        用户档案设好了会自动带入,但每条提示词仍然要写学生基础
+        AI 不知道你的学生是谁--在提示词里补一句<strong>这一届的具体情况</strong>(如"这班连 Java 基础都不扎实"),AI 会据此调整教学策略(如分步引导 vs 开放式项目)<br>
+        学段/年级这类档案信息会自动带入,不用重复;但这一届学生的具体短板,AI 不可能知道,要你说
       </div>
     </div>
     <div class="warn-box">
