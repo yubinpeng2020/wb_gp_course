@@ -342,6 +342,35 @@
   }
   .warn-box .text { color:var(--text-body); font-size:15px; line-height:1.85; }
 
+  /* ========== 解释卡 why-card(全课件通用:讲「为什么这么写」) ========== */
+  .why-card{position:relative;border-radius:12px;padding:13px 16px 10px;overflow:hidden;flex:0 0 auto;
+    background:linear-gradient(135deg,rgba(var(--blue-rgb),0.13) 0%,rgba(var(--purple-rgb),0.03) 100%);
+    border:1px solid rgba(var(--blue-rgb),0.32);animation:whyIn .55s cubic-bezier(.22,.9,.3,1) both;transition:transform .25s,box-shadow .25s;}
+  .why-card.why-orange{background:linear-gradient(135deg,rgba(var(--orange2-rgb),0.15) 0%,rgba(var(--red-rgb),0.03) 100%);border-color:rgba(var(--orange2-rgb),0.34);}
+  .why-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;z-index:2;background:linear-gradient(180deg,var(--accent-blue),var(--accent-purple));}
+  .why-card.why-orange::before{background:linear-gradient(180deg,var(--accent-orange2),var(--accent-red));}
+  .why-card::after{content:'';position:absolute;right:-44px;top:-48px;width:132px;height:132px;border-radius:50%;pointer-events:none;z-index:0;
+    background:radial-gradient(circle,rgba(var(--blue-rgb),0.26) 0%,transparent 68%);}
+  .why-card.why-orange::after{background:radial-gradient(circle,rgba(var(--orange2-rgb),0.24) 0%,transparent 68%);}
+  @keyframes whyIn{from{transform:translateY(10px) scale(.99);}to{transform:none;}}
+  .why-head{position:relative;z-index:1;display:flex;align-items:center;gap:8px;font-size:12.5px;font-weight:800;letter-spacing:.4px;margin-bottom:7px;color:var(--accent-blue);}
+  .why-card.why-orange .why-head{color:var(--accent-orange2);}
+  .why-badge{flex:0 0 auto;width:20px;height:20px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:900;color:#fff;
+    background:linear-gradient(135deg,var(--accent-blue),var(--accent-purple));box-shadow:0 2px 10px rgba(var(--blue-rgb),0.45);}
+  .why-card.why-orange .why-badge{background:linear-gradient(135deg,var(--accent-orange2),var(--accent-red));box-shadow:0 2px 10px rgba(var(--orange2-rgb),0.45);}
+  .why-wrap{display:grid;gap:12px;align-content:start;align-self:start;}
+  .two-col > .why-wrap > .card{height:auto;margin:0;}
+  .why-item{position:relative;z-index:1;display:flex;gap:8px;align-items:flex-start;padding:6px 0;}
+  .why-item + .why-item{border-top:1px dashed rgba(var(--white-rgb),0.11);}
+  .why-k{flex:0 0 auto;font-size:10.5px;font-weight:800;padding:1.5px 6px;border-radius:5px;margin-top:1px;white-space:nowrap;
+    background:rgba(var(--blue-rgb),0.18);color:var(--accent-blue);}
+  .why-card.why-orange .why-k{background:rgba(var(--orange2-rgb),0.18);color:var(--accent-orange2);}
+  .why-t{font-size:12.5px;line-height:1.6;color:var(--text-body);}
+  .why-t b{color:var(--text-primary);}
+  .why-card:hover{transform:translateY(-2px);box-shadow:0 8px 26px rgba(var(--blue-rgb),0.18);}
+  .why-card.why-orange:hover{box-shadow:0 8px 26px rgba(var(--orange2-rgb),0.18);}
+  @media (max-width:768px){.why-head{font-size:12px;}.why-t{font-size:12px;line-height:1.55;}}
+
   .ok-box {
     background:var(--bg-card);
     border:1px solid rgba(var(--green2-rgb),0.3);
@@ -3260,36 +3289,6 @@
 <!-- ========== 4.2 实操 0:调成你的助教 ========== -->
 <section class="slide" id="kickoff">
   <h2>4.2 🧰 实操 0:把 AI 调成你的助教</h2>
-  <style>
-  .why-card{position:relative;border-radius:12px;padding:13px 16px 10px;overflow:hidden;
-    background:linear-gradient(135deg,rgba(var(--blue-rgb),0.13) 0%,rgba(var(--purple-rgb),0.03) 100%);
-    border:1px solid rgba(var(--blue-rgb),0.32);animation:whyIn .55s cubic-bezier(.22,.9,.3,1) both;transition:transform .25s,box-shadow .25s;}
-  .why-card.why-orange{background:linear-gradient(135deg,rgba(var(--orange2-rgb),0.15) 0%,rgba(var(--red-rgb),0.03) 100%);border-color:rgba(var(--orange2-rgb),0.34);}
-  .why-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;z-index:2;background:linear-gradient(180deg,var(--accent-blue),var(--accent-purple));}
-  .why-card.why-orange::before{background:linear-gradient(180deg,var(--accent-orange2),var(--accent-red));}
-  .why-card::after{content:'';position:absolute;right:-44px;top:-48px;width:132px;height:132px;border-radius:50%;pointer-events:none;z-index:0;
-    background:radial-gradient(circle,rgba(var(--blue-rgb),0.26) 0%,transparent 68%);}
-  .why-card.why-orange::after{background:radial-gradient(circle,rgba(var(--orange2-rgb),0.24) 0%,transparent 68%);}
-  @keyframes whyIn{from{transform:translateY(10px) scale(.99);}to{transform:none;}}
-  .why-head{position:relative;z-index:1;display:flex;align-items:center;gap:8px;font-size:12.5px;font-weight:800;letter-spacing:.4px;margin-bottom:7px;color:var(--accent-blue);}
-  .why-card.why-orange .why-head{color:var(--accent-orange2);}
-  .why-badge{flex:0 0 auto;width:20px;height:20px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:900;color:#fff;
-    background:linear-gradient(135deg,var(--accent-blue),var(--accent-purple));box-shadow:0 2px 10px rgba(var(--blue-rgb),0.45);}
-  .why-card.why-orange .why-badge{background:linear-gradient(135deg,var(--accent-orange2),var(--accent-red));box-shadow:0 2px 10px rgba(var(--orange2-rgb),0.45);}
-  .why-wrap{display:grid;gap:12px;align-content:start;align-self:start;}
-  .two-col > .why-wrap > .card{height:auto;margin:0;}
-  .why-card{flex:0 0 auto;}
-  .why-item{position:relative;z-index:1;display:flex;gap:8px;align-items:flex-start;padding:6px 0;}
-  .why-item + .why-item{border-top:1px dashed rgba(var(--white-rgb),0.11);}
-  .why-k{flex:0 0 auto;font-size:10.5px;font-weight:800;padding:1.5px 6px;border-radius:5px;margin-top:1px;white-space:nowrap;
-    background:rgba(var(--blue-rgb),0.18);color:var(--accent-blue);}
-  .why-card.why-orange .why-k{background:rgba(var(--orange2-rgb),0.18);color:var(--accent-orange2);}
-  .why-t{font-size:12.5px;line-height:1.6;color:var(--text-body);}
-  .why-t b{color:var(--text-primary);}
-  .why-card:hover{transform:translateY(-2px);box-shadow:0 8px 26px rgba(var(--blue-rgb),0.18);}
-  .why-card.why-orange:hover{box-shadow:0 8px 26px rgba(var(--orange2-rgb),0.18);}
-  @media (max-width:768px){.why-head{font-size:12px;}.why-t{font-size:12px;line-height:1.55;}}
-  </style>
   <div class="highlight" style="margin-bottom:18px;">
     💡 <strong>这是所有实操的前提!</strong>把基本情况告诉 AI 一次,它会记到<strong>长期记忆</strong>里--以后所有任务都自动套用,不用每次重复说「我教什么课、几年级、什么风格」。<strong>用户档案</strong>告诉 AI「你是谁」,<strong>协作规则</strong>告诉 AI「怎么跟你配合」。<strong>不设的话,AI 每次给的都是通用模板--学段、专业、输出格式全对不上你的课。</strong>
   </div>
@@ -3532,34 +3531,28 @@
         </div>
       </div>
 
-      <!-- 两个解释卡片并排(跨两栏) -->
-      <div style="margin-top:0;display:grid;grid-template-columns:1fr 1fr;gap:12px;grid-column:1 / -1;">
-        <!-- 左:写法要点 + 为什么这5步 -->
-        <div style="display:flex;flex-direction:column;gap:12px;">
-          <div style="padding:12px 16px;background:rgba(var(--purple-rgb),0.06);border-radius:8px;border:1px solid rgba(var(--purple-rgb),0.2);">
-            <div style="font-size:13px;color:var(--accent-purple);"><strong>✏️ 写法要点:任务和输出分开写,且不一致</strong></div>
-            <div style="font-size:13px;color:var(--text-muted);margin-top:4px;">本步任务 5 步(含联网搜索等过程性动作),输出 4 部分。有些任务是<span style="color:var(--accent-orange2);">"过程"</span>不直接对应一个<span style="color:var(--accent-blue);">输出章节</span>——这是最常见的写法。</div>
+      <!-- 解释卡:写法要点 + 两个「为什么」 -->
+      <div style="margin-top:0;display:grid;grid-template-columns:1fr 1fr;gap:12px;grid-column:1 / -1;align-items:start;">
+        <div class="why-wrap">
+          <div class="why-card why-orange">
+            <div class="why-head"><span class="why-badge">!</span>写法要点:任务和输出分开写,且不一致</div>
+            <div class="why-item"><span class="why-k">要点</span><span class="why-t">本步任务 5 步(含联网搜索等过程性动作),输出 4 部分。有些任务是<b>「过程」</b>,不直接对应一个<b>输出章节</b>--这是最常见的写法</span></div>
           </div>
-          <div style="padding:14px 16px;background:rgba(var(--sky-rgb),0.04);border-radius:8px;border:1px solid rgba(var(--sky-rgb),0.15);">
-            <h4 style="margin:0 0 10px;font-size:15px;color:var(--accent-purple);">🔍 为什么要这 5 个步骤?</h4>
-            <div style="font-size:13px;line-height:1.8;color:var(--text-muted);">
-              <div><strong style="color:var(--accent-green);">123 量差距</strong> - 联网搜索建立标尺 → 对比课程找最大差距 → 结构化输出每个模块的现状/差距/建议</div>
-              <div><strong style="color:var(--accent-blue);">4 查教材</strong> - 教材是讲课依据,单独评估,与课程内容评估互补</div>
-              <div><strong style="color:var(--accent-orange2);">5 刹车</strong> - AI 容易建议大改,用课时和学生基础约束住,确保方案可落地</div>
-            </div>
-            <div style="margin-top:8px;font-size:13px;color:var(--text-muted);">三段式:<strong style="color:var(--text-body);">量差距 → 查教材 → 看能不能改</strong></div>
+          <div class="why-card why-blue">
+            <div class="why-head"><span class="why-badge">?</span>为什么要这 5 个步骤</div>
+            <div class="why-item"><span class="why-k">1-3 量差距</span><span class="why-t">联网搜索建立标尺 → 对比课程找最大差距 → 结构化输出每个模块的现状/差距/建议</span></div>
+            <div class="why-item"><span class="why-k">4 查教材</span><span class="why-t">教材是讲课依据,单独评估,与课程内容评估互补</span></div>
+            <div class="why-item"><span class="why-k">5 刹车</span><span class="why-t">AI 容易建议大改,用课时和学生基础约束住,确保方案可落地</span></div>
+            <div class="why-item"><span class="why-k">三段式</span><span class="why-t">量差距 → 查教材 → 看能不能改</span></div>
           </div>
         </div>
-        <!-- 右:为什么这四部分 -->
-        <div style="padding:14px 16px;background:rgba(var(--sky-rgb),0.04);border-radius:8px;border:1px solid rgba(var(--sky-rgb),0.15);">
-          <h4 style="margin:0 0 10px;color:var(--accent-blue);">📋 输出为什么要这四部分?</h4>
-          <div style="font-size:13px;line-height:1.8;color:var(--text-muted);">
-            <div><strong style="color:var(--accent-green);">1 行业需求摘要 - 标尺</strong><br>建立行业基准,没有它后面的对比全是主观判断</div>
-            <div><strong style="color:var(--accent-green);">2 教材评估 - 源头</strong><br>教材过时=源头过时,量化判断"还能不能用"</div>
-            <div><strong style="color:var(--accent-green);">3 诊断表格 - 主体</strong><br>逐模块对比,选优先升级模块的直接依据</div>
-            <div><strong style="color:var(--accent-green);">4 可行性评估 - 刹车</strong><br>结合课时和学生基础,防止一次全改</div>
-          </div>
-          <div style="margin-top:8px;font-size:13px;color:var(--text-muted);">逻辑链:<strong style="color:var(--text-body);">标尺 → 源头 → 主体 → 刹车</strong></div>
+        <div class="why-card why-blue">
+          <div class="why-head"><span class="why-badge">?</span>输出为什么要这四部分</div>
+          <div class="why-item"><span class="why-k">1 需求摘要</span><span class="why-t">建立行业基准,没有它后面的对比全是主观判断</span></div>
+          <div class="why-item"><span class="why-k">2 教材评估</span><span class="why-t">教材过时=源头过时,量化判断"还能不能用"</span></div>
+          <div class="why-item"><span class="why-k">3 诊断表格</span><span class="why-t">逐模块对比,选优先升级模块的直接依据</span></div>
+          <div class="why-item"><span class="why-k">4 可行性评估</span><span class="why-t">结合课时和学生基础,防止一次全改</span></div>
+          <div class="why-item"><span class="why-k">逻辑链</span><span class="why-t">标尺 → 源头 → 主体 → 刹车</span></div>
         </div>
       </div>
 
@@ -3975,40 +3968,29 @@
       </div>
 
       <!-- 两个解释卡片并排(跨两栏) -->
-      <div style="margin-top:0;display:grid;grid-template-columns:1fr 1fr;gap:12px;grid-column:1 / -1;">
-        <!-- 左:六步分析逻辑 -->
-        <div style="padding:14px 16px;background:rgba(var(--sky-rgb),0.04);border-radius:8px;border:1px solid rgba(var(--sky-rgb),0.15);">
-          <h4 style="margin:0 0 10px;font-size:15px;color:var(--accent-purple);">🔍 为什么要这 6 个步骤?</h4>
-          <div style="font-size:13px;line-height:1.8;color:var(--text-muted);">
-            <div><strong style="color:var(--accent-green);">1 整体情况 - 全貌</strong>：平均分和及格率是学情的“体温计”,班级差异提示是否需要差异化教学</div>
-            <div><strong style="color:var(--accent-blue);">2 成绩结构 - 分群</strong>：三档分布揭示两极分化程度,决定教学策略是“抓低”还是“拔高”</div>
-            <div><strong style="color:var(--accent-orange2);">3 占比分析 - 诊断</strong>：按考勤/作业/大作业三列拆解得分率,哪一环节最低就是教学最需要加强的地方</div>
-            <div><strong style="color:var(--accent-purple);">4 关联分析 - 深挖</strong>：平时 vs 期末的关联,发现“考前突击”“完全脱节”等隐藏模式</div>
-            <div><strong style="color:var(--accent-red);">5 重点关注 - 行动</strong>：列出谁需要帮助、问题在哪,课后辅导的直接依据</div>
-            <div><strong style="color:var(--accent-green);">6 教学建议 - 衔接</strong>：AI 的策略建议直接输入第三步,数据驱动的教学设计</div>
-          </div>
-          <div style="margin-top:8px;font-size:13px;color:var(--text-muted);">逻辑链:<strong style="color:var(--text-body);">全貌 → 分群 → 诊断 → 深挖 → 行动 → 衔接</strong></div>
+      <!-- 解释卡:六步逻辑 + 任务与输出的关系 -->
+      <div style="margin-top:0;display:grid;grid-template-columns:1fr 1fr;gap:12px;grid-column:1 / -1;align-items:start;">
+        <div class="why-card why-blue">
+          <div class="why-head"><span class="why-badge">?</span>为什么要这 6 个步骤</div>
+          <div class="why-item"><span class="why-k">1 整体情况</span><span class="why-t"><b>全貌</b>--平均分和及格率是学情的「体温计」,班级差异提示是否需要差异化教学</span></div>
+          <div class="why-item"><span class="why-k">2 成绩结构</span><span class="why-t"><b>分群</b>--三档分布揭示两极分化程度,决定教学策略是「抓低」还是「拔高」</span></div>
+          <div class="why-item"><span class="why-k">3 占比分析</span><span class="why-t"><b>诊断</b>--按考勤/作业/大作业三列拆解得分率,哪一环节最低就是教学最需要加强的地方</span></div>
+          <div class="why-item"><span class="why-k">4 关联分析</span><span class="why-t"><b>深挖</b>--平时 vs 期末的关联,发现「考前突击」「完全脱节」等隐藏模式</span></div>
+          <div class="why-item"><span class="why-k">5 重点关注</span><span class="why-t"><b>行动</b>--列出谁需要帮助、问题在哪,课后辅导的直接依据</span></div>
+          <div class="why-item"><span class="why-k">6 教学建议</span><span class="why-t"><b>衔接</b>--AI 的策略建议直接输入第三步,数据驱动的教学设计</span></div>
+          <div class="why-item"><span class="why-k">逻辑链</span><span class="why-t">全貌 → 分群 → 诊断 → 深挖 → 行动 → 衔接</span></div>
         </div>
-        <!-- 右:任务与输出的关系 -->
-        <div style="padding:14px 16px;background:rgba(var(--sky-rgb),0.04);border-radius:8px;border:1px solid rgba(var(--sky-rgb),0.15);">
-          <h4 style="margin:0 0 10px;font-size:15px;color:var(--accent-purple);">💡 任务和输出的关系</h4>
-          <div style="font-size:13px;line-height:1.8;color:var(--text-muted);">
-            <div style="margin-bottom:10px;">提示词里<strong style="color:var(--text-body);">“任务”和“输出”是两个独立板块</strong>,它们的关系取决于场景:</div>
-            <div style="padding:10px;border-radius:6px;background:rgba(var(--green-rgb),0.06);margin-bottom:8px;">
-              <strong style="color:var(--accent-green);">可以不一致（如第一步课程诊断）</strong><br>
-              <span style="color:var(--text-muted);">任务 5 步（含联网搜索等过程性步骤）,输出 4 部分。有些任务是<span style="color:var(--accent-orange2);">"过程动作"</span>,不直接对应一个<span style="color:var(--accent-blue);">输出章节</span>。</span>
-            </div>
-            <div style="padding:10px;border-radius:6px;background:rgba(var(--blue-rgb),0.06);">
-              <strong style="color:var(--accent-blue);">可以一一对应（如本步学情分析）</strong><br>
-              <span style="color:var(--text-muted);">任务 6 步 = 输出 6 部分。每一步分析就是一个输出维度,步骤名称直接变成报告章节标题。学员一看就知道“第 3 步分析占比 → 报告第三部分就是占比分析”。</span>
-            </div>
-          </div>
+        <div class="why-card why-blue">
+          <div class="why-head"><span class="why-badge">?</span>任务和输出是什么关系</div>
+          <div class="why-item"><span class="why-k">前提</span><span class="why-t">提示词里<b>「任务」和「输出」是两个独立板块</b>,它们的关系取决于场景</span></div>
+          <div class="why-item"><span class="why-k">不一致</span><span class="why-t">如第一步课程诊断:任务 5 步(含联网搜索等过程性步骤),输出 4 部分。有些任务是<b>「过程动作」</b>,不直接对应一个输出章节</span></div>
+          <div class="why-item"><span class="why-k">一一对应</span><span class="why-t">如本步学情分析:任务 6 步 = 输出 6 部分。每一步分析就是一个输出维度,步骤名称直接变成报告章节标题--学员一看就知道「第 3 步分析占比 → 报告第三部分就是占比分析」</span></div>
         </div>
       </div>
 
-      <div style="margin-top:0;grid-column:1 / -1;padding:12px 16px;background:rgba(var(--purple-rgb),0.06);border-radius:8px;border:1px solid rgba(var(--purple-rgb),0.2);">
-        <div style="font-size:13px;color:var(--accent-purple);"><strong>✏️ 写法要点:任务和输出一一对应,为什么还分开写?</strong></div>
-        <div style="font-size:13px;color:var(--text-muted);margin-top:4px;">本步任务和输出数量相同(6=6),但任务讲<span style="color:var(--accent-orange2);">"做什么"</span>(操作动作,如"统计各列得分率"),输出讲<span style="color:var(--accent-blue);">"给什么"</span>(产出结构,如"各维度得分率占比分析")。分开写让 AI 更明确:不仅要执行操作,还要按指定结构输出。</div>
+      <div class="why-card why-orange" style="grid-column:1 / -1;">
+        <div class="why-head"><span class="why-badge">!</span>写法要点:任务和输出一一对应,为什么还分开写</div>
+        <div class="why-item"><span class="why-k">要点</span><span class="why-t">本步任务和输出数量相同(6=6),但任务讲<b>「做什么」</b>(操作动作,如「统计各列得分率」),输出讲<b>「给什么」</b>(产出结构,如「各维度得分率占比分析」)。分开写让 AI 更明确:不仅要执行操作,还要按指定结构输出</span></div>
       </div>
 
       <div class="warn-box" style="margin-top:0;grid-column:1 / -1;">
@@ -4454,31 +4436,13 @@
 4. 评价方式(过程性评价 60% + 终结性评价 40%,列出具体评价项)
 <button class="copy-btn" onclick="copyPrompt('p-upgrade-demo',this)">复制</button></div>
 
-        <div style="padding:14px 16px;background:rgba(var(--sky-rgb),0.04);border-radius:8px;border:1px solid rgba(var(--sky-rgb),0.15);">
-          <h4 style="margin:0 0 10px;font-size:15px;color:var(--accent-purple);">💡 为什么要在提示词里补充四条关键信息?</h4>
-          <div style="font-size:13px;line-height:1.8;color:var(--text-muted);">
-            <div style="padding:10px;border-radius:6px;background:rgba(var(--red2-rgb),0.06);margin-bottom:8px;">
-              <strong style="color:var(--accent-red);">只写"基于前两步的结果"</strong><br>
-              <span style="color:var(--text-muted);">AI 从长对话记忆中自行提取,可能丢失细节,输出泛泛而谈。</span>
-            </div>
-            <div style="padding:10px;border-radius:6px;background:rgba(var(--green-rgb),0.06);margin-bottom:8px;">
-              <strong style="color:var(--accent-green);">补充四条关键信息</strong><br>
-              <span style="color:var(--text-muted);">最薄弱环节 + 分层比例 + 关键发现 + AI 建议--AI 输出直接<span style="color:var(--accent-sky);">聚焦</span>你的学情,方案更落地。</span>
-            </div>
-            <div style="padding:10px;border-radius:6px;background:rgba(var(--sky-rgb),0.06);margin-bottom:8px;">
-              <strong style="color:var(--accent-sky);">实际影响</strong>
-              <ul style="margin:4px 0 0;padding-left:16px;color:var(--text-muted);">
-                <li><strong>聚焦度</strong>:直接锚定最薄弱环节,输出不跑偏</li>
-                <li><strong>细节保持</strong>:长对话中细节可能被压缩,显式注入不依赖记忆</li>
-                <li><strong>个性化</strong>:输出直接对应你的学情,而非通用方案</li>
-              </ul>
-            </div>
-            <div style="padding:10px;border-radius:6px;background:rgba(var(--orange2-rgb),0.06);margin-bottom:8px;">
-              <strong style="color:var(--accent-orange2);">⚠ 唯一注意点</strong><br>
-              <span style="color:var(--text-muted);">四条信息要准确--如果提炼错了,AI 会基于错误信息输出方案。所以 6.3 步的提炼质量很关键。</span>
-            </div>
-            <div style="margin-top:6px;color:var(--text-muted);">💡 对话记忆提供了<strong>完整背景</strong>,四条关键信息提供了<strong>聚焦方向</strong>,两者配合效果最好。</div>
-          </div>
+        <div class="why-card why-blue">
+          <div class="why-head"><span class="why-badge">?</span>为什么要在提示词里补充四条关键信息</div>
+          <div class="why-item"><span class="why-k">省略写法</span><span class="why-t">只写「基于前两步的结果」--AI 从长对话记忆中自行提取,可能丢失细节,输出泛泛而谈</span></div>
+          <div class="why-item"><span class="why-k">补充四条</span><span class="why-t">最薄弱环节 + 分层比例 + 关键发现 + AI 建议--AI 输出直接聚焦你的学情,方案更落地</span></div>
+          <div class="why-item"><span class="why-k">实际影响</span><span class="why-t"><b>聚焦度</b>:直接锚定最薄弱环节,输出不跑偏;<b>细节保持</b>:长对话中细节可能被压缩,显式注入不依赖记忆;<b>个性化</b>:输出直接对应你的学情,而非通用方案</span></div>
+          <div class="why-item"><span class="why-k">唯一注意</span><span class="why-t">四条信息要准确--如果提炼错了,AI 会基于错误信息输出方案。所以 6.3 步的提炼质量很关键</span></div>
+          <div class="why-item"><span class="why-k">配比</span><span class="why-t">对话记忆提供<b>完整背景</b>,四条关键信息提供<b>聚焦方向</b>,两者配合效果最好</span></div>
         </div>
       </div>
 
@@ -4498,19 +4462,17 @@
           </ul>
           <p style="margin:8px 0 0;text-align:center;"><strong style="color:var(--accent-green);">在同一对话中继续 + 手动补充四条关键信息</strong></p>
         </div>
-        <div style="padding:12px 16px;background:rgba(var(--purple-rgb),0.06);border-radius:8px;border:1px solid rgba(var(--purple-rgb),0.2);">
-          <div style="font-size:13px;color:var(--accent-purple);"><strong>✏️ 写法要点:分开写 + 关键信息补充</strong></div>
-          <div style="font-size:13px;color:var(--text-muted);margin-top:4px;">和前两步一样<span style="color:var(--accent-purple);">任务与输出分开写</span>,但多了一段<span style="color:var(--accent-orange2);">“关键信息补充”</span>--从学情报告中提炼四条直接写进提示词,让 AI 不只靠对话记忆,而是<span style="color:var(--accent-blue);">聚焦</span>你的实际学情输出方案。这是四步法里第一次出现“补充信息”结构。</div>
+        <div class="why-card why-orange">
+          <div class="why-head"><span class="why-badge">!</span>写法要点:分开写 + 关键信息补充</div>
+          <div class="why-item"><span class="why-k">要点</span><span class="why-t">和前两步一样<b>任务与输出分开写</b>,但多了一段<b>「关键信息补充」</b>--从学情报告中提炼四条直接写进提示词,让 AI 不只靠对话记忆,而是聚焦你的实际学情输出方案。这是四步法里第一次出现「补充信息」结构</span></div>
         </div>
-        <div style="padding:14px 16px;background:rgba(var(--sky-rgb),0.04);border-radius:8px;border:1px solid rgba(var(--sky-rgb),0.15);flex:1;">
-          <h4 style="margin:0 0 10px;font-size:15px;color:var(--accent-purple);">🔍 为什么要这 4 个任务?</h4>
-          <div style="font-size:13px;line-height:1.8;color:var(--text-muted);">
-            <div><strong style="color:var(--accent-green);">1 教学目标 - 定方向</strong>：知识+能力+素养三维目标,明确升级后学生要达到什么水平</div>
-            <div><strong style="color:var(--accent-blue);">2 项目主题 - 找载体</strong>：项目式教学的核心,选一个贴近生活的App让学生在做中学,同时设计<strong>分层选题</strong>(A/B/C级)照顾不同层次学生</div>
-            <div><strong style="color:var(--accent-orange2);">3 教学活动 - 拆课时</strong>：4课时拆解,每课时教师做什么+学生做什么+用什么工具,直接能上课</div>
-            <div><strong style="color:var(--accent-purple);">4 评价方式 - 闭环</strong>：过程性60%+终结性40%,把原来"考勤+交作业"的形式性评分换成任务检查点+当堂验收</div>
-          </div>
-          <div style="margin-top:8px;font-size:13px;color:var(--text-muted);">逻辑链:<strong style="color:var(--text-body);">定方向 → 找载体 → 拆课时 → 闭环</strong></div>
+        <div class="why-card why-blue">
+          <div class="why-head"><span class="why-badge">?</span>为什么要这 4 个任务</div>
+          <div class="why-item"><span class="why-k">1 教学目标</span><span class="why-t"><b>定方向</b>--知识+能力+素养三维目标,明确升级后学生要达到什么水平</span></div>
+          <div class="why-item"><span class="why-k">2 项目主题</span><span class="why-t"><b>找载体</b>--项目式教学的核心,选一个贴近生活的 App 让学生在做中学,同时设计<b>分层选题</b>(A/B/C 级)照顾不同层次学生</span></div>
+          <div class="why-item"><span class="why-k">3 教学活动</span><span class="why-t"><b>拆课时</b>--4 课时拆解,每课时教师做什么+学生做什么+用什么工具,直接能上课</span></div>
+          <div class="why-item"><span class="why-k">4 评价方式</span><span class="why-t"><b>闭环</b>--过程性 60%+终结性 40%,把原来「考勤+交作业」的形式性评分换成任务检查点+当堂验收</span></div>
+          <div class="why-item"><span class="why-k">逻辑链</span><span class="why-t">定方向 → 找载体 → 拆课时 → 闭环</span></div>
         </div>
       </div>
 
@@ -4857,9 +4819,9 @@
 全部保存到当前工作目录。
 <button class="copy-btn" onclick="copyPrompt('p-resource-all',this)">复制</button></div>
 
-        <div style="padding:12px 16px;background:rgba(var(--purple-rgb),0.06);border-radius:8px;border:1px solid rgba(var(--purple-rgb),0.2);margin-top:12px;">
-          <div style="font-size:13px;color:var(--accent-purple);"><strong>✏️ 写法要点:任务和输出合并写 + 依赖上下文记忆</strong></div>
-          <div style="font-size:13px;color:var(--text-muted);margin-top:4px;">这是四步里最短的提示词——因为前三步的课程信息、学情数据、教学设计全靠 AI 从对话记忆中提取,不需要复述。任务和输出约束<span style="color:var(--accent-purple);">合并写</span>:4 种资源各有各的要求,逐条列出“做什么+要什么格式”比单独写输出约束更清晰。</div>
+        <div class="why-card why-orange" style="margin-top:12px;">
+          <div class="why-head"><span class="why-badge">!</span>写法要点:任务和输出合并写 + 依赖上下文记忆</div>
+          <div class="why-item"><span class="why-k">要点</span><span class="why-t">这是四步里<b>最短的提示词</b>--因为前三步的课程信息、学情数据、教学设计全靠 AI 从对话记忆中提取,不需要复述。任务和输出约束<b>合并写</b>:4 种资源各有各的要求,逐条列出「做什么+要什么格式」比单独写输出约束更清晰</span></div>
         </div>
       </div>
 
