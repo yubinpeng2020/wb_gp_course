@@ -3486,31 +3486,10 @@
   <div class="card" style="border-left:4px solid var(--accent-green);margin-bottom:18px;">
     <h4>👨‍🏫 第一阶段:讲师演示</h4>
 
-    <div style="display:grid;grid-template-columns:58% 42%;gap:16px;">
+    <!-- 左:演示提示词 / 右:解析(解析紧跟提示词看) -->
+    <div style="display:grid;grid-template-columns:58% 42%;gap:16px;align-items:start;">
       <div>
-        <!-- 三要素拆解 -->
-        <div style="padding:12px 14px;background:rgba(var(--sky-rgb),0.04);border-radius:8px;border:1px solid rgba(var(--sky-rgb),0.15);">
-          <h4 style="margin:0 0 10px;font-size:15px;color:var(--accent-purple);">🔎 用三要素拆解这条提示词</h4>
-          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;">
-            <div style="padding:10px;border-radius:6px;background:rgba(var(--green-rgb),0.08);border-left:3px solid var(--accent-green);">
-              <div style="font-weight:bold;color:var(--accent-green);font-size:13px;margin-bottom:4px;">🎭 角色设定</div>
-              <div style="font-size:13px;color:var(--text-body);line-height:1.6;">"我要做一次课程诊断。我教一门课程「手机编程应用」..."<br><span style="color:var(--text-muted);">→ 要做什么 + 你是谁、教什么课</span></div>
-            </div>
-            <div style="padding:10px;border-radius:6px;background:rgba(var(--blue-rgb),0.08);border-left:3px solid var(--accent-blue);">
-              <div style="font-weight:bold;color:var(--accent-blue);font-size:13px;margin-bottom:4px;">🎯 任务明确</div>
-              <div style="font-size:13px;color:var(--text-body);line-height:1.6;">"联网搜索→找匹配度最低模块→评教材→评可行性→对两个来源"<br><span style="color:var(--text-muted);">→ 6 个递进任务,末尾一句边界:只做诊断,不改课</span></div>
-            </div>
-            <div style="padding:10px;border-radius:6px;background:rgba(var(--orange2-rgb),0.08);border-left:3px solid var(--accent-orange2);">
-              <div style="font-weight:bold;color:var(--accent-orange2);font-size:13px;margin-bottom:4px;">📋 输出约束</div>
-              <div style="font-size:13px;color:var(--text-body);line-height:1.6;">"输出格式:行业需求摘要→教材评估→诊断表格→可行性评估"<br><span style="color:var(--text-muted);">→ 4部分结构化输出,表格列名指定</span></div>
-            </div>
-          </div>
-          <div style="margin-top:8px;font-size:13px;color:var(--text-muted);line-height:1.6;">
-            💡 课程信息(学分学时、前序后续课程、教材、学生基础、痛点)不是三要素之一,但属于<strong>上下文信息</strong>--信息越全,AI 诊断越准。三要素是骨架,上下文是血肉。
-          </div>
-        </div>
-
-        <div class="prompt-box" id="p-diag-demo" style="margin-top:14px;"><span style="color:var(--accent-blue);font-weight:bold;">我要做一次课程诊断。我教一门课程「手机编程应用」,是面向安卓系统的手机应用开发方向的计算机专业核心课。</span>
+          <div class="prompt-box" id="p-diag-demo" style="margin-top:14px;"><span style="color:var(--accent-blue);font-weight:bold;">我要做一次课程诊断。我教一门课程「手机编程应用」,是面向安卓系统的手机应用开发方向的计算机专业核心课。</span>
 
 【基本信息】
 - 课程编码:01131110C
@@ -3547,49 +3526,73 @@
 - 第二部分:教材适用性评估(1段话),末尾加一小段「教材与本校方案的差异」
 - 第三部分:诊断表格,列名:模块名称 | 现状 | 行业需求差距 | 升级建议
 - 第四部分:升级可行性评估(结合学时和学生基础,1段话)
-<button class="copy-btn" onclick="copyPrompt('p-diag-demo',this)">复制</button></div>
+  <button class="copy-btn" onclick="copyPrompt('p-diag-demo',this)">复制</button></div>
       </div>
 
-      <div style="display:flex;flex-direction:column;gap:12px;">
-        <div class="card" style="border-left:4px solid var(--accent-orange);margin:0;flex:1;">
-          <h4>📸 示例结果参考</h4>
-          <div class="step-img" style="text-align:center;"><img src="images/wb_diag_result.png" alt="课程诊断结果示例" class="zoom-img" style="max-width:80%;margin:0 auto;" onerror="imgMissing(this)"></div>
-          <p style="margin:8px 0 0;text-align:center;">AI 输出四部分:行业需求摘要(5条趋势) → 教材评估(1段) → 诊断表格(5模块) → 可行性评估(三优先级方案),以 Word 文档形式输出</p>
+      <!-- 右栏:三要素解析 + 写法要点 -->
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <div style="padding:12px 14px;background:rgba(var(--sky-rgb),0.04);border-radius:8px;border:1px solid rgba(var(--sky-rgb),0.15);">
+          <h4 style="margin:0 0 10px;font-size:15px;color:var(--accent-purple);">🔎 用三要素拆解左边这条提示词</h4>
+          <div style="display:grid;grid-template-columns:1fr;gap:9px;">
+            <div style="padding:10px;border-radius:6px;background:rgba(var(--green-rgb),0.08);border-left:3px solid var(--accent-green);">
+              <div style="font-weight:bold;color:var(--accent-green);font-size:13px;margin-bottom:4px;">🎭 角色设定</div>
+              <div style="font-size:13px;color:var(--text-body);line-height:1.6;">"我要做一次课程诊断。我教一门课程「手机编程应用」..."<br><span style="color:var(--text-muted);">→ 要做什么 + 你是谁、教什么课</span></div>
+            </div>
+            <div style="padding:10px;border-radius:6px;background:rgba(var(--blue-rgb),0.08);border-left:3px solid var(--accent-blue);">
+              <div style="font-weight:bold;color:var(--accent-blue);font-size:13px;margin-bottom:4px;">🎯 任务明确</div>
+              <div style="font-size:13px;color:var(--text-body);line-height:1.6;">"联网搜索→找匹配度最低模块→评教材→评可行性→对两个来源"<br><span style="color:var(--text-muted);">→ 6 个递进任务,末尾一句边界:只做诊断,不改课</span></div>
+            </div>
+            <div style="padding:10px;border-radius:6px;background:rgba(var(--orange2-rgb),0.08);border-left:3px solid var(--accent-orange2);">
+              <div style="font-weight:bold;color:var(--accent-orange2);font-size:13px;margin-bottom:4px;">📋 输出约束</div>
+              <div style="font-size:13px;color:var(--text-body);line-height:1.6;">"输出格式:需求摘要→教材评估(含方案差异)→诊断表格→可行性评估"<br><span style="color:var(--text-muted);">→ 4 部分结构化输出,表格列名指定</span></div>
+            </div>
+          </div>
+          <div style="margin-top:8px;font-size:13px;color:var(--text-muted);line-height:1.6;">
+            💡 课程信息(学分学时、前序后续课程、教材、学生基础、痛点)不是三要素之一,但属于<strong>上下文信息</strong>--信息越全,AI 诊断越准。三要素是骨架,上下文是血肉。
+          </div>
         </div>
-        <div class="card" style="border-left:4px solid var(--accent-red);margin:0;flex:1;">
-          <h4>⚠️ 执行过程中可能出现的安全提示</h4>
-          <p style="margin:6px 0;">WorkBuddy 检测到工作空间外部文件修改时,会弹出确认提示询问是否继续。</p>
-          <div class="step-img" style="text-align:center;"><img src="images/wb_security_prompt.png" alt="安全确认提示截图" class="zoom-img" style="max-width:80%;margin:0 auto;border-radius:6px;border:1px solid rgba(var(--white-rgb),0.1);" onerror="imgMissing(this)"></div>
-          <p style="margin:8px 0 0;text-align:center;"><strong style="color:var(--accent-green);">这是正常的安全确认机制</strong>,确认无误后选择「允许」即可。</p>
-        </div>
-      </div>
 
-      <!-- 解释卡:写法要点 + 两个「为什么」 -->
-      <div style="margin-top:0;display:grid;grid-template-columns:1fr 1fr;gap:12px;grid-column:1 / -1;align-items:start;">
-        <div class="why-wrap">
-          <div class="why-card why-orange">
-            <div class="why-head"><span class="why-badge">!</span>写法要点:任务和输出分开写,且不一致</div>
-            <div class="why-item"><span class="why-k">要点</span><span class="why-t">本步任务 5 步(含联网搜索等过程性动作),输出 4 部分。有些任务是<b>「过程」</b>,不直接对应一个<b>输出章节</b>--这是最常见的写法</span></div>
-          </div>
-          <div class="why-card why-blue">
-            <div class="why-head"><span class="why-badge">?</span>为什么要这 5 个步骤</div>
-            <div class="why-item"><span class="why-k">1-3 量差距</span><span class="why-t">联网搜索建立标尺 → 对比课程找最大差距 → 结构化输出每个模块的现状/差距/建议</span></div>
-            <div class="why-item"><span class="why-k">4 查教材</span><span class="why-t">教材是讲课依据,单独评估,与课程内容评估互补</span></div>
-            <div class="why-item"><span class="why-k">5 刹车</span><span class="why-t">AI 容易建议大改,用课时和学生基础约束住,确保方案可落地</span></div>
-            <div class="why-item"><span class="why-k">三段式</span><span class="why-t">量差距 → 查教材 → 看能不能改</span></div>
-          </div>
+        <div class="why-card why-orange">
+          <div class="why-head"><span class="why-badge">!</span>写法要点:任务和输出分开写,且不一致</div>
+          <div class="why-item"><span class="why-k">要点</span><span class="why-t">本步任务 6 项(含联网搜索等过程性动作),输出 4 部分。有些任务是<b>「过程」</b>,不直接对应一个<b>输出章节</b>--这是最常见的写法</span></div>
         </div>
+
         <div class="why-card why-blue">
-          <div class="why-head"><span class="why-badge">?</span>输出为什么要这四部分</div>
-          <div class="why-item"><span class="why-k">1 需求摘要</span><span class="why-t">建立行业基准,没有它后面的对比全是主观判断</span></div>
-          <div class="why-item"><span class="why-k">2 教材评估</span><span class="why-t">教材过时=源头过时,量化判断"还能不能用"</span></div>
-          <div class="why-item"><span class="why-k">3 诊断表格</span><span class="why-t">逐模块对比,选优先升级模块的直接依据</span></div>
-          <div class="why-item"><span class="why-k">4 可行性评估</span><span class="why-t">结合学时和学生基础,防止一次全改</span></div>
-          <div class="why-item"><span class="why-k">逻辑链</span><span class="why-t">标尺 → 源头 → 主体 → 刹车</span></div>
+          <div class="why-head"><span class="why-badge">?</span>为什么要这 6 项任务</div>
+          <div class="why-item"><span class="why-k">1-3 量差距</span><span class="why-t">联网搜索建立标尺 → 对比课程找最大差距 → 结构化输出每个模块的现状/差距/建议</span></div>
+          <div class="why-item"><span class="why-k">4 查教材</span><span class="why-t">教材是讲课依据,单独评估,与课程内容评估互补</span></div>
+          <div class="why-item"><span class="why-k">5 刹车</span><span class="why-t">AI 容易建议大改,用课时和学生基础约束住,确保方案可落地</span></div>
+          <div class="why-item"><span class="why-k">6 对来源</span><span class="why-t">教材大纲和本校方案各自都成立,摆在一起才看出起点差一整门课;只评教材会漏掉这条</span></div>
+          <div class="why-item"><span class="why-k">四段式</span><span class="why-t">量差距 → 查教材 → 看能不能改 → 对两个来源</span></div>
         </div>
       </div>
+    </div>
 
-      <div class="warn-box" style="margin-top:0;grid-column:1 / -1;">
+    <!-- 参考截图:次要材料,放下面看 -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px;align-items:start;">
+      <div style="padding:12px 14px;border-radius:8px;background:rgba(var(--white-rgb),0.03);border:1px solid rgba(var(--white-rgb),0.08);">
+        <div style="font-size:13.5px;font-weight:700;color:var(--text-primary);margin-bottom:6px;">📸 参考:AI 大致会输出什么</div>
+        <div style="text-align:center;"><img src="images/wb_diag_result.png" alt="课程诊断结果示例" class="zoom-img" style="max-width:62%;margin:0 auto;border-radius:6px;" onerror="imgMissing(this)"></div>
+        <p style="margin:8px 0 0;font-size:12.5px;color:var(--text-muted);line-height:1.6;">四部分:行业需求摘要(5 条趋势) → 教材评估(含「教材与本校方案的差异」) → 诊断表格(5 模块) → 可行性评估(三优先级方案),以 Word 文档输出</p>
+      </div>
+      <div style="padding:12px 14px;border-radius:8px;background:rgba(var(--white-rgb),0.03);border:1px solid rgba(var(--white-rgb),0.08);">
+        <div style="font-size:13.5px;font-weight:700;color:var(--text-primary);margin-bottom:6px;">⚠️ 执行中的安全提示</div>
+        <p style="margin:6px 0;font-size:12.5px;color:var(--text-muted);line-height:1.6;">WorkBuddy 检测到工作空间外部文件修改时,会弹出确认提示询问是否继续。</p>
+        <div style="text-align:center;"><img src="images/wb_security_prompt.png" alt="安全确认提示截图" class="zoom-img" style="max-width:62%;margin:0 auto;border-radius:6px;border:1px solid rgba(var(--white-rgb),0.1);" onerror="imgMissing(this)"></div>
+        <p style="margin:8px 0 0;font-size:12.5px;color:var(--text-muted);line-height:1.6;"><strong style="color:var(--accent-green);">这是正常的安全确认机制</strong>,确认无误后选择「允许」即可。</p>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px;align-items:start;">
+      <div class="why-card why-blue">
+        <div class="why-head"><span class="why-badge">?</span>输出为什么要这四部分</div>
+        <div class="why-item"><span class="why-k">1 需求摘要</span><span class="why-t">建立行业基准,没有它后面的对比全是主观判断</span></div>
+        <div class="why-item"><span class="why-k">2 教材评估</span><span class="why-t">教材过时=源头过时,量化判断"还能不能用";末尾那段差异是和本校方案对出来的</span></div>
+        <div class="why-item"><span class="why-k">3 诊断表格</span><span class="why-t">逐模块对比,选优先升级模块的直接依据</span></div>
+        <div class="why-item"><span class="why-k">4 可行性评估</span><span class="why-t">结合学时和学生基础,防止一次全改</span></div>
+        <div class="why-item"><span class="why-k">逻辑链</span><span class="why-t">标尺 → 源头 → 主体 → 刹车</span></div>
+      </div>
+      <div class="warn-box" style="margin:0;align-self:start;">
         <div class="title">⚠ 重要:不要复制示例提示词!</div>
         <div class="text">示例提示词填的是讲师的课程信息,如果直接复制到你的 WorkBuddy,会污染你的账号记忆。请用下面的<strong>提示词模板</strong>,填你自己的课程信息。</div>
       </div>
