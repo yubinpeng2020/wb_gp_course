@@ -3437,25 +3437,24 @@
     <div style="font-size:13.5px;color:var(--text-body);margin-top:6px;line-height:1.75;">技术栈停在 <span class="hl-lg key">2018 年</span>,落后 <span class="hl-lg warn">8 个大版本</span>--存量课程可能存在类似问题,这一站就拿它当样本。</div>
     <div style="display:flex;gap:16px;align-items:flex-start;margin-top:12px;">
       <div style="flex:1;min-width:0;">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
           <div>
-            <strong>课程信息</strong>
-            <ul style="margin:4px 0 0;">
-              <li>计算机专业核心课</li>
-              <li>面向 Android 原生开发</li>
-              <li>Java + XML + Android SDK</li>
-              <li>工具链:Android Studio 3.2 / Android 9</li>
-              <li>二年级下学期,已修完 C 语言程序设计</li>
-              <li>72学时(理论0+实训72),4学分</li>
+            <strong>课程规划</strong> <span style="font-size:11.5px;color:var(--text-muted);">学校定的--查培养方案</span>
+            <ul style="margin:6px 0 0;">
+              <li>计算机专业核心课,面向 Android 原生开发</li>
+              <li>4 学分,72 学时(理论 0 + 实训 72)</li>
+              <li>第 4 学期,二年级下,已修 C 语言程序设计</li>
+              <li>考核:考查,考勤 30% + 作业 30% + 大作业 40%</li>
             </ul>
           </div>
           <div>
-            <strong>教材与考核</strong>
-            <ul style="margin:4px 0 0;">
+            <strong>教材选用</strong> <span style="font-size:11.5px;color:var(--text-muted);">出版社编的--查教材和大纲</span>
+            <ul style="margin:6px 0 0;">
               <li>《Android项目实战--博学谷(第2版)》</li>
-              <li>2021年出版,已5年</li>
-              <li>项目:注册登录→看视频→做习题</li>
-              <li>考核:考查,考勤30%+作业30%+大作业40%</li>
+              <li>2021 年出版,已 5 年</li>
+              <li>技术栈:Java + XML + Android SDK</li>
+              <li>工具链:Android Studio 3.2 / Android 9</li>
+              <li>项目案例:注册登录→看视频→做习题</li>
             </ul>
           </div>
         </div>
@@ -3463,7 +3462,7 @@
           <strong style="color:var(--accent-orange2);">痛点</strong>:教材三个项目照书敲能跑,离开书不知道从哪下手--学生会的是「复现」,不是「开发」
         </div>
       </div>
-      <div style="flex:0 0 20%;max-width:20%;text-align:center;display:flex;flex-direction:column;justify-content:center;">
+      <div style="flex:0 0 24%;max-width:24%;text-align:center;display:flex;flex-direction:column;justify-content:center;">
         <img src="images/wb_textbook_android.png" alt="教材封面" class="zoom-img" style="max-width:100%;border-radius:6px;border:1px solid rgba(var(--white-rgb),0.1);" onerror="imgMissing(this)">
         <div style="font-size:11px;color:var(--text-muted);margin-top:2px;">教材封面</div>
       </div>
@@ -3471,11 +3470,11 @@
     <div style="margin-top:12px;padding:9px 14px;background:rgba(var(--blue-rgb),0.08);border-left:3px solid var(--accent-blue);border-radius:9px;font-size:13.5px;line-height:1.7;">
       👉 先记住这门课的样子。等会儿 AI 给出薄弱模块,你对照一下:它看出来的,和你平时觉得别扭的地方,是同一个吗?
     </div>
-    <div style="margin-top:8px;font-size:11.5px;color:var(--text-muted);line-height:1.6;">📄 课程信息取自《2024 级信息安全技术应用专业人才培养方案》第 24、28 页(课程编码 01131110C,资料包里给了这两页的摘录)</div>
+    <div style="margin-top:8px;font-size:11.5px;color:var(--text-muted);line-height:1.6;">📄 课程规划取自《2024 级信息安全技术应用专业人才培养方案》第 24、28 页(课程编码 01131110C,资料包里给了这两页的摘录);教材选用取自教材本身和出版社的教学大纲。</div>
   </div>
 </section>
 <!-- 演讲备注:好,用户档案设好了。现在进入第一个实操--课程诊断。课程诊断就是让 AI 帮你找出你的课程里哪些模块最需要升级。逻辑很简单:你告诉 AI 你教什么课、用什么教材,AI 联网搜索这个行业最新的需求和技术趋势,然后对比你的课程内容,找出匹配度最低的模块。本次演示我用真实案例--就是我自己教的「手机编程应用」这门课。这门课教的是 Android 原生开发,Java 加 XML,用的教材是 2021 年出版的《Android项目实战--博学谷》,已经 5 年了。但注意,5 年是书的年龄;书里标的工具链是 Android Studio 3.2 + Android 9,那是 2018 年的东西,到今天 8 年了,落后 8 个大版本。判断一门课老不老,看的不是书什么时候印的,是它用的工具链是哪一年的。我们来看看 AI 能不能诊断出这门课的问题。
-【这块案例卡怎么讲--不要一带而过】先让学员把三件事记住:教材五年没换、工具链还停在 2018 年(落后 8 个大版本)、学生能抄不能做。然后停十秒,让他们在心里猜:这门课你觉得哪几个模块最该改?不用说出来,自己有个数就行。等 AI 出诊断结果时,再让他们对照--AI 看出来的,和你猜的,是不是一回事?差在哪?这个落差才是他们要带走的东西。只夸"AI 真厉害"没用,得让他们先有自己的判断,落差才谈得起来。
+【这块案例卡怎么讲--不要一带而过】卡上分两栏,分的是**来源**,不是知识点:左边课程规划,学校定的,查培养方案;右边教材选用,出版社编的,查教材和大纲。为什么这么分?因为这两样在现实里就是两个人、两个时间点定的,放在一起看才发现对不上--5.3 那张对照表就是把这两栏逐条比一遍。讲的时候先让学员把三件事记住:教材五年没换、工具链还停在 2018 年(落后 8 个大版本)、学生能抄不能做。然后停十秒,让他们在心里猜:这门课你觉得哪几个模块最该改?不用说出来,自己有个数就行。等 AI 出诊断结果时,再让他们对照--AI 看出来的,和你猜的,是不是一回事?差在哪?这个落差才是他们要带走的东西。只夸"AI 真厉害"没用,得让他们先有自己的判断,落差才谈得起来。
 【课程信息以培养方案为准】这一页的 4 学分、72 学时(理论 0 + 实训 72)、第 4 学期、前序课程 C 语言程序设计,都是从培养方案第 24、28 页抄来的。不要凭印象说"这门课 67 学时"--学分学时年年可能调,一定翻当年的方案。学员资料包里给了这两页的摘录 PDF(只摘了与本课程直接相关的两页,别的课程的学分学时没给),还有一张课程信息卡,让他们照这个格式查自己的课。 -->
 
 <!-- ========== 5.2 实操1:课程诊断(演示+跟做) ========== -->
