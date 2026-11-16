@@ -3504,35 +3504,43 @@
             </div>
           </div>
           <div style="margin-top:8px;font-size:13px;color:var(--text-muted);line-height:1.6;">
-            💡 课程信息(教材/课时/学生基础/痛点)不是三要素之一,但属于<strong>上下文信息</strong>--信息越全,AI 诊断越准。三要素是骨架,上下文是血肉。
+            💡 课程信息(学分学时、前序后续课程、教材、学生基础、痛点)不是三要素之一,但属于<strong>上下文信息</strong>--信息越全,AI 诊断越准。三要素是骨架,上下文是血肉。
           </div>
         </div>
 
         <div class="prompt-box" id="p-diag-demo" style="margin-top:14px;"><span style="color:var(--accent-blue);font-weight:bold;">这是课程焕新四步法的第一步。我教一门课程「手机编程应用」,是面向安卓系统的手机应用开发方向的计算机专业核心课。</span>
 
-课程信息:
+【基本信息】
+- 课程编码:01131110C
+- 学分:4
+- 学时:72 学时(理论 0 + 实践 72,全部在机房实训)
+- 开设学期:第 4 学期(二年级下)
+- 前序课程:C 语言程序设计、数据结构(数据结构与本课程同设第 4 学期,学生尚未修完)
+- 后续课程:岗位实习(第 6 学期)
+- 考核方式:考查,考勤 30% + 日常作业 30% + 期末大作业 40%
+
+【课程内容与教学条件】
 - 主要内容:以「博学谷」App 一个完整项目为主线,分 8 章:项目概述、界面设计、欢迎注册和登录、"我"的模块、个人资料、习题、课程、项目上线
-- 前序课程:Android移动开发基础案例教程(第2版)
+- 授课对象:二年级下学期,学生只学过 C 语言,Java 语法要从零教
 - 教材:《Android项目实战--博学谷(第2版)》,2021年出版,使用Android Studio 3.2.0和Android 9.0
 - 教材在线地址:https://resource.ityxb.com/book/android_bxg2.html
 - 教材项目案例:博学谷App(注册登录→个人资料→习题→课程→项目上线)
-- 授课对象:二年级下学期,已修完 C 语言程序设计
-- 课时安排:72学时(理论0+实训72),4学分,第4学期开设
+
+【我观察到的问题】
 - 课程现有痛点:学生跟着抄能做,离开书不会独立开发,不理解代码
-- 考核方式:考查,考勤30%+日常作业30%+期末大作业40%
 
 请帮我做课程诊断:
 1. 联网搜索当前"移动应用开发"领域的行业最新需求和技术趋势
 2. 对比我的课程内容与教材与行业现状,找出匹配度最低的 3-5 个模块
 3. 每个模块列出:现状描述、行业需求差距、升级方向建议
 4. 评估教材的适用性(技术栈是否过时、项目案例是否贴合企业需求)
-5. 结合授课对象和课时安排,评估升级建议的可行性(课时是否够用)
+5. 结合授课对象和学时安排,评估升级建议的可行性(学时是否够用)
 
 输出格式:
 - 第一部分:行业需求摘要(当前主流技术栈和岗位要求,3-5条)
 - 第二部分:教材适用性评估(1段话)
 - 第三部分:诊断表格,列名:模块名称 | 现状 | 行业需求差距 | 升级建议
-- 第四部分:升级可行性评估(结合课时和学生基础,1段话)
+- 第四部分:升级可行性评估(结合学时和学生基础,1段话)
 <button class="copy-btn" onclick="copyPrompt('p-diag-demo',this)">复制</button></div>
       </div>
 
@@ -3570,7 +3578,7 @@
           <div class="why-item"><span class="why-k">1 需求摘要</span><span class="why-t">建立行业基准,没有它后面的对比全是主观判断</span></div>
           <div class="why-item"><span class="why-k">2 教材评估</span><span class="why-t">教材过时=源头过时,量化判断"还能不能用"</span></div>
           <div class="why-item"><span class="why-k">3 诊断表格</span><span class="why-t">逐模块对比,选优先升级模块的直接依据</span></div>
-          <div class="why-item"><span class="why-k">4 可行性评估</span><span class="why-t">结合课时和学生基础,防止一次全改</span></div>
+          <div class="why-item"><span class="why-k">4 可行性评估</span><span class="why-t">结合学时和学生基础,防止一次全改</span></div>
           <div class="why-item"><span class="why-k">逻辑链</span><span class="why-t">标尺 → 源头 → 主体 → 刹车</span></div>
         </div>
       </div>
@@ -3587,29 +3595,39 @@
 
     <div style="display:grid;grid-template-columns:58% 42%;gap:16px;">
       <div>
-        <div class="prompt-box" id="p-diag-do"><span style="color:var(--accent-blue);font-weight:bold;">这是课程焕新四步法的第一步。我教一门课程「<span class="ph">【请填你的课程名称】</span>」,课程信息:</span>
-- 主要内容:<span class="ph">【请简要描述你的课程教什么,列出主要模块】</span>
+        <div class="prompt-box" id="p-diag-do"><span style="color:var(--accent-blue);font-weight:bold;">这是课程焕新四步法的第一步。我教一门课程「<span class="ph">【请填你的课程名称】</span>」,课程信息如下:</span>
+
+【基本信息】
+- 课程编码:<span class="ph">【请填课程编码,如 01131110C】</span>
+- 学分:<span class="ph">【请填学分数,如 4】</span>
+- 学时:<span class="ph">【请填总学时和理论/实践拆分,如"72 学时(理论 0 + 实践 72)"】</span>
+- 开设学期:<span class="ph">【请填第几学期,如"第 4 学期"】</span>
 - 前序课程:<span class="ph">【请填前序课程,没有可删掉这行】</span>
+- 后续课程:<span class="ph">【请填后续课程,没有可删掉这行】</span>
+- 考核方式:<span class="ph">【请填考试/考查+各项比例,如"考查,考勤30%+作业30%+大作业40%"】</span>
+
+【课程内容与教学条件】
+- 主要内容:<span class="ph">【请简要描述你的课程教什么,列出主要模块】</span>
+- 授课对象:<span class="ph">【请填年级和学生基础,如"二年级,已修完 C 语言程序设计"】</span>
 - 教材:<span class="ph">【请填教材名称和出版年份,没有可删掉这行】</span>
 - 教材在线地址:<span class="ph">【请填教材链接,没有可删掉这行】</span>
 - 教材项目案例:<span class="ph">【请填教材中的项目案例,没有可删掉这行】</span>
-- 授课对象:<span class="ph">【请填年级和学生基础,如"二年级,有XX基础"】</span>
-- 课时安排:<span class="ph">【请填总学时和理论/实训分配,如"72学时(理论0+实训72)"】</span>
+
+【我观察到的问题】
 - 课程现有痛点:<span class="ph">【请填你感觉到的问题,如"学生听不懂、不会动手"】</span>
-- 考核方式:<span class="ph">【请填考试/考查+比例,如"考查,平时30%+期末70%"】</span>
 
 请帮我做课程诊断:
 1. 联网搜索当前这个行业 / 领域的最新需求和技术趋势
 2. 对比我的课程内容与教材与行业现状,找出匹配度最低的 3-5 个模块
 3. 每个模块列出:现状描述、行业需求差距、升级方向建议
 4. 评估教材的适用性(技术栈是否过时、项目案例是否贴合企业需求)
-5. 结合授课对象和课时安排,评估升级建议的可行性(课时是否够用)
+5. 结合授课对象和学时安排,评估升级建议的可行性(学时是否够用)
 
 输出格式:
 - 第一部分:行业需求摘要(当前主流技术栈和岗位要求,3-5条)
 - 第二部分:教材适用性评估(1段话)
 - 第三部分:诊断表格,列名:模块名称 | 现状 | 行业需求差距 | 升级建议
-- 第四部分:升级可行性评估(结合课时和学生基础,1段话)
+- 第四部分:升级可行性评估(结合学时和学生基础,1段话)
 
 全部保存到「课程焕新/01_课程诊断」目录(没有就新建)。
 <button class="copy-btn" onclick="copyPrompt('p-diag-do',this)">复制</button></div>
@@ -3621,7 +3639,7 @@
           <div class="step"><div class="num">1</div><div class="text"><strong>新建对话</strong></div></div>
           <div class="step"><div class="num">2</div><div class="text"><strong>选择工作空间</strong> → 选你自己建的工作目录(4.2 那一步建好的文件夹,不是讲师的路径)</div></div>
           <div class="step"><div class="num">3</div><div class="text">模式保持<strong>默认(Agent)</strong>即可(直接执行)</div></div>
-          <div class="step"><div class="num">4</div><div class="text">复制<strong>提示词模板</strong>(不是示例提示词!),替换<b style="color:var(--accent-orange2);">橙色</b>的<strong>【请填…】</strong>为你的课程信息(有教材填教材,没有删掉那几行;前序课程同理)</div></div>
+          <div class="step"><div class="num">4</div><div class="text">复制<strong>提示词模板</strong>(不是示例提示词!),替换<b style="color:var(--accent-orange2);">橙色</b>的<strong>【请填…】</strong>--<strong>照课程信息卡逐项抄</strong>,有教材就填教材,没有就删掉那几行;前序/后续课程同样处理</div></div>
           <div class="step"><div class="num">5</div><div class="text">按回车发送</div></div>
           <div class="step"><div class="num">6</div><div class="text">确认输出:行业需求摘要(5条) + 教材评估 + 诊断表格(5模块) + 可行性评估(三优先级)</div></div>
         </div>
@@ -3674,7 +3692,10 @@
     <p style="margin:6px 0;font-size:14px;line-height:1.7;color:var(--text-body);">AI 不是替你做决定,是帮你把<strong style="color:var(--accent-orange2);font-size:1.2em;letter-spacing:0.5px;">重复劳动</strong>压缩到几秒。行业调研、数据对比、格式整理这些体力活交给 AI,你专注于<strong>判断、取舍、教学设计</strong>--这才是教师不可替代的部分。</p>
   </div>
 </section>
-<!-- 演讲备注:现在进入第一个实操--课程诊断。课程诊断就是让 AI 帮你找出课程里哪些模块最需要升级。这个实操分两步:第一步我先演示,大家看我的屏幕;第二步你们用自己的课程做。先看演示--我打开 WorkBuddy,新建对话,模式保持默认 Agent,复制这条示例提示词粘贴进去。注意这条提示词里包含了课程内容、教材、授课对象、课时、痛点、考核方式,信息越全 AI 诊断越准。回车后看 WorkBuddy 的反应:联网搜索行业需求,对比课程和教材,输出四部分--行业需求摘要、教材评估、诊断表格、可行性评估。好,现在轮到你们了。重要提醒:不要复制刚才的示例提示词!那是我的课程信息,复制到你的账号会污染你的记忆。请用下面的提示词模板,填你自己的课程信息。有教材的填教材,没有的删掉那几行。 -->
+<!-- 演讲备注:现在进入第一个实操--课程诊断。课程诊断就是让 AI 帮你找出课程里哪些模块最需要升级。这个实操分两步:第一步我先演示,大家看我的屏幕;第二步你们用自己的课程做。先看演示--我打开 WorkBuddy,新建对话,模式保持默认 Agent,复制这条示例提示词粘贴进去。
+【课程信息为什么分三块写】基本信息(编码/学分/学时/开设学期/前序后续课程/考核方式)、课程内容与教学条件(主要内容/授课对象/教材)、我观察到的问题。不是每一项都影响诊断--编码和学分主要是让报告有据可查、以后写材料不用再翻方案;真正决定诊断质量的是三样:学时决定能改多少(72 学时全实训,和 67 学时含理论,能改的幅度完全不同),前序课程决定要从哪教起(学生只学过 C 语言,Java 就得从零教),学生基础决定例子举多深。这三样缺一样,AI 给的方案就是空的。
+【这些信息不用现编】照课程信息卡抄一遍就填完了。卡上 8 项,和提示词前 7 项一一对应(课程名称在首行),剩下教材、痛点这些是自己补的。让学员照着卡抄,比让他们临场回忆准得多。
+回车后看 WorkBuddy 的反应:联网搜索行业需求,对比课程和教材,输出四部分--行业需求摘要、教材评估、诊断表格、可行性评估。好,现在轮到你们了。重要提醒:不要复制刚才的示例提示词!那是我的课程信息,复制到你的账号会污染你的记忆。请用下面的提示词模板,填你自己的课程信息。有教材的填教材,没有的删掉那几行。 -->
 
 <!-- ========== 5.3 实操1:结果分析 ========== -->
 <section class="slide" id="diag-check">
@@ -3757,7 +3778,7 @@
           <div style="padding:10px;border-radius:6px;background:rgba(var(--orange-rgb),0.06);border-left:3px solid var(--accent-orange);">
             <div style="font-size:14px;color:var(--text-body);"><strong>第四部分:没分优先级或脱离实际</strong></div>
             <div style="font-size:13px;color:var(--text-muted);margin-top:4px;">没考虑课时和学生基础,建议一次全改</div>
-            <div style="font-size:13px;color:var(--accent-green);margin-top:2px;">→ <code>"请结合课时和学生基础给出分优先级方案"</code></div>
+            <div style="font-size:13px;color:var(--accent-green);margin-top:2px;">→ <code>"请结合学时和学生基础给出分优先级方案"</code></div>
           </div>
         </div>
       </div>
@@ -3777,7 +3798,7 @@
             <div style="font-size:13px;color:var(--text-muted);margin-top:4px;">"以 Room 替代 SQLiteOpenHelper,引入 ViewModel + StateFlow"--不是"建议升级"四个字</div>
           </div>
           <div style="padding:10px;border-radius:6px;background:rgba(var(--blue-rgb),0.06);border-left:3px solid var(--accent-blue);">
-            <div style="font-size:14px;color:var(--text-body);"><strong>4 第四部分:可行性评估结合课时和学生基础</strong></div>
+            <div style="font-size:14px;color:var(--text-body);"><strong>4 第四部分:可行性评估结合学时和学生基础</strong></div>
             <div style="font-size:13px;color:var(--text-muted);margin-top:4px;">"学生只学过 C 语言,Java 语法要从零教,第一优先级 Kotlin + Git 占前 12 学时"--有具体安排</div>
           </div>
         </div>
