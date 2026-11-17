@@ -2281,7 +2281,7 @@
     <div style="display:flex;gap:16px;">
       <div style="flex:1;text-align:center;">
         <img src="images/wb_task_result.png" alt="右侧结果区查看执行结果" class="zoom-img" style="max-width:100%;border:1px solid rgba(var(--white-rgb),0.1);border-radius:6px;min-height:100px;background:rgba(var(--white-rgb),0.02);" onerror="imgMissing(this)">
-        <div style="margin-top:4px;color:var(--text-muted);font-size:12px;line-height:1.7;">📍 右侧结果区<div class="ver-note"><span class="ver-tag">旧版截图</span>图里「查看工作空间」＝「查看分组」</div></div>
+        <div style="margin-top:4px;color:var(--text-muted);font-size:12px;line-height:1.7;">📍 右侧结果区<div class="ver-note"><span class="ver-tag">旧版截图</span>图里「查看工作空间」＝「查看文件夹」</div></div>
       </div>
       <div style="flex:1;text-align:center;">
         <img src="images/wb_artifacts.png" alt="产物面板查看生成的文件" class="zoom-img" style="max-width:100%;border:1px solid rgba(var(--white-rgb),0.1);border-radius:6px;min-height:100px;background:rgba(var(--white-rgb),0.02);" onerror="imgMissing(this)">
@@ -2292,7 +2292,7 @@
 
 </section>
 
-<!-- 演讲备注:这一页按最新版界面讲。要说一句版本差异--同一个东西,旧版叫「工作空间」,新版叫「分组」,功能一模一样。为什么专门说?实训室的电脑可能没更新,学员看到的还是「工作空间」,一看到名字不一样就以为走错地方了。两组改名:工作空间改成"分组",任务改成"最近"。五个对应关系记住就行:选择工作空间=选择分组、+新建工作空间=+新建分组、侧边栏空间列表=分组列表、查看工作空间=查看分组、任务列表=最近列表。名字换了,操作一步没变,后面四步实操照做。 -->
+<!-- 演讲备注:这一页按最新版界面讲。要说一句版本差异--同一个东西,旧版叫「工作空间」,新版叫「分组」,功能一模一样。为什么专门说?实训室的电脑可能没更新,学员看到的还是「工作空间」,一看到名字不一样就以为走错地方了。两组改名:工作空间改成"分组",任务改成"最近"。五个对应关系记住就行:选择工作空间=选择分组、+新建工作空间=+新建分组、侧边栏空间列表=分组列表、查看工作空间=查看文件夹、任务列表=最近列表。名字换了,操作一步没变,后面四步实操照做。另外一定要补一句行为差异:「最近」现在是全部对话的总表,归了分组的对话在这里也照样有一条,不是"设了分组就只在分组里";「分组」只是把同一批对话按文件夹再理一遍。学员一定会问"我明明归到分组了,最近里怎么还有"--答案就是同一批对话、两个视图:最近按时间找,分组按目录找。 -->
 <!-- ========== 3.1 认识操作主界面 ========== -->
 <section class="slide" id="feature-tour">
   <h2>3.1 🗺️ 认识操作主界面--三个区 · 对话区的设置</h2>
@@ -2312,7 +2312,7 @@
         <div style="font-size:15px;font-weight:700;color:var(--accent-blue);">① 侧边栏(左)--功能入口</div>
         <div style="font-size:13px;color:var(--text-body);line-height:1.8;margin-top:4px;">
           上半部分:<strong>新建对话</strong> · <strong>助理</strong> · <strong>专家·技能·连接器</strong> · <strong>定时任务</strong> · <strong>资料库</strong> · <strong>更多</strong><br>
-          下半部分两个列表:<strong>「最近」</strong>和<strong>「分组」</strong>--下一段专门讲这两个怎么分。
+          下半部分两个列表:<strong>「最近」</strong>和<strong>「分组」</strong>--下一段专门讲这两个怎么配合。
         </div>
       </div>
       <div class="card" style="border-left:3px solid var(--accent-green);padding:10px 14px;margin:0;">
@@ -2326,7 +2326,7 @@
         <div style="font-size:15px;font-weight:700;color:var(--accent-orange);">③ 结果区(右)--验收成果的地方</div>
         <div style="font-size:13px;color:var(--text-body);line-height:1.8;margin-top:4px;">
           点对话里的产物卡片,文件<strong>直接在这一侧打开</strong>--Excel 表格能看、能改,不用另开软件。<br>
-          结果区里四个入口:<strong>打开浏览器 / 查看分组 / 查看变更 / 打开终端</strong>(旧版这个入口叫「查看工作空间」),下面还有<strong>产物列表</strong>(第 6 段细讲)。
+          结果区里四个入口:<strong>打开浏览器 / 查看文件夹 / 查看变更 / 打开终端</strong>(旧版这个入口叫「查看工作空间」),下面还有<strong>产物列表</strong>(第 6 段细讲)。
         </div>
       </div>
       <div style="font-size:12.5px;color:var(--text-muted);line-height:1.7;padding:0 4px;">
@@ -2336,13 +2336,17 @@
   </div>
 
   <!-- 2 最近 / 分组 -->
-  <h3 style="margin-top:8px;">2 「最近」与「分组」--两个列表怎么分,目录怎么设</h3>
+  <h3 style="margin-top:8px;">2 「最近」与「分组」--一个是总表,一个是目录</h3>
   <div style="margin:0 0 12px;padding:9px 13px;border-radius:8px;background:rgba(var(--blue-rgb),0.07);border:1px solid rgba(var(--blue-rgb),0.22);font-size:13px;color:var(--text-body);line-height:1.7;">
-    ℹ️ <strong>版本差异:这一节按最新版界面写。</strong>新版改了两个名字,<strong style="color:var(--accent-orange);">功能都没变</strong>:①「工作空间」→<strong>「分组」</strong>;②「任务」→<strong>「最近」</strong>(侧边栏上半那个列表)。<br>实训室电脑没更新时你会看到旧名字,照着对:输入框下的<strong>「选择工作空间」=「选择分组」</strong>、<strong>「＋ 新建工作空间」=「＋ 新建分组」</strong>、侧边栏<strong>「空间」列表 =「分组」列表</strong>、结果区<strong>「查看工作空间」=「查看分组」</strong>、上半部分<strong>「任务」列表 =「最近」列表</strong>。<br>名字换了,地方和操作一步没变。这一页有几张图取自旧版界面,图注带<span class="ver-tag">旧版截图</span>的,照上面的对应关系念。
+    ℹ️ <strong>版本差异：只改了名字，位置和操作不变。</strong><br>
+    <span style="color:#8c8c8c;font-weight:700;">工作空间</span> → <span style="color:var(--accent-green);font-weight:700;">分组</span>　选择工作空间=选择分组 · ＋新建工作空间=＋新建分组 · 空间列表=分组列表 · 查看工作空间=查看文件夹<br>
+    <span style="color:#8c8c8c;font-weight:700;">任务</span> → <span style="color:var(--accent-blue);font-weight:700;">最近</span>　任务列表=最近列表<br>
+    <span style="color:var(--text-muted);font-size:12.5px;">图注带 <span class="ver-tag">旧版截图</span> 的，按这个对照念。</span>
   </div>
   <div style="display:grid;grid-template-columns:1.15fr 0.85fr;gap:14px;margin-bottom:12px;align-items:center;">
     <div style="color:var(--text-body);font-size:15px;line-height:1.9;">
-      三区先混个脸熟就行。真正要现在搞懂的,是<strong>侧边栏下半部分那两个列表</strong>——「最近」和「分组」:这俩看着不起眼,却决定了你每次干活之后<strong>文件去哪、下次还找不找得到</strong>。
+      三区先混个脸熟就行。真正要现在搞懂的,是<strong>侧边栏下半部分那两个列表</strong>——「最近」和「分组」:这俩看着不起眼,却决定了你每次干活之后<strong>文件去哪、下次还找不找得到</strong>。<br>
+      <strong>这两个不是两拨对话</strong>:「最近」是<strong>全部对话</strong>的总表,「分组」是<strong>同一批对话</strong>按文件夹再排一遍。
     </div>
     <div style="text-align:center;">
       <img src="images/wb_sidebar_lists.png" alt="侧边栏最近与分组两个列表" class="zoom-img" style="max-width:100%;border:1px solid rgba(var(--white-rgb),0.1);border-radius:6px;background:rgba(var(--white-rgb),0.02);" onerror="imgMissing(this)">
@@ -2353,16 +2357,17 @@
   <!-- 2a 最近：行 -->
   <div style="display:grid;grid-template-columns:1.12fr 0.88fr;gap:14px;margin-bottom:12px;align-items:stretch;">
     <div class="card" style="border-left:4px solid var(--accent-blue);padding:14px 16px;margin:0;display:flex;flex-direction:column;justify-content:center;">
-      <div style="font-size:16px;font-weight:700;color:var(--accent-blue);">📋 「最近」--不设任何东西,直接写提示词</div>
+      <div style="font-size:16px;font-weight:700;color:var(--accent-blue);">📋 「最近」--所有对话都在这儿,新的排最上</div>
       <div style="font-size:14px;color:var(--text-body);line-height:1.9;margin-top:8px;">
         打开客户端,在输入框里<strong>直接写要求</strong>、回车,AI 跑完一轮就多出<strong>一条记录</strong>,自动排进「最近」,<strong>新的排最上</strong>。点一下能回到那次对话接着聊,当时的产物也还在。<br>
-        <span style="color:var(--accent-orange);font-weight:600;">⚠️ 但没设分组时</span>:WorkBuddy 会自动建一个<span class="hl-lg warn">临时目录</span>把活干完。文件不会丢,可目录名是它起的、位置不好找,而且只挂在这一次对话下面,<strong>不归任何分组</strong>。<br>
+        <span style="color:var(--accent-blue);font-weight:600;">📌 总表</span>:设没设分组,对话都在这儿。<br>
+        <span style="color:var(--accent-orange);font-weight:600;">⚠️ 但没设分组时</span>:WorkBuddy 会自动建一个<span class="hl-lg warn">临时目录</span>把活干完。文件不会丢,可目录名是它起的、位置不好找,而且只挂在这一次对话下面,<strong>在「分组」里找不到它</strong>。<br>
         <span style="color:var(--text-muted);font-size:13px;">✅ 什么时候这样用:临时问一句、试一下、不打算留档的活--用完就扔,不必建分组。</span>
       </div>
     </div>
     <div class="card" style="border-top:3px solid var(--accent-blue);padding:12px;margin:0;display:flex;flex-direction:column;">
       <img src="images/wb_flow_task.png" alt="不设分组直接输入提示词的界面" class="zoom-img" style="width:100%;flex:1;object-fit:contain;border:1px solid rgba(var(--white-rgb),0.1);border-radius:6px;min-height:150px;background:rgba(var(--white-rgb),0.02);" onerror="imgMissing(this)">
-      <div style="margin-top:8px;color:var(--text-muted);font-size:12.5px;text-align:center;line-height:1.7;">📍 不选分组,直接写提示词 → 数据落在「临时目录」<div class="ver-note"><span class="ver-tag">旧版截图</span>图里「不设置工作空间」＝现在的「不选分组」</div></div>
+      <div style="margin-top:8px;color:var(--text-muted);font-size:12.5px;text-align:center;line-height:1.7;">📍 不选分组,直接写提示词 → 数据落在「临时目录」</div>
     </div>
   </div>
 
@@ -2371,7 +2376,7 @@
     <div class="card" style="border-left:4px solid var(--accent-green);padding:14px 16px;margin:0;display:flex;flex-direction:column;justify-content:center;">
       <div style="font-size:16px;font-weight:700;color:var(--accent-green);">📁 「分组」--先设文件夹,再写提示词</div>
       <div style="font-size:14px;color:var(--text-body);line-height:1.9;margin-top:8px;">
-        顺序反过来:<strong>先指定一个文件夹</strong>当分组,再往输入框里写提示词。这次对话就归进「分组」,按文件夹归类。<br>
+        顺序反过来:<strong>先指定一个文件夹</strong>当分组,再往输入框里写提示词。这次对话的<strong>文件就落在这个文件夹里</strong>,同时在「分组」下多一条记录——<strong style="color:var(--accent-orange);">不是从「最近」搬走,那儿照样有它</strong>。<br>
         <span style="color:var(--accent-green);font-weight:600;">怎么建</span>--「分组」这块有两个入口,点哪个都行:<br>
         <span style="display:inline-block;margin:3px 6px 3px 0;padding:2px 10px;border-radius:12px;border:1px solid rgba(var(--blue-rgb),0.4);background:rgba(var(--blue-rgb),0.1);color:var(--accent-blue);font-size:13px;font-weight:700;">＋ 新建分组</span>从零建一个,交给 WorkBuddy 管<br>
         <span style="display:inline-block;margin:3px 6px 3px 0;padding:2px 10px;border-radius:12px;border:1px solid rgba(var(--green-rgb),0.4);background:rgba(var(--green-rgb),0.1);color:var(--accent-green);font-size:13px;font-weight:700;">📂 打开本地文件夹</span>直接指向你电脑上已有的文件夹<br>
@@ -2382,15 +2387,15 @@
     </div>
     <div class="card" style="border-top:3px solid var(--accent-green);padding:12px;margin:0;display:flex;flex-direction:column;">
       <img src="images/wb_flow_space.png" alt="先设置分组再输入提示词的界面" class="zoom-img" style="width:100%;flex:1;object-fit:contain;border:1px solid rgba(var(--white-rgb),0.1);border-radius:6px;min-height:150px;background:rgba(var(--white-rgb),0.02);" onerror="imgMissing(this)">
-      <div style="margin-top:8px;color:var(--text-muted);font-size:12.5px;text-align:center;line-height:1.7;">📍 先选好分组,再写提示词 → 落在「分组」列表<div class="ver-note"><span class="ver-tag">旧版截图</span>图里「工作空间」＝现在的「分组」</div></div>
+      <div style="margin-top:8px;color:var(--text-muted);font-size:12.5px;text-align:center;line-height:1.7;">📍 先选好分组,再写提示词 → 文件落在分组目录,对话同时进「分组」和「最近」</div>
     </div>
   </div>
 
   <div class="ok-box" style="margin:0 0 12px 0;">
     <div class="title">💡 一句话分清</div>
     <div class="text" style="font-size:14px;">
-      <strong>「最近」看的是"我干过什么"</strong>(一条记录 = 一段对话),<strong>「分组」看的是"东西存在哪"</strong>(一个分组 = 一个文件夹)。<br>
-      <strong style="color:var(--accent-green);">所以顺序是先设分组、再开对话</strong>--先说清楚"这门课的文件放 D 盘哪个文件夹",再让它干活,出来的东西自然归在一起。
+      <strong>同一批对话,两个视角</strong>:<strong style="color:var(--accent-blue);">「最近」按时间找</strong>--全部对话新的排最上,归没归分组都在里面;<strong style="color:var(--accent-green);">「分组」按目录找</strong>--同一个文件夹的对话归在一起。<br>
+      <strong style="color:var(--accent-green);">所以顺序是先设分组、再开对话</strong>--先说清楚"这门课的文件放 D 盘哪个文件夹",再让它干活:文件落到该落的地方,对话在「最近」和「分组」两处都能翻到。
     </div>
   </div>
 
@@ -2406,12 +2411,12 @@
       <div class="step" style="margin:7px 0;"><div class="num">1</div><div class="text" style="font-size:15px;">在 D 盘新建 <code>D:\WorkBuddy国培</code><span style="display:block;color:var(--text-muted);font-size:12.5px;margin-top:1px;">不想自己建?点「＋ 新建分组」起个名,它帮你建</span></div></div>
       <div class="step" style="margin:7px 0;"><div class="num">2</div><div class="text" style="font-size:15px;">点 <strong>📂 打开本地文件夹</strong>,选中这个文件夹</div></div>
       <div class="step" style="margin:7px 0;"><div class="num">3</div><div class="text" style="font-size:15px;">确认:输入框下方的「选择分组」变成<strong style="color:var(--accent-green);">你的文件夹名</strong>--就成了<span style="display:block;color:var(--text-muted);font-size:12.5px;margin-top:1px;">旧版这个位置写的是「选择工作空间」,一样</span></div></div>
-      <div class="step" style="margin:7px 0 0;"><div class="num">4</div><div class="text" style="font-size:15px;">侧边栏「分组」里能看到它,这四步实操的对话都丢进去</div></div>
+      <div class="step" style="margin:7px 0 0;"><div class="num">4</div><div class="text" style="font-size:15px;">侧边栏「分组」里能看到它;这几步实操的对话都选这个分组<span style="display:block;color:var(--text-muted);font-size:12.5px;margin-top:1px;">「最近」里也照样能看到这几条--两个地方是同一批对话</span></div></div>
     </div>
     <div class="card" style="border-top:3px solid var(--accent-green);padding:12px 14px;margin:0;display:flex;flex-direction:column;justify-content:center;">
       <img src="images/wb_space_ready.png" alt="设好分组后的界面" class="zoom-img" style="width:100%;border:1px solid rgba(var(--white-rgb),0.1);border-radius:6px;min-height:130px;background:rgba(var(--white-rgb),0.02);" onerror="imgMissing(this)">
       <div style="margin-top:8px;color:var(--text-muted);font-size:12.5px;line-height:1.7;text-align:center;">
-        📍 红框那行就是证据:输入框左下方显示<strong style="color:var(--accent-green);">WorkBuddy国培</strong>,分组就设好了<div class="ver-note"><span class="ver-tag">旧版截图</span>图里「先设置好工作空间」＝现在的「先设置好分组」</div>
+        📍 红框那行就是证据:输入框左下方显示<strong style="color:var(--accent-green);">WorkBuddy国培</strong>,分组就设好了
       </div>
       <div style="margin-top:6px;color:var(--text-body);font-size:12.5px;line-height:1.7;background:rgba(var(--green-rgb),0.07);border-radius:5px;padding:6px 9px;">
         🗂️ <strong>子文件夹不用提前建</strong>--干活时让它建,文件自然落在根目录;真需要分了,再按「一门课一个文件夹」理一次。
@@ -2539,7 +2544,7 @@
   <div style="display:grid;grid-template-columns:0.55fr 1.15fr 0.85fr;gap:14px;margin-bottom:14px;align-items:stretch;">
     <div style="display:flex;flex-direction:column;justify-content:center;">
       <img src="images/wb_view_tabs.png" alt="结果区界面:标签页+四个入口+产物列表" class="zoom-img" style="width:100%;border:1px solid rgba(var(--white-rgb),0.1);border-radius:8px;min-height:120px;background:rgba(var(--white-rgb),0.02);" onerror="imgMissing(this)">
-      <div style="margin-top:6px;color:var(--text-muted);font-size:12px;text-align:center;line-height:1.7;">📍 结果区 = AI 的工作台:标签页(可多开) + 四个入口 + 产物列表<div class="ver-note"><span class="ver-tag">旧版截图</span>图里「查看工作空间」＝「查看分组」</div></div>
+      <div style="margin-top:6px;color:var(--text-muted);font-size:12px;text-align:center;line-height:1.7;">📍 结果区 = AI 的工作台:标签页(可多开) + 四个入口 + 产物列表</div>
     </div>
     <div style="display:flex;flex-direction:column;gap:10px;">
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
@@ -2548,7 +2553,7 @@
           <div style="font-size:13px;color:var(--text-body);line-height:1.7;margin-top:4px;">AI 上网操作时,实时画面在这里,能随时叫停</div>
         </div>
         <div class="card" style="border-left:3px solid var(--accent-green);padding:10px 12px;margin:0;">
-          <div style="font-size:14px;font-weight:700;color:var(--accent-green);">📁 查看分组</div>
+          <div style="font-size:14px;font-weight:700;color:var(--accent-green);">📁 查看文件夹</div>
           <div style="font-size:13px;color:var(--text-body);line-height:1.7;margin-top:4px;">整个目录的文件树,新出的文件一眼看到</div>
         </div>
         <div class="card" style="border-left:3px solid var(--accent-orange);padding:10px 12px;margin:0;">
