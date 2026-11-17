@@ -1008,6 +1008,24 @@
     padding: 2px 8px; border-radius: 6px; font-size: 13px;
     font-family: 'JetBrains Mono','Consolas',monospace;
   }
+  /* 追问话术卡：症状左、话术右，逐条可复制 */
+  .ask-grid { margin-top: 6px; }
+  .ask-row { display: flex; align-items: baseline; gap: 10px; padding: 5px 0;
+    border-top: 1px dashed rgba(var(--purple-rgb),0.22); }
+  .ask-grid .ask-row:first-child { border-top: none; }
+  .ask-sym { flex: 0 0 38%; font-size: 13px; color: var(--text-body); line-height: 1.55; }
+  .ask-sym::before { content: '·'; color: var(--accent-purple-pale); margin-right: 5px; }
+  .ask-say { flex: 1 1 auto; min-width: 0; font-family: 'JetBrains Mono','Consolas',monospace;
+    font-size: 12.5px; line-height: 1.6; color: #C7D2FE;
+    background: rgba(var(--purple-rgb),0.15); border-radius: 6px; padding: 3px 8px; }
+  .ask-cp { flex: 0 0 auto; align-self: center; font-size: 11px; padding: 2px 8px; cursor: pointer;
+    border-radius: 5px; border: 1px solid rgba(var(--purple-rgb),0.45);
+    background: transparent; color: var(--accent-purple-pale); white-space: nowrap; transition: all .15s; }
+  .ask-cp:hover { background: rgba(var(--purple-rgb),0.2); }
+  body.light .ask-say { color: #4338CA; background: rgba(var(--purple-rgb),0.10); }
+  body.light .ask-cp { color: #4338CA; border-color: rgba(var(--purple-rgb),0.4); }
+  .ask-cp.ok { background: var(--accent-green); color: var(--bg-deep); border-color: transparent; }
+  @media (max-width: 860px) { .ask-row { flex-wrap: wrap; } .ask-sym { flex: 1 0 100%; } }
   /* 成果验收清单 */
   .check-list {
     background: linear-gradient(160deg, rgba(var(--green-rgb),0.10) 0%, rgba(var(--overlay3-rgb),0.6) 100%);
@@ -3719,11 +3737,15 @@
 
   <!-- 🎯 实操增强：追问话术卡 -->
   <div class="ask-card">
-    <span class="ask-q">💬 卡住了?照着这样追问 AI:</span><br>
-    · 诊断太笼统、没说我的课 → <code>请针对我的课程给出模块级诊断,不要泛泛而谈</code><br>
-    · 数据像编的、没来源 → <code>请先联网搜索最新行业需求和技术趋势,并附数据来源</code><br>
-    · 教材信息填错了 → <code>请忽略刚才的教材,按《XXX》重新评估适用性</code><br>
-    · 建议一次改太多 → <code>请结合我的课时和学生基础,给出分优先级、可落地的方案</code>
+    <span class="ask-q">💬 卡住了?照着这样追问 AI:</span>
+    <div class="ask-grid">
+      <div class="ask-row"><span class="ask-sym">没读我的材料,直接开编</span><span class="ask-say">先说明你读了工作目录里的哪几份文件、各取到了什么;一份没读就先读再回答</span><button class="ask-cp" onclick="copyText(this.previousElementSibling,this)">复制</button></div>
+      <div class="ask-row"><span class="ask-sym">数据像编的、没来源</span><span class="ask-say">请先联网搜索最新行业需求和技术趋势,并附数据来源</span><button class="ask-cp" onclick="copyText(this.previousElementSibling,this)">复制</button></div>
+      <div class="ask-row"><span class="ask-sym">诊断太笼统、没说我的课</span><span class="ask-say">请针对我的课程给出模块级诊断,不要泛泛而谈</span><button class="ask-cp" onclick="copyText(this.previousElementSibling,this)">复制</button></div>
+      <div class="ask-row"><span class="ask-sym">第 6 项只回一句「略有差异」</span><span class="ask-say">把培养方案和教材大纲在学分、学时分配、考核方式、学生基础上的不一致逐条列出来,不要只说略有差异</span><button class="ask-cp" onclick="copyText(this.previousElementSibling,this)">复制</button></div>
+      <div class="ask-row"><span class="ask-sym">教材信息填错了</span><span class="ask-say">请忽略刚才的教材,按《教材名》重新评估适用性</span><button class="ask-cp" onclick="copyText(this.previousElementSibling,this)">复制</button></div>
+      <div class="ask-row"><span class="ask-sym">建议一次改太多</span><span class="ask-say">请结合我的课时和学生基础,给出分优先级、可落地的方案</span><button class="ask-cp" onclick="copyText(this.previousElementSibling,this)">复制</button></div>
+    </div>
   </div>
 
   <!-- 🎯 实操增强：成果验收清单 -->
@@ -4207,11 +4229,13 @@
   </div>
   <!-- 🎯 实操增强：追问话术卡 -->
   <div class="ask-card">
-    <span class="ask-q">💬 卡住了?照着这样追问 AI:</span><br>
-    · 报告没分班 → <code>请分班级统计平均分、及格率,并对比两班差异</code><br>
-    · 没指出薄弱环节 → <code>请指出得分率最低的环节(考勤/作业/大作业),并分析原因</code><br>
-    · 建议太笼统 → <code>请给出具体可操作的教学策略,不要笼统建议</code><br>
-    · 名单没给原因 → <code>请分析每个不及格学生的可能原因</code>
+    <span class="ask-q">💬 卡住了?照着这样追问 AI:</span>
+    <div class="ask-grid">
+      <div class="ask-row"><span class="ask-sym">报告没分班</span><span class="ask-say">请分班级统计平均分、及格率,并对比两班差异</span><button class="ask-cp" onclick="copyText(this.previousElementSibling,this)">复制</button></div>
+      <div class="ask-row"><span class="ask-sym">没指出薄弱环节</span><span class="ask-say">请指出得分率最低的环节(考勤/作业/大作业),并分析原因</span><button class="ask-cp" onclick="copyText(this.previousElementSibling,this)">复制</button></div>
+      <div class="ask-row"><span class="ask-sym">建议太笼统</span><span class="ask-say">请给出具体可操作的教学策略,不要笼统建议</span><button class="ask-cp" onclick="copyText(this.previousElementSibling,this)">复制</button></div>
+      <div class="ask-row"><span class="ask-sym">名单没给原因</span><span class="ask-say">请分析每个不及格学生的可能原因</span><button class="ask-cp" onclick="copyText(this.previousElementSibling,this)">复制</button></div>
+    </div>
   </div>
 
   <!-- 🎯 实操增强：成果验收清单 -->
@@ -4688,11 +4712,13 @@
 
   <!-- 🎯 实操增强：追问话术卡 -->
   <div class="ask-card">
-    <span class="ask-q">💬 卡住了?照着这样追问 AI:</span><br>
-    · 项目主题不贴近学生 → <code>换成更贴近中职学生日常生活的项目,并设计 A/B/C 三级分层选题</code><br>
-    · 没照顾薄弱学生 → <code>请针对最薄弱环节和待提升学生,增加针对性教学活动</code><br>
-    · 评价不具体 → <code>请列出每个评价项的评分标准和权重</code><br>
-    · 课时活动太笼统 → <code>请更具体地描述每个课时的教学活动</code>
+    <span class="ask-q">💬 卡住了?照着这样追问 AI:</span>
+    <div class="ask-grid">
+      <div class="ask-row"><span class="ask-sym">项目主题不贴近学生</span><span class="ask-say">换成更贴近中职学生日常生活的项目,并设计 A/B/C 三级分层选题</span><button class="ask-cp" onclick="copyText(this.previousElementSibling,this)">复制</button></div>
+      <div class="ask-row"><span class="ask-sym">没照顾薄弱学生</span><span class="ask-say">请针对最薄弱环节和待提升学生,增加针对性教学活动</span><button class="ask-cp" onclick="copyText(this.previousElementSibling,this)">复制</button></div>
+      <div class="ask-row"><span class="ask-sym">评价不具体</span><span class="ask-say">请列出每个评价项的评分标准和权重</span><button class="ask-cp" onclick="copyText(this.previousElementSibling,this)">复制</button></div>
+      <div class="ask-row"><span class="ask-sym">课时活动太笼统</span><span class="ask-say">请更具体地描述每个课时的教学活动</span><button class="ask-cp" onclick="copyText(this.previousElementSibling,this)">复制</button></div>
+    </div>
   </div>
 
   <!-- 🎯 实操增强：成果验收清单 -->
@@ -5077,11 +5103,13 @@
 
   <!-- 🎯 实操增强：追问话术卡 -->
   <div class="ask-card">
-    <span class="ask-q">💬 卡住了?照着这样追问 AI:</span><br>
-    · PPT 某页不满意 → <code>PPT 第 X 页改为...</code><br>
-    · 练习题太简单 → <code>增加 2 道综合应用题</code><br>
-    · 实训案例不贴近学生 → <code>项目背景换成中职生更熟悉的场景</code><br>
-    · 教案缺环节 → <code>请在教案中补充板书设计和时间标注</code>
+    <span class="ask-q">💬 卡住了?照着这样追问 AI:</span>
+    <div class="ask-grid">
+      <div class="ask-row"><span class="ask-sym">PPT 某页不满意</span><span class="ask-say">PPT 第 X 页改为...</span><button class="ask-cp" onclick="copyText(this.previousElementSibling,this)">复制</button></div>
+      <div class="ask-row"><span class="ask-sym">练习题太简单</span><span class="ask-say">增加 2 道综合应用题</span><button class="ask-cp" onclick="copyText(this.previousElementSibling,this)">复制</button></div>
+      <div class="ask-row"><span class="ask-sym">实训案例不贴近学生</span><span class="ask-say">项目背景换成中职生更熟悉的场景</span><button class="ask-cp" onclick="copyText(this.previousElementSibling,this)">复制</button></div>
+      <div class="ask-row"><span class="ask-sym">教案缺环节</span><span class="ask-say">请在教案中补充板书设计和时间标注</span><button class="ask-cp" onclick="copyText(this.previousElementSibling,this)">复制</button></div>
+    </div>
   </div>
 
   <!-- 🎯 实操增强：成果验收清单 -->
@@ -5526,6 +5554,20 @@ showSlide(initId);
 updateFontHint();
 
 // Copy button
+function copyText(el, btn){
+  const txt = (el.innerText || el.textContent || '').trim();
+  const done = ()=>{ const o=btn.textContent; btn.textContent='已复制'; btn.classList.add('ok');
+    setTimeout(()=>{ btn.textContent=o; btn.classList.remove('ok'); }, 1500); };
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(txt).then(done).catch(()=>{
+      const ta=document.createElement('textarea'); ta.value=txt; document.body.appendChild(ta);
+      ta.select(); document.execCommand('copy'); ta.remove(); done();
+    });
+  } else {
+    const ta=document.createElement('textarea'); ta.value=txt; document.body.appendChild(ta);
+    ta.select(); document.execCommand('copy'); ta.remove(); done();
+  }
+}
 function copyPrompt(id, btn){
   const el = document.getElementById(id);
   // Get text content, excluding the copy button text
