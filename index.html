@@ -431,6 +431,15 @@
   }
   .prompt-box code .ph { background:transparent; padding:0; }
   body.light .prompt-box .ph { color:#B45309; background:rgba(var(--orange2-rgb),0.14); }
+  /* 演示提示词:标出哪些是讲师的取值、要换成自己的 */
+  .prompt-box .pm {
+    color:var(--accent-orange2);
+    background:rgba(var(--orange2-rgb),0.11);
+    border-radius:3px; padding:0 2px;
+    border-bottom:1px dashed rgba(var(--orange2-rgb),0.55);
+  }
+  body.light .prompt-box .pm { color:#B45309; background:rgba(var(--orange2-rgb),0.11); }
+  .prompt-box code .pm { background:transparent; }
 
   /* ========== 步骤 ========== */
   .step { display:flex; margin:14px 0; align-items:flex-start; }
@@ -3512,8 +3521,8 @@
     <!-- 左:演示提示词 / 右:解析(解析紧跟提示词看) -->
     <div style="display:grid;grid-template-columns:58% 42%;gap:16px;align-items:start;">
       <div>
-          <div class="pt-head"><span class="pt-tag demo">👨‍🏫 演示用</span><span class="pt-note">填的是讲师的课,别复制到你的账号</span></div>
-          <div class="prompt-box" id="p-diag-demo" style="margin-top:14px;"><span style="color:var(--accent-blue);font-weight:bold;">我要做一次课程诊断。我教一门课程「手机编程应用」,是面向安卓系统的手机应用开发方向的计算机专业核心课。</span>
+          <div class="pt-head"><span class="pt-tag demo">👨‍🏫 演示用</span><span class="pt-note">填的是讲师的课,别复制到你的账号;橙色底纹那几处就是要换成你自己的</span></div>
+          <div class="prompt-box" id="p-diag-demo" style="margin-top:14px;"><span style="color:var(--accent-blue);font-weight:bold;">我要做一次课程诊断。我教一门课程<span class="pm">「手机编程应用」</span>,是面向安卓系统的手机应用开发方向的计算机专业核心课。</span>
 
 【手边的材料,都在工作目录里,先读再动手】
 - 学员资料包/本校课程材料/2024级信息安全技术应用专业人才培养方案(课程信息摘录).pdf
@@ -3524,9 +3533,9 @@
 读完先在报告开头列一张表:每份文件你取到了哪些信息、哪些没写。
 
 【文件里没有、只有我知道的】
-- 授课对象:二年级下学期,学生只学过 C 语言,Java 语法要从零教
-- 课程现有痛点:学生跟着抄能做,离开书不会独立开发,不理解代码
-- 教材与工具链(大纲里没有,以这条为准):《Android项目实战--博学谷(第2版)》2021 年出版,Java + XML + Android SDK,Android Studio 3.2.0 / Android 9.0
+- 授课对象:<span class="pm">二年级下学期,学生只学过 C 语言,Java 语法要从零教</span>
+- 课程现有痛点:<span class="pm">学生跟着抄能做,离开书不会独立开发,不理解代码</span>
+- 教材与工具链(大纲里没有,以这条为准):<span class="pm">《Android项目实战--博学谷(第2版)》2021 年出版,Java + XML + Android SDK,Android Studio 3.2.0 / Android 9.0</span>
 
 请帮我做课程诊断:
 1. 联网搜索当前"移动应用开发"领域的行业最新需求和技术趋势
@@ -4050,10 +4059,10 @@
           </div>
         </div>
 
-        <div class="pt-head"><span class="pt-tag demo">👨‍🏫 演示用</span><span class="pt-note">填的是讲师的课,别复制到你的账号</span></div>
-        <div class="prompt-box" id="p-analysis" style="margin-top:14px;"><span style="color:var(--accent-blue);font-weight:bold;">接着上次的课程诊断做学情分析。诊断中优先升级的模块是「Kotlin 基础」,现在要分析学生成绩,为后面的教学设计升级提供数据。</span>
+        <div class="pt-head"><span class="pt-tag demo">👨‍🏫 演示用</span><span class="pt-note">填的是讲师的课,别复制到你的账号;橙色底纹那几处就是要换成你自己的</span></div>
+        <div class="prompt-box" id="p-analysis" style="margin-top:14px;"><span style="color:var(--accent-blue);font-weight:bold;">接着上次的课程诊断做学情分析。诊断中优先升级的模块是<span class="pm">「Kotlin 基础」</span>,现在要分析学生成绩,为后面的教学设计升级提供数据。</span>
 
-我上传了一份学生成绩文件 <code>成绩汇总_脱敏.csv</code>,这是「手机编程应用」课程2026学期的成绩数据(已脱敏),包含2个班级97名学生:考勤分(满分30,占30%)、日常作业分(满分30,占30%)、期末大作业分(满分40,占40%),总评 = 三项之和(满分100)。表里另有一列「缺勤次数」,可用来解释考勤失分。
+我上传了一份学生成绩文件 <code><span class="pm">成绩汇总_脱敏.csv</span></code>,这是「手机编程应用」课程2026学期的成绩数据(已脱敏),包含<span class="pm">2个班级97名学生</span>:<span class="pm">考勤分(满分30,占30%)、日常作业分(满分30,占30%)、期末大作业分(满分40,占40%)</span>,总评 = 三项之和(满分100)。表里另有一列「缺勤次数」,可用来解释考勤失分。
 
 请帮我做学情分析:
 1. 整体情况:2个班级的平均分、最高分、最低分、及格率,对比两班差异
@@ -4552,14 +4561,14 @@
           </div>
         </div>
 
-        <div class="pt-head"><span class="pt-tag demo">👨‍🏫 演示用</span><span class="pt-note">填的是讲师的课,别复制到你的账号</span></div>
+        <div class="pt-head"><span class="pt-tag demo">👨‍🏫 演示用</span><span class="pt-note">填的是讲师的课,别复制到你的账号;橙色底纹那几处就是要换成你自己的</span></div>
         <div class="prompt-box" id="p-upgrade-demo" style="margin-top:14px;"><span style="color:var(--accent-blue);font-weight:bold;">请基于前面课程诊断的薄弱模块清单和学情分析的关键结论,把诊断报告中优先升级的模块从传统讲授式升级为项目式教学。</span>
 
 关键信息补充(来自学情分析的提炼):
-- 最薄弱环节:<span style="color:var(--accent-orange2);">期末大作业得分率仅39.9%、日常作业56.6%,"人在心不在"</span>
-- 分层比例:<span style="color:var(--accent-orange2);">优秀17.5% / 合格43.3% / 待提升39.2%,待提升比例过高</span>
-- 关键发现:<span style="color:var(--accent-orange2);">18人几乎全勤但作业和大作业都不及格;2班大作业均分14.4,明显低于1班17.6</span>
-- AI 建议:<span style="color:var(--accent-orange2);">结对编程+当场验收、过程检查点+分层选题、2班优先干预</span>
+- 最薄弱环节:<span style="color:var(--accent-orange2);"><span class="pm">期末大作业得分率仅39.9%、日常作业56.6%,"人在心不在"</span></span>
+- 分层比例:<span style="color:var(--accent-orange2);"><span class="pm">优秀17.5% / 合格43.3% / 待提升39.2%,待提升比例过高</span></span>
+- 关键发现:<span style="color:var(--accent-orange2);"><span class="pm">18人几乎全勤但作业和大作业都不及格;2班大作业均分14.4,明显低于1班17.6</span></span>
+- AI 建议:<span style="color:var(--accent-orange2);"><span class="pm">结对编程+当场验收、过程检查点+分层选题、2班优先干预</span></span>
 
 请按以下四部分输出升级版教学方案:
 1. 教学目标(3条:知识目标 + 能力目标 + 素养目标)
