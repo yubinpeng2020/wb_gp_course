@@ -1790,7 +1790,7 @@
     <table>
       <tr><th style="width:20%;">能力维度</th><th style="width:38%;">聊天 AI(元宝 / 豆包 / Kimi)</th><th style="width:42%;">Agent 型(WorkBuddy)</th></tr>
       <tr><td><strong>回答问题 · 写文案 · 翻译</strong></td><td>✅ 擅长</td><td>✅ 擅长</td></tr>
-      <tr><td><strong>读取文件内容</strong></td><td>✅ 能(你手动上传才行)</td><td>✅ 能(工作空间绑定 / 添加本地文件 / 路径定向读取)</td></tr>
+      <tr><td><strong>读取文件内容</strong></td><td>✅ 能(你手动上传才行)</td><td>✅ 能(分组绑定 / 添加本地文件 / 路径定向读取)</td></tr>
       <tr><td><strong>主动读写电脑文件</strong></td><td>❌ 不能(只能读你提交的)</td><td>✅ 能(直接操作本地文件系统)</td></tr>
       <tr><td><strong>生成 · 编辑办公文档</strong></td><td>❌ 只能输出文本</td><td>✅ 直接生成 PPT / 写 Excel / 编辑 Word</td></tr>
       <tr><td><strong>记忆 · 上下文连续性</strong></td><td>⚠️ 有限(对话内)</td><td>✅ 三层记忆系统(跨对话记住你)</td></tr>
@@ -2193,7 +2193,7 @@
   <div class="card" style="border-left:4px solid var(--accent-green);margin-bottom:14px;">
     <h4 style="margin-top:0;margin-bottom:10px;">4 添加上下文--把「学生成绩.csv」交给 AI</h4>
     <div style="color:var(--text-body);font-size:16px;line-height:1.9;margin-bottom:14px;">
-      在输入框输入任务描述前,先<strong>添加上下文</strong>(即 AI 需要的文件、图片或技能)。WorkBuddy 提供 3 种添加方式,<strong style="color:var(--accent-green);">这一步用「添加本地文件」或「粘贴文件」就行</strong>--不用先设目录;<strong style="color:var(--accent-orange);">@引用 这一步先跳过</strong>,等你把工作空间设好(3.1 讲)它才认得出文件。
+      在输入框输入任务描述前,先<strong>添加上下文</strong>(即 AI 需要的文件、图片或技能)。WorkBuddy 提供 3 种添加方式,<strong style="color:var(--accent-green);">这一步用「添加本地文件」或「粘贴文件」就行</strong>--不用先设目录;<strong style="color:var(--accent-orange);">@引用 这一步先跳过</strong>,等你把分组设好(3.1 讲)它才认得出文件。
     </div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
       <!-- 添加上下文区域截图 -->
@@ -2206,7 +2206,7 @@
       <div style="background:rgba(var(--white-rgb),0.03);border-radius:8px;padding:12px;text-align:center;border:1px dashed rgba(var(--orange-rgb),0.32);">
         <img src="images/wb_input_at.gif" alt="@引用文件" class="zoom-img" style="max-width:100%;border:1px solid rgba(var(--white-rgb),0.1);border-radius:6px;min-height:120px;background:rgba(var(--white-rgb),0.02);" onerror="imgMissing(this)">
         <div style="margin-top:8px;color:var(--text-primary);font-size:15px;font-weight:600;">@引用 <span style="font-size:11px;padding:1px 8px;border-radius:9px;background:rgba(var(--orange-rgb),0.15);color:var(--accent-orange);border:1px solid rgba(var(--orange-rgb),0.38);font-weight:700;vertical-align:middle;">这一步先不用</span></div>
-        <div style="color:var(--text-muted);font-size:13px;margin-top:2px;">输入 @ 触发文件选择,只能选到<strong>工作空间根目录</strong>里的文件<br><span style="color:var(--accent-orange);">⚠️ 没设空间就 @ 不到--设好空间(3.1)再回头用</span></div>
+        <div style="color:var(--text-muted);font-size:13px;margin-top:2px;">输入 @ 触发文件选择,只能选到<strong>分组根目录</strong>里的文件<br><span style="color:var(--accent-orange);">⚠️ 没设分组就 @ 不到--设好分组(3.1)再回头用</span></div>
       </div>
       <!-- 粘贴文件 -->
       <div style="background:rgba(var(--white-rgb),0.03);border-radius:8px;padding:12px;text-align:center;">
@@ -2291,7 +2291,7 @@
 <section class="slide" id="feature-tour">
   <h2>3.1 🗺️ 认识操作主界面--三个区 · 对话区的设置</h2>
   <div class="highlight" style="margin-bottom:16px;">
-    💡 刚才你已经跑完第一个任务。这一页把界面拆开看--<strong>在哪里下指令、在哪里看结果、哪里需要设置</strong>。对话区下面四个设置(工作空间 / 模式 / 模型 / 权限)选对,后面的四步实操会顺很多。
+    💡 刚才你已经跑完第一个任务。这一页把界面拆开看--<strong>在哪里下指令、在哪里看结果、哪里需要设置</strong>。对话区下面四个设置(分组 / 模式 / 模型 / 权限)选对,后面的四步实操会顺很多。
   </div>
 
   <!-- 1 界面三区 -->
@@ -2306,21 +2306,21 @@
         <div style="font-size:15px;font-weight:700;color:var(--accent-blue);">① 侧边栏(左)--功能入口</div>
         <div style="font-size:13px;color:var(--text-body);line-height:1.8;margin-top:4px;">
           上半部分:<strong>新建任务</strong> · <strong>助理</strong> · <strong>专家·技能·连接器</strong> · <strong>定时任务</strong> · <strong>资料库</strong> · <strong>更多</strong><br>
-          下半部分两个列表:<strong>「任务」</strong>和<strong>「空间」</strong>--下一段专门讲这两个怎么分。
+          下半部分两个列表:<strong>「任务」</strong>和<strong>「分组」</strong>--下一段专门讲这两个怎么分。
         </div>
       </div>
       <div class="card" style="border-left:3px solid var(--accent-green);padding:10px 14px;margin:0;">
         <div style="font-size:15px;font-weight:700;color:var(--accent-green);">② 对话区(中)--下指令的地方</div>
         <div style="font-size:13px;color:var(--text-body);line-height:1.8;margin-top:4px;">
           顶部任务标题 → 中间消息流(<strong>AI 每一步干了什么实时显示</strong>,干完给你一张<strong>产物卡片</strong>)→ 底部输入框。<br>
-          输入框下面那一排:<strong>左边 + 菜单</strong>(模式藏在这里)、<strong>技能</strong>;<strong>右边写着当前模型</strong>,再往右是语音和发送。<strong>输入框正下方</strong>还有两个下拉:<strong>选择工作空间</strong>和<strong>默认权限</strong>。
+          输入框下面那一排:<strong>左边 + 菜单</strong>(模式藏在这里)、<strong>技能</strong>;<strong>右边写着当前模型</strong>,再往右是语音和发送。<strong>输入框正下方</strong>还有两个下拉:<strong>选择分组</strong>和<strong>默认权限</strong>。
         </div>
       </div>
       <div class="card" style="border-left:3px solid var(--accent-orange);padding:10px 14px;margin:0;">
         <div style="font-size:15px;font-weight:700;color:var(--accent-orange);">③ 结果区(右)--验收成果的地方</div>
         <div style="font-size:13px;color:var(--text-body);line-height:1.8;margin-top:4px;">
           点对话里的产物卡片,文件<strong>直接在这一侧打开</strong>--Excel 表格能看、能改,不用另开软件。<br>
-          结果区里四个入口:<strong>打开浏览器 / 查看工作空间 / 查看变更 / 打开终端</strong>,下面还有<strong>产物列表</strong>(第 6 段细讲)。
+          结果区里四个入口:<strong>打开浏览器 / 查看分组 / 查看变更 / 打开终端</strong>,下面还有<strong>产物列表</strong>(第 6 段细讲)。
         </div>
       </div>
       <div style="font-size:12.5px;color:var(--text-muted);line-height:1.7;padding:0 4px;">
@@ -2329,15 +2329,15 @@
     </div>
   </div>
 
-  <!-- 2 任务 / 空间 → 工作空间 -->
-  <h3 style="margin-top:8px;">2 「任务」与「空间」--两个列表怎么分,目录怎么设</h3>
+  <!-- 2 任务 / 分组 → 分组 -->
+  <h3 style="margin-top:8px;">2 「任务」与「分组」--两个列表怎么分,目录怎么设</h3>
   <div style="display:grid;grid-template-columns:1.15fr 0.85fr;gap:14px;margin-bottom:12px;align-items:center;">
     <div style="color:var(--text-body);font-size:15px;line-height:1.9;">
-      三区先混个脸熟就行。真正要现在搞懂的,是<strong>侧边栏下半部分那两个列表</strong>——「任务」和「空间」:这俩看着不起眼,却决定了你每次干活之后<strong>文件去哪、下次还找不找得到</strong>。
+      三区先混个脸熟就行。真正要现在搞懂的,是<strong>侧边栏下半部分那两个列表</strong>——「任务」和「分组」:这俩看着不起眼,却决定了你每次干活之后<strong>文件去哪、下次还找不找得到</strong>。
     </div>
     <div style="text-align:center;">
-      <img src="images/wb_sidebar_lists.png" alt="侧边栏任务与空间两个列表" class="zoom-img" style="max-width:100%;border:1px solid rgba(var(--white-rgb),0.1);border-radius:6px;background:rgba(var(--white-rgb),0.02);" onerror="imgMissing(this)">
-      <div style="margin-top:4px;color:var(--text-muted);font-size:12px;">📍 侧边栏下半部分:上「任务」、下「空间」两个列表</div>
+      <img src="images/wb_sidebar_lists.png" alt="侧边栏任务与分组两个列表" class="zoom-img" style="max-width:100%;border:1px solid rgba(var(--white-rgb),0.1);border-radius:6px;background:rgba(var(--white-rgb),0.02);" onerror="imgMissing(this)">
+      <div style="margin-top:4px;color:var(--text-muted);font-size:12px;">📍 侧边栏下半部分:上「任务」、下「分组」两个列表</div>
     </div>
   </div>
 
@@ -2347,41 +2347,41 @@
       <div style="font-size:16px;font-weight:700;color:var(--accent-blue);">📋 「任务」--不设任何东西,直接写提示词</div>
       <div style="font-size:14px;color:var(--text-body);line-height:1.9;margin-top:8px;">
         打开客户端,在输入框里<strong>直接写要求</strong>、回车,AI 跑完一轮就多出<strong>一个任务</strong>,自动排进「任务」列表,<strong>最近的排最上</strong>。点一下能回到那次对话接着聊,当时的产物也还在。<br>
-        <span style="color:var(--accent-orange);font-weight:600;">⚠️ 但没设工作空间时</span>:WorkBuddy 会自动建一个<span class="hl-lg warn">临时目录</span>把活干完。文件不会丢,可目录名是它起的、位置不好找,而且只挂在这一条任务下面,<strong>不成本组</strong>。<br>
-        <span style="color:var(--text-muted);font-size:13px;">✅ 什么时候这样用:临时问一句、试一下、不打算留档的活--用完就扔,不必建空间。</span>
+        <span style="color:var(--accent-orange);font-weight:600;">⚠️ 但没设分组时</span>:WorkBuddy 会自动建一个<span class="hl-lg warn">临时目录</span>把活干完。文件不会丢,可目录名是它起的、位置不好找,而且只挂在这一条任务下面,<strong>不归任何分组</strong>。<br>
+        <span style="color:var(--text-muted);font-size:13px;">✅ 什么时候这样用:临时问一句、试一下、不打算留档的活--用完就扔,不必建分组。</span>
       </div>
     </div>
     <div class="card" style="border-top:3px solid var(--accent-blue);padding:12px;margin:0;display:flex;flex-direction:column;">
-      <img src="images/wb_flow_task.png" alt="不设空间直接输入提示词的界面" class="zoom-img" style="width:100%;flex:1;object-fit:contain;border:1px solid rgba(var(--white-rgb),0.1);border-radius:6px;min-height:150px;background:rgba(var(--white-rgb),0.02);" onerror="imgMissing(this)">
-      <div style="margin-top:8px;color:var(--text-muted);font-size:12.5px;text-align:center;">📍 不选工作空间,直接写提示词 → 数据落在「临时目录」</div>
+      <img src="images/wb_flow_task.png" alt="不设分组直接输入提示词的界面" class="zoom-img" style="width:100%;flex:1;object-fit:contain;border:1px solid rgba(var(--white-rgb),0.1);border-radius:6px;min-height:150px;background:rgba(var(--white-rgb),0.02);" onerror="imgMissing(this)">
+      <div style="margin-top:8px;color:var(--text-muted);font-size:12.5px;text-align:center;">📍 不选分组,直接写提示词 → 数据落在「临时目录」</div>
     </div>
   </div>
 
-  <!-- 2b 空间：行 -->
+  <!-- 2b 分组：行 -->
   <div style="display:grid;grid-template-columns:1.12fr 0.88fr;gap:14px;margin-bottom:12px;align-items:stretch;">
     <div class="card" style="border-left:4px solid var(--accent-green);padding:14px 16px;margin:0;display:flex;flex-direction:column;justify-content:center;">
-      <div style="font-size:16px;font-weight:700;color:var(--accent-green);">📁 「空间」--先设文件夹,再写提示词</div>
+      <div style="font-size:16px;font-weight:700;color:var(--accent-green);">📁 「分组」--先设文件夹,再写提示词</div>
       <div style="font-size:14px;color:var(--text-body);line-height:1.9;margin-top:8px;">
-        顺序反过来:<strong>先指定一个文件夹</strong>当工作空间,再往输入框里写提示词。这条任务就归进「空间」,按文件夹分组。<br>
-        <span style="color:var(--accent-green);font-weight:600;">怎么建</span>--「空间」这块有两个入口,点哪个都行:<br>
-        <span style="display:inline-block;margin:3px 6px 3px 0;padding:2px 10px;border-radius:12px;border:1px solid rgba(var(--blue-rgb),0.4);background:rgba(var(--blue-rgb),0.1);color:var(--accent-blue);font-size:13px;font-weight:700;">＋ 新建工作空间</span>从零建一个,交给 WorkBuddy 管<br>
+        顺序反过来:<strong>先指定一个文件夹</strong>当分组,再往输入框里写提示词。这条任务就归进「分组」,按文件夹归类。<br>
+        <span style="color:var(--accent-green);font-weight:600;">怎么建</span>--「分组」这块有两个入口,点哪个都行:<br>
+        <span style="display:inline-block;margin:3px 6px 3px 0;padding:2px 10px;border-radius:12px;border:1px solid rgba(var(--blue-rgb),0.4);background:rgba(var(--blue-rgb),0.1);color:var(--accent-blue);font-size:13px;font-weight:700;">＋ 新建分组</span>从零建一个,交给 WorkBuddy 管<br>
         <span style="display:inline-block;margin:3px 6px 3px 0;padding:2px 10px;border-radius:12px;border:1px solid rgba(var(--green-rgb),0.4);background:rgba(var(--green-rgb),0.1);color:var(--accent-green);font-size:13px;font-weight:700;">📂 打开本地文件夹</span>直接指向你电脑上已有的文件夹<br>
-        <span style="color:var(--accent-green);font-weight:600;">✅ 好处</span>:同一个空间里的任务<span class="hl-lg good">共用这个目录</span>--文件存进同一个地方,下次还读得到,<strong>一门课一个文件夹</strong>,四个实操全放这儿,回头一眼找全。<br>
-        <span style="color:var(--accent-orange);font-weight:600;">🔁 补上刚才那一步</span>:空间设好后,输入框打 <strong style="font-size:1.15em;">@</strong> 就能直接引用<strong>这个目录里的文件</strong>--2.3 里跳过的「@引用」,现在能用了。<br>
+        <span style="color:var(--accent-green);font-weight:600;">✅ 好处</span>:同一个分组里的任务<span class="hl-lg good">共用这个目录</span>--文件存进同一个地方,下次还读得到,<strong>一门课一个文件夹</strong>,四个实操全放这儿,回头一眼找全。<br>
+        <span style="color:var(--accent-orange);font-weight:600;">🔁 补上刚才那一步</span>:分组设好后,输入框打 <strong style="font-size:1.15em;">@</strong> 就能直接引用<strong>这个目录里的文件</strong>--2.3 里跳过的「@引用」,现在能用了。<br>
         <span style="color:var(--text-muted);font-size:13px;">管三件事:从哪里读文件 · 成果存到哪里 · 只能在这个目录里活动(权限边界)</span>
       </div>
     </div>
     <div class="card" style="border-top:3px solid var(--accent-green);padding:12px;margin:0;display:flex;flex-direction:column;">
-      <img src="images/wb_flow_space.png" alt="先设置工作空间再输入提示词的界面" class="zoom-img" style="width:100%;flex:1;object-fit:contain;border:1px solid rgba(var(--white-rgb),0.1);border-radius:6px;min-height:150px;background:rgba(var(--white-rgb),0.02);" onerror="imgMissing(this)">
-      <div style="margin-top:8px;color:var(--text-muted);font-size:12.5px;text-align:center;">📍 先选好工作空间,再写提示词 → 落在「空间」列表</div>
+      <img src="images/wb_flow_space.png" alt="先设置分组再输入提示词的界面" class="zoom-img" style="width:100%;flex:1;object-fit:contain;border:1px solid rgba(var(--white-rgb),0.1);border-radius:6px;min-height:150px;background:rgba(var(--white-rgb),0.02);" onerror="imgMissing(this)">
+      <div style="margin-top:8px;color:var(--text-muted);font-size:12.5px;text-align:center;">📍 先选好分组,再写提示词 → 落在「分组」列表</div>
     </div>
   </div>
 
   <div class="ok-box" style="margin:0 0 12px 0;">
     <div class="title">💡 一句话分清</div>
     <div class="text" style="font-size:14px;">
-      <strong>「任务」看的是"我干过什么"</strong>(一个任务 = 一段对话),<strong>「空间」看的是"东西存在哪"</strong>(一个空间 = 一个文件夹)。<br>
-      <strong style="color:var(--accent-green);">所以顺序是先设空间、再造任务</strong>--先说清楚"这门课的文件放 D 盘哪个文件夹",再让它干活,出来的东西自然归在一起。
+      <strong>「任务」看的是"我干过什么"</strong>(一个任务 = 一段对话),<strong>「分组」看的是"东西存在哪"</strong>(一个分组 = 一个文件夹)。<br>
+      <strong style="color:var(--accent-green);">所以顺序是先设分组、再造任务</strong>--先说清楚"这门课的文件放 D 盘哪个文件夹",再让它干活,出来的东西自然归在一起。
     </div>
   </div>
 
@@ -2390,19 +2390,19 @@
     <div style="margin:0;display:flex;flex-direction:column;justify-content:center;background:linear-gradient(135deg,rgba(var(--green-rgb),0.16),rgba(var(--green-rgb),0.05));border:2px solid var(--accent-green);border-radius:10px;padding:14px 16px;box-shadow:0 0 0 4px rgba(var(--green-rgb),0.09),0 10px 26px rgba(var(--green-rgb),0.16);">
       <div style="display:flex;align-items:center;gap:9px;">
         <span style="font-size:21px;line-height:1;">🖐️</span>
-        <span style="font-size:19px;font-weight:800;color:var(--accent-green);letter-spacing:0.3px;">现在动手:建一个工作空间</span>
+        <span style="font-size:19px;font-weight:800;color:var(--accent-green);letter-spacing:0.3px;">现在动手:建一个分组</span>
         <span style="margin-left:auto;font-size:11.5px;font-weight:700;padding:2px 9px;border-radius:10px;background:rgba(var(--green-rgb),0.18);color:var(--accent-green);border:1px solid rgba(var(--green-rgb),0.42);white-space:nowrap;">📌 学员动手</span>
       </div>
       <div style="height:1px;background:rgba(var(--green-rgb),0.28);margin:9px 0 2px;"></div>
-      <div class="step" style="margin:7px 0;"><div class="num">1</div><div class="text" style="font-size:15px;">在 D 盘新建 <code>D:\WorkBuddy国培</code><span style="display:block;color:var(--text-muted);font-size:12.5px;margin-top:1px;">不想自己建?点「＋ 新建工作空间」起个名,它帮你建</span></div></div>
+      <div class="step" style="margin:7px 0;"><div class="num">1</div><div class="text" style="font-size:15px;">在 D 盘新建 <code>D:\WorkBuddy国培</code><span style="display:block;color:var(--text-muted);font-size:12.5px;margin-top:1px;">不想自己建?点「＋ 新建分组」起个名,它帮你建</span></div></div>
       <div class="step" style="margin:7px 0;"><div class="num">2</div><div class="text" style="font-size:15px;">点 <strong>📂 打开本地文件夹</strong>,选中这个文件夹</div></div>
-      <div class="step" style="margin:7px 0;"><div class="num">3</div><div class="text" style="font-size:15px;">确认:输入框下方的「选择工作空间」变成<strong style="color:var(--accent-green);">你的文件夹名</strong>--就成了</div></div>
-      <div class="step" style="margin:7px 0 0;"><div class="num">4</div><div class="text" style="font-size:15px;">侧边栏「空间」里能看到它,这四步实操的任务都丢进去</div></div>
+      <div class="step" style="margin:7px 0;"><div class="num">3</div><div class="text" style="font-size:15px;">确认:输入框下方的「选择分组」变成<strong style="color:var(--accent-green);">你的文件夹名</strong>--就成了</div></div>
+      <div class="step" style="margin:7px 0 0;"><div class="num">4</div><div class="text" style="font-size:15px;">侧边栏「分组」里能看到它,这四步实操的任务都丢进去</div></div>
     </div>
     <div class="card" style="border-top:3px solid var(--accent-green);padding:12px 14px;margin:0;display:flex;flex-direction:column;justify-content:center;">
-      <img src="images/wb_space_ready.png" alt="设好工作空间后的界面" class="zoom-img" style="width:100%;border:1px solid rgba(var(--white-rgb),0.1);border-radius:6px;min-height:130px;background:rgba(var(--white-rgb),0.02);" onerror="imgMissing(this)">
+      <img src="images/wb_space_ready.png" alt="设好分组后的界面" class="zoom-img" style="width:100%;border:1px solid rgba(var(--white-rgb),0.1);border-radius:6px;min-height:130px;background:rgba(var(--white-rgb),0.02);" onerror="imgMissing(this)">
       <div style="margin-top:8px;color:var(--text-muted);font-size:12.5px;line-height:1.7;text-align:center;">
-        📍 红框那行就是证据:输入框左下方显示<strong style="color:var(--accent-green);">WorkBuddy国培</strong>,空间就设好了
+        📍 红框那行就是证据:输入框左下方显示<strong style="color:var(--accent-green);">WorkBuddy国培</strong>,分组就设好了
       </div>
       <div style="margin-top:6px;color:var(--text-body);font-size:12.5px;line-height:1.7;background:rgba(var(--green-rgb),0.07);border-radius:5px;padding:6px 9px;">
         🗂️ <strong>子文件夹不用提前建</strong>--干活时让它建,文件自然落在根目录;真需要分了,再按「一门课一个文件夹」理一次。
@@ -2508,7 +2508,7 @@
   <div class="two-col" style="margin-bottom:14px;">
     <div class="card" style="border-left:4px solid var(--accent-pink);margin:0;padding:12px 14px;">
       <div style="color:var(--text-body);font-size:14px;line-height:1.9;">
-        <strong>默认权限</strong>:改文件、访问工作空间外的位置,都要你<strong>点一下确认</strong><br>
+        <strong>默认权限</strong>:改文件、访问分组外的位置,都要你<strong>点一下确认</strong><br>
         <strong>完全访问</strong>:免掉这些确认,<strong>不建议随手开</strong>--尤其是让它动成绩、职称材料的时候<br>
         <span style="color:var(--text-muted);font-size:13px;">位置:输入框正下方的<strong>「默认权限」</strong>下拉。技能 / 连接器 / 专家后面<strong>3.4 单独讲</strong>,现在不用配。</span>
       </div>
@@ -2519,7 +2519,7 @@
       <div class="text" style="font-size:15px;">
         • 模式:<strong>默认 Agent</strong>(任务明确,直接执行)<br>
         • 模型:<strong>默认模型</strong>(日常够用,不折腾)<br>
-        • 工作空间:<strong>D:\WorkBuddy国培</strong><br>
+        • 分组:<strong>D:\WorkBuddy国培</strong><br>
         • 权限:<strong>默认权限</strong>(不开完全访问)
       </div>
     </div>
@@ -2539,7 +2539,7 @@
           <div style="font-size:13px;color:var(--text-body);line-height:1.7;margin-top:4px;">AI 上网操作时,实时画面在这里,能随时叫停</div>
         </div>
         <div class="card" style="border-left:3px solid var(--accent-green);padding:10px 12px;margin:0;">
-          <div style="font-size:14px;font-weight:700;color:var(--accent-green);">📁 查看工作空间</div>
+          <div style="font-size:14px;font-weight:700;color:var(--accent-green);">📁 查看分组</div>
           <div style="font-size:13px;color:var(--text-body);line-height:1.7;margin-top:4px;">整个目录的文件树,新出的文件一眼看到</div>
         </div>
         <div class="card" style="border-left:3px solid var(--accent-orange);padding:10px 12px;margin:0;">
@@ -2745,7 +2745,7 @@
       <div style="font-size:12.5px;color:var(--text-muted);margin-top:3px;">记录有长期价值的项目成果和约定,支持用户级和项目级</div>
       <div style="font-size:13px;color:var(--text-body);line-height:1.8;margin-top:6px;">
         <strong>用户级</strong>--你主动说的"我是谁、教什么、什么偏好",<strong>所有项目通用</strong>。<br>
-        <strong>项目级</strong>--跟着<strong>工作空间</strong>走,只在这门课 / 这个目录里生效,换个项目就不带过去。<br>
+        <strong>项目级</strong>--跟着<strong>分组</strong>走,只在这门课 / 这个目录里生效,换个项目就不带过去。<br>
         <span style="color:var(--text-muted);">存在你本机,教三门课不会串味。</span><br>
         <span style="color:var(--accent-green);font-weight:700;">打开开关就完事,AI 自动记,你基本不用管。</span>
       </div>
@@ -3572,7 +3572,7 @@
       </div>
       <div style="padding:12px 14px;border-radius:8px;background:rgba(var(--white-rgb),0.03);border:1px solid rgba(var(--white-rgb),0.08);">
         <div style="font-size:13.5px;font-weight:700;color:var(--text-primary);margin-bottom:6px;">⚠️ 执行中的安全提示</div>
-        <p style="margin:6px 0;font-size:12.5px;color:var(--text-muted);line-height:1.6;">WorkBuddy 检测到工作空间外部文件修改时,会弹出确认提示询问是否继续。</p>
+        <p style="margin:6px 0;font-size:12.5px;color:var(--text-muted);line-height:1.6;">WorkBuddy 检测到分组外部文件修改时,会弹出确认提示询问是否继续。</p>
         <div style="text-align:center;"><img src="images/wb_security_prompt.png" alt="安全确认提示截图" class="zoom-img" style="max-width:62%;margin:0 auto;border-radius:6px;border:1px solid rgba(var(--white-rgb),0.1);" onerror="imgMissing(this)"></div>
         <p style="margin:8px 0 0;font-size:12.5px;color:var(--text-muted);line-height:1.6;"><strong style="color:var(--accent-green);">这是正常的安全确认机制</strong>,确认无误后选择「允许」即可。</p>
       </div>
@@ -3639,7 +3639,7 @@
         <div class="card" style="border-left:4px solid var(--accent-green);margin:0;">
           <h4>📋 操作步骤</h4>
           <div class="step"><div class="num">1</div><div class="text">把 <code>学员资料包</code> 整个文件夹拖进你 4.2 设的工作目录里--<strong>只需一次</strong>。提示词里写的相对路径就是从这里算的,不拖进去 AI 找不到文件</div></div>
-          <div class="step"><div class="num">2</div><div class="text"><strong>新建对话</strong>,工作空间选你自己的工作目录(4.2 那一步建好的文件夹,不是讲师的路径)</div></div>
+          <div class="step"><div class="num">2</div><div class="text"><strong>新建对话</strong>,分组选你自己的工作目录(4.2 那一步建好的文件夹,不是讲师的路径)</div></div>
           <div class="step"><div class="num">3</div><div class="text">模式保持<strong>默认(Agent)</strong>即可(直接执行)</div></div>
           <div class="step"><div class="num">4</div><div class="text">复制<strong>提示词模板</strong>(不是示例提示词!),替换<b style="color:var(--accent-orange2);">橙色</b>的<strong>【请填…】</strong>--要填的只剩<strong>文件里没有、只有你知道的</strong>几项:学生实际基础、痛点、教材版本;手上没有的那行直接删掉</div></div>
           <div class="step"><div class="num">5</div><div class="text">按回车发送。先看它<strong>读了哪几份文件</strong>--报告开头会写;如果一份没读就开始编,停下来问它"你读了工作目录里的材料吗?"</div></div>
