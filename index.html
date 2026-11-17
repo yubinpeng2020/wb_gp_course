@@ -3636,30 +3636,16 @@
 <strong>③ 手上没有可讲的课</strong>:照包里这门走一遍,练的是流程;练完到「记忆」里把这条删掉,别让它一直算作你的课。</div>
       </div>
     </div>
-    <!-- 参考截图:次要材料,放下面看 -->
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px;align-items:start;">
-      <div style="padding:12px 14px;border-radius:8px;background:rgba(var(--white-rgb),0.03);border:1px solid rgba(var(--white-rgb),0.08);">
-        <div style="font-size:13.5px;font-weight:700;color:var(--text-primary);margin-bottom:6px;">📸 参考:AI 大致会输出什么</div>
-        <div style="text-align:center;"><img src="images/wb_diag_result.png" alt="课程诊断结果示例" class="zoom-img" style="max-width:62%;margin:0 auto;border-radius:6px;" onerror="imgMissing(this)"></div>
-        <p style="margin:8px 0 0;font-size:12.5px;color:var(--text-muted);line-height:1.6;">四部分:行业需求摘要(5 条趋势) → 教材评估(含「教材与本校方案的差异」) → 诊断表格(5 模块) → 可行性评估(三优先级方案),以 Word 文档输出</p>
-      </div>
-      <div style="padding:12px 14px;border-radius:8px;background:rgba(var(--white-rgb),0.03);border:1px solid rgba(var(--white-rgb),0.08);">
-        <div style="font-size:13.5px;font-weight:700;color:var(--text-primary);margin-bottom:6px;">⚠️ 执行中的安全提示</div>
-        <p style="margin:6px 0;font-size:12.5px;color:var(--text-muted);line-height:1.6;">WorkBuddy 检测到分组外部文件修改时,会弹出确认提示询问是否继续。</p>
-        <div style="text-align:center;"><img src="images/wb_security_prompt.png" alt="安全确认提示截图" class="zoom-img" style="max-width:62%;margin:0 auto;border-radius:6px;border:1px solid rgba(var(--white-rgb),0.1);" onerror="imgMissing(this)"></div>
-        <p style="margin:8px 0 0;font-size:12.5px;color:var(--text-muted);line-height:1.6;"><strong style="color:var(--accent-green);">这是正常的安全确认机制</strong>,确认无误后选择「允许」即可。</p>
-      </div>
-    </div>
 
   </div>
 
   <!-- 下半部分:学员跟做 -->
   <div class="card" style="border-left:4px solid var(--accent-orange2);">
 
-    <div style="display:grid;grid-template-columns:58% 42%;gap:16px;">
-      <div>
+    <div style="display:grid;grid-template-columns:50% 50%;gap:16px;align-items:stretch;">
+      <div style="display:flex;flex-direction:column;min-width:0;">
         <div class="pt-head tpl"><span class="pt-tag tpl">📝 学员模板</span><span class="pt-note">替换橙色【请填…】;没有的材料就把那行删掉,<b>第 6 项也一起删</b></span></div>
-        <div class="prompt-box" id="p-diag-do" style="margin-top:14px;"><span style="color:var(--accent-blue);font-weight:bold;">我要做一次课程诊断。我教一门课程「<span class="ph">【请填你的课程名称】</span>」。</span>
+        <div class="prompt-box" id="p-diag-do" style="margin-top:14px;flex:1;"><span style="color:var(--accent-blue);font-weight:bold;">我要做一次课程诊断。我教一门课程「<span class="ph">【请填你的课程名称】</span>」。</span>
 
 【手边的材料,都在工作目录里,先读再动手】
 - 本校课程材料:<span class="ph">【请填文件夹,如 学员资料包/本校课程材料;没有就删掉这行】</span>
@@ -3712,6 +3698,21 @@
             <li><strong>没有教材</strong>(体育、美术、公共基础课常见):教材大纲那行删掉,<strong>第 4 项和输出第二部分一起删</strong>,只留行业需求 + 诊断表 + 可行性;这类课常常一份材料都没有,光写课程名称也能问</li>
           </ul>
         </div>
+      </div>
+    </div>
+
+    <!-- 按回车前后:界面长什么样 -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px;align-items:start;">
+      <div style="padding:12px 14px;border-radius:8px;background:rgba(var(--white-rgb),0.03);border:1px solid rgba(var(--white-rgb),0.08);">
+        <div style="font-size:13.5px;font-weight:700;color:var(--text-primary);margin-bottom:6px;">📸 执行前:界面应该长这样</div>
+        <div style="text-align:center;"><img src="images/wb_before_send.png" alt="按回车前的界面截图" class="zoom-img" style="max-width:62%;margin:0 auto;border-radius:6px;" onerror="imgMissing(this)"></div>
+        <p style="margin:8px 0 0;font-size:12.5px;color:var(--text-muted);line-height:1.6;">输入框下方分组已是 <strong>D:\WorkBuddy国培</strong>;提示词粘在输入框里、橙色【请填…】都换掉了;模式留在默认 Agent(没开 Plan / Ask)。这三样齐了再按回车。</p>
+      </div>
+      <div style="padding:12px 14px;border-radius:8px;background:rgba(var(--white-rgb),0.03);border:1px solid rgba(var(--white-rgb),0.08);">
+        <div style="font-size:13.5px;font-weight:700;color:var(--text-primary);margin-bottom:6px;">⚠️ 执行中的安全提示</div>
+        <p style="margin:6px 0;font-size:12.5px;color:var(--text-muted);line-height:1.6;">WorkBuddy 检测到分组外部文件修改时,会弹出确认提示询问是否继续。</p>
+        <div style="text-align:center;"><img src="images/wb_security_prompt.png" alt="安全确认提示截图" class="zoom-img" style="max-width:62%;margin:0 auto;border-radius:6px;border:1px solid rgba(var(--white-rgb),0.1);" onerror="imgMissing(this)"></div>
+        <p style="margin:8px 0 0;font-size:12.5px;color:var(--text-muted);line-height:1.6;"><strong style="color:var(--accent-green);">这是正常的安全确认机制</strong>,确认无误后选择「允许」即可。</p>
       </div>
     </div>
   </div>
