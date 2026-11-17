@@ -1557,6 +1557,11 @@
   .cap-row .bubble-label{font-size:10.5px;margin-bottom:2px;}
   .cap-row .ai-result{font-size:12px;}
 
+  /* 旧版界面截图标注:徽标 + 新旧名对照 */
+  .ver-tag{display:inline-block;font-size:10.5px;font-weight:800;padding:1px 6px;border-radius:4px;background:rgba(var(--orange-rgb),0.2);color:var(--accent-orange2);border:1px solid rgba(var(--orange-rgb),0.5);margin-right:4px;white-space:nowrap;vertical-align:1px;}
+  .ver-note{display:block;margin-top:2px;color:var(--text-muted);line-height:1.65;}
+  body.light .ver-tag{color:#B45309;background:rgba(var(--orange-rgb),0.16);}
+
 </style>
 </head>
 <body>
@@ -2175,7 +2180,7 @@
         <img src="images/wb_files_result.png" alt="资料包里的学生成绩表" class="zoom-img" style="max-width:85%;border:1px solid rgba(var(--white-rgb),0.1);border-radius:6px;min-height:40px;background:rgba(var(--white-rgb),0.02);margin-top:10px;display:block;margin-left:auto;margin-right:auto;" onerror="imgMissing(this)">
         <div style="margin-top:4px;color:var(--text-muted);font-size:12px;">📍 学生成绩.csv 文件位置</div>
         <img src="images/wb_first_prompt.png" alt="填入提示词但未发送的界面" class="zoom-img" style="max-width:85%;border:1px solid rgba(var(--white-rgb),0.1);border-radius:6px;min-height:40px;background:rgba(var(--white-rgb),0.02);margin-top:14px;display:block;margin-left:auto;margin-right:auto;" onerror="imgMissing(this)">
-        <div style="margin-top:4px;color:var(--text-muted);font-size:12px;">📍 在输入框填入提示词、但还没按回车发送的界面</div>
+        <div style="margin-top:4px;color:var(--text-muted);font-size:12px;line-height:1.7;">📍 在输入框填入提示词、但还没按回车发送的界面<div class="ver-note"><span class="ver-tag">旧版截图</span>图里「新建任务」＝现在的「新建对话」,「选择工作空间」＝现在的「选择分组」</div></div>
       </div>
     </div>
   </div>
@@ -2200,7 +2205,7 @@
       <div style="background:rgba(var(--white-rgb),0.03);border-radius:8px;padding:12px;text-align:center;">
         <img src="images/wb_context_area.png" alt="上下文添加区域" class="zoom-img" style="max-width:100%;border:1px solid rgba(var(--white-rgb),0.1);border-radius:6px;min-height:120px;background:rgba(var(--white-rgb),0.02);" onerror="imgMissing(this)">
         <div style="margin-top:8px;color:var(--text-primary);font-size:15px;font-weight:600;">上下文区域</div>
-        <div style="color:var(--text-muted);font-size:13px;margin-top:2px;">输入框上方的文件区<br>添加后文件显示在此</div>
+        <div style="color:var(--text-muted);font-size:13px;margin-top:2px;">输入框上方的文件区<br>添加后文件显示在此<div class="ver-note"><span class="ver-tag">旧版截图</span>图里「选择工作空间」＝现在的「选择分组」</div></div>
       </div>
       <!-- @引用 -->
       <div style="background:rgba(var(--white-rgb),0.03);border-radius:8px;padding:12px;text-align:center;border:1px dashed rgba(var(--orange-rgb),0.32);">
@@ -2255,7 +2260,7 @@
       </div>
       <div style="flex:0 0 42%;max-width:42%;">
         <img src="images/wb_task_running.png" alt="AI执行过程" class="zoom-img" style="max-width:100%;border:1px solid rgba(var(--white-rgb),0.1);border-radius:6px;min-height:100px;background:rgba(var(--white-rgb),0.02);" onerror="imgMissing(this)">
-        <div style="margin-top:4px;color:var(--text-muted);font-size:12px;">📍 AI执行过程</div>
+        <div style="margin-top:4px;color:var(--text-muted);font-size:12px;line-height:1.7;">📍 AI执行过程<div class="ver-note"><span class="ver-tag">旧版截图</span>图里「任务」「空间」＝现在的「最近」「分组」</div></div>
       </div>
     </div>
   </div>
@@ -2276,11 +2281,11 @@
     <div style="display:flex;gap:16px;">
       <div style="flex:1;text-align:center;">
         <img src="images/wb_task_result.png" alt="右侧结果区查看执行结果" class="zoom-img" style="max-width:100%;border:1px solid rgba(var(--white-rgb),0.1);border-radius:6px;min-height:100px;background:rgba(var(--white-rgb),0.02);" onerror="imgMissing(this)">
-        <div style="margin-top:4px;color:var(--text-muted);font-size:12px;">📍 右侧结果区</div>
+        <div style="margin-top:4px;color:var(--text-muted);font-size:12px;line-height:1.7;">📍 右侧结果区<div class="ver-note"><span class="ver-tag">旧版截图</span>图里「查看工作空间」＝「查看分组」</div></div>
       </div>
       <div style="flex:1;text-align:center;">
         <img src="images/wb_artifacts.png" alt="产物面板查看生成的文件" class="zoom-img" style="max-width:100%;border:1px solid rgba(var(--white-rgb),0.1);border-radius:6px;min-height:100px;background:rgba(var(--white-rgb),0.02);" onerror="imgMissing(this)">
-        <div style="margin-top:4px;color:var(--text-muted);font-size:12px;">📍 产物面板</div>
+        <div style="margin-top:4px;color:var(--text-muted);font-size:12px;line-height:1.7;">📍 产物面板<div class="ver-note"><span class="ver-tag">旧版截图</span>图里「任务」「空间」＝现在的「最近」「分组」</div></div>
       </div>
     </div>
   </div>
@@ -2300,7 +2305,7 @@
   <div style="display:grid;grid-template-columns:1.05fr 1fr;gap:14px;margin-bottom:14px;align-items:stretch;">
     <div style="display:flex;flex-direction:column;justify-content:center;">
       <img src="images/wb_new_task_page.png" alt="WorkBuddy 执行后的界面" class="zoom-img" style="width:100%;border:1px solid rgba(var(--white-rgb),0.1);border-radius:8px;min-height:200px;background:rgba(var(--white-rgb),0.02);" onerror="imgMissing(this)">
-      <div style="margin-top:6px;color:var(--text-muted);font-size:12px;text-align:center;">📍 一个例子跑完之后的样子:左边「最近」、中间对话、右边结果</div>
+      <div style="margin-top:6px;color:var(--text-muted);font-size:12px;text-align:center;line-height:1.7;">📍 一个例子跑完之后的样子:左边「最近」、中间对话、右边结果<div class="ver-note"><span class="ver-tag">旧版截图</span>图里「任务」「空间」＝现在的「最近」「分组」</div></div>
     </div>
     <div style="display:flex;flex-direction:column;gap:10px;">
       <div class="card" style="border-left:3px solid var(--accent-blue);padding:10px 14px;margin:0;">
@@ -2333,7 +2338,7 @@
   <!-- 2 最近 / 分组 -->
   <h3 style="margin-top:8px;">2 「最近」与「分组」--两个列表怎么分,目录怎么设</h3>
   <div style="margin:0 0 12px;padding:9px 13px;border-radius:8px;background:rgba(var(--blue-rgb),0.07);border:1px solid rgba(var(--blue-rgb),0.22);font-size:13px;color:var(--text-body);line-height:1.7;">
-    ℹ️ <strong>版本差异:这一节按最新版界面写。</strong>新版改了两个名字,<strong style="color:var(--accent-orange);">功能都没变</strong>:①「工作空间」→<strong>「分组」</strong>;②「任务」→<strong>「最近」</strong>(侧边栏上半那个列表)。<br>实训室电脑没更新时你会看到旧名字,照着对:输入框下的<strong>「选择工作空间」=「选择分组」</strong>、<strong>「＋ 新建工作空间」=「＋ 新建分组」</strong>、侧边栏<strong>「空间」列表 =「分组」列表</strong>、结果区<strong>「查看工作空间」=「查看分组」</strong>、上半部分<strong>「任务」列表 =「最近」列表</strong>。<br>名字换了,地方和操作一步没变。
+    ℹ️ <strong>版本差异:这一节按最新版界面写。</strong>新版改了两个名字,<strong style="color:var(--accent-orange);">功能都没变</strong>:①「工作空间」→<strong>「分组」</strong>;②「任务」→<strong>「最近」</strong>(侧边栏上半那个列表)。<br>实训室电脑没更新时你会看到旧名字,照着对:输入框下的<strong>「选择工作空间」=「选择分组」</strong>、<strong>「＋ 新建工作空间」=「＋ 新建分组」</strong>、侧边栏<strong>「空间」列表 =「分组」列表</strong>、结果区<strong>「查看工作空间」=「查看分组」</strong>、上半部分<strong>「任务」列表 =「最近」列表</strong>。<br>名字换了,地方和操作一步没变。这一页有几张图取自旧版界面,图注带<span class="ver-tag">旧版截图</span>的,照上面的对应关系念。
   </div>
   <div style="display:grid;grid-template-columns:1.15fr 0.85fr;gap:14px;margin-bottom:12px;align-items:center;">
     <div style="color:var(--text-body);font-size:15px;line-height:1.9;">
@@ -2341,7 +2346,7 @@
     </div>
     <div style="text-align:center;">
       <img src="images/wb_sidebar_lists.png" alt="侧边栏最近与分组两个列表" class="zoom-img" style="max-width:100%;border:1px solid rgba(var(--white-rgb),0.1);border-radius:6px;background:rgba(var(--white-rgb),0.02);" onerror="imgMissing(this)">
-      <div style="margin-top:4px;color:var(--text-muted);font-size:12px;line-height:1.7;">📍 侧边栏下半部分:上「最近」、下「分组」两个列表<br><span style="color:var(--text-faint2);">(图示为旧版界面,两个列表分别叫「任务」「空间」)</span></div>
+      <div style="margin-top:4px;color:var(--text-muted);font-size:12px;line-height:1.7;">📍 侧边栏下半部分:上「最近」、下「分组」两个列表</div>
     </div>
   </div>
 
@@ -2357,7 +2362,7 @@
     </div>
     <div class="card" style="border-top:3px solid var(--accent-blue);padding:12px;margin:0;display:flex;flex-direction:column;">
       <img src="images/wb_flow_task.png" alt="不设分组直接输入提示词的界面" class="zoom-img" style="width:100%;flex:1;object-fit:contain;border:1px solid rgba(var(--white-rgb),0.1);border-radius:6px;min-height:150px;background:rgba(var(--white-rgb),0.02);" onerror="imgMissing(this)">
-      <div style="margin-top:8px;color:var(--text-muted);font-size:12.5px;text-align:center;">📍 不选分组,直接写提示词 → 数据落在「临时目录」</div>
+      <div style="margin-top:8px;color:var(--text-muted);font-size:12.5px;text-align:center;line-height:1.7;">📍 不选分组,直接写提示词 → 数据落在「临时目录」<div class="ver-note"><span class="ver-tag">旧版截图</span>图里「不设置工作空间」＝现在的「不选分组」</div></div>
     </div>
   </div>
 
@@ -2377,7 +2382,7 @@
     </div>
     <div class="card" style="border-top:3px solid var(--accent-green);padding:12px;margin:0;display:flex;flex-direction:column;">
       <img src="images/wb_flow_space.png" alt="先设置分组再输入提示词的界面" class="zoom-img" style="width:100%;flex:1;object-fit:contain;border:1px solid rgba(var(--white-rgb),0.1);border-radius:6px;min-height:150px;background:rgba(var(--white-rgb),0.02);" onerror="imgMissing(this)">
-      <div style="margin-top:8px;color:var(--text-muted);font-size:12.5px;text-align:center;">📍 先选好分组,再写提示词 → 落在「分组」列表</div>
+      <div style="margin-top:8px;color:var(--text-muted);font-size:12.5px;text-align:center;line-height:1.7;">📍 先选好分组,再写提示词 → 落在「分组」列表<div class="ver-note"><span class="ver-tag">旧版截图</span>图里「工作空间」＝现在的「分组」</div></div>
     </div>
   </div>
 
@@ -2406,7 +2411,7 @@
     <div class="card" style="border-top:3px solid var(--accent-green);padding:12px 14px;margin:0;display:flex;flex-direction:column;justify-content:center;">
       <img src="images/wb_space_ready.png" alt="设好分组后的界面" class="zoom-img" style="width:100%;border:1px solid rgba(var(--white-rgb),0.1);border-radius:6px;min-height:130px;background:rgba(var(--white-rgb),0.02);" onerror="imgMissing(this)">
       <div style="margin-top:8px;color:var(--text-muted);font-size:12.5px;line-height:1.7;text-align:center;">
-        📍 红框那行就是证据:输入框左下方显示<strong style="color:var(--accent-green);">WorkBuddy国培</strong>,分组就设好了
+        📍 红框那行就是证据:输入框左下方显示<strong style="color:var(--accent-green);">WorkBuddy国培</strong>,分组就设好了<div class="ver-note"><span class="ver-tag">旧版截图</span>图里「先设置好工作空间」＝现在的「先设置好分组」</div>
       </div>
       <div style="margin-top:6px;color:var(--text-body);font-size:12.5px;line-height:1.7;background:rgba(var(--green-rgb),0.07);border-radius:5px;padding:6px 9px;">
         🗂️ <strong>子文件夹不用提前建</strong>--干活时让它建,文件自然落在根目录;真需要分了,再按「一门课一个文件夹」理一次。
@@ -2534,7 +2539,7 @@
   <div style="display:grid;grid-template-columns:0.55fr 1.15fr 0.85fr;gap:14px;margin-bottom:14px;align-items:stretch;">
     <div style="display:flex;flex-direction:column;justify-content:center;">
       <img src="images/wb_view_tabs.png" alt="结果区界面:标签页+四个入口+产物列表" class="zoom-img" style="width:100%;border:1px solid rgba(var(--white-rgb),0.1);border-radius:8px;min-height:120px;background:rgba(var(--white-rgb),0.02);" onerror="imgMissing(this)">
-      <div style="margin-top:6px;color:var(--text-muted);font-size:12px;text-align:center;">📍 结果区 = AI 的工作台:标签页(可多开) + 四个入口 + 产物列表</div>
+      <div style="margin-top:6px;color:var(--text-muted);font-size:12px;text-align:center;line-height:1.7;">📍 结果区 = AI 的工作台:标签页(可多开) + 四个入口 + 产物列表<div class="ver-note"><span class="ver-tag">旧版截图</span>图里「查看工作空间」＝「查看分组」</div></div>
     </div>
     <div style="display:flex;flex-direction:column;gap:10px;">
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
