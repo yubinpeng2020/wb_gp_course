@@ -3735,9 +3735,25 @@
     </div>
   </div>
 
+  <!-- 执行中：看日志 + 追问入口 -->
+  <div class="card" style="border-left:4px solid var(--accent-purple);">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start;">
+      <div>
+        <div style="font-size:13.5px;font-weight:700;color:var(--text-primary);margin-bottom:6px;">📸 执行中:盯住任务日志</div>
+        <div style="text-align:center;"><img src="images/wb_exec_log.png" alt="任务执行日志截图" class="zoom-img" style="max-width:100%;margin:0 auto;border-radius:6px;" onerror="imgMissing(this)"></div>
+        <p style="margin:8px 0 0;font-size:12.5px;color:var(--text-muted);line-height:1.6;">读哪几份文件、联网搜了什么、在写哪张表--每一步都滚在对话里。<strong>顺序和提示词对不上就当场喊停</strong>,别等它跑完再说。</p>
+      </div>
+      <div>
+        <div style="font-size:13.5px;font-weight:700;color:var(--text-primary);margin-bottom:6px;">📸 发现问题:就在输入框里追问</div>
+        <div style="text-align:center;"><img src="images/wb_ask_followup.png" alt="输入框追问截图" class="zoom-img" style="max-width:100%;margin:0 auto;border-radius:6px;" onerror="imgMissing(this)"></div>
+        <p style="margin:8px 0 0;font-size:12.5px;color:var(--text-muted);line-height:1.6;">不用等它跑完,也不用新开对话:把下面的话术粘进输入框、按回车,它按新要求接着做。</p>
+      </div>
+    </div>
+  </div>
+
   <!-- 🎯 实操增强：追问话术卡 -->
   <div class="ask-card">
-    <span class="ask-q">💬 卡住了?照着这样追问 AI:</span>
+    <span class="ask-q">💬 跑的时候盯住任务日志,看到不对就追问:</span>
     <div style="font-size:12.5px;color:var(--text-muted2);margin:2px 0 4px;">在<strong>原对话</strong>里接着问,别新开一个--它不记得刚才那份报告,会重新编一遍</div>
     <div class="ask-grid">
       <div class="ask-row"><span class="ask-sym">没读我的材料,直接开编</span><span class="ask-say">先说明你读了工作目录里的哪几份文件、各取到了什么;一份没读就先读再回答</span><button class="ask-cp" onclick="copyText(this.previousElementSibling,this)">复制</button></div>
