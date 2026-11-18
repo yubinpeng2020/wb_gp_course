@@ -3445,20 +3445,42 @@
     </div>
   </div>
 
-  <!-- 第一次执行：发出去 + 分组里多一条 -->
+  <!-- 第一次执行：发出去 -->
   <div class="card" style="border-left:4px solid var(--accent-purple);margin-top:16px;">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start;">
-        <div>
-          <div style="font-size:13.5px;font-weight:700;color:var(--text-primary);margin-bottom:6px;">📸 分组选好,发出第一条</div>
-          <div style="text-align:center;"><img src="images/wb_first_run.png" alt="在分组里发出第一条任务的截图" class="zoom-img" style="max-width:100%;margin:0 auto;border-radius:6px;" onerror="imgMissing(this)"></div>
-          <p style="margin:8px 0 0;font-size:12.5px;color:var(--text-muted);line-height:1.6;">输入框左下角是 <strong>WorkBuddy国培</strong>,提示词粘在输入框里--回车,右侧开始一步步跑。</p>
-        </div>
-        <div>
-          <div style="font-size:13.5px;font-weight:700;color:var(--text-primary);margin-bottom:6px;">📸 跑完:分组里多了一条</div>
-          <div style="text-align:center;"><img src="images/wb_group_list.png" alt="侧边栏分组列表截图" class="zoom-img" style="max-width:100%;margin:0 auto;border-radius:6px;" onerror="imgMissing(this)"></div>
-          <p style="margin:8px 0 0;font-size:12.5px;color:var(--text-muted);line-height:1.6;">侧边栏「<strong>分组</strong>」展开 WorkBuddy国培,这条对话就挂在下面;下次点它就能接着聊,不用重新建。</p>
-        </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start;">
+      <div>
+        <div style="font-size:13.5px;font-weight:700;color:var(--text-primary);margin-bottom:6px;">📸 分组选好,发出第一条</div>
+        <div style="text-align:center;"><img src="images/wb_first_run.png" alt="在分组里发出第一条任务的截图" class="zoom-img" style="max-width:100%;margin:0 auto;border-radius:6px;" onerror="imgMissing(this)"></div>
       </div>
+      <div>
+        <div style="font-size:13.5px;font-weight:700;color:var(--text-primary);margin-bottom:8px;">照这张图核对四件事</div>
+        <div class="why-item"><span class="why-k" style="background:rgba(var(--purple-rgb),0.16);color:var(--accent-purple-pale);min-width:66px;text-align:center;">① 分组</span><span class="why-t">左下角显示 <strong>WorkBuddy国培</strong>--不是临时目录,也不是别的课</span></div>
+        <div class="why-item"><span class="why-k" style="background:rgba(var(--purple-rgb),0.16);color:var(--accent-purple-pale);min-width:66px;text-align:center;">② 提示词</span><span class="why-t">橙色【请填…】已经换成你的学校、课程、学段、专业</span></div>
+        <div class="why-item"><span class="why-k" style="background:rgba(var(--purple-rgb),0.16);color:var(--accent-purple-pale);min-width:66px;text-align:center;">③ 发送</span><span class="why-t">回车后右侧开始一步步跑,<b>别关页面、别连点回车</b></span></div>
+        <div class="why-item"><span class="why-k" style="background:rgba(var(--purple-rgb),0.16);color:var(--accent-purple-pale);min-width:66px;text-align:center;">④ 收尾</span><span class="why-t">它回完「已记住」就结束,<b>这一步不产出文件</b>--档案存在记忆里,不用去目录里找</span></div>
+        <div style="margin-top:12px;padding:9px 11px;border-radius:8px;background:rgba(var(--orange2-rgb),0.10);border-left:3px solid var(--accent-orange2);font-size:12.5px;line-height:1.6;color:var(--text-body);"><b style="color:var(--accent-orange2);">最容易出错的一处</b>:分组显示成临时目录或别的名字,说明没选对。<b>先停下改分组,再发</b>--发出去生成的文件会落进那个目录,四步的成果就散在别处了。</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 跑完改名：三张图 -->
+  <div class="card" style="border-left:4px solid var(--accent-purple);margin-top:12px;">
+    <div style="font-size:13.5px;font-weight:700;color:var(--text-primary);">📸 跑完第一件事:给这条对话改名</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;align-items:start;margin-top:10px;">
+      <div>
+        <div style="font-size:12.5px;font-weight:700;color:var(--text-primary);margin-bottom:6px;">① 分组里多了一条</div>
+        <div style="text-align:center;"><img src="images/wb_group_list.png" alt="侧边栏分组列表截图" class="zoom-img" style="max-width:100%;margin:0 auto;border-radius:6px;" onerror="imgMissing(this)"></div>
+      </div>
+      <div>
+        <div style="font-size:12.5px;font-weight:700;color:var(--text-primary);margin-bottom:6px;">② 点出菜单,选「重命名」</div>
+        <div style="text-align:center;"><img src="images/wb_rename_menu.png" alt="点出重命名菜单的截图" class="zoom-img" style="max-width:100%;margin:0 auto;border-radius:6px;" onerror="imgMissing(this)"></div>
+      </div>
+      <div>
+        <div style="font-size:12.5px;font-weight:700;color:var(--text-primary);margin-bottom:6px;">③ 改成「设置长期记忆」</div>
+        <div style="text-align:center;"><img src="images/wb_rename_done.png" alt="重命名完成后的截图" class="zoom-img" style="max-width:100%;margin:0 auto;border-radius:6px;" onerror="imgMissing(this)"></div>
+      </div>
+    </div>
+    <p style="margin:10px 0 0;font-size:12.5px;color:var(--text-muted);line-height:1.6;">四步走完,这个分组里会攒下十几条对话。<strong>名字起清楚</strong>,后面 5.2、6.2、7.2 要回头翻"当时让 AI 干什么了",一眼就能找到;留着默认名,只能一条条点开看。改名不影响记忆,也不影响它记住的内容。</p>
   </div>
 
 </section>
@@ -3471,6 +3493,7 @@
 【安全三条为什么最要紧】学生姓名、学号、成绩,一旦原样出现在 AI 的输出里、你又把这份东西发到群里,就是教学事故。所以写"见到敏感信息先提醒我脱敏"。这条不是形式主义--学生信息一旦外泄,责任在任课老师身上。
 【"课程焕新/01~04"为什么从长期规则里拿掉】长期规则是所有任务共用的。学员以后还会用它写教研论文、做行政材料、整理班级台账--把"课程焕新四个子目录"这条项目规则硬写进长期记忆,那些任务也会被它牵着走:交个论文也可能给你建个 01_课程诊断出来。所以这条规则下放到四步各自的提示词末尾:第一步存「01_课程诊断」、第二步「02_学情分析」、第三步「03_教学设计」、第四步「04_教学资源」,每句都带了"(没有就新建)"--学员目录里通常还没有这几个文件夹,不写这半句,AI 会跑回来问"没找到这个目录",他当场就得停下来处理。"直接生成文件"这条留在长期规则里,是因为它管的是所有任务--不写,AI 有时把 Word 正文直接贴在对话里让你自己复制,成果留在聊天记录里、不在磁盘上,回头交作业找不到。
 【"汇报不超过 5 行"这种小事为什么要写】不写,AI 干完活能给你写一屏总结,你根本不想看,久而久之就不看它的汇报了--那才是最危险的:你开始不看它做了什么。
+【为什么让学员改名】四步走完，同一个分组里会攒下十几条对话，默认名多半是任务首句的截断，几条长得很像。5.2、6.2、7.2 上课时要回头翻"当时给 AI 的是什么提示词、它第一步干了什么"，靠默认名只能一条条点开；改过名的列表能直接扫。课上务必强调：**改名只是改显示名**，不删内容、不动记忆、不影响上下文，学员不用担心"改坏了"。改名这个动作要养成习惯--每次跑完一个任务就顺手改。
 【收尾】这套规则是你的,不是标准答案。你不喜欢啰嗦就改成"回答不超过 200 字";你常改文件就加一条"改前先给我看 diff"。带回去按自己习惯改,改完让它重新记一遍。
 接下来进入第一个实操--课程诊断。这门课还没设计好没关系,诊断就是做体检,先看清楚问题在哪。 -->
 
