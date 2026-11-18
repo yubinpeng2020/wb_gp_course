@@ -3391,7 +3391,7 @@
     <div class="why-wrap">
       <div class="card" style="margin:0;">
         <h4>📋 第一步:设用户档案</h4>
-        <div class="step"><div class="num">1</div><div class="text">打开 WorkBuddy,<strong>新建一个对话</strong>;输入框下方的分组选 <strong>WorkBuddy国培</strong>--这是这个分组里的第一条</div></div>
+        <div class="step"><div class="num">1</div><div class="text">打开 WorkBuddy,在侧边栏「<strong>分组</strong>」里展开 <strong>WorkBuddy国培</strong>,点「<strong>新建任务</strong>」--这是这个分组里的第一条</div></div>
       <div class="step"><div class="num">2</div><div class="text">复制左边的提示词,粘贴到输入框</div></div>
         <div class="step"><div class="num">3</div><div class="text">把<strong>【请填 XXX】</strong>替换成你的真实信息(学校、课程、学段、专业)</div></div>
         <div class="step"><div class="num">4</div><div class="text">按回车发送,等 WorkBuddy 回复<strong>"已记住"</strong></div></div>
@@ -3742,7 +3742,7 @@
         <div class="card" style="border-left:4px solid var(--accent-green);margin:0;">
           <h4>📋 操作步骤</h4>
           <div class="step"><div class="num">1</div><div class="text">把 <code>学员资料包</code> 整个文件夹拖进 <strong>3.1 建的那个分组文件夹</strong>里（课上建的是 D:\WorkBuddy国培）--<strong>只需一次</strong>。提示词里写的相对路径就是从这里算的,不拖进去 AI 找不到文件</div></div>
-          <div class="step"><div class="num">2</div><div class="text"><strong>新建对话</strong>,输入框下方的「选择分组」选<strong>同一个文件夹</strong>(还是 3.1 建的那个,别选到讲师的路径;<span style="color:var(--text-muted);">旧版叫「工作空间」</span>)</div></div>
+          <div class="step"><div class="num">2</div><div class="text">在侧边栏「<strong>分组</strong>」里展开 <strong>WorkBuddy国培</strong>,在这一行上点「<strong>新建任务</strong>」--新对话直接落在 3.1 建的那个目录里,不用再挑一遍分组(<span style="color:var(--text-muted);">旧版叫「工作空间」</span>)</div></div>
           <div class="step"><div class="num">3</div><div class="text">模式保持<strong>默认(Agent)</strong>即可(直接执行)</div></div>
           <div class="step"><div class="num">4</div><div class="text">复制<strong>提示词模板</strong>,把<b style="color:var(--accent-orange2);">橙色</b>的<strong>【请填…】</strong>逐项填一遍--<strong>填的过程就是练习</strong>:除了把材料文件夹指向你手头那份,剩下要填的都是<strong>文件里没有、只有你知道的</strong>(学生实际基础、痛点、教材版本);填不出来的那几项,就是你缺的信息;手上没有的那行直接删掉</div></div>
           <div class="step"><div class="num">5</div><div class="text">按回车发送。先看它<strong>读了哪几份文件</strong>--报告开头会写;如果一份没读就开始编,停下来问它"你读了工作目录里的材料吗?"</div></div>
@@ -3759,17 +3759,22 @@
       </div>
     </div>
 
-    <!-- 按回车前后:界面长什么样 -->
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px;align-items:start;">
+    <!-- 新建任务 → 按回车前 → 安全提示 -->
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-top:14px;align-items:start;">
       <div style="padding:12px 14px;border-radius:8px;background:rgba(var(--white-rgb),0.03);border:1px solid rgba(var(--white-rgb),0.08);">
-        <div style="font-size:13.5px;font-weight:700;color:var(--text-primary);margin-bottom:6px;">📸 执行前:界面应该长这样</div>
-        <div style="text-align:center;"><img src="images/wb_before_send.png" alt="按回车前的界面截图" class="zoom-img" style="max-width:62%;margin:0 auto;border-radius:6px;" onerror="imgMissing(this)"></div>
-        <p style="margin:8px 0 0;font-size:12.5px;color:var(--text-muted);line-height:1.6;">输入框下方分组已是 <strong>D:\WorkBuddy国培</strong>;提示词粘在输入框里、橙色【请填…】都换掉了;模式留在默认 Agent(没开 Plan / Ask)。这三样齐了再按回车。</p>
+        <div style="font-size:13.5px;font-weight:700;color:var(--text-primary);margin-bottom:6px;">📸 ① 从分组里新建任务</div>
+        <div style="text-align:center;min-height:200px;display:flex;align-items:center;justify-content:center;"><img src="images/wb_new_task_in_group.png" alt="在分组上点新建任务的截图" class="zoom-img" style="max-width:100%;margin:0 auto;border-radius:6px;" onerror="imgMissing(this)"></div>
+        <p style="margin:8px 0 0;font-size:12.5px;color:var(--text-muted);line-height:1.6;">侧边栏「<strong>分组</strong>」展开 <strong>WorkBuddy国培</strong>,在这一行上点「<strong>新建任务</strong>」--开出来的对话天生就在这个目录里,后面不用再管路径。</p>
       </div>
       <div style="padding:12px 14px;border-radius:8px;background:rgba(var(--white-rgb),0.03);border:1px solid rgba(var(--white-rgb),0.08);">
-        <div style="font-size:13.5px;font-weight:700;color:var(--text-primary);margin-bottom:6px;">⚠️ 执行中的安全提示</div>
+        <div style="font-size:13.5px;font-weight:700;color:var(--text-primary);margin-bottom:6px;">📸 ② 执行前:界面应该长这样</div>
+        <div style="text-align:center;min-height:200px;display:flex;align-items:center;justify-content:center;"><img src="images/wb_before_send.png" alt="按回车前的界面截图" class="zoom-img" style="max-width:100%;margin:0 auto;border-radius:6px;" onerror="imgMissing(this)"></div>
+        <p style="margin:8px 0 0;font-size:12.5px;color:var(--text-muted);line-height:1.6;">输入框下方分组已是 <strong>WorkBuddy国培</strong>;提示词粘在输入框里、橙色【请填…】都换掉了;模式留在默认 Agent(没开 Plan / Ask)。这三样齐了再按回车。</p>
+      </div>
+      <div style="padding:12px 14px;border-radius:8px;background:rgba(var(--white-rgb),0.03);border:1px solid rgba(var(--white-rgb),0.08);">
+        <div style="font-size:13.5px;font-weight:700;color:var(--text-primary);margin-bottom:6px;">⚠️ ③ 执行中的安全提示</div>
         <p style="margin:6px 0;font-size:12.5px;color:var(--text-muted);line-height:1.6;">WorkBuddy 检测到分组外部文件修改时,会弹出确认提示询问是否继续。</p>
-        <div style="text-align:center;"><img src="images/wb_security_prompt.png" alt="安全确认提示截图" class="zoom-img" style="max-width:62%;margin:0 auto;border-radius:6px;border:1px solid rgba(var(--white-rgb),0.1);" onerror="imgMissing(this)"></div>
+        <div style="text-align:center;min-height:200px;display:flex;align-items:center;justify-content:center;"><img src="images/wb_security_prompt.png" alt="安全确认提示截图" class="zoom-img" style="max-width:100%;margin:0 auto;border-radius:6px;border:1px solid rgba(var(--white-rgb),0.1);" onerror="imgMissing(this)"></div>
         <p style="margin:8px 0 0;font-size:12.5px;color:var(--text-muted);line-height:1.6;"><strong style="color:var(--accent-green);">这是正常的安全确认机制</strong>,确认无误后选择「允许」即可。</p>
       </div>
     </div>
