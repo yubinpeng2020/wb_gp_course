@@ -3784,8 +3784,8 @@
   <div class="card" style="border-left:4px solid var(--accent-purple);">
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start;">
       <div>
-        <div style="font-size:13.5px;font-weight:700;color:var(--text-primary);margin-bottom:6px;">📸 执行中:盯住任务日志</div>
-        <div style="text-align:center;"><img src="images/wb_exec_log.png" alt="任务执行日志截图" class="zoom-img" style="max-width:100%;margin:0 auto;border-radius:6px;" onerror="imgMissing(this)"></div>
+        <div style="font-size:13.5px;font-weight:700;color:var(--text-primary);margin-bottom:6px;">📸 执行监督:看它偷没偷工</div>
+        <div style="text-align:center;min-height:180px;display:flex;align-items:center;justify-content:center;"><img src="images/wb_exec_log.png" alt="任务执行日志截图" class="zoom-img" style="max-width:100%;margin:0 auto;border-radius:6px;" onerror="imgMissing(this)"></div>
         <p style="margin:8px 0 0;font-size:12.5px;color:var(--text-muted);line-height:1.6;"><strong style="color:var(--text-primary);">它不是写完才给你看</strong>--读了哪份文件、搜了什么、在写哪张表,一边跑一边滚在对话里。盯三处就够:</p>
         <ul style="margin:6px 0 0;padding-left:18px;font-size:12.5px;color:var(--text-muted);line-height:1.65;">
           <li><b style="color:var(--text-primary);">读的文件</b>:清单里那几份读了没--漏一份,后面全靠编</li>
@@ -3796,15 +3796,16 @@
       </div>
       <div>
         <div style="font-size:13.5px;font-weight:700;color:var(--text-primary);margin-bottom:6px;">📸 发现问题:就在输入框里追问</div>
-        <div style="text-align:center;"><img src="images/wb_ask_followup.png" alt="输入框追问截图" class="zoom-img" style="max-width:100%;margin:0 auto;border-radius:6px;" onerror="imgMissing(this)"></div>
+        <div style="text-align:center;min-height:180px;display:flex;align-items:center;justify-content:center;"><img src="images/wb_ask_followup.png" alt="输入框追问截图" class="zoom-img" style="max-width:100%;margin:0 auto;border-radius:6px;" onerror="imgMissing(this)"></div>
         <p style="margin:8px 0 0;font-size:12.5px;color:var(--text-muted);line-height:1.6;">不用等它跑完,也不用新开对话:把下面的话术粘进输入框、按回车,它按新要求接着做。</p>
+        <p style="margin:6px 0 0;font-size:12.5px;color:var(--text-muted);line-height:1.6;">改完让它<strong style="color:var(--text-primary);">说清动了哪几处</strong>--"已按您的意见修改"这句话不算数,回去逐处对照。</p>
       </div>
     </div>
   </div>
 
   <!-- 🎯 实操增强：追问话术卡 -->
   <div class="ask-card">
-    <span class="ask-q">💬 跑的时候盯住任务日志,看到不对就追问:</span>
+    <span class="ask-q">💬 监督时看到不对,照这句问:</span>
     <div style="font-size:12.5px;color:var(--text-muted2);margin:2px 0 4px;">在<strong>原对话</strong>里接着问,别新开一个--它不记得刚才那份报告,会重新编一遍</div>
     <div class="ask-grid">
       <div class="ask-row"><span class="ask-sym">没读我的材料,直接开编</span><span class="ask-say">先说明你读了工作目录里的哪几份文件、各取到了什么;一份没读就先读再回答</span><button class="ask-cp" onclick="copyText(this.previousElementSibling,this)">复制</button></div>
