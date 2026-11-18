@@ -3613,7 +3613,7 @@
 2. 对比我的课程内容与教材与行业现状,找出<span class="pk">匹配度最低的 3-5 个模块</span>
 3. 每个模块列出:现状描述、行业需求差距、升级方向建议
 4. 评估教材的适用性(技术栈是否过时、项目案例是否贴合企业需求)
-5. <span class="pk">结合授课对象和学时安排</span>,评估升级建议的可行性(学时是否够用)
+5. <span class="pk">结合授课对象和学时安排</span>,评估升级建议的可行性(学时是否够用),并给出<span class="pk">分优先级的落地顺序</span>(先上什么、后上什么、各占多少学时)
 <span class="pk">6. 对比本校培养方案与教材教学大纲</span>:学分、学时分配、考核方式、假定的学生基础,逐条指出不一致之处,并说明照教材的教案上课会在哪里接不上
 
 <span class="pk">只做诊断:不要改课程内容,也不要给教学设计方案。</span>
@@ -3660,7 +3660,7 @@
           <div class="why-head"><span class="why-badge">?</span>为什么要这 6 项任务</div>
           <div class="why-item"><span class="why-k">1-3 量差距</span><span class="why-t">联网搜索建立标尺 → 对比课程找最大差距 → 结构化输出每个模块的现状/差距/建议</span></div>
           <div class="why-item"><span class="why-k">4 查教材</span><span class="why-t">教材是讲课依据,单独评估,与课程内容评估互补</span></div>
-          <div class="why-item"><span class="why-k">5 刹车</span><span class="why-t">AI 容易建议大改,用课时和学生基础约束住,确保方案可落地</span></div>
+          <div class="why-item"><span class="why-k">5 刹车</span><span class="why-t">AI 容易建议大改,用课时和学生基础约束住,确保方案可落地;<b>顺带让它排出先后顺序</b>--否则你拿到的是"能改"和"不能改",没有"先改哪个"</span></div>
           <div class="why-item"><span class="why-k">6 对来源</span><span class="why-t">教材大纲和本校方案各自都成立,摆在一起才看出起点差一整门课;只评教材会漏掉这条</span></div>
           <div class="why-item"><span class="why-k">四段式</span><span class="why-t">量差距 → 查教材 → 看能不能改 → 对两个来源</span></div>
         </div>
@@ -3729,7 +3729,7 @@
 2. 对比我的课程内容与教材与行业现状,找出<span class="pk">匹配度最低的 3-5 个模块</span>
 3. 每个模块列出:现状描述、行业需求差距、升级方向建议
 4. 评估教材的适用性(技术栈是否过时、项目案例是否贴合企业需求)
-5. <span class="pk">结合授课对象和学时安排</span>,评估升级建议的可行性(学时是否够用)
+5. <span class="pk">结合授课对象和学时安排</span>,评估升级建议的可行性(学时是否够用),并给出<span class="pk">分优先级的落地顺序</span>(先上什么、后上什么、各占多少学时)
 <span class="pk">6. 对比本校培养方案与教材教学大纲</span>:学分、学时分配、考核方式、假定的学生基础,逐条指出不一致之处,并说明照教材的教案上课会在哪里接不上
 
 <span class="pk">只做诊断:不要改课程内容,也不要给教学设计方案。</span>
@@ -3858,12 +3858,13 @@
       <span style="color:var(--accent-green);font-size:16px;align-self:center;">→</span>
       <span style="background:rgba(var(--orange-rgb),0.15);border:1px solid rgba(var(--orange-rgb),0.4);border-radius:20px;padding:4px 14px;font-size:13px;color:var(--accent-orange);">3 确认优先级</span>
     </span>
+    <div style="margin-top:10px;padding-top:10px;border-top:1px dashed rgba(var(--white-rgb),0.14);font-size:13.5px;line-height:1.75;color:var(--text-body);">你跑出来的报告<strong>会和我这份不一样</strong>--诊断哪几个模块、行业里是哪几个数字、优先级怎么排,模型和材料一变就跟着变。<strong style="color:var(--accent-green);">所以别对照内容,对照判断方法</strong>:提示词里写死过的,硬查;没写死的,看它站不站得住。</div>
   </div>
 
   <!-- 第一步:检查产物完整性 -->
   <div class="card" style="border-left:4px solid var(--accent-green);margin-bottom:16px;">
-    <h4>第一步:检查产物完整性--四部分都有没有?<span style="font-size:14px;color:var(--accent-green);margin-left:10px;background:rgba(var(--green-rgb),0.1);padding:2px 10px;border-radius:12px;">完整性</span><span style="font-size:13px;color:var(--text-muted2);margin-left:6px;">查"有没有"</span></h4>
-    <p style="margin:4px 0 10px;font-size:12px;color:var(--text-muted2);">📌 对应提示词的 <code style="background:rgba(var(--green-rgb),0.1);padding:2px 6px;border-radius:4px;color:var(--accent-green);">输出格式</code> 部分--你在提示词里要求 AI 输出四部分,先查有没有缺。缺了哪部分就追问补上:</p>
+    <h4>第一步:硬查提示词规定的东西--都有没有?<span style="font-size:14px;color:var(--accent-green);margin-left:10px;background:rgba(var(--green-rgb),0.1);padding:2px 10px;border-radius:12px;">完整性</span><span style="font-size:13px;color:var(--text-muted2);margin-left:6px;">查"有没有"</span></h4>
+    <p style="margin:4px 0 10px;font-size:12px;color:var(--text-muted2);">📌 对应提示词的 <code style="background:rgba(var(--green-rgb),0.1);padding:2px 6px;border-radius:4px;color:var(--accent-green);">输出格式</code> 和 6 项任务--<strong>凡是提示词里写死的,都逐条核</strong>。这一层跟"哪个模型"无关,缺了就是没照做:</p>
     <p style="margin:6px 0 10px;font-size:14px;color:var(--text-body);">📂 打开 WorkBuddy 生成的 <strong>Word 诊断报告</strong>,查看导航窗格,确认四部分是否齐全:</p>
     <div style="display:grid;grid-template-columns:1fr 42%;gap:14px;align-items:start;">
     <div style="display:grid;grid-template-columns:auto 1fr 1fr;gap:0;border-radius:8px;overflow:hidden;">
@@ -3892,6 +3893,15 @@
       <p style="margin:6px 0 0;font-size:13px;color:var(--text-muted);">📋 Word 导航窗格:一眼看到四部分是否齐全</p>
     </div>
     </div>
+    <div style="margin-top:12px;padding:11px 13px;border-radius:8px;background:rgba(var(--green-rgb),0.07);border:1px solid rgba(var(--green-rgb),0.25);">
+      <div style="font-size:13px;font-weight:700;color:var(--accent-green);margin-bottom:7px;">另外四条也是提示词里写死的--逐条核,不用凭感觉</div>
+      <ul style="margin:0;padding-left:18px;font-size:13px;line-height:1.8;color:var(--text-body);">
+        <li>报告开头有一张表:<strong>每份材料读到了什么、缺哪几项</strong>--没有这张表,说明它没真读</li>
+        <li>诊断表格列名是 <code style="background:rgba(var(--green-rgb),0.1);padding:1px 5px;border-radius:4px;color:var(--accent-green);">模块名称 | 现状 | 行业需求差距 | 升级建议</code>,没自己加列</li>
+        <li>诊断的是 <strong>3-5 个</strong>模块--给你 8 个是没收敛,给你 2 个是没找全</li>
+        <li><strong>只做诊断</strong>:没替你写教案、没改课程内容(写了就是越界)</li>
+      </ul>
+    </div>
     <div style="margin-top:10px;padding:8px 12px;border-radius:6px;background:rgba(var(--white-rgb),0.03);border:1px solid rgba(var(--white-rgb),0.08);font-size:13px;color:var(--text-muted);">i️ 补充说明:WorkBuddy 输出为 Word/Excel 文档是<strong style="color:var(--text-body);">正常行为</strong>,不是错误--打开文档即可查看完整内容。</div>
   </div>
 
@@ -3899,7 +3909,7 @@
   <div class="card" style="border-left:4px solid var(--accent-blue);margin-bottom:16px;">
     <h4>第二步:判断诊断结果质量--每部分内容达标吗?<span style="font-size:14px;color:var(--accent-blue);margin-left:10px;background:rgba(var(--blue-rgb),0.1);padding:2px 10px;border-radius:12px;">质量</span><span style="font-size:13px;color:var(--text-muted2);margin-left:6px;">查"好不好"</span></h4>
     <p style="margin:4px 0 6px;font-size:12px;color:var(--text-muted2);">📌 对应提示词的 <code style="background:rgba(var(--blue-rgb),0.1);padding:2px 6px;border-radius:4px;color:var(--accent-blue);">请帮我做课程诊断</code> 六条要求--AI 做了,但做得好不好?</p>
-    <p style="margin:6px 0 10px;font-size:14px;color:var(--text-muted);">四部分都齐了,接下来看内容质量。用讲师案例做正例对照。</p>
+    <p style="margin:6px 0 10px;font-size:14px;color:var(--text-muted);">四部分都齐了,接下来看内容质量。拿我这份当样本对照--<strong>对照的是"好到什么程度",不是"长什么样"</strong>。</p>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px;">
       <div>
         <p style="margin:0 0 8px;color:var(--accent-orange);font-weight:bold;">⚠ 质量不达标 → 追问细化</p>
@@ -3932,15 +3942,15 @@
         </div>
       </div>
       <div>
-        <p style="margin:0 0 8px;color:var(--accent-blue);font-weight:bold;">✅ 质量好的标志(附讲师案例正例)</p>
+        <p style="margin:0 0 8px;color:var(--accent-blue);font-weight:bold;">✅ 质量好的标志(示例·你那份不必长这样)</p>
         <div style="display:flex;flex-direction:column;gap:10px;">
           <div style="padding:10px;border-radius:6px;background:rgba(var(--blue-rgb),0.06);border-left:3px solid var(--accent-blue);">
             <div style="font-size:14px;color:var(--text-body);"><strong>1 第一部分:行业需求有数据支撑</strong></div>
-            <div style="font-size:13px;color:var(--text-muted);margin-top:4px;">"Kotlin 使用率 78%,Top 1000 应用中 95% 已迁移"--不是笼统说"需要更新"</div>
+            <div style="font-size:13px;color:var(--text-muted);margin-top:4px;">落到具体岗位和技术栈:"在招的 Android 岗把 Kotlin + Compose 写成硬性要求,Java 降为了解、XML 不再是主线"--不是笼统说"需要更新"</div>
           </div>
           <div style="padding:10px;border-radius:6px;background:rgba(var(--blue-rgb),0.06);border-left:3px solid var(--accent-blue);">
             <div style="font-size:14px;color:var(--text-body);"><strong>2 第二部分:教材评估切中要害</strong></div>
-            <div style="font-size:13px;color:var(--text-muted);margin-top:4px;">指出教材用 Android Studio 3.2.0 + Android 9.0,已落后 8 个大版本--你看了会点头</div>
+            <div style="font-size:13px;color:var(--text-muted);margin-top:4px;">指出教材用 Android Studio 3.2.0 + Android 9.0,都是 2018 年的东西,整套写法已经换代--你看了会点头</div>
           </div>
           <div style="padding:10px;border-radius:6px;background:rgba(var(--blue-rgb),0.06);border-left:3px solid var(--accent-blue);">
             <div style="font-size:14px;color:var(--text-body);"><strong>3 第三部分:诊断表格有具体技术方案</strong></div>
@@ -3948,7 +3958,7 @@
           </div>
           <div style="padding:10px;border-radius:6px;background:rgba(var(--blue-rgb),0.06);border-left:3px solid var(--accent-blue);">
             <div style="font-size:14px;color:var(--text-body);"><strong>4 第四部分:可行性评估结合学时和学生基础</strong></div>
-            <div style="font-size:13px;color:var(--text-muted);margin-top:4px;">"学生只学过 C 语言,Java 语法要从零教,第一优先级 Kotlin + Git 占前 12 学时"--有具体安排</div>
+            <div style="font-size:13px;color:var(--text-muted);margin-top:4px;">"学生只学过 C 语言,Java 语法要从零教,光语言基础就得先给 10-12 学时"--有具体安排</div>
           </div>
         </div>
       </div>
@@ -4003,9 +4013,9 @@
 
   <!-- 第三步:确认优先级方案 -->
   <div class="card" style="border-left:4px solid var(--accent-orange);margin-bottom:16px;">
-    <h4>第三步:确认优先级方案--AI 排好了,你来把关<span style="font-size:14px;color:var(--accent-orange);margin-left:10px;background:rgba(var(--orange-rgb),0.1);padding:2px 10px;border-radius:12px;">合理性</span><span style="font-size:13px;color:var(--text-muted2);margin-left:6px;">查"对不对"</span></h4>
-    <p style="margin:4px 0 6px;font-size:12px;color:var(--text-muted2);">📌 对应提示词第 <code style="background:rgba(var(--orange-rgb),0.1);padding:2px 6px;border-radius:4px;color:var(--accent-orange);">2</code> 条 <code style="background:rgba(var(--orange-rgb),0.1);padding:2px 6px;border-radius:4px;color:var(--accent-orange);">找出匹配度最低的 3-5 个模块</code> + 第 <code style="background:rgba(var(--orange-rgb),0.1);padding:2px 6px;border-radius:4px;color:var(--accent-orange);">5</code> 条 <code style="background:rgba(var(--orange-rgb),0.1);padding:2px 6px;border-radius:4px;color:var(--accent-orange);">评估升级建议的可行性</code>--AI 已给出优先级方案,你做教师专业判断</p>
-    <p style="margin:6px 0;">AI 在第四部分"可行性评估"里已经排好了优先级,但 AI 不了解你的实际课时、学生基础和课程衔接--<strong>合理就用,不合理就追问调整</strong>。</p>
+    <h4>第三步:确认优先级方案--排没排,都得你把关<span style="font-size:14px;color:var(--accent-orange);margin-left:10px;background:rgba(var(--orange-rgb),0.1);padding:2px 10px;border-radius:12px;">合理性</span><span style="font-size:13px;color:var(--text-muted2);margin-left:6px;">查"对不对"</span></h4>
+    <p style="margin:4px 0 6px;font-size:12px;color:var(--text-muted2);">📌 对应提示词第 <code style="background:rgba(var(--orange-rgb),0.1);padding:2px 6px;border-radius:4px;color:var(--accent-orange);">2</code> 条 <code style="background:rgba(var(--orange-rgb),0.1);padding:2px 6px;border-radius:4px;color:var(--accent-orange);">找出匹配度最低的 3-5 个模块</code> + 第 <code style="background:rgba(var(--orange-rgb),0.1);padding:2px 6px;border-radius:4px;color:var(--accent-orange);">5</code> 条 <code style="background:rgba(var(--orange-rgb),0.1);padding:2px 6px;border-radius:4px;color:var(--accent-orange);">评估升级建议的可行性</code>--排成什么样不由你定,合不合理只有你能判</p>
+    <p style="margin:6px 0;">它<strong>可能排了,也可能只给了"能不能改"的结论</strong>--模型和材料一变,交付就跟着变,两种都算合格。<strong>排了</strong>:用下面四个问题逐条过;<strong>没排</strong>:追问一句 <code style="background:rgba(var(--orange-rgb),0.1);padding:2px 6px;border-radius:4px;color:var(--accent-orange);">"按学时和学生基础,给出分优先级的落地顺序:先上什么、后上什么、各占多少学时"</code>。</p>
     <div style="display:grid;grid-template-columns:1fr 38%;gap:14px;align-items:start;">
     <div>
     <p style="margin:10px 0 6px;color:var(--accent-sky2);font-weight:bold;">🔎 四个判断维度</p>
@@ -4016,7 +4026,7 @@
       <li><strong>相关性</strong>:建议是否跑题?应聚焦"课程升级",不是发散教学建议</li>
     </ul>
     <div style="margin-top:12px;padding:12px 14px;background:rgba(var(--sky-rgb),0.06);border-radius:8px;font-size:14px;">
-      💡 <strong>讲师案例</strong>:AI 给出优先级--第一 Kotlin+Git,第二 Compose,第三 协同开发。用四个维度逐个检查:<br>
+      💡 <strong>我这次跑出来的(你的会不一样)</strong>:它给的排序是第一 Kotlin+Git、第二 Compose、第三 跨平台(KMP)。四个问题逐个过:<br>
       <ul style="margin:8px 0 4px;padding-left:18px;line-height:1.9;list-style:none;">
         <li>✅ <strong>合理性</strong>:Kotlin 替代 Java 确实是行业主流,判断合理</li>
         <li>❌ <strong>可行性</strong>:学生只学过 C 语言,这门课的 Java 语法要从零教--72 学时先被语法吃掉一块;Kotlin 的函数式写法 + Git + Compose 三样一起上,课时和接受度都吃紧</li>
@@ -4056,8 +4066,8 @@
   </div>
 
   <div class="ok-box" style="margin-top:18px;">
-    <div class="title">✅ 结果分析完毕</div>
-    <div class="text">三步走完:完整性 ✓ → 质量 ✓ → 优先级方案已确认。下一步进入学情分析,了解学生情况后再设计教学方案</div>
+    <div class="title">✅ 分析完了吗?看这三句说出来没有</div>
+    <div class="text">这一步的产物不是"确认了 AI 的方案",是<strong>你能说出三句话</strong>:<span style="display:block;margin:8px 0 0;line-height:1.9;">① <strong>先改哪个模块</strong>--从 3-5 个里挑出最该动的那一个;<br>② <strong>改到什么程度</strong>--换技术栈,还是先补语言基础,还是只改写法;<br>③ <strong>哪条建议我不接受</strong>--连同理由写下来,<strong style="color:var(--accent-green);">敢否决才算真判断</strong>。</span><span style="display:block;margin-top:8px;color:var(--text-muted);">下一步进入学情分析--了解学生情况后再设计教学方案。</span></div>
   </div>
 </section>
 
