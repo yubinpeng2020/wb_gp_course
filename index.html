@@ -3854,19 +3854,21 @@
   <h2>5.3 🔍 实操 1 结果分析</h2>
   <div class="highlight" style="margin-bottom:14px;">
     💡 拿到诊断结果后怎么用?<br>
-    <span style="display:inline-flex;gap:8px;margin-top:8px;flex-wrap:wrap;">
-      <span style="background:rgba(var(--green-rgb),0.15);border:1px solid rgba(var(--green-rgb),0.4);border-radius:20px;padding:4px 14px;font-size:13px;color:var(--accent-green);">1 检查完整性</span>
-      <span style="color:var(--accent-green);font-size:16px;align-self:center;">→</span>
-      <span style="background:rgba(var(--blue-rgb),0.15);border:1px solid rgba(var(--blue-rgb),0.4);border-radius:20px;padding:4px 14px;font-size:13px;color:var(--accent-blue);">2 判断质量</span>
-      <span style="color:var(--accent-green);font-size:16px;align-self:center;">→</span>
-      <span style="background:rgba(var(--orange-rgb),0.15);border:1px solid rgba(var(--orange-rgb),0.4);border-radius:20px;padding:4px 14px;font-size:13px;color:var(--accent-orange);">3 确认优先级</span>
+    <span style="display:inline-flex;gap:8px;margin-top:8px;flex-wrap:wrap;align-items:center;">
+      <span style="background:rgba(var(--green-rgb),0.15);border:1px solid rgba(var(--green-rgb),0.4);border-radius:20px;padding:4px 14px;font-size:13px;color:var(--accent-green);">1 全不全</span>
+      <span style="color:var(--accent-green);font-size:16px;">→</span>
+      <span style="background:rgba(var(--blue-rgb),0.15);border:1px solid rgba(var(--blue-rgb),0.4);border-radius:20px;padding:4px 14px;font-size:13px;color:var(--accent-blue);">2 实不实</span>
+      <span style="color:var(--accent-green);font-size:16px;">→</span>
+      <span style="background:rgba(var(--sky-rgb),0.15);border:1px solid rgba(var(--sky-rgb),0.4);border-radius:20px;padding:4px 14px;font-size:13px;color:var(--accent-sky);">3 准不准</span>
+      <span style="color:var(--accent-green);font-size:16px;">→</span>
+      <span style="background:rgba(var(--orange-rgb),0.15);border:1px solid rgba(var(--orange-rgb),0.4);border-radius:20px;padding:4px 14px;font-size:13px;color:var(--accent-orange);">4 合不合理</span>
     </span>
     <div style="margin-top:10px;padding-top:10px;border-top:1px dashed rgba(var(--white-rgb),0.14);font-size:13.5px;line-height:1.75;color:var(--text-body);">同一段提示词,你跑出来的和别人跑出来的<strong>不会一样</strong>--挑中哪几个模块、行业用哪组数字、顺序和学时怎么分,模型和材料一变就跟着变。<strong style="color:var(--accent-green);">所以别对着别人的报告比,对着标准比</strong>:提示词里点名的--四部分、四列、3-5 个、落地顺序--逐条对;没点名的--挑哪个模块、改到什么程度--看它给没给依据、你带的学生跟不跟得上。</div>
   </div>
 
-  <!-- 第一步:检查产物完整性 -->
+  <!-- 第一步:全不全 -->
   <div class="card" style="border-left:4px solid var(--accent-green);margin-bottom:16px;">
-    <h4>第一步:硬查提示词规定的东西--都有没有?<span style="font-size:14px;color:var(--accent-green);margin-left:10px;background:rgba(var(--green-rgb),0.1);padding:2px 10px;border-radius:12px;">完整性</span><span style="font-size:13px;color:var(--text-muted2);margin-left:6px;">查"有没有"</span></h4>
+    <h4>第一步:全不全--提示词点名的,报告里都有吗?<span style="font-size:14px;color:var(--accent-green);margin-left:10px;background:rgba(var(--green-rgb),0.1);padding:2px 10px;border-radius:12px;">完整性</span><span style="font-size:13px;color:var(--text-muted2);margin-left:6px;">查"有没有"</span></h4>
     <p style="margin:4px 0 10px;font-size:12px;color:var(--text-muted2);">📌 提示词的要求分散在三处:材料段那句 <code style="background:rgba(var(--green-rgb),0.1);padding:2px 6px;border-radius:4px;color:var(--accent-green);">读完先列一张表</code>、<code style="background:rgba(var(--green-rgb),0.1);padding:2px 6px;border-radius:4px;color:var(--accent-green);">输出格式</code>、<code style="background:rgba(var(--green-rgb),0.1);padding:2px 6px;border-radius:4px;color:var(--accent-green);">第 1-6 条</code>。<strong>凡是写明的都逐条核</strong>--这一层跟"哪个模型"无关,缺了就是没照做:</p>
     <p style="margin:6px 0 10px;font-size:14px;color:var(--text-body);">📂 打开分组文件夹里的 <strong style="color:var(--accent-green);">课程焕新 › 01_课程诊断</strong>,双击那份 <strong>.docx</strong>;点顶部「<strong>视图</strong>」→ 勾上「<strong>导航窗格</strong>」,左边就把每一项的标题列出来--齐不齐一眼就看到:</p>
     <div style="display:grid;grid-template-columns:1fr 42%;gap:14px;align-items:start;">
@@ -3915,9 +3917,9 @@
     <div style="margin-top:10px;padding:8px 12px;border-radius:6px;background:rgba(var(--white-rgb),0.03);border:1px solid rgba(var(--white-rgb),0.08);font-size:13px;color:var(--text-muted);">i️ 补充说明:WorkBuddy 输出为 Word/Excel 文档是<strong style="color:var(--text-body);">正常行为</strong>,不是错误--打开文档即可查看完整内容。</div>
   </div>
 
-  <!-- 第二步:判断诊断结果质量 -->
+  <!-- 第二步:实不实 -->
   <div class="card" style="border-left:4px solid var(--accent-blue);margin-bottom:16px;">
-    <h4>第二步:判断诊断结果质量--每部分内容达标吗?<span style="font-size:14px;color:var(--accent-blue);margin-left:10px;background:rgba(var(--blue-rgb),0.1);padding:2px 10px;border-radius:12px;">质量</span><span style="font-size:13px;color:var(--text-muted2);margin-left:6px;">查"好不好"</span></h4>
+    <h4>第二步:实不实--每部分落到具体了吗?<span style="font-size:14px;color:var(--accent-blue);margin-left:10px;background:rgba(var(--blue-rgb),0.1);padding:2px 10px;border-radius:12px;">质量</span><span style="font-size:13px;color:var(--text-muted2);margin-left:6px;">查"具体不具体"</span></h4>
     <p style="margin:4px 0 6px;font-size:12px;color:var(--text-muted2);">📌 对应提示词的 <code style="background:rgba(var(--blue-rgb),0.1);padding:2px 6px;border-radius:4px;color:var(--accent-blue);">第 1-6 条</code>(就是「请帮我做课程诊断:」后面那六条)--AI 做了,但做得好不好?</p>
     <p style="margin:6px 0 10px;font-size:14px;color:var(--text-muted);">四部分都齐了,接下来看内容质量。左边是常见的糊弄法,右边是达标的样子--<strong>看的是"好到什么程度",不是"长什么样"</strong>。</p>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px;">
@@ -3977,7 +3979,7 @@
 
   <!-- 演讲备注:这一步是收口。提示词第 6 条已经让 AI 去对比教材大纲和本校方案,但多数模型只回一句"学时略有差异",甚至整段不提--因为对比这件事它做得来,判断哪条要紧它做不来。所以第二部分末尾那段「教材与本校方案的差异」,要逐条对一遍。四条里真正要紧的是前两条:教材假定学生学过一门 Android 基础课,我们这门课前面只有 C 语言和数据结构,数据结构还是同学期开的;教材按闭卷考试设计,平时三成期末七成,我们这门课是考查,靠大作业说话。这两条对不上,教材的教案就不能直接搬。学时那条别当问题讲--方案 72 学时比教材 67 还多,讲练结合本来就是这个上法,只是记账口径不同。 -->
   <div class="card" style="border-left:4px solid var(--accent-sky);margin-bottom:16px;">
-    <h4>第二步补充:AI 报了"教材和本校方案对不上"吗?<span style="font-size:14px;color:var(--accent-sky);margin-left:10px;background:rgba(var(--sky-rgb),0.1);padding:2px 10px;border-radius:12px;">教师判断</span><span style="font-size:13px;color:var(--text-muted2);margin-left:6px;">查"合不合"</span></h4>
+    <h4>第三步:准不准--AI 报的差异,和原件对得上吗?<span style="font-size:14px;color:var(--accent-sky);margin-left:10px;background:rgba(var(--sky-rgb),0.1);padding:2px 10px;border-radius:12px;">核对</span><span style="font-size:13px;color:var(--text-muted2);margin-left:6px;">查"真不真"</span></h4>
     <p style="margin:6px 0 6px;font-size:14px;color:var(--text-body);">这一步只做一件事:<strong>把培养方案和教材教学大纲两份原件摆在一起,核 AI 报的那些差异</strong>--数字对不对、条数全不全、哪一条才真要命。</p>
     <p style="margin:6px 0 8px;font-size:14px;color:var(--text-body);">提示词第 6 条要它对比两边,但不少模型只回一句<strong>"学时略有差异"</strong>就过去了--对比它做得来,判断哪一条要紧它做不来。第二部分末尾那段「教材与本校方案的差异」,自己逐条对一遍:</p>
     <table style="font-size:13px;margin:0 0 10px;">
@@ -4022,9 +4024,9 @@
     <div style="padding:10px 14px;background:rgba(var(--white-rgb),0.03);border:1px solid rgba(var(--white-rgb),0.08);border-radius:8px;font-size:13px;color:var(--text-muted);">💬 它只回了"略有差异"、或者整段没提:把<strong style="color:var(--text-body);">培养方案和教材教学大纲一起拖进对话</strong>,再问 <code style="background:rgba(var(--white-rgb),0.06);padding:2px 6px;border-radius:4px;color:var(--accent-sky);">"逐条对比这两份材料:学分、学时分配、考核方式、假定学生什么基础,列出不一致的地方,再说照教材教案上课会在哪里接不上"</code>--材料不给全,它只能猜。</div>
   </div>
 
-  <!-- 第三步:确认优先级方案 -->
+  <!-- 第四步:合不合理 -->
   <div class="card" style="border-left:4px solid var(--accent-orange);margin-bottom:16px;">
-    <h4>第三步:确认优先级方案--排没排,都得你把关<span style="font-size:14px;color:var(--accent-orange);margin-left:10px;background:rgba(var(--orange-rgb),0.1);padding:2px 10px;border-radius:12px;">合理性</span><span style="font-size:13px;color:var(--text-muted2);margin-left:6px;">查"对不对"</span></h4>
+    <h4>第四步:合不合理--排序和学时,排得开吗?<span style="font-size:14px;color:var(--accent-orange);margin-left:10px;background:rgba(var(--orange-rgb),0.1);padding:2px 10px;border-radius:12px;">合理性</span><span style="font-size:13px;color:var(--text-muted2);margin-left:6px;">查"排不排得开"</span></h4>
     <p style="margin:4px 0 6px;font-size:12px;color:var(--text-muted2);">📌 对应提示词第 <code style="background:rgba(var(--orange-rgb),0.1);padding:2px 6px;border-radius:4px;color:var(--accent-orange);">5</code> 条 <code style="background:rgba(var(--orange-rgb),0.1);padding:2px 6px;border-radius:4px;color:var(--accent-orange);">评估升级建议的可行性…并给出分优先级的落地顺序(先上什么、后上什么、各占多少学时)</code>--排得整齐不等于排得对,合不合理只有你能判</p>
     <p style="margin:6px 0;">它<strong>可能排成一张学时表,也可能只回一句能不能改</strong>--模型和材料一变,交付就跟着变,两种都算合格。<strong>排了</strong>:用下面四个问题逐条过;<strong>没排</strong>:追问一句 <code style="background:rgba(var(--orange-rgb),0.1);padding:2px 6px;border-radius:4px;color:var(--accent-orange);">"按学时和学生基础,给出分优先级的落地顺序:先上什么、后上什么、各占多少学时"</code>。</p>
     <div style="display:grid;grid-template-columns:1fr 38%;gap:14px;align-items:start;">
