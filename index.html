@@ -4185,8 +4185,8 @@
   </div>
 
   <div class="card" style="margin-top:20px;border-left:4px solid var(--accent-orange);">
-    <h4>📌 演示数据:手机编程应用一个学期的成绩表</h4>
-    <div style="font-size:13.5px;color:var(--text-body);margin-top:6px;line-height:1.75;">接着 5.1 那门课。成绩表从教务系统直接导出,<span class="hl-lg key">2 个班 97 人</span>,姓名已换成编号。</div>
+    <h4>📌 演示数据:手机编程应用上一轮的成绩表</h4>
+    <div style="font-size:13.5px;color:var(--text-body);margin-top:6px;line-height:1.75;">接着 5.1 那门课,用的是<span class="hl-lg key">上一轮已经结课</span>的学生成绩--<strong>回头看结果</strong>,不是管现在这个班。2 个班 97 人,姓名已换成编号。</div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:12px;">
       <div>
         <strong>表里有什么</strong> <span style="font-size:11.5px;color:var(--text-muted);">教务系统导出--不用另做</span>
@@ -4200,18 +4200,18 @@
         </ul>
       </div>
       <div>
-        <strong>这张表要回答什么</strong> <span style="font-size:11.5px;color:var(--text-muted);">诊断问课程,这里问学生</span>
+        <strong>这张表要回答什么</strong> <span style="font-size:11.5px;color:var(--text-muted);">诊断问课程,这里问学生学得怎么样</span>
         <ul style="margin:6px 0 0;">
-          <li>哪个环节最拖后腿</li>
-          <li>分化到什么程度</li>
-          <li>哪些学生要单独帮</li>
+          <li>哪个环节最拖后腿 → 教学重点挪到哪</li>
+          <li>分化到什么程度 → 要不要分层设计</li>
+          <li>掉队的是哪一类 → 课程哪里没托住</li>
         </ul>
       </div>
     </div>
     <div style="margin-top:12px;padding:9px 14px;background:rgba(var(--blue-rgb),0.08);border-left:3px solid var(--accent-blue);border-radius:9px;font-size:13.5px;line-height:1.7;">
-      👉 这张表算不出来的也记一下:<strong>课堂表现、学习态度、谁课后问过你</strong>--AI 看不到,得你自己补。
+      👉 这张表问的是<strong>课程</strong>,不是问某个人。报告里的名单不是留给你去辅导的--<strong>他们怎么掉队的,才是这门课要改的地方</strong>。算不出来的也记一下:课堂表现、学习态度、谁课后问过你,AI 看不到,得你自己补。
     </div>
-    <div style="margin-top:8px;font-size:11.5px;color:var(--text-muted);line-height:1.6;">📄 数据取自「手机编程应用」2026 学期成绩汇总(学员资料包/成绩数据/),与 5.1 的课程信息是同一门课。</div>
+    <div style="margin-top:8px;font-size:11.5px;color:var(--text-muted);line-height:1.6;">📄 数据取自「手机编程应用」上一轮已结课(2026 学期)的成绩汇总(学员资料包/成绩数据/),与 5.1 的课程信息是同一门课。</div>
   </div>
 
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px;">
@@ -4554,7 +4554,7 @@
         </div>
       </div>
       <div>
-        <p style="margin:0 0 8px;color:var(--accent-blue);font-weight:bold;">✅ 质量好的标志(附讲师案例正例)</p>
+        <p style="margin:0 0 8px;color:var(--accent-blue);font-weight:bold;">✅ 每部分写到什么程度算到位--各给一句参照</p>
         <div style="display:flex;flex-direction:column;gap:10px;">
           <div style="padding:10px;border-radius:6px;background:rgba(var(--blue-rgb),0.06);border-left:3px solid var(--accent-blue);">
             <div style="font-size:14px;color:var(--text-body);"><strong>1 第一部分:整体情况统计概览表格——分班对比有差异</strong></div>
@@ -4574,7 +4574,7 @@
           </div>
           <div style="padding:10px;border-radius:6px;background:rgba(var(--blue-rgb),0.06);border-left:3px solid var(--accent-blue);">
             <div style="font-size:14px;color:var(--text-body);"><strong>5 第五部分:重点关注名单表格——不及格有归因</strong></div>
-            <div style="font-size:13px;color:var(--text-muted);margin-top:4px;">三类:几乎全勤但两项都不及格18人、作业尚可大作业交不出28人、全面放弃35人--不是光列名单</div>
+            <div style="font-size:13px;color:var(--text-muted);margin-top:4px;">三类:几乎全勤但两项都不及格18人、作业尚可大作业交不出28人、全面放弃35人--不是光列名单。<strong style="color:var(--text-body);">三种掉队方式,对应课程三处不同的漏洞</strong></div>
           </div>
           <div style="padding:10px;border-radius:6px;background:rgba(var(--blue-rgb),0.06);border-left:3px solid var(--accent-blue);">
             <div style="font-size:14px;color:var(--text-body);"><strong>6 第六部分:教学策略建议——建议可操作</strong></div>
@@ -4632,7 +4632,7 @@
       <ul style="margin:0;padding-left:18px;line-height:2;">
         <li>学生<strong>最薄弱的地方</strong>是什么?教学重点该放在哪?</li>
         <li>学生<strong>分层情况</strong>如何?需不需要分层教学?</li>
-        <li>报告里有没有<strong>让你意外的发现</strong>?该怎么针对性干预?</li>
+        <li>报告里有没有<strong>让你意外的发现</strong>?它指向课程哪一处要补?</li>
         <li>AI 给的建议<strong>靠谱吗</strong>?哪些能直接用,哪些要改?</li>
       </ul>
     </div>
@@ -4660,7 +4660,7 @@
       <ul style="margin:0 0 14px;padding-left:18px;line-height:1.8;">
         <li><strong>最薄弱环节</strong>:哪个维度得分率最低?→ 决定教学重点</li>
         <li><strong>分层比例</strong>:优秀/合格/待提升各占多少?→ 决定是否分层</li>
-        <li><strong>关键发现</strong>:有没有隐藏模式(如"全勤零产出""两班失败模式不同")?→ 针对性干预</li>
+        <li><strong>关键发现</strong>:有没有隐藏模式(如"全勤零产出""两班失败模式不同")?→ 课程要在哪里补</li>
         <li><strong>AI 教学建议</strong>:3条策略→ 参考但不盲从</li>
       </ul>
       <div style="text-align:center;">
