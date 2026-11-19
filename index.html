@@ -3503,7 +3503,7 @@
   <h2>5.1 🔍 课程诊断--找出你的课程短板</h2>
   <div class="highlight" style="margin-bottom:20px;">
     💡 <strong>定义</strong>:用 AI 帮你找出课程中<span class="hl-lg key">哪些模块最需要升级</span><br>
-    💡 <strong>你需要提供</strong>:课程<span class="hl-lg good">信息越全</span>,AI <span class="hl-lg good">诊断越准</span>(具体需要哪些见下方提示词模板)<br>
+    💡 <strong>你需要提供</strong>:课程<span class="hl-lg good">信息越全</span>,AI <span class="hl-lg good">诊断越准</span>(具体要哪几样,见 5.2 的提示词模板)<br>
     ⚠️ <strong>注意</strong>:诊断是<span class="hl-lg warn">"体检"</span>不是"治病"--AI 只分析问题在哪、差距多大、优先改什么,输出的是<strong>诊断报告</strong>,不是直接改你的课程。怎么改,后面第 7 章教学设计升级再说
   </div>
 
@@ -3513,7 +3513,7 @@
       <div style="padding:11px 12px;border-radius:8px;background:rgba(var(--green-rgb),0.05);border:1px solid rgba(var(--green-rgb),0.16);border-top:3px solid var(--accent-green);">
         <div style="font-size:13px;font-weight:700;color:var(--accent-green);margin-bottom:5px;">① 课程定位</div>
         <div style="font-size:12px;color:var(--text-muted);line-height:1.6;margin-bottom:5px;">学分 · 学时 · 学期 · 前序后续</div>
-        <div style="font-size:12.5px;color:var(--text-body);line-height:1.65;">先定住边界,后面四条才有参照</div>
+        <div style="font-size:12.5px;color:var(--text-body);line-height:1.65;">先定住边界,后面四维才有参照</div>
       </div>
       <div style="padding:11px 12px;border-radius:8px;background:rgba(var(--green-rgb),0.05);border:1px solid rgba(var(--green-rgb),0.16);border-top:3px solid var(--accent-green);">
         <div style="font-size:13px;font-weight:700;color:var(--accent-green);margin-bottom:5px;">② 前序基础</div>
@@ -3763,7 +3763,7 @@
           <div class="step"><div class="num">3</div><div class="text">模式保持<strong>默认(Agent)</strong>即可(直接执行)</div></div>
           <div class="step"><div class="num">4</div><div class="text">复制<strong>提示词模板</strong>,把<b style="color:var(--accent-orange2);">橙色</b>的<strong>【请填…】</strong>逐项填一遍--<strong>填的过程就是练习</strong>:除了把材料文件夹指向你手头那份,剩下要填的都是<strong>文件里没有、只有你知道的</strong>(学生实际基础、痛点、教材版本);填不出来的那几项,就是你缺的信息;手上没有的那行直接删掉</div></div>
           <div class="step"><div class="num">5</div><div class="text">按回车发送。先看它<strong>读了哪几份文件</strong>--报告开头会写;如果一份没读就开始编,停下来问它"你读了工作目录里的材料吗?"</div></div>
-          <div class="step"><div class="num">6</div><div class="text">确认输出:<strong>开头一张材料表</strong>,再加四部分齐全--行业需求摘要(3-5 条)/ 教材评估(末尾有「教材与本校方案的差异」)/ 诊断表格 / 可行性评估;表格列名是不是「模块名称 | 现状 | 行业需求差距 | 升级建议」,别让它自己改列</div></div>
+          <div class="step"><div class="num">6</div><div class="text">确认输出:<strong>开头一张材料表</strong>,再加四部分齐全--行业需求摘要(3-5 条)/ 教材评估(末尾有「教材与本校方案的差异」)/ 诊断表格 / 可行性评估;表格列名是不是「模块名称 | 现状 | 行业需求差距 | 升级建议」,别让它自己改列。这里只扫一眼<strong>齐不齐</strong>,逐条核在 <strong>5.3</strong></div></div>
         </div>
         <div class="card" style="border-left:4px solid var(--accent-red2);margin-top:12px;">
           <h4>⚠ 常见问题</h4>
@@ -3928,7 +3928,7 @@
   <div class="card" style="border-left:4px solid var(--accent-blue);margin-bottom:16px;">
     <h4>第二步:实不实--每部分落到具体了吗?<span style="font-size:14px;color:var(--accent-blue);margin-left:10px;background:rgba(var(--blue-rgb),0.1);padding:2px 10px;border-radius:12px;">质量</span><span style="font-size:13px;color:var(--text-muted2);margin-left:6px;">查"具体不具体"</span></h4>
     <p style="margin:4px 0 6px;font-size:12px;color:var(--text-muted2);">📌 对应提示词的 <code style="background:rgba(var(--blue-rgb),0.1);padding:2px 6px;border-radius:4px;color:var(--accent-blue);">第 1-6 条</code>(就是「请帮我做课程诊断:」后面那六条)--AI 做了,但做得好不好?</p>
-    <p style="margin:6px 0 10px;font-size:14px;color:var(--text-muted);">四部分都齐了,接下来看内容质量。左边是常见的糊弄法,右边是达标的样子--<strong>看的是"好到什么程度",不是"长什么样"</strong>。</p>
+    <p style="margin:6px 0 10px;font-size:14px;color:var(--text-muted);">四部分都齐了,接下来看内容质量。左边是常见的糊弄法,右边是达标的样子--<strong>看的是"好到什么程度",不是"长什么样"</strong>。右边举的是计算机课的例子,不是你的专业不用看懂,只看颗粒度:有没有<strong style="color:var(--text-body);">点名具体东西</strong>、有没有<strong style="color:var(--text-body);">给出数字</strong>、有没有<strong style="color:var(--text-body);">说清从哪来</strong>。</p>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px;">
       <div>
         <p style="margin:0 0 8px;color:var(--accent-orange);font-weight:bold;">⚠ 每部分容易糊弄的地方 → 对上了就追问</p>
@@ -4040,12 +4040,12 @@
         </tr>
       </tbody>
     </table>
-    <div style="margin:-4px 0 12px;font-size:12.5px;color:var(--text-muted);line-height:1.65;">另外两维不在这张表里:① 课程定位在 5.1 案例卡左栏已经写清,是基准;③ 内容与技术栈得跟行业比,是第二步那张诊断表格管的事。</div>
+    <div style="margin:-4px 0 12px;font-size:12.5px;color:var(--text-muted);line-height:1.65;">另外两维不在这张表里:① 课程定位在 5.1 案例卡左栏已经写清,是基准;③ 内容与技术栈得跟行业比,是第二步那张四列诊断表格里「行业需求差距」一列的事。</div>
     <div style="padding:12px 14px;border-radius:8px;background:rgba(var(--green-rgb),0.06);border:1px solid rgba(var(--green-rgb),0.22);font-size:13.5px;line-height:1.85;margin-bottom:10px;">
-      <div style="font-weight:700;color:var(--accent-green);margin-bottom:6px;">✅ 这一步要带走的是"两真一假"</div>
-      <div><strong style="color:var(--accent-red);">真 ①</strong> <strong style="color:var(--text-body);">学生起点</strong>:教材假定已修一门 Android 基础课,我们前面只有 C 语言--<strong>教案从第 1 周就接不上</strong>。</div>
-      <div><strong style="color:var(--accent-red);">真 ②</strong> <strong style="color:var(--text-body);">考核方式</strong>:教材按闭卷考试设计,我们靠大作业交差--<strong>练的和考的不是一回事</strong>。</div>
-      <div><strong style="color:var(--text-muted2);">假</strong> <strong style="color:var(--text-body);">学时差 5 个</strong>:72 比 67 还多,各章的增减加起来正是这 5 个--记账口径不同,<strong>别当矛盾去改</strong>。</div>
+      <div style="font-weight:700;color:var(--accent-green);margin-bottom:6px;">✅ 这一步要带走的是三类差距--换一门课,还是这三类</div>
+      <div><strong style="color:var(--accent-red);">① 起点错位</strong>--教材假定学生会什么,你的学生实际会什么。<span style="color:var(--text-muted);">本课:教材假定已修一门 Android 基础课,我们前面只有 C 语言,教案从第 1 周就接不上。</span></div>
+      <div><strong style="color:var(--accent-red);">② 考练错位</strong>--平时练的和期末考的是不是一回事。<span style="color:var(--text-muted);">本课:教材按闭卷考试设计,我们靠大作业交差,练的和考的不是一回事。</span></div>
+      <div><strong style="color:var(--text-muted2);">③ 口径不同</strong>--两个数看着打架,其实是记法不一样,<strong>别当矛盾去改</strong>。<span style="color:var(--text-muted);">本课:72 比 67 多 5 个,各章增减加起来正是这 5 个。</span></div>
     </div>
     <div style="padding:10px 14px;background:rgba(var(--white-rgb),0.03);border:1px solid rgba(var(--white-rgb),0.08);border-radius:8px;font-size:13px;color:var(--text-muted);">💬 它只回了"略有差异"、或者整段没提:把<strong style="color:var(--text-body);">培养方案和教材教学大纲一起拖进对话</strong>,再问 <code style="background:rgba(var(--white-rgb),0.06);padding:2px 6px;border-radius:4px;color:var(--accent-sky);">"逐条对比这两份材料:学分、学时分配、考核方式、假定学生什么基础,列出不一致的地方,再说照教材教案上课会在哪里接不上"</code>--材料不给全,它只能猜。</div>
   </div>
@@ -4054,22 +4054,15 @@
   <div class="card" style="border-left:4px solid var(--accent-orange);margin-bottom:16px;">
     <h4>第四步:合不合理--排序和学时,排得开吗?<span style="font-size:14px;color:var(--accent-orange);margin-left:10px;background:rgba(var(--orange-rgb),0.1);padding:2px 10px;border-radius:12px;">合理性</span><span style="font-size:13px;color:var(--text-muted2);margin-left:6px;">查"排不排得开"</span></h4>
     <p style="margin:4px 0 6px;font-size:12px;color:var(--text-muted2);">📌 对应提示词第 <code style="background:rgba(var(--orange-rgb),0.1);padding:2px 6px;border-radius:4px;color:var(--accent-orange);">5</code> 条 <code style="background:rgba(var(--orange-rgb),0.1);padding:2px 6px;border-radius:4px;color:var(--accent-orange);">评估升级建议的可行性…并给出分优先级的落地顺序(先上什么、后上什么、各占多少学时)</code>--排得整齐不等于排得对,合不合理只有你能判</p>
-    <p style="margin:6px 0;">它<strong>可能排成一张学时表,也可能只回一句能不能改</strong>--模型和材料一变,交付就跟着变,两种都算合格。<strong>排了</strong>:用下面四个问题逐条过;<strong>没排</strong>:追问一句 <code style="background:rgba(var(--orange-rgb),0.1);padding:2px 6px;border-radius:4px;color:var(--accent-orange);">"按学时和学生基础,给出分优先级的落地顺序:先上什么、后上什么、各占多少学时"</code>。</p>
+    <p style="margin:6px 0;">它<strong>可能排成一张学时表,也可能只回一句能不能改</strong>--模型和材料一变,交付就跟着变,两种都算合格。<strong>排了</strong>:用下面四个维度逐条过;<strong>没排</strong>:追问一句 <code style="background:rgba(var(--orange-rgb),0.1);padding:2px 6px;border-radius:4px;color:var(--accent-orange);">"按学时和学生基础,给出分优先级的落地顺序:先上什么、后上什么、各占多少学时"</code>。</p>
     <div style="display:grid;grid-template-columns:1fr 38%;gap:14px;align-items:start;">
     <div>
-    <p style="margin:10px 0 6px;color:var(--accent-sky2);font-weight:bold;">🔎 四个判断维度</p>
-    <ul style="margin:0;padding-left:18px;line-height:1.8;">
-      <li><strong>合理性</strong>:建议的技术栈是否确实是行业主流?</li>
-      <li><strong>可行性</strong>:你的学生基础能否跟上?学期内能消化吗?</li>
-      <li><strong>渐进性</strong>:好的建议是"保留XX,逐步引入XX",不是"全部替换"</li>
-      <li><strong>相关性</strong>:建议是否跑题?应聚焦"课程升级",不是发散教学建议</li>
-    </ul>
     <div style="margin-top:12px;padding:12px 14px;background:rgba(var(--sky-rgb),0.06);border-radius:8px;font-size:14px;">
       💡 <strong>一份跑出来的结果(你的会不一样)</strong>:它给了一张七行的落地顺序表,加起来正好 72 学时--
       <table style="width:100%;font-size:12.5px;margin:8px 0 6px;border-collapse:collapse;">
         <thead>
           <tr>
-            <th style="width:40px;padding:5px 8px;">顺序</th>
+            <th style="width:56px;padding:5px 8px;">顺序</th>
             <th style="padding:5px 8px;">模块</th>
             <th style="width:52px;padding:5px 8px;">学时</th>
           </tr>
@@ -4087,22 +4080,23 @@
         </tbody>
       </table>
       <span style="display:block;font-size:13px;color:var(--text-muted);margin-bottom:10px;">数字先自己加一遍:界面 −6、列表 −8,换出 14 学时;12 给语言底座、2 作机动。<strong style="color:var(--text-body);">加得平,才叫真排过</strong>。</span>
-      四个问题逐个过:
+      <div style="margin:2px 0 6px;color:var(--accent-sky2);font-weight:bold;font-size:13.5px;">🔎 四个维度逐个过--每一维先问一句通用的,再看它答成什么样</div>
       <ul style="margin:8px 0 4px;padding-left:18px;line-height:1.9;list-style:none;">
-        <li>✅ <strong>合理性</strong>:Kotlin + Compose、Room、REST 都是岗位 JD 上写着的,不是它造的新词</li>
-        <li>⚠️ <strong>可行性</strong>:Kotlin 只给 12 学时,要求却是"从零到能写 Compose"。学生只有 C 语言基础,类、接口、泛型、空安全、协程都得现学,3 周消化不完</li>
-        <li>✅ <strong>渐进性</strong>:原话是"XML 不是被淘汰,只是不再是主线";界面 24→18 是合并同类项,没砍内容</li>
-        <li>✅ <strong>相关性</strong>:主动把跨平台和鸿蒙挡在门外--"必须另开课",没往这门课里塞</li>
+        <li>✅ <strong>合理性</strong>:它推荐的东西,行业里真在用吗?<span style="color:var(--text-muted);">本课:Kotlin + Compose、Room、REST 都是岗位 JD 上写着的,不是它造的新词。</span></li>
+        <li>⚠️ <strong>可行性</strong>:你的学生底子跟得上吗?<span style="color:var(--text-muted);">本课:Kotlin 只给 12 学时,要求却是"从零到能写 Compose";学生只有 C 语言基础,3 周消化不完。</span></li>
+        <li>✅ <strong>渐进性</strong>:是保住一部分逐步换,还是整个推翻?<span style="color:var(--text-muted);">本课:原话"XML 不是被淘汰,只是不再是主线";界面 24→18 是合并同类项,没砍内容。</span></li>
+        <li>✅ <strong>相关性</strong>:有没有跑出这门课的范围?<span style="color:var(--text-muted);">本课:主动把跨平台和鸿蒙挡在门外,"必须另开课",没往这门课里塞。</span></li>
       </ul>
-      <strong style="color:var(--accent-orange2);">→ 判断结果:大方向可用,唯一要你拍的是"Kotlin 12 学时"这一格</strong>
+      <strong style="color:var(--accent-orange2);">→ 判断结果:四条里只有"可行性"一条过不去(本课是"12 学时写不出 Compose")--<strong>过不去的那一条,就是你要追问的那一句</strong></strong>
     </div>
     <div style="margin-top:12px;padding:10px 14px;background:rgba(var(--orange-rgb),0.06);border:1px solid rgba(var(--orange-rgb),0.15);border-radius:8px;font-size:14px;">
       💬 <strong>这一格不服,就问它要依据</strong>--别自己闷头替它算:<br>
       <code style="display:block;margin:8px 0;padding:10px 14px;background:rgba(0,0,0,0.3);border-radius:6px;color:var(--accent-orange);font-size:13px;">"Kotlin 只给 12 学时。请拆开说明:语法、类与接口、泛型、空安全、协程各占几学时?只有 C 语言基础的学生,学完能不能独立写出一个 Compose 界面?"</code>
-      拆出来明显不够,就让它加学时--<strong>加的那几个从哪门内容里减,必须一起说清</strong>,否则总数就不是 72 了。
+      拆出来明显不够,就让它加学时--<strong>加的那几个从哪门内容里减,必须一起说清</strong>,否则总数就不是 72 了。<br>
+      <span style="font-size:13px;color:var(--text-muted);">套到你的课:把数和知识点换成你的,「拆开各占几学时」「零基础学完能不能做到」这两问照抄。</span>
     </div>
     <div style="margin-top:12px;padding:10px 14px;background:rgba(var(--red2-rgb),0.08);border-radius:8px;font-size:13px;">
-      ⚠ <strong>追问话术参考</strong>:"我的专业还有其他相关课程,请考虑课程衔接" / "请给出 Kotlin 基础的课时拆分方案" / "Compose 对零基础学生是否友好?"
+      ⚠ <strong>换课也能用的三句</strong>:"我的专业还有其他相关课程,请把课程衔接一起考虑" / "把这个模块的学时拆开:每一部分各占几学时、学完能做到什么" / "这个要求对零基础学生友好吗?给出判断依据"
     </div>
     </div>
     <div style="text-align:center;display:flex;flex-direction:column;justify-content:center;align-self:stretch;">
