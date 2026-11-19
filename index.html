@@ -4246,34 +4246,17 @@
   <div class="card" style="border-left:4px solid var(--accent-green);margin-bottom:18px;">
     <h4>👨‍🏫 第一阶段:讲师演示</h4>
 
-    <div style="display:grid;grid-template-columns:58% 42%;gap:16px;">
+    <div style="display:grid;grid-template-columns:44% 56%;gap:16px;">
       <div>
-        <!-- 三要素拆解 -->
-        <div style="padding:12px 14px;background:rgba(var(--sky-rgb),0.04);border-radius:8px;border:1px solid rgba(var(--sky-rgb),0.15);">
-          <h4 style="margin:0 0 10px;font-size:15px;color:var(--accent-purple);">🔎 用三要素拆解这条提示词</h4>
-          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;">
-            <div style="padding:10px;border-radius:6px;background:rgba(var(--green-rgb),0.08);border-left:3px solid var(--accent-green);">
-              <div style="font-weight:bold;color:var(--accent-green);font-size:13px;margin-bottom:4px;">🎭 角色设定</div>
-              <div style="font-size:13px;color:var(--text-body);line-height:1.6;">"接着上次的课程诊断做学情分析...优先升级模块是..."<br><span style="color:var(--text-muted);">→ 说清这次要做什么 + 带上上一步的产物</span></div>
-            </div>
-            <div style="padding:10px;border-radius:6px;background:rgba(var(--blue-rgb),0.08);border-left:3px solid var(--accent-blue);">
-              <div style="font-weight:bold;color:var(--accent-blue);font-size:13px;margin-bottom:4px;">🎯 任务明确</div>
-              <div style="font-size:13px;color:var(--text-body);line-height:1.6;">"整体情况→成绩结构→占比分析→关联分析→重点关注→教学建议"<br><span style="color:var(--text-muted);">→ 6个递进式分析任务</span></div>
-            </div>
-            <div style="padding:10px;border-radius:6px;background:rgba(var(--orange2-rgb),0.08);border-left:3px solid var(--accent-orange2);">
-              <div style="font-weight:bold;color:var(--accent-orange2);font-size:13px;margin-bottom:4px;">📋 输出约束</div>
-              <div style="font-size:13px;color:var(--text-body);line-height:1.6;">"输出格式:六部分依次输出"<br><span style="color:var(--text-muted);">→ 结构化输出,与提示词六步一一对应</span></div>
-            </div>
-          </div>
-          <div style="margin-top:8px;font-size:13px;color:var(--text-muted);line-height:1.6;">
-            💡 成绩文件描述(班级数/人数/列名/占比)不是三要素之一,但属于<strong>上下文信息</strong>--告诉 AI 数据结构,AI 才能正确解析列含义。添加本地文件 + 文字描述双管齐下。
-          </div>
-        </div>
 
         <div class="pt-head"><span class="pt-tag demo">👨‍🏫 演示用</span><span class="pt-note">填的是讲师的课,别复制到你的账号;橙色底纹那几处就是要换成你自己的</span></div>
         <div class="prompt-box" id="p-analysis" style="margin-top:14px;"><span style="color:var(--accent-blue);font-weight:bold;">接着上次的课程诊断做学情分析。诊断中优先升级的模块是<span class="pm">「Kotlin 基础」</span>,现在要分析学生成绩,为后面的教学设计升级提供数据。</span>
 
 我上传了一份学生成绩文件 <code><span class="pm">成绩汇总_脱敏.csv</span></code>,这是「手机编程应用」课程2026学期的成绩数据(已脱敏),包含<span class="pm">2个班级97名学生</span>:<span class="pm">考勤分(满分30,占30%)、日常作业分(满分30,占30%)、期末大作业分(满分40,占40%)</span>,总评 = 三项之和(满分100)。表里另有一列「缺勤次数」,可用来解释考勤失分。
+
+【文件里没有、只有我知道的】
+- 课堂观察:<span class="pm">2 班在下午第一节,后半段普遍走神;有 3 人每周缺 1 次课;第 7 周起大作业进度明显掉队</span>
+- 学生情况:<span class="pm">有 6 人同时在准备技能竞赛,课后时间被占</span>
 
 请帮我做学情分析:
 1. 整体情况:2个班级的平均分、最高分、最低分、及格率,对比两班差异
@@ -4294,21 +4277,32 @@
       </div>
 
       <div style="display:flex;flex-direction:column;gap:12px;">
-        <div class="card" style="border-left:4px solid var(--accent-orange);margin:0;flex:1;">
-          <h4>📸 示例结果参考</h4>
-          <div class="step-img" style="text-align:center;"><!-- 截图占位:学情分析结果 --><img src="images/wb_analysis_result.png" alt="学情分析结果示例" class="zoom-img" style="max-width:80%;margin:0 auto;" onerror="imgMissing(this)"></div>
-          <p style="margin:8px 0 0;text-align:center;">AI 输出六部分:整体情况(两班对比) → 成绩结构(三档分层) → 占比分析(三列得分率) → 关联分析 → 重点关注名单 → 教学建议</p>
+        <!-- 三要素拆解 -->
+        <div style="padding:12px 14px;background:rgba(var(--sky-rgb),0.04);border-radius:8px;border:1px solid rgba(var(--sky-rgb),0.15);">
+          <h4 style="margin:0 0 10px;font-size:15px;color:var(--accent-purple);">🔎 用三要素拆解这条提示词</h4>
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;">
+            <div style="padding:10px;border-radius:6px;background:rgba(var(--green-rgb),0.08);border-left:3px solid var(--accent-green);">
+              <div style="font-weight:bold;color:var(--accent-green);font-size:13px;margin-bottom:4px;">🎭 角色设定</div>
+              <div style="font-size:13px;color:var(--text-body);line-height:1.6;">"接着上次的课程诊断做学情分析...优先升级模块是..."<br><span style="color:var(--text-muted);">→ 说清这次要做什么 + 带上上一步的产物</span></div>
+            </div>
+            <div style="padding:10px;border-radius:6px;background:rgba(var(--blue-rgb),0.08);border-left:3px solid var(--accent-blue);">
+              <div style="font-weight:bold;color:var(--accent-blue);font-size:13px;margin-bottom:4px;">🎯 任务明确</div>
+              <div style="font-size:13px;color:var(--text-body);line-height:1.6;">"整体情况→成绩结构→占比分析→关联分析→重点关注→教学建议"<br><span style="color:var(--text-muted);">→ 6个递进式分析任务</span></div>
+            </div>
+            <div style="padding:10px;border-radius:6px;background:rgba(var(--orange2-rgb),0.08);border-left:3px solid var(--accent-orange2);">
+              <div style="font-weight:bold;color:var(--accent-orange2);font-size:13px;margin-bottom:4px;">📋 输出约束</div>
+              <div style="font-size:13px;color:var(--text-body);line-height:1.6;">"输出格式:六部分依次输出"<br><span style="color:var(--text-muted);">→ 结构化输出,与提示词六步一一对应</span></div>
+            </div>
+          </div>
+          <div style="margin-top:8px;font-size:13px;color:var(--text-muted);line-height:1.6;">
+            💡 成绩文件描述(班级数/人数/列名/占比)和课堂观察,都不是三要素之一,但属于<strong>上下文信息</strong>--前者让 AI 正确解析每一列,后者让 AI 知道你班里真实发生了什么。三要素是骨架,上下文是血肉。
+          </div>
         </div>
-        <div class="card" style="border-left:4px solid var(--accent-red);margin:0;flex:1;">
+        <div class="card" style="border-left:4px solid var(--accent-red);margin:0;">
           <h4>⚠️ 这里用「添加本地文件」,别用 @引用</h4>
           <p style="margin:6px 0;">资料包里的成绩表,如果没拷进你的工作目录,<strong>@ 就找不到它</strong>;<strong>添加本地文件没有这个限制</strong>。</p>
           <p style="margin:8px 0 0;text-align:center;"><strong style="color:var(--accent-green);">添加后 AI 自动解析 CSV/Excel</strong>,无需手动指定列名</p>
         </div>
-      </div>
-
-      <!-- 两个解释卡片并排(跨两栏) -->
-      <!-- 解释卡:六步逻辑 + 任务与输出的关系 -->
-      <div style="margin-top:0;display:grid;grid-template-columns:1fr 1fr;gap:12px;grid-column:1 / -1;align-items:start;">
         <div class="why-card why-blue">
           <div class="why-head"><span class="why-badge">?</span>为什么要这 6 个步骤</div>
           <div class="why-item"><span class="why-k">1 整体情况</span><span class="why-t"><b>全貌</b>--平均分和及格率是学情的「体温计」,班级差异提示是否需要差异化教学</span></div>
@@ -4326,6 +4320,9 @@
           <div class="why-item"><span class="why-k">一一对应</span><span class="why-t">如本步学情分析:任务 6 步 = 输出 6 部分。每一步分析就是一个输出维度,步骤名称直接变成报告章节标题--学员一看就知道「第 3 步分析占比 → 报告第三部分就是占比分析」</span></div>
         </div>
       </div>
+
+      <!-- 两个解释卡片并排(跨两栏) -->
+      <!-- 解释卡:六步逻辑 + 任务与输出的关系 -->
 
       <div class="why-card why-orange" style="grid-column:1 / -1;">
         <div class="why-head"><span class="why-badge">!</span>写法要点:任务和输出一一对应,为什么还分开写</div>
@@ -4348,6 +4345,10 @@
         <div class="prompt-box" id="p-analysis-do" style="margin-top:14px;"><span style="color:var(--accent-blue);font-weight:bold;">接着上次的课程诊断做学情分析。诊断中优先升级的模块是「<span class="ph">【请填诊断结果中第 1 个模块】</span>」,现在要分析学生成绩,为后面的教学设计升级提供数据。</span>
 
 我上传了一份学生成绩文件 <code><span class="ph">【请填你的成绩文件名.csv】</span></code>,这是我的课程真实成绩数据(已脱敏),包含<span class="ph">【请填班级数】</span>个班级<span class="ph">【请填人数】</span>名学生的<span class="ph">【请填成绩列名及占比,如:考勤分(30%)、作业分(30%)、期末考试(40%)】</span>。
+
+【文件里没有、只有我知道的】
+- 课堂观察:<span class="ph">【请填,如"2 班下午第一节后半段普遍走神;有 3 人每周缺 1 次课;第 7 周起作业开始大面积交不上"】</span>
+- 学生情况:<span class="ph">【请填,如"有 6 人在准备技能竞赛,课后时间被占";没有就删掉这行】</span>
 
 请帮我做学情分析:
 1. 整体情况:各班级的平均分、最高分、最低分、及格率,对比班级差异
@@ -4372,7 +4373,7 @@
       <div>
         <div class="card" style="border-left:4px solid var(--accent-green);margin:0;">
           <h4>📋 操作步骤</h4>
-          <div class="step"><div class="num">1</div><div class="text">在原对话中继续,复制<strong>提示词模板</strong>,根据自己课程实际情况修改<strong>【请填...】</strong>部分</div></div>
+          <div class="step"><div class="num">1</div><div class="text">在原对话中继续,复制<strong>提示词模板</strong>,根据自己课程实际情况修改<strong>【请填...】</strong>部分。其中<strong style="color:var(--accent-orange2);">课堂观察那两行最容易空着</strong>--成绩表里永远看不到这些,填了建议才准</div></div>
           <div class="step"><div class="num">2</div><div class="text">用 <strong>添加本地文件</strong> 方式添加 <code>成绩汇总_脱敏.csv</code>(在自己课的班上用,就换成你的成绩表)</div></div>
           <div class="step"><div class="num">3</div><div class="text">按回车发送</div></div>
           <div class="step"><div class="num">4</div><div class="text">确认输出:统计概览 + 占比分析 + 分层统计 + 关联分析 + 重点关注名单 + 教学建议</div></div>
@@ -4387,6 +4388,14 @@
         </div>
       </div>
     </div>
+  </div>
+
+  <!-- 示例结果:跑完之后对照 -->
+  <div class="card" style="border-left:4px solid var(--accent-orange);margin-top:18px;">
+    <h4>📸 跑完了?对照一眼--六部分该长这样</h4>
+    <p style="margin:6px 0 10px;font-size:14px;color:var(--text-body);">顺序对得上:整体情况(两班对比) → 成绩结构(三档分层) → 占比分析(三列得分率) → 关联分析 → 重点关注名单 → 教学建议。少哪部分,回 6.3 第一步查。</p>
+    <div style="text-align:center;"><img src="images/wb_analysis_result.png" alt="学情分析结果示例" class="zoom-img" style="max-width:70%;margin:0 auto;border-radius:6px;border:1px solid rgba(var(--white-rgb),0.1);" onerror="imgMissing(this)"></div>
+    <p style="margin:8px 0 0;text-align:center;font-size:13px;color:var(--text-muted);">📋 六部分输出:顺序、分班、占比、名单都在</p>
   </div>
   <!-- 🎯 实操增强：追问话术卡 -->
   <div class="ask-card">
