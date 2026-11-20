@@ -4252,7 +4252,8 @@
         <div class="pt-head"><span class="pt-tag demo">👨‍🏫 演示用</span><span class="pt-note">填的是讲师的课,别复制到你的账号;橙色底纹那几处就是要换成你自己的</span></div>
         <div class="prompt-box" id="p-analysis" style="margin-top:14px;"><span style="color:var(--accent-blue);font-weight:bold;">接着上次的课程诊断做学情分析。诊断中优先升级的模块是<span class="pm">「Kotlin 基础」</span>,现在要分析学生成绩,为后面的教学设计升级提供数据。</span>
 
-我上传了一份学生成绩文件 <code><span class="pm">成绩汇总_脱敏.csv</span></code>,这是「手机编程应用」课程2026学期的成绩数据(已脱敏),包含<span class="pm">2个班级97名学生</span>:<span class="pm">考勤分(满分30,占30%)、日常作业分(满分30,占30%)、期末大作业分(满分40,占40%)</span>,总评 = 三项之和(满分100)。表里另有一列「缺勤次数」,可用来解释考勤失分。
+【手边的材料,都在工作目录里,先读再动手】
+- 成绩数据:<code><span class="pm">学员资料包/成绩数据/成绩汇总_脱敏.csv</span></code>  --  「手机编程应用」2026 学期的成绩(已脱敏),<span class="pm">2 个班 97 人</span>;<span class="pm">考勤分(满分 30,占 30%)、日常作业分(满分 30,占 30%)、期末大作业分(满分 40,占 40%)</span>,总评 = 三项之和(满分 100)。另有一列「缺勤次数」,可用来解释考勤失分
 
 【文件里没有、只有我知道的】
 - 课堂观察:<span class="pm">2 班在下午第一节,后半段普遍走神;有 3 人每周缺 1 次课;第 7 周起大作业进度明显掉队</span>
@@ -4299,8 +4300,8 @@
           </div>
         </div>
         <div class="card" style="border-left:4px solid var(--accent-red);margin:0;">
-          <h4>⚠️ 这里用「添加本地文件」,别用 @引用</h4>
-          <p style="margin:6px 0;">资料包里的成绩表,如果没拷进你的工作目录,<strong>@ 就找不到它</strong>;<strong>添加本地文件没有这个限制</strong>。</p>
+          <h4>⚠️ 成绩表不在工作目录?用「添加本地文件」,别用 @ 引用</h4>
+          <p style="margin:6px 0;">演示数据就在 <code>学员资料包/成绩数据/</code> 里,提示词写了路径,直接发就行。<strong>换成你自己从教务系统导出的那份</strong>--它在你电脑上、不在工作目录里,@ 找不到它;<strong>添加本地文件没有这个限制</strong>。</p>
           <p style="margin:8px 0 0;text-align:center;"><strong style="color:var(--accent-green);">添加后 AI 自动解析 CSV/Excel</strong>,无需手动指定列名</p>
         </div>
         <div class="why-card why-blue">
@@ -4344,7 +4345,8 @@
         <div class="pt-head tpl"><span class="pt-tag tpl">📝 学员模板</span><span class="pt-note">替换橙色【请填…】,填你自己的课程信息</span></div>
         <div class="prompt-box" id="p-analysis-do" style="margin-top:14px;"><span style="color:var(--accent-blue);font-weight:bold;">接着上次的课程诊断做学情分析。诊断中优先升级的模块是「<span class="ph">【请填诊断结果中第 1 个模块】</span>」,现在要分析学生成绩,为后面的教学设计升级提供数据。</span>
 
-我上传了一份学生成绩文件 <code><span class="ph">【请填你的成绩文件名.csv】</span></code>,这是我的课程真实成绩数据(已脱敏),包含<span class="ph">【请填班级数】</span>个班级<span class="ph">【请填人数】</span>名学生的<span class="ph">【请填成绩列名及占比,如:考勤分(30%)、作业分(30%)、期末考试(40%)】</span>。
+【手边的材料,都在工作目录里,先读再动手】
+- 成绩数据:<code><span class="ph">【请填路径,如 学员资料包/成绩数据/成绩汇总_脱敏.csv】</span></code>  --  我的课程真实成绩(已脱敏),<span class="ph">【班级数】</span>个班<span class="ph">【人数】</span>人;<span class="ph">【成绩列名及占比,如:考勤分(30%)、作业分(30%)、期末考试(40%)】</span>
 
 【文件里没有、只有我知道的】
 - 课堂观察:<span class="ph">【请填,如"2 班下午第一节后半段普遍走神;有 3 人每周缺 1 次课;第 7 周起作业开始大面积交不上"】</span>
@@ -4374,14 +4376,14 @@
         <div class="card" style="border-left:4px solid var(--accent-green);margin:0;">
           <h4>📋 操作步骤</h4>
           <div class="step"><div class="num">1</div><div class="text">在原对话中继续,复制<strong>提示词模板</strong>,根据自己课程实际情况修改<strong>【请填...】</strong>部分。其中<strong style="color:var(--accent-orange2);">课堂观察那两行最容易空着</strong>--成绩表里永远看不到这些,填了建议才准</div></div>
-          <div class="step"><div class="num">2</div><div class="text">用 <strong>添加本地文件</strong> 方式添加 <code>成绩汇总_脱敏.csv</code>(在自己课的班上用,就换成你的成绩表)</div></div>
+          <div class="step"><div class="num">2</div><div class="text">演示数据已在工作目录里,提示词写好路径,直接发;<strong>换成你自己那份成绩表,就先「添加本地文件」传上来</strong></div></div>
           <div class="step"><div class="num">3</div><div class="text">按回车发送</div></div>
           <div class="step"><div class="num">4</div><div class="text">确认输出:统计概览 + 占比分析 + 分层统计 + 关联分析 + 重点关注名单 + 教学建议</div></div>
         </div>
         <div class="card" style="border-left:4px solid var(--accent-red2);margin-top:12px;">
           <h4>⚠ 成绩数据脱敏</h4>
           <ul style="margin:0;padding-left:18px;line-height:1.8;">
-            <li>上传前<strong>删除姓名列</strong>,学号用编号替代(如 S001)</li>
+            <li>放进工作目录前<strong>删除姓名列</strong>,学号用编号替代(如 S001)</li>
             <li>专业 / 班级名称可用编号替代(如 B1 / B2)</li>
             <li>保留成绩数值即可,AI 分析不需要姓名</li>
           </ul>
@@ -4423,7 +4425,7 @@
   <div class="tier-box">
     <div class="tier tier-basic">
       <span class="tier-tag">🟢 基础</span>
-      <p>上传成绩表,拿到六部分学情报告即可。没带成绩表就用演示数据跟做。</p>
+      <p>把成绩表放进工作目录(或「添加本地文件」传上来),拿到六部分学情报告即可。没带成绩表就用演示数据跟做。</p>
     </div>
     <div class="tier tier-adv">
       <span class="tier-tag">🔵 进阶</span>
