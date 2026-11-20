@@ -4248,10 +4248,10 @@
     <h4>👨‍🏫 第一阶段:讲师演示</h4>
 
     <div style="display:grid;grid-template-columns:44% 56%;gap:16px;">
-      <div>
+      <div style="display:flex;flex-direction:column;">
 
         <div class="pt-head"><span class="pt-tag demo">👨‍🏫 演示用</span><span class="pt-note">填的是讲师的课,别复制到你的账号;橙色底纹那几处就是要换成你自己的</span></div>
-        <div class="prompt-box" id="p-analysis" style="margin-top:14px;"><span style="color:var(--accent-blue);font-weight:bold;">接着上次的课程诊断做学情分析。诊断中优先升级的模块是<span class="pm">「Kotlin 基础」</span>,现在要分析学生成绩,为后面的教学设计升级提供数据。<span class="pk">成绩来自上一轮已结课的班,下一轮还没开课--要找出的是课程哪里要改。</span></span>
+        <div class="prompt-box" id="p-analysis" style="margin-top:14px;flex:1;"><span style="color:var(--accent-blue);font-weight:bold;">接着上次的课程诊断做学情分析。诊断中优先升级的模块是<span class="pm">「Kotlin 基础」</span>,现在要分析学生成绩,为后面的教学设计升级提供数据。<span class="pk">成绩来自上一轮已结课的班,下一轮还没开课--要找出的是课程哪里要改。</span></span>
 
 【手边的材料,都在工作目录里,<span class="pk">先读再动手</span>】
 - 成绩数据:<code><span class="pm">学员资料包/成绩数据/成绩汇总_脱敏.csv</span></code>  --  「手机编程应用」<span class="pm">上一轮(2026 学期)</span>真实成绩(已脱敏),<span class="pm">总评 = 考勤 30 + 日常作业 30 + 期末大作业 40</span>,三项占比 <span class="pm">30% / 30% / 40%</span>;<span class="pk">缺勤次数可用来解释考勤失分</span>
@@ -4321,14 +4321,10 @@
           <div class="why-item"><span class="why-k">不一致</span><span class="why-t">如第一步课程诊断:任务 5 步(含联网搜索等过程性步骤),输出 4 部分。有些任务是<b>「过程动作」</b>,不直接对应一个输出章节</span></div>
           <div class="why-item"><span class="why-k">一一对应</span><span class="why-t">如本步学情分析:任务 6 步 = 输出 6 部分。每一步分析就是一个输出维度,步骤名称直接变成报告章节标题--学员一看就知道「第 3 步分析占比 → 报告第三部分就是占比分析」</span></div>
         </div>
-      </div>
-
-      <!-- 两个解释卡片并排(跨两栏) -->
-      <!-- 解释卡:六步逻辑 + 任务与输出的关系 -->
-
-      <div class="why-card why-orange" style="grid-column:1 / -1;">
-        <div class="why-head"><span class="why-badge">!</span>写法要点:任务和输出一一对应,为什么还分开写</div>
-        <div class="why-item"><span class="why-k">要点</span><span class="why-t">本步任务和输出数量相同(6=6),但任务讲<b>「做什么」</b>(操作动作,如「统计各列得分率」),输出讲<b>「给什么」</b>(产出结构,如「各维度得分率占比分析」)。分开写让 AI 更明确:不仅要执行操作,还要按指定结构输出</span></div>
+        <div class="why-card why-orange">
+          <div class="why-head"><span class="why-badge">!</span>写法要点:任务和输出一一对应,为什么还分开写</div>
+          <div class="why-item"><span class="why-k">要点</span><span class="why-t">本步任务和输出数量相同(6=6),但任务讲<b>「做什么」</b>(操作动作,如「统计各列得分率」),输出讲<b>「给什么」</b>(产出结构,如「各维度得分率占比分析」)。分开写让 AI 更明确:不仅要执行操作,还要按指定结构输出</span></div>
+        </div>
       </div>
 
       <div class="warn-box" style="margin-top:0;grid-column:1 / -1;">
