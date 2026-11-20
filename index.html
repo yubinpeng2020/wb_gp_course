@@ -4253,7 +4253,7 @@
         <div class="prompt-box" id="p-analysis" style="margin-top:14px;"><span style="color:var(--accent-blue);font-weight:bold;">接着上次的课程诊断做学情分析。诊断中优先升级的模块是<span class="pm">「Kotlin 基础」</span>,现在要分析学生成绩,为后面的教学设计升级提供数据。</span>
 
 【手边的材料,都在工作目录里,先读再动手】
-- 成绩数据:<code><span class="pm">学员资料包/成绩数据/成绩汇总_脱敏.csv</span></code>  --  「手机编程应用」2026 学期真实成绩(已脱敏);缺勤次数可用来解释考勤失分
+- 成绩数据:<code><span class="pm">学员资料包/成绩数据/成绩汇总_脱敏.csv</span></code>  --  「手机编程应用」2026 学期真实成绩(已脱敏),<span class="pm">总评 = 考勤 30 + 日常作业 30 + 期末大作业 40</span>,三项占比 <span class="pm">30% / 30% / 40%</span>;缺勤次数可用来解释考勤失分
 
 【文件里没有、只有我知道的】
 - 课堂观察:<span class="pm">2 班在下午第一节,后半段普遍走神;有 3 人每周缺 1 次课;第 7 周起大作业进度明显掉队</span>
@@ -4262,7 +4262,7 @@
 请帮我做学情分析:
 1. 整体情况:2个班级的平均分、最高分、最低分、及格率,对比两班差异
 2. 成绩结构:将学生分为优秀(≥80)、合格(60-79)、待提升(<60)三档,统计各档人数和占比
-3. 占比分析:分别按 考勤分、日常作业分、期末大作业分 三列,统计各列的平均得分率(得分/满分占比),找出学生最薄弱的环节
+3. 占比分析:分别按 考勤分、日常作业分、期末大作业分 三列,统计各列的平均得分率(该列平均分 ÷ 该列满分),找出学生最薄弱的环节
 4. 关联分析:日常作业分与期末大作业分的相关性--找出作业完成差但大作业尚可、或两者都差的学生群体
 5. 重点关注:列出待提升档学生的学号、考勤分、作业分、大作业分,分析不及格的可能原因
 6. 教学建议:基于以上分析,给出3条针对性的教学策略建议
@@ -4296,7 +4296,7 @@
             </div>
           </div>
           <div style="margin-top:8px;font-size:13px;color:var(--text-muted);line-height:1.6;">
-            💡 成绩文件描述(班级数/人数/列名/占比)和课堂观察,都不是三要素之一,但属于<strong>上下文信息</strong>--前者让 AI 正确解析每一列,后者让 AI 知道你班里真实发生了什么。三要素是骨架,上下文是血肉。
+            💡 成绩文件的结构(每项占多少分、占比多少)和课堂观察,都不是三要素之一,但属于<strong>上下文信息</strong>--前者让 AI 正确解析每一列,后者让 AI 知道你班里真实发生了什么。三要素是骨架,上下文是血肉。
           </div>
         </div>
         <div class="card" style="border-left:4px solid var(--accent-red);margin:0;">
@@ -4346,7 +4346,7 @@
         <div class="prompt-box" id="p-analysis-do" style="margin-top:14px;"><span style="color:var(--accent-blue);font-weight:bold;">接着上次的课程诊断做学情分析。诊断中优先升级的模块是「<span class="ph">【请填诊断结果中第 1 个模块】</span>」,现在要分析学生成绩,为后面的教学设计升级提供数据。</span>
 
 【手边的材料,都在工作目录里,先读再动手】
-- 成绩数据:<code><span class="ph">【请填路径,如 学员资料包/成绩数据/成绩汇总_脱敏.csv】</span></code>  --  我上一轮的真实成绩(已脱敏),<span class="ph">【各列满分,如:平时分 30、期末 70】</span>;缺勤次数可用来说明考勤失分
+- 成绩数据:<code><span class="ph">【请填路径,如 学员资料包/成绩数据/成绩汇总_脱敏.csv】</span></code>  --  我上一轮的真实成绩(已脱敏),<span class="ph">【各构成项及占比,如:平时分 30%、期末 70%】</span>;缺勤次数可用来说明考勤失分
 
 【文件里没有、只有我知道的】
 - 课堂观察:<span class="ph">【请填,如"2 班下午第一节后半段普遍走神;有 3 人每周缺 1 次课;第 7 周起作业开始大面积交不上"】</span>
@@ -4355,7 +4355,7 @@
 请帮我做学情分析:
 1. 整体情况:各班级的平均分、最高分、最低分、及格率,对比班级差异
 2. 成绩结构:将学生分为优秀(≥80)、合格(60-79)、待提升(<60)三档,统计各档人数和占比
-3. 占比分析:分别按各成绩列,统计平均得分率(得分/满分占比),找出学生最薄弱的环节
+3. 占比分析:分别按各成绩列,统计平均得分率(该列平均分 ÷ 该列满分),找出学生最薄弱的环节
 4. 关联分析:各成绩列之间的相关性--找出平时成绩差但期末尚可、或两者都差的学生群体
 5. 重点关注:列出待提升档学生的编号及各列成绩,分析不及格的可能原因
 6. 教学建议:基于以上分析,给出3条针对性的教学策略建议
@@ -4375,7 +4375,7 @@
       <div>
         <div class="card" style="border-left:4px solid var(--accent-green);margin:0;">
           <h4>📋 操作步骤</h4>
-          <div class="step"><div class="num">1</div><div class="text">在原对话中继续,复制<strong>提示词模板</strong>,根据自己课程实际情况修改<strong>【请填...】</strong>部分。其中<strong style="color:var(--accent-orange2);">课堂观察那两行和「各列满分」最容易漏</strong>--前者成绩表里永远没有,后者一漏,它算得分率只能猜</div></div>
+          <div class="step"><div class="num">1</div><div class="text">在原对话中继续,复制<strong>提示词模板</strong>,根据自己课程实际情况修改<strong>【请填...】</strong>部分。其中<strong style="color:var(--accent-orange2);">课堂观察那两行和「各构成项占比」最容易漏</strong>--前者成绩表里永远没有,后者一漏,得分率就没法算</div></div>
           <div class="step"><div class="num">2</div><div class="text">演示数据已在工作目录里,提示词写好路径,直接发;<strong>换成你自己那份成绩表,就先「添加本地文件」传上来</strong></div></div>
           <div class="step"><div class="num">3</div><div class="text">按回车发送</div></div>
           <div class="step"><div class="num">4</div><div class="text">确认输出:统计概览 + 占比分析 + 分层统计 + 关联分析 + 重点关注名单 + 教学建议</div></div>
