@@ -4253,7 +4253,7 @@
         <div class="prompt-box" id="p-analysis" style="margin-top:14px;"><span style="color:var(--accent-blue);font-weight:bold;">接着上次的课程诊断做学情分析。诊断中优先升级的模块是<span class="pm">「Kotlin 基础」</span>,现在要分析学生成绩,为后面的教学设计升级提供数据。</span>
 
 【手边的材料,都在工作目录里,先读再动手】
-- 成绩数据:<code><span class="pm">学员资料包/成绩数据/成绩汇总_脱敏.csv</span></code>  --  「手机编程应用」2026 学期的成绩(已脱敏),<span class="pm">2 个班 97 人</span>;<span class="pm">考勤分(满分 30,占 30%)、日常作业分(满分 30,占 30%)、期末大作业分(满分 40,占 40%)</span>,总评 = 三项之和(满分 100)。另有一列「缺勤次数」,可用来解释考勤失分
+- 成绩数据:<code><span class="pm">学员资料包/成绩数据/成绩汇总_脱敏.csv</span></code>  --  「手机编程应用」2026 学期真实成绩(已脱敏),<strong>列名和满分表头里都写着,先读一遍再算</strong>;缺勤次数可用来解释考勤失分
 
 【文件里没有、只有我知道的】
 - 课堂观察:<span class="pm">2 班在下午第一节,后半段普遍走神;有 3 人每周缺 1 次课;第 7 周起大作业进度明显掉队</span>
@@ -4346,7 +4346,7 @@
         <div class="prompt-box" id="p-analysis-do" style="margin-top:14px;"><span style="color:var(--accent-blue);font-weight:bold;">接着上次的课程诊断做学情分析。诊断中优先升级的模块是「<span class="ph">【请填诊断结果中第 1 个模块】</span>」,现在要分析学生成绩,为后面的教学设计升级提供数据。</span>
 
 【手边的材料,都在工作目录里,先读再动手】
-- 成绩数据:<code><span class="ph">【请填路径,如 学员资料包/成绩数据/成绩汇总_脱敏.csv】</span></code>  --  我的课程真实成绩(已脱敏),<span class="ph">【班级数】</span>个班<span class="ph">【人数】</span>人;<span class="ph">【成绩列名及占比,如:考勤分(30%)、作业分(30%)、期末考试(40%)】</span>
+- 成绩数据:<code><span class="ph">【请填路径,如 学员资料包/成绩数据/成绩汇总_脱敏.csv】</span></code>  --  我上一轮的真实成绩(已脱敏),<strong>列名和满分在表头里,按表头算</strong>;缺勤次数可用来说明考勤失分
 
 【文件里没有、只有我知道的】
 - 课堂观察:<span class="ph">【请填,如"2 班下午第一节后半段普遍走神;有 3 人每周缺 1 次课;第 7 周起作业开始大面积交不上"】</span>
@@ -4618,10 +4618,13 @@
         <div style="font-size:12.5px;color:var(--text-body);line-height:1.65;">考勤 30、作业 30、大作业 40,分母别拿错</div>
       </div>
     </div>
+    <div style="padding:10px 14px;border-radius:8px;background:rgba(var(--orange-rgb),0.06);border:1px solid rgba(var(--orange-rgb),0.16);margin-bottom:10px;">
+      <div style="font-size:13px;color:var(--text-body);line-height:1.8;">📐 <strong>演示数据先记住这几个数</strong>--<strong style="color:var(--accent-orange2);">2 个班 97 人</strong>(1 班 47、2 班 50)、<strong style="color:var(--accent-orange2);">全体平均分 61.6</strong>(1 班 62.9、2 班 60.5)。报告里跟它们对不上,就是它算错了。</div>
+    </div>
     <div style="padding:12px 14px;border-radius:8px;background:rgba(var(--red2-rgb),0.06);border:1px solid rgba(var(--red2-rgb),0.18);margin-bottom:10px;">
       <div style="font-size:13px;font-weight:700;color:var(--accent-red);margin-bottom:7px;">⚠ 三个最容易算错的地方--换一份成绩表,还是这三处</div>
       <div style="font-size:13px;line-height:1.85;color:var(--text-body);">
-        <div><strong>① 两班混着算</strong>--<span style="color:var(--text-muted);">本课:1 班 62.9、2 班 60.5,混起来 61.6,看着没毛病;可两班挂科的原因可能完全不一样,混算就看不出来了。</span></div>
+        <div><strong>① 两班混着算</strong>--<span style="color:var(--text-muted);">本课:两班平均分只差 2.4 分,合起来看不出区别;可 2 班大作业得分率 36.1%、1 班 44.0%,差 8 个百分点,混算就把这个差距抹平了。</span></div>
         <div><strong>② 口径没问清</strong>--<span style="color:var(--text-muted);">及格线 60 还是 50、等级制怎么折分、缺考算 0 分还是不计入,不写清楚它就自己挑一个。</span></div>
         <div><strong>③ 分母拿错</strong>--<span style="color:var(--text-muted);">得分率是"得分 ÷ 满分"还是"得分 ÷ 实际布置的作业总分";缺考的人算不算进分母,答案能差好几个百分点。</span></div>
       </div>
