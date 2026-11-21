@@ -4884,32 +4884,10 @@
   <div class="card" style="border-left:4px solid var(--accent-green);margin-bottom:18px;">
     <h4>👨‍🏫 第一阶段:讲师演示</h4>
 
-    <div style="display:grid;grid-template-columns:58% 42%;gap:16px;">
-      <div>
-        <!-- 三要素拆解 -->
-        <div style="padding:12px 14px;background:rgba(var(--sky-rgb),0.04);border-radius:8px;border:1px solid rgba(var(--sky-rgb),0.15);">
-          <h4 style="margin:0 0 10px;font-size:15px;color:var(--accent-purple);">🔎 用三要素拆解这条提示词</h4>
-          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;">
-            <div style="padding:10px;border-radius:6px;background:rgba(var(--green-rgb),0.08);border-left:3px solid var(--accent-green);">
-              <div style="font-weight:bold;color:var(--accent-green);font-size:13px;margin-bottom:4px;">🎭 角色设定</div>
-              <div style="font-size:13px;color:var(--text-body);line-height:1.6;">"请基于前面课程诊断的薄弱模块清单和学情分析的关键结论..."<br><span style="color:var(--text-muted);">→ 说清这次要做什么 + 指明带上哪两样产物</span></div>
-            </div>
-            <div style="padding:10px;border-radius:6px;background:rgba(var(--blue-rgb),0.08);border-left:3px solid var(--accent-blue);">
-              <div style="font-weight:bold;color:var(--accent-blue);font-size:13px;margin-bottom:4px;">🎯 任务明确</div>
-              <div style="font-size:13px;color:var(--text-body);line-height:1.6;">"把诊断报告中优先升级的模块从传统讲授式升级为项目式教学"<br><span style="color:var(--text-muted);">→ <b style="color:var(--accent-blue);">做什么</b>:将薄弱模块的教学方式升级为项目式</span></div>
-            </div>
-            <div style="padding:10px;border-radius:6px;background:rgba(var(--orange2-rgb),0.08);border-left:3px solid var(--accent-orange2);">
-              <div style="font-weight:bold;color:var(--accent-orange2);font-size:13px;margin-bottom:4px;">📋 输出约束</div>
-              <div style="font-size:13px;color:var(--text-body);line-height:1.6;">"按4部分依次输出:教学目标→项目主题→分课时表格→评价方式,第3部分用表格"<br><span style="color:var(--text-muted);">→ <b style="color:var(--accent-orange2);">给什么</b>:4部分结构化输出,表格化呈现</span></div>
-            </div>
-          </div>
-          <div style="margin-top:8px;font-size:13px;color:var(--text-muted);line-height:1.6;">
-            💡 虽然前两步的结果已在同一对话中,AI 有<span style="color:var(--accent-purple);">上下文记忆</span>,但<strong>手动补充关键信息能让 AI 输出更聚焦</strong>--避免长对话中细节丢失,把学情报告中的四条关键发现直接注入提示词。
-          </div>
-        </div>
-
+    <div style="display:grid;grid-template-columns:46% 54%;gap:16px;align-items:stretch;">
+      <div style="display:flex;flex-direction:column;">
         <div class="pt-head"><span class="pt-tag demo">👨‍🏫 演示用</span><span class="pt-note">填的是讲师的课,别复制到你的账号;橙色底纹那几处就是要换成你自己的</span></div>
-        <div class="prompt-box" id="p-upgrade-demo" style="margin-top:14px;"><span style="color:var(--accent-blue);font-weight:bold;">请基于前面课程诊断的薄弱模块清单和学情分析的关键结论,把诊断报告中优先升级的模块从传统讲授式升级为项目式教学。</span>
+        <div class="prompt-box" id="p-upgrade-demo" style="margin-top:14px;flex:1;"><span style="color:var(--accent-blue);font-weight:bold;">请基于前面课程诊断的薄弱模块清单和学情分析的关键结论,把诊断报告中优先升级的模块从传统讲授式升级为项目式教学。</span>
 
 关键信息补充(来自学情分析的提炼):
 - 最薄弱环节:<span style="color:var(--accent-orange2);"><span class="pm">期末大作业得分率仅39.9%、日常作业56.6%,"人在心不在"</span></span>
@@ -4923,8 +4901,36 @@
 3. 分课时教学设计表格,列名:课时 | 教师活动 | 学生活动 | 工具 / 资源 | 评价项(分 4 个课时,重点照顾薄弱模块和待提升学生)
 4. 评价方式(过程性评价 60% + 终结性评价 40%,列出具体评价项)
 <button class="copy-btn" onclick="copyPrompt('p-upgrade-demo',this)">复制</button></div>
+      </div>
 
-        <div class="why-card why-blue">
+      <div style="display:flex;flex-direction:column;gap:12px;">
+        <div style="padding:12px 14px;background:rgba(var(--sky-rgb),0.04);border-radius:8px;border:1px solid rgba(var(--sky-rgb),0.15);">
+          <h4 style="margin:0 0 10px;font-size:15px;color:var(--accent-purple);">🔎 用三要素拆解这条提示词</h4>
+          <div style="display:grid;grid-template-columns:1fr;gap:9px;">
+            <div style="padding:10px;border-radius:6px;background:rgba(var(--green-rgb),0.08);border-left:3px solid var(--accent-green);">
+              <div style="font-weight:bold;color:var(--accent-green);font-size:13px;margin-bottom:4px;">🎭 角色设定</div>
+              <div style="font-size:13px;color:var(--text-body);line-height:1.6;">"请基于前面课程诊断的薄弱模块清单和学情分析的关键结论..."<br><span style="color:var(--text-muted);">→ 说清这次要做什么 + 指明带上哪两样产物</span></div>
+            </div>
+            <div style="padding:10px;border-radius:6px;background:rgba(var(--blue-rgb),0.08);border-left:3px solid var(--accent-blue);">
+              <div style="font-weight:bold;color:var(--accent-blue);font-size:13px;margin-bottom:4px;">🎯 任务明确</div>
+              <div style="font-size:13px;color:var(--text-body);line-height:1.6;">"把诊断报告中优先升级的模块从传统讲授式升级为项目式教学"<br><span style="color:var(--text-muted);">→ <b style="color:var(--accent-blue);">做什么</b>:将薄弱模块的教学方式升级为项目式</span></div>
+            </div>
+            <div style="padding:10px;border-radius:6px;background:rgba(var(--orange2-rgb),0.08);border-left:3px solid var(--accent-orange2);">
+              <div style="font-weight:bold;color:var(--accent-orange2);font-size:13px;margin-bottom:4px;">📋 输出约束</div>
+              <div style="font-size:13px;color:var(--text-body);line-height:1.6;">"按4部分依次输出:教学目标→项目主题→分课时表格→评价方式,第3部分用表格"<br><span style="color:var(--text-muted);">→ <b style="color:var(--accent-orange2);">给什么</b>:4部分结构化输出,表格化呈现</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="why-card">
+          <div class="why-head"><span class="why-badge">!</span>这一步与前两步的关系</div>
+          <div class="why-item"><span class="why-k">诊断报告</span><span class="why-t">告诉 AI <b>升级哪个模块</b>--优先升级的那一个,不是全改</span></div>
+          <div class="why-item"><span class="why-k">学情报告</span><span class="why-t">告诉 AI <b>学生薄弱在哪</b>--大作业交不出来、待提升 39.2%</span></div>
+          <div class="why-item"><span class="why-k">本步输出</span><span class="why-t">为下一步<b>资源生成</b>提供素材--方案里写了什么活动,下一步就配什么资源</span></div>
+          <div class="why-item"><span class="why-k">衔接</span><span class="why-t">在<b>同一对话</b>里继续,AI 有前两步的上下文;再把四条关键信息写进提示词</span></div>
+        </div>
+
+        <div class="why-card">
           <div class="why-head"><span class="why-badge">?</span>为什么要在提示词里补充四条关键信息</div>
           <div class="why-item"><span class="why-k">省略写法</span><span class="why-t">只写「基于前两步的结果」--AI 从长对话记忆中自行提取,可能丢失细节,输出泛泛而谈</span></div>
           <div class="why-item"><span class="why-k">补充四条</span><span class="why-t">最薄弱环节 + 分层比例 + 关键发现 + AI 建议--AI 输出直接聚焦你的学情,方案更落地</span></div>
@@ -4932,30 +4938,8 @@
           <div class="why-item"><span class="why-k">唯一注意</span><span class="why-t">四条信息要准确--如果提炼错了,AI 会基于错误信息输出方案。所以 6.3 步的提炼质量很关键</span></div>
           <div class="why-item"><span class="why-k">配比</span><span class="why-t">对话记忆提供<b>完整背景</b>,四条关键信息提供<b>聚焦方向</b>,两者配合效果最好</span></div>
         </div>
-      </div>
 
-      <div style="display:flex;flex-direction:column;gap:12px;">
-        <div class="card" style="border-left:4px solid var(--accent-orange);margin:0;flex:1;">
-          <h4>📸 示例结果参考</h4>
-          <div class="step-img" style="text-align:center;"><!-- 截图占位:教学设计升级结果 --><img src="images/wb_upgrade_result.png" alt="教学设计升级结果示例" class="zoom-img" style="max-width:80%;margin:0 auto;" onerror="imgMissing(this)"></div>
-          <p style="margin:8px 0 0;text-align:center;">AI 输出:教学目标(3条) → 项目主题(汕职备忘录+分层A/B/C级选题) → 分课时表格(4课时) → 评价方式(过程60%+终结40%)</p>
-        </div>
-        <div class="card" style="border-left:4px solid var(--accent-red);margin:0;flex:1;">
-          <h4>⚠️ 这一步与前两步的关系</h4>
-          <p style="margin:6px 0;">本步直接<strong>消费</strong>前两步的产出:</p>
-          <ul style="margin:4px 0 6px;padding-left:18px;font-size:13px;color:var(--text-muted);line-height:1.8;">
-            <li><strong style="color:var(--accent-green);">诊断报告</strong> → 告诉 AI 升级哪个模块</li>
-            <li><strong style="color:var(--accent-blue);">学情报告</strong> → 告诉 AI 学生薄弱环节</li>
-            <li><strong style="color:var(--accent-orange2);">本步输出</strong> → 为第四步资源生成提供素材</li>
-          </ul>
-          <p style="margin:8px 0 0;text-align:center;"><strong style="color:var(--accent-green);">在同一对话中继续 + 手动补充四条关键信息</strong></p>
-        </div>
-        <div class="why-card why-orange">
-          <div class="why-head"><span class="why-badge">!</span>写法要点:只列输出 + 关键信息补充</div>
-          <div class="why-item"><span class="why-k">不写任务</span><span class="why-t">只列四部分输出--四个部分不是四件事,是同一份方案的四块内容。硬拆会写成「任务:设计教学目标 / 输出:第一部分 教学目标」,同义反复</span></div>
-          <div class="why-item"><span class="why-k">多一段</span><span class="why-t"><b>「关键信息补充」</b>--从学情报告提炼四条直接写进提示词,让 AI 不只靠对话记忆,而是聚焦你的实际学情输出方案</span></div>
-        </div>
-        <div class="why-card why-blue">
+        <div class="why-card">
           <div class="why-head"><span class="why-badge">?</span>输出为什么是这四部分</div>
           <div class="why-item"><span class="why-k">1 教学目标</span><span class="why-t"><b>定方向</b>--知识+能力+素养三维目标,明确升级后学生要达到什么水平</span></div>
           <div class="why-item"><span class="why-k">2 项目主题</span><span class="why-t"><b>找载体</b>--项目式教学的核心,选一个贴近生活的 App 让学生在做中学,同时设计<b>分层选题</b>(A/B/C 级)照顾不同层次学生</span></div>
@@ -4964,12 +4948,18 @@
           <div class="why-item"><span class="why-k">逻辑链</span><span class="why-t">定方向 → 找载体 → 拆课时 → 闭环</span></div>
           <div class="why-item"><span class="why-k">少一块就断</span><span class="why-t">没有 ①,四课时不知道往哪教;没有 ③,目标落不到每节课;没有 ④,做完不算「学会」,还是老一套考勤加交作业</span></div>
         </div>
-      </div>
 
-      <div class="warn-box" style="margin-top:0;grid-column:1 / -1;">
-        <div class="title">⚠ 重要:不要复制示例提示词!</div>
-        <div class="text">示例提示词用的是讲师的课程,如果直接复制到你的 WorkBuddy,会污染你的账号记忆。请用下面的<strong>提示词模板</strong>,在你的对话中继续即可。</div>
+        <div class="why-card why-orange">
+          <div class="why-head"><span class="why-badge">!</span>写法要点:只列输出 + 关键信息补充</div>
+          <div class="why-item"><span class="why-k">不写任务</span><span class="why-t">只列四部分输出--四个部分不是四件事,是同一份方案的四块内容。硬拆会写成「任务:设计教学目标 / 输出:第一部分 教学目标」,同义反复</span></div>
+          <div class="why-item"><span class="why-k">多一段</span><span class="why-t"><b>「关键信息补充」</b>--从学情报告提炼四条直接写进提示词,让 AI 不只靠对话记忆,而是聚焦你的实际学情输出方案</span></div>
+        </div>
       </div>
+    </div>
+
+    <div class="warn-box" style="margin-top:14px;">
+      <div class="title">⚠ 重要:不要复制示例提示词!</div>
+      <div class="text">示例提示词用的是讲师的课程,如果直接复制到你的 WorkBuddy,会污染你的账号记忆。请用下面的<strong>提示词模板</strong>,在你的对话中继续即可。</div>
     </div>
   </div>
 
@@ -4977,10 +4967,10 @@
   <div class="card" style="border-left:4px solid var(--accent-orange2);">
     <h4>👥 第二阶段:学员跟做(用自己的课程)</h4>
 
-    <div style="display:grid;grid-template-columns:58% 42%;gap:16px;">
-      <div>
+    <div style="display:grid;grid-template-columns:58% 42%;gap:16px;align-items:stretch;">
+      <div style="display:flex;flex-direction:column;">
         <div class="pt-head tpl"><span class="pt-tag tpl">📝 学员模板</span><span class="pt-note">替换橙色【请填…】,填你自己的课程信息</span></div>
-        <div class="prompt-box" id="p-upgrade-do" style="margin-top:14px;"><span style="color:var(--accent-blue);font-weight:bold;">请基于前面课程诊断的薄弱模块清单和学情分析的关键结论,把诊断报告中优先升级的模块从传统讲授式升级为项目式教学。</span>
+        <div class="prompt-box" id="p-upgrade-do" style="margin-top:14px;flex:1;"><span style="color:var(--accent-blue);font-weight:bold;">请基于前面课程诊断的薄弱模块清单和学情分析的关键结论,把诊断报告中优先升级的模块从传统讲授式升级为项目式教学。</span>
 
 关键信息补充(把你在 6.3 步学情分析中提炼的四条填入):
 - 最薄弱环节:<span class="ph">【请填6.3步提炼的最薄弱环节】</span>
@@ -4996,18 +4986,27 @@
 
 全部保存到「课程焕新/03_教学设计」目录(没有就新建)。
 <button class="copy-btn" onclick="copyPrompt('p-upgrade-do',this)">复制</button></div>
+      </div>
 
-        <div class="card" style="margin-top:14px;">
+      <div style="display:flex;flex-direction:column;gap:12px;">
+        <div class="card" style="margin:0;flex:1;">
           <h4>📋 操作步骤</h4>
-          <div class="step"><div class="num">1</div><div class="text">在原对话中继续,复制<strong>提示词模板</strong>,根据自己学情分析结果修改<strong>【请填...】</strong>部分</div></div>
+          <div class="step"><div class="num">1</div><div class="text">在原对话中继续,复制<strong>提示词模板</strong>,把四处【请填...】换成你自己 6.3 步提炼出来的四条</div></div>
           <div class="step"><div class="num">2</div><div class="text">按回车发送</div></div>
           <div class="step"><div class="num">3</div><div class="text">确认输出:教学目标(3条) + 项目主题 + 分课时表格(4课时) + 评价方式</div></div>
           <div class="step"><div class="num">4</div><div class="text">检查输出--教学目标是否合理?项目主题是否贴近生活?评价方式是否完整?</div></div>
           <div class="step"><div class="num">5</div><div class="text">如果不满意,可以追问调整(如"项目主题换成更简单的""评价项增加课堂表现")</div></div>
         </div>
-      </div>
 
-  <!-- 🎯 实操增强：追问话术卡 -->
+        <div class="warn-box" style="margin:0;">
+          <div class="title">💡 关键提醒</div>
+          <div class="text">• 四条关键信息来自<strong>6.3 步你自己的提炼</strong>--不是照抄示例,而是从你的学情报告里提炼<br>• 在你自己的对话中继续即可,AI 已有你的诊断和学情上下文</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 🎯 实操增强:追问话术卡 -->
   <div class="ask-card">
     <span class="ask-q">💬 卡住了?照着这样追问 AI:</span>
     <div class="ask-grid">
@@ -5018,7 +5017,7 @@
     </div>
   </div>
 
-  <!-- 🎯 实操增强：成果验收清单 -->
+  <!-- 🎯 实操增强:成果验收清单 -->
   <div class="check-list">
     <div class="title">✅ 成果验收:我做出升级方案了吗?</div>
     <ul>
@@ -5029,7 +5028,7 @@
     </ul>
   </div>
 
-  <!-- 🎯 实操增强：分层练习 -->
+  <!-- 🎯 实操增强:分层练习 -->
   <div class="tier-box">
     <div class="tier tier-basic">
       <span class="tier-tag">🟢 基础</span>
@@ -5038,16 +5037,6 @@
     <div class="tier tier-adv">
       <span class="tier-tag">🔵 进阶</span>
       <p>追问 AI 针对你学情的<code>薄弱环节</code>做针对性设计(如结对编程、当场验收、分层选题),让方案真正落地。</p>
-    </div>
-  </div>
-
-      <div class="warn-box" style="margin-top:0;grid-column:1 / -1;">
-        <div class="title">💡 关键提醒</div>
-        <div class="text">
-          • 提示词中的四条关键信息来自<strong>6.3 步你自己的提炼</strong>--不是照抄示例,而是从你的学情报告中提炼出属于你课程的四个维度<br>
-          • 在你自己的对话中继续即可,AI 已有你的课程诊断和学情分析上下文记忆
-        </div>
-      </div>
     </div>
   </div>
 </section>
