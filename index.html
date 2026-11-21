@@ -4780,6 +4780,52 @@
       </div>
     </div>
 
+    <div class="card" style="border-left:4px solid var(--accent-purple-pale);">
+      <h4 style="color:var(--accent-purple-pale);">🔍 先判一下:示例课原本是哪一种?</h4>
+      <p style="margin:6px 0 12px;font-size:13px;color:var(--text-muted);">拿上面两张卡的流程去对，四条判据都指向同一个答案:</p>
+      <div style="display:grid;grid-template-columns:150px 1fr 1fr;border-radius:8px;overflow:hidden;">
+        <div style="padding:8px 12px;background:rgba(var(--purple-rgb),0.1);font-size:12.5px;font-weight:bold;color:var(--accent-purple-pale);border-bottom:1px solid rgba(var(--white-rgb),0.06);">判据</div>
+        <div style="padding:8px 12px;background:rgba(var(--green-rgb),0.1);font-size:12.5px;font-weight:bold;color:var(--accent-green);border-bottom:1px solid rgba(var(--white-rgb),0.06);">项目式该有的样子</div>
+        <div style="padding:8px 12px;background:rgba(var(--red-rgb),0.1);font-size:12.5px;font-weight:bold;color:var(--accent-red2);border-bottom:1px solid rgba(var(--white-rgb),0.06);">「手机编程应用」实际</div>
+
+        <div style="padding:10px 12px;background:rgba(var(--purple-rgb),0.04);font-size:12.5px;font-weight:700;color:var(--text-body);border-bottom:1px solid rgba(var(--white-rgb),0.06);">谁在做决定</div>
+        <div style="padding:10px 12px;background:rgba(var(--green-rgb),0.03);font-size:12.5px;line-height:1.6;color:var(--text-muted);border-bottom:1px solid rgba(var(--white-rgb),0.06);">学生自己规划、分工、试错</div>
+        <div style="padding:10px 12px;background:rgba(var(--red-rgb),0.03);font-size:12.5px;line-height:1.6;color:var(--text-body);border-bottom:1px solid rgba(var(--white-rgb),0.06);">老师讲一步、学生跟一步，<strong>步骤来自教材</strong></div>
+
+        <div style="padding:10px 12px;background:rgba(var(--purple-rgb),0.04);font-size:12.5px;font-weight:700;color:var(--text-body);border-bottom:1px solid rgba(var(--white-rgb),0.06);">项目的位置</div>
+        <div style="padding:10px 12px;background:rgba(var(--green-rgb),0.03);font-size:12.5px;line-height:1.6;color:var(--text-muted);border-bottom:1px solid rgba(var(--white-rgb),0.06);">项目是主线，知识点按项目需要拉进来</div>
+        <div style="padding:10px 12px;background:rgba(var(--red-rgb),0.03);font-size:12.5px;line-height:1.6;color:var(--text-body);border-bottom:1px solid rgba(var(--white-rgb),0.06);">8 章按知识逻辑排（界面→列表→数据库→网络→上线），<strong>项目被切成 8 块挂上去</strong></div>
+
+        <div style="padding:10px 12px;background:rgba(var(--purple-rgb),0.04);font-size:12.5px;font-weight:700;color:var(--text-body);border-bottom:1px solid rgba(var(--white-rgb),0.06);">交付节奏</div>
+        <div style="padding:10px 12px;background:rgba(var(--green-rgb),0.03);font-size:12.5px;line-height:1.6;color:var(--text-muted);border-bottom:1px solid rgba(var(--white-rgb),0.06);">分阶段交付，每段有验收标准</div>
+        <div style="padding:10px 12px;background:rgba(var(--red-rgb),0.03);font-size:12.5px;line-height:1.6;color:var(--text-body);border-bottom:1px solid rgba(var(--white-rgb),0.06);">每章交一块跟做的模块；检查点只写"完成某界面"，<strong>没有验收标准</strong></div>
+
+        <div style="padding:10px 12px;background:rgba(var(--purple-rgb),0.04);font-size:12.5px;font-weight:700;color:var(--text-body);">评价落点</div>
+        <div style="padding:10px 12px;background:rgba(var(--green-rgb),0.03);font-size:12.5px;line-height:1.6;color:var(--text-muted);">过程性质量评价 + 自评互评 + 迭代</div>
+        <div style="padding:10px 12px;background:rgba(var(--red-rgb),0.03);font-size:12.5px;line-height:1.6;color:var(--text-body);">考勤 30 + 作业 30（看复现结果）+ 期末 40（一次性）</div>
+      </div>
+
+      <div style="margin-top:12px;padding:11px 15px;border-radius:8px;background:rgba(var(--red-rgb),0.07);border-left:3px solid var(--accent-red2);">
+        <div style="font-size:15px;font-weight:800;color:var(--accent-red-soft);">→ 传统教学</div>
+        <div style="font-size:12.5px;line-height:1.7;color:var(--text-body);margin-top:3px;">准确说是<strong>「教材项目驱动的讲授」</strong>：项目当素材，组织逻辑、学生角色、评价方式都还是老一套。</div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px;">
+        <div style="padding:10px 13px;border-radius:7px;background:rgba(var(--white-rgb),0.03);border:1px solid rgba(var(--white-rgb),0.08);font-size:12.5px;line-height:1.7;color:var(--text-muted);">
+          <div style="font-weight:700;color:var(--text-body);margin-bottom:4px;">课程标准的原话</div>
+          "教师按教材章节讲解并演示，学生在机房同步跟做……学生在上机课时<strong style="color:var(--text-body);">按教材步骤复现功能</strong>"<br>
+          <span style="color:var(--accent-red2);">→ 复现者，不是决策者。</span>
+        </div>
+        <div style="padding:10px 13px;border-radius:7px;background:rgba(var(--white-rgb),0.03);border:1px solid rgba(var(--white-rgb),0.08);font-size:12.5px;line-height:1.7;color:var(--text-muted);">
+          <div style="font-weight:700;color:var(--text-body);margin-bottom:4px;">期末成绩对得上这一条</div>
+          期末大作业 97 人里 <strong style="color:var(--accent-red2);">63 人不及格（65%）</strong>、18 人 0 分、平均 16.0/40。<br>
+          <span style="color:var(--accent-red2);">→ 两年都照步骤复现，期末要独立做，没步骤可照。</span>
+        </div>
+      </div>
+
+      <div style="margin-top:10px;padding:10px 13px;border-radius:7px;background:rgba(var(--purple-rgb),0.09);border:1px solid rgba(var(--purple-rgb),0.26);font-size:13px;line-height:1.7;color:var(--text-body);"><strong style="color:var(--accent-purple-pale);">有项目 ≠ 项目式。</strong>分界就一条：<strong>学生在做决定，还是在照步骤复现。</strong></div>
+    </div>
+
     <div class="card" style="border-left:4px solid var(--accent-green);">
       <h4 style="color:var(--accent-green);">🧭 项目式到底好在哪--四件事,传统模式给不了</h4>
       <p style="margin:6px 0 12px;font-size:13px;color:var(--text-muted2);">这四条不是理念上的好处,是学生身上的变化:</p>
