@@ -373,6 +373,21 @@
     vertical-align:1px;letter-spacing:.3px;}
   .proc-tag{background:rgba(var(--purple-rgb),0.16);color:var(--accent-purple-pale);border:1px solid rgba(var(--purple-rgb),0.34);}
   .out-tag{background:rgba(var(--blue-rgb),0.16);color:var(--accent-blue);border:1px solid rgba(var(--blue-rgb),0.34);}
+  /* 「多出来的节怎么判」:判据两行对照 + 本课实例两行 */
+  .more-grid{display:flex;flex-direction:column;gap:5px;margin-top:8px;padding-left:10px;
+    border-left:2px solid rgba(var(--orange-rgb),0.34);
+    font-size:12.5px;line-height:1.6;color:var(--text-body);}
+  .more-grid > div{display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+  .more-verdict{font-size:12px;font-weight:800;padding:2px 12px;border-radius:12px;white-space:nowrap;line-height:1.4;}
+  .more-verdict.keep{background:rgba(var(--green-rgb),0.16);color:var(--accent-green);border:1px solid rgba(var(--green-rgb),0.34);}
+  .more-verdict.drop{background:rgba(var(--red-rgb),0.14);color:var(--accent-red2);border:1px solid rgba(var(--red-rgb),0.3);}
+  .more-case{display:grid;grid-template-columns:auto 1fr;gap:9px;align-items:start;margin-top:6px;padding:6px 10px;
+    border-radius:6px;background:rgba(var(--white-rgb),0.035);border-left:2px solid rgba(var(--green-rgb),0.42);
+    font-size:12.5px;line-height:1.62;color:var(--text-body);}
+  .more-case .mc-where{font-size:10.5px;font-weight:800;padding:1.5px 6px;border-radius:5px;margin-top:1px;white-space:nowrap;
+    background:rgba(var(--green-rgb),0.14);color:var(--accent-green);}
+  .more-case b{color:var(--text-primary);}
+  .more-case .mc-note{color:var(--text-muted);}
   .why-card:hover{transform:translateY(-2px);box-shadow:0 8px 26px rgba(var(--blue-rgb),0.18);}
   .why-card.why-orange:hover{box-shadow:0 8px 26px rgba(var(--orange2-rgb),0.18);}
   @media (max-width:768px){.why-head{font-size:12px;}.why-t{font-size:12px;line-height:1.55;}}
@@ -4457,7 +4472,20 @@
     <p style="margin:6px 0 6px;font-size:14px;color:var(--text-body);">📂 打开 WorkBuddy 生成的 <strong>学情分析报告</strong>,逐部分检查:</p>
     <div style="margin:0 0 12px;padding:11px 14px;border-radius:8px;background:rgba(var(--green-rgb),0.05);border:1px solid rgba(var(--green-rgb),0.16);font-size:13px;line-height:1.85;color:var(--text-body);">
       <div><strong style="color:var(--accent-green);">少了 → 补。</strong>缺哪一节、缺哪个要素,用下面每部分给的追问话术要回来。</div>
-      <div style="margin-top:5px;"><strong style="color:var(--accent-orange);">多了 → 先判,再决定留不留。</strong>产物不会刚好六节。多出来那节只问一句:<strong style="color:var(--text-body);">它是在交代「这些数怎么算的、从哪来的、哪些事证不了」,还是把前面的话换个说法又讲一遍?</strong>前者留,后者删。<br>比如本课开头那段「<strong>分析对象 / 数据来源 / 计分口径</strong>」--97 人从哪来、总评怎么加起来的;末尾那节「<strong>三个数据缺口</strong>」--没有周次进度、没有备赛标记、作业只有汇总分,哪些结论因此靠不住、下一轮要补什么字段。都是被追问时的答案,留。</div>
+      <div style="margin-top:5px;"><strong style="color:var(--accent-orange);">多了 → 先判,再决定留不留。</strong>产物不会刚好六节。多出来那节只问一句:<strong style="color:var(--text-primary);">它是在交代「这些数怎么算的、从哪来的、哪些事证不了」吗?</strong></div>
+      <div class="more-grid">
+        <div><span>是--数的来历、算法规则、哪块拿不到,都写在这节里</span><span class="more-verdict keep">留</span></div>
+        <div><span>不是,只是把前面说过的换个说法又讲一遍</span><span class="more-verdict drop">删</span></div>
+      </div>
+      <div style="margin-top:10px;font-size:12.5px;color:var(--text-muted);">本课多出来的两处,都答"是":</div>
+      <div class="more-case">
+        <span class="mc-where">开头</span>
+        <div><b>分析对象 / 数据来源 / 计分口径</b><span class="mc-note">--97 人从哪来、总评怎么加起来</span></div>
+      </div>
+      <div class="more-case">
+        <span class="mc-where">末尾</span>
+        <div><b>三个数据缺口</b><span class="mc-note">--没有周次进度、没有备赛标记、作业只有汇总分;哪些结论因此靠不住、下一轮要补什么字段</span></div>
+      </div>
     </div>
 
     <!-- 第一部分 -->
