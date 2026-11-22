@@ -186,7 +186,7 @@
     background: linear-gradient(90deg, var(--accent-sky), var(--accent-blue));
   }
   /* 第7章 教学设计升级 */
-  [id="upgrade-intro"]::before, [id="upgrade-demo"]::before, [id="upgrade-check"]::before {
+  [id="upgrade-intro"]::before, [id="upgrade-course"]::before, [id="upgrade-demo"]::before, [id="upgrade-check"]::before {
     background: linear-gradient(90deg, var(--accent-green2), var(--accent-green));
   }
   [id="resource-intro"]::before, [id="resource-demo"]::before, [id="resource-pitfall"]::before {
@@ -1666,8 +1666,9 @@
   <div class="sep"></div>
   <div class="nav-title">第 7 章 · 教学设计升级</div>
   <a href="#upgrade-intro">7.1 教学设计升级</a>
-  <a href="#upgrade-demo" title="7.2 实操3(演示→跟做)"><span class="nav-op">实操</span>7.2 实操3(演示→跟做)</a>
-  <a href="#upgrade-check">7.3 实操3 结果分析</a>
+  <a href="#upgrade-course" title="7.2 课程级设计(定主线)"><span class="nav-op">实操</span>7.2 课程级设计(定主线)</a>
+  <a href="#upgrade-demo" title="7.3 模块级设计(细化一段)"><span class="nav-op">实操</span>7.3 模块级设计(细化一段)</a>
+  <a href="#upgrade-check">7.4 实操3 结果分析</a>
   <div class="sep"></div>
   <div class="nav-title">第 8 章 · 资源生成</div>
   <a href="#resource-intro">8.1 教学资源生成概览</a>
@@ -3347,7 +3348,7 @@
     </div>
     <div class="card tap-card" style="flex:1; border-top:3px solid var(--accent-blue); text-align:center;">
       <div style="font-size:28px; margin-bottom:6px;">🚀</div>
-      <h4 style="color:var(--accent-blue);">第三步 · 教学设计升级<span class="step-ref" style="color:var(--accent-blue);">↳ 7.2</span></h4>
+      <h4 style="color:var(--accent-blue);">第三步 · 教学设计升级<span class="step-ref" style="color:var(--accent-blue);">↳ 7.2–7.3</span></h4>
       <div style="color:var(--text-body); font-size:13px; line-height:1.8; text-align:left;">
         结合诊断+学情<br>传统→项目式<br>AI 生成升级方案
       </div>
@@ -4958,9 +4959,35 @@
 
 </section>
 
-<!-- ========== 7.2 实操3:教学设计升级(演示+跟做) ========== -->
-<section class="slide" id="upgrade-demo">
-  <h2>7.2 🚀 实操 3:教学设计升级--讲师演示 → 学员跟做 ⭐实操</h2>
+<!-- ========== 7.2 实操3-1:课程级教学设计(定主线) ========== -->
+<section class="slide" id="upgrade-course">
+  <h2>7.2 🏗 实操 3-1:课程级教学设计--整门课先定一条主线</h2>
+
+  <!-- 两种改法 -->
+  <div class="card" style="border-left:4px solid var(--accent-purple-pale);margin-bottom:18px;">
+    <h4 style="color:var(--accent-purple-pale);">🔀 两种改法,两种结果</h4>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:stretch;">
+      <div style="padding:13px 15px;border-radius:10px;background:rgba(var(--red-rgb),0.07);border:1px solid rgba(var(--red-rgb),0.24);border-top:3px solid rgba(var(--red-rgb),0.6);">
+        <div style="font-size:14.5px;font-weight:800;color:var(--accent-red);margin-bottom:9px;">✕ 逐个模块改</div>
+        <div style="font-size:13px;line-height:1.95;color:var(--text-body);">
+          8 个模块各配一个小项目<br>
+          改完手上是<strong>8 个不相干的小练习</strong><br>
+          没有一件东西能从头用到尾
+        </div>
+      </div>
+      <div style="padding:13px 15px;border-radius:10px;background:rgba(var(--green-rgb),0.07);border:1px solid rgba(var(--green-rgb),0.28);border-top:3px solid rgba(var(--green-rgb),0.65);">
+        <div style="font-size:14.5px;font-weight:800;color:var(--accent-green);margin-bottom:9px;">✓ 先定主线再拆</div>
+        <div style="font-size:13px;line-height:1.95;color:var(--text-body);">
+          整门课做<strong>同一个作品</strong><br>
+          每个模块推进一段<br>
+          最后手上有一个<strong>能跑能演示</strong>的东西
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:12px;padding:9px 13px;border-radius:8px;background:rgba(var(--purple-rgb),0.09);border:1px solid rgba(var(--purple-rgb),0.22);font-size:14.5px;font-weight:800;color:var(--accent-purple-pale);text-align:center;letter-spacing:.5px;">
+      先有作品,再拆分工
+    </div>
+  </div>
 
   <!-- 上半部分:讲师演示 -->
   <div class="card" style="border-left:4px solid var(--accent-green);margin-bottom:18px;">
@@ -4969,8 +4996,144 @@
     <div style="display:grid;grid-template-columns:46% 54%;gap:16px;align-items:stretch;">
       <div style="display:flex;flex-direction:column;">
         <div class="pt-head"><span class="pt-tag demo">👨‍🏫 演示用</span><span class="pt-note">填的是讲师的课,别复制到你的账号;橙色底纹那几处就是要换成你自己的</span></div>
-        <div class="prompt-box" id="p-upgrade-demo" style="margin-top:14px;flex:1;"><span style="color:var(--accent-blue);font-weight:bold;">接着前面的诊断和学情,把<span class="pm">「登录注册与用户体系」</span>(第 3 章,<span class="pm">12 学时</span>)从讲授式改成项目式。只改这一个模块,其他模块不动。</span>
-<span class="pk">诊断表格按匹配度从低到高排,第 1 行就是它:企业登录要 Token + 加盐哈希,教材还在本地存字符串、手写无盐 MD5 → 项目得把这个差距真做出来,不能做个能登录的界面就算完。</span>
+        <div class="prompt-box" id="p-course-demo" style="margin-top:14px;flex:1;"><span style="color:var(--accent-blue);font-weight:bold;">接着前面的诊断和学情,为<span class="pm">「手机编程应用」</span>整门课做项目式改造的总体设计。</span>
+诊断给了 <span class="pm">7 个模块</span>和学时(共 <span class="pm">72 学时</span>),但顺序是按知识依赖排的;这次先定项目主线,再让模块顺序跟主线对齐。
+
+方案必须满足:
+- 一个作品贯穿全课:整门课做同一个 App,从第 1 个模块推进到最后,不是每个模块各做一个小练习
+- 每个模块都要有可运行交付物:第一个模块就要跑出能装到手机上的最小版本;不接受"完成文档""完成设计"这类只在纸上的产出
+- 基础段单独讲:诊断里新增的 <span class="pm">Kotlin 12 学时</span>独立上,不用项目替代
+- 主线要能分层:同一个作品允许做到 <span class="pm">A/B/C</span> 三档完成度,不是三套不同项目
+- 评价分散到模块:过程分不要等到期末一次性给,每个模块结束时结一次
+
+请按以下四部分输出课程级框架(<span class="pk">只要框架,不展开到课时</span>):
+1. 项目主线:作品名称 + 300 字说明 + 最终交付形态(有哪些页面、哪些功能)
+2. 课程目标:知识 / 能力 / 素养三类,每条要能对应到主线里的具体环节
+3. 模块分工表:模块 | 学时 | 在主线里推进哪一段 | 本模块交付物 | 主要检查点
+4. 总体评价框架:过程性 / 终结性比例,各模块的分数怎么累计到总评
+
+全部保存到「课程焕新/03_教学设计」目录(没有就新建),文件名带「课程级」。
+<button class="copy-btn" onclick="copyPrompt('p-course-demo',this)">复制</button></div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:12px;">
+        <div style="padding:14px 16px;background:rgba(var(--sky-rgb),0.04);border-radius:10px;border:1px solid rgba(var(--sky-rgb),0.15);">
+          <h4 style="margin:0 0 10px;font-size:15px;color:var(--accent-purple);">🔎 用三要素拆解这条提示词</h4>
+          <div style="display:grid;grid-template-columns:1fr;gap:9px;">
+            <div style="padding:10px;border-radius:6px;background:rgba(var(--green-rgb),0.08);border-left:3px solid var(--accent-green);">
+              <div style="font-weight:bold;color:var(--accent-green);font-size:13px;margin-bottom:4px;">🎭 角色设定</div>
+              <div style="font-size:13px;color:var(--text-body);line-height:1.6;">"接着前面的诊断和学情,为整门课做总体设计"<br><span style="color:var(--text-muted);">→ 接在前两步之后,这一轮管的是<strong>整门课</strong>,不是某一个模块</span></div>
+            </div>
+            <div style="padding:10px;border-radius:6px;background:rgba(var(--blue-rgb),0.08);border-left:3px solid var(--accent-blue);">
+              <div style="font-weight:bold;color:var(--accent-blue);font-size:13px;margin-bottom:4px;">🎯 任务明确</div>
+              <div style="font-size:13px;color:var(--text-body);line-height:1.6;">"先定项目主线,再让模块顺序跟主线对齐"<br><span style="color:var(--text-muted);">→ <b style="color:var(--accent-blue);">定什么</b>:定主线,顺便把诊断里的顺序重新排一遍</span></div>
+            </div>
+            <div style="padding:10px;border-radius:6px;background:rgba(var(--orange2-rgb),0.08);border-left:3px solid var(--accent-orange2);">
+              <div style="font-weight:bold;color:var(--accent-orange2);font-size:13px;margin-bottom:4px;">📋 输出约束</div>
+              <div style="font-size:13px;color:var(--text-body);line-height:1.6;">"四部分框架 + 只要框架,不展开到课时"<br><span style="color:var(--text-muted);">→ <b style="color:var(--accent-orange2);">到哪一层</b>:上层先定死,下层才有依据</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="why-card">
+          <div class="why-head"><span class="why-badge">?</span>框架里必须有哪四样</div>
+          <div class="why-item"><span class="why-k">1 项目主线</span><span class="why-t"><b>做什么</b>--整门课做哪个作品、最终长什么样。后面每一个模块都挂在它上面</span></div>
+          <div class="why-item"><span class="why-k">2 课程目标</span><span class="why-t"><b>到哪去</b>--知识 / 能力 / 素养三类。模块目标从这里往下拆,不能各自另立</span></div>
+          <div class="why-item"><span class="why-k">3 模块分工</span><span class="why-t"><b>谁做哪段</b>--每个模块推进主线的哪一段、交什么。这就是下一步模块级方案的输入</span></div>
+          <div class="why-item"><span class="why-k">4 评价框架</span><span class="why-t"><b>怎么记分</b>--过程/终结什么比例、各模块分数怎么累计。不定这个,模块里又会回到"考勤+期末一次大作业"</span></div>
+          <div class="why-item"><span class="why-k">少一样就散</span><span class="why-t">没有 ①,模块各做各的;没有 ③,下一步不知道这段该做什么,只能重新发明一个项目</span></div>
+        </div>
+
+        <div class="why-card why-orange">
+          <div class="why-head"><span class="why-badge">!</span>写法要点:只要框架,不要细节</div>
+          <div class="why-item"><span class="why-k">不加细节</span><span class="why-t">这一轮的产物是<b>一页纸</b>。写到课时、写到每张 PPT,后面模块级就没得做了,而且它会越写越糙</span></div>
+          <div class="why-item"><span class="why-k">五条要求</span><span class="why-t">每一条都咬住诊断或学情里的一个具体问题,不写"注重实践""加强互动"这类放之四海皆准的话</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 下半部分:学员跟做 -->
+  <div class="card" style="border-left:4px solid var(--accent-orange2);">
+    <h4>👥 第二阶段:学员跟做(用自己的课程)</h4>
+
+    <div style="display:grid;grid-template-columns:58% 42%;gap:16px;align-items:stretch;">
+      <div style="display:flex;flex-direction:column;">
+        <div class="pt-head tpl"><span class="pt-tag tpl">📝 学员模板</span><span class="pt-note">替换橙色【请填…】,填你自己的课程信息</span></div>
+        <div class="prompt-box" id="p-course-do" style="margin-top:14px;flex:1;"><span style="color:var(--accent-blue);font-weight:bold;">接着前面的诊断和学情,为<span class="ph">【请填你的课程名称】</span>整门课做项目式改造的总体设计。</span>
+诊断给了 <span class="ph">【请填模块数】</span>个模块和学时(共 <span class="ph">【请填总学时】</span> 学时),但顺序是按知识依赖排的;这次先定项目主线,再让模块顺序跟主线对齐。
+
+方案必须满足:
+- 一个作品贯穿全课:整门课做同一个作品,从第 1 个模块推进到最后,不是每个模块各做一个小练习
+- 每个模块都要有可运行交付物:第一个模块就要出能拿得出手的第一个版本;不接受"完成文档""完成设计"这类只在纸上的产出
+- 基础段单独讲:<span class="ph">【请填语言/工具基础模块 + 学时】</span>独立上,不用项目替代
+- 主线要能分层:同一个作品允许做到 A/B/C 三档完成度,不是三套不同项目
+- 评价分散到模块:过程分不要等到期末一次性给,每个模块结束时结一次
+
+请按以下四部分输出课程级框架(只要框架,不展开到课时):
+1. 项目主线:作品名称 + 300 字说明 + 最终交付形态
+2. 课程目标:知识 / 能力 / 素养三类,每条要能对应到主线里的具体环节
+3. 模块分工表:模块 | 学时 | 在主线里推进哪一段 | 本模块交付物 | 主要检查点
+4. 总体评价框架:过程性 / 终结性比例,各模块的分数怎么累计到总评
+
+全部保存到「课程焕新/03_教学设计」目录(没有就新建),文件名带「课程级」。
+<button class="copy-btn" onclick="copyPrompt('p-course-do',this)">复制</button></div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:12px;">
+        <div class="card" style="margin:0;flex:1;">
+          <h4>📋 操作步骤</h4>
+          <div class="step"><div class="num">1</div><div class="text">在原对话中继续,复制<strong>提示词模板</strong>,把四处【请填】换掉:课程名称、模块数、总学时、你的语言或工具基础模块</div></div>
+          <div class="step"><div class="num">2</div><div class="text">按回车发送</div></div>
+          <div class="step"><div class="num">3</div><div class="text">确认输出:项目主线 + 课程目标 + <strong>模块分工表</strong> + 总体评价框架</div></div>
+          <div class="step"><div class="num">4</div><div class="text">检查:每个模块是不是都有<strong>能拿出来的东西</strong>?主线能不能做出 A/B/C 三档?</div></div>
+          <div class="step"><div class="num">5</div><div class="text">这份框架留着,下一步就挑<strong>其中一段</strong>细化成课时表</div></div>
+        </div>
+
+        <div class="warn-box" style="margin:0;">
+          <div class="title">💡 关键提醒</div>
+          <div class="text">• 这一轮<strong>只要框架</strong>,别让它展开到课时--课时留给 7.3<br>• 你的课不是软件课也行:把"作品"换成你课里的<strong>产品 / 案例 / 服务</strong><br>• 模块分工表是下一步的输入,现在写得含糊,下一步就没法开工</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 🎯 实操增强:成果验收清单 -->
+  <div class="check-list" style="margin-top:18px;">
+    <div class="title">✅ 成果验收:整门课的框架立住了吗?</div>
+    <ul>
+      <li>有一个<strong>贯穿全课的作品</strong>,不是每个模块各做一个小练习</li>
+      <li>模块分工表里每一行都写清了<strong>推进哪一段、交什么</strong></li>
+      <li>每个模块的交付物都<strong>能跑能看</strong>,不只有文档和设计稿</li>
+      <li>同一个作品能做出 <strong>A/B/C 三档</strong>,不是三套不同作品</li>
+      <li>分数<strong>分散到各模块</strong>,不靠期末一次大作业</li>
+    </ul>
+  </div>
+
+  <!-- 🎯 实操增强:追问话术卡 -->
+  <div class="ask-card">
+    <span class="ask-q">💬 卡住了?照着这样追问 AI:</span>
+    <div class="ask-grid">
+      <div class="ask-row"><span class="ask-sym">作品太宏大</span><span class="ask-say">换一个学生在一个学期内真能做完的作品,功能砍到最小可用</span><button class="ask-cp" onclick="copyText(this.previousElementSibling,this)">复制</button></div>
+      <div class="ask-row"><span class="ask-sym">模块之间接不上</span><span class="ask-say">请按项目推进顺序重排模块,让每个模块都在上一段的基础上往下做</span><button class="ask-cp" onclick="copyText(this.previousElementSibling,this)">复制</button></div>
+      <div class="ask-row"><span class="ask-sym">交付物只有文档</span><span class="ask-say">每个模块的交付物改成能跑、能看、能演示的东西,不接受只有文档和设计稿</span><button class="ask-cp" onclick="copyText(this.previousElementSibling,this)">复制</button></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 7.3 实操3-2:模块级教学设计(演示+跟做) ========== -->
+<section class="slide" id="upgrade-demo">
+  <h2>7.3 🚀 实操 3-2:模块级教学设计--讲师演示 → 学员跟做 ⭐实操</h2>
+
+  <!-- 上半部分:讲师演示 -->
+  <div class="card" style="border-left:4px solid var(--accent-green);margin-bottom:18px;">
+    <h4>👨‍🏫 第一阶段:讲师演示</h4>
+
+    <div style="display:grid;grid-template-columns:46% 54%;gap:16px;align-items:stretch;">
+      <div style="display:flex;flex-direction:column;">
+        <div class="pt-head"><span class="pt-tag demo">👨‍🏫 演示用</span><span class="pt-note">填的是讲师的课,别复制到你的账号;橙色底纹那几处就是要换成你自己的</span></div>
+        <div class="prompt-box" id="p-upgrade-demo" style="margin-top:14px;flex:1;"><span style="color:var(--accent-blue);font-weight:bold;">接着上一步的课程级框架,把模块分工表里<span class="pm">「登录注册与用户体系」</span>(第 3 章,<span class="pm">12 学时</span>)这一段细化成能直接上课的方案。只做这一段,其他段不动。</span>
+<span class="pk">这一段在主线里负责"能登录、能区分谁是谁";企业登录要 Token + 加盐哈希,教材还在本地存字符串、手写无盐 MD5 → 这一段得把这个差距真做出来,不能做个能登录的界面就算完。</span>
 
 方案必须满足(每条都要在方案里找得到对应位置):
 - 前置基础:<span style="color:var(--accent-orange2);"><span class="pm">第 2 个模块已用 12 学时讲过 Kotlin</span></span> → <span class="pk">本模块不开语法专题,用到类、接口、空安全只做 5 分钟以内回顾</span>
@@ -4978,11 +5141,13 @@
 - 分层比例:<span style="color:var(--accent-orange2);"><span class="pm">待提升 39.2%</span></span> → <span class="pk">任务分 A/B/C 三级:最弱一档照步骤做出能跑的最小片段,最强一档只给需求、自己定实现路径</span>
 - 关键发现:<span style="color:var(--accent-orange2);"><span class="pm">18 人全勤,作业和大作业却都不及格;同一份教案,2 班大作业均分 14.4、1 班 17.6</span></span> → <span class="pk">到教室不算数,动手才算:过程分只按检查点给,考勤不单独计分;每次课讲授压到 15 分钟内</span>
 
-请按以下四部分输出升级版教学方案:
-1. 教学目标(3条:知识目标 + 能力目标 + 素养目标;每条都要在本模块 12 学时内达得到,并能对应到具体检查点)
-2. 项目主题(名称 + 200字简介;项目本身必须有"用户私有数据",让登录成为必需而不是外挂练习;给出 A/B/C 三级分层选题)
+请按以下四部分输出这一段的实施方案:
+1. 本段教学目标(3条:知识 + 能力 + 素养;要能对上课程目标,并在 12 学时内达得到、能对应到具体检查点)
+2. 本段任务:在主线作品里推进哪一段、学生交付什么;A/B/C 三档分别做到哪一步
 3. 分课时教学设计表格:6 行(每次课 2 学时,每周 4 学时),列名 课时 | 教师活动 | 学生活动 | 工具 / 资源 | 检查点与验收标准
-4. 模块内的评价方式:过程性 60%(按检查点逐项给分,含当堂验收和互评) + 终结性 40%(模块作品)
+4. 本段评价:按课程级框架的比例落到这一段--过程性 60%(按检查点逐项给分,含当堂验收和互评) + 终结性 40%(本段作品)
+
+全部保存到「课程焕新/03_教学设计」目录(没有就新建),文件名带「本段」。
 <button class="copy-btn" onclick="copyPrompt('p-upgrade-demo',this)">复制</button></div>
 
         <div style="padding:14px 16px;background:rgba(var(--sky-rgb),0.04);border-radius:10px;border:1px solid rgba(var(--sky-rgb),0.15);">
@@ -4990,15 +5155,15 @@
           <div style="display:grid;grid-template-columns:1fr;gap:9px;">
             <div style="padding:10px;border-radius:6px;background:rgba(var(--green-rgb),0.08);border-left:3px solid var(--accent-green);">
               <div style="font-weight:bold;color:var(--accent-green);font-size:13px;margin-bottom:4px;">🎭 角色设定</div>
-              <div style="font-size:13px;color:var(--text-body);line-height:1.6;">"接着前面的诊断和学情..."<br><span style="color:var(--text-muted);">→ 说清接在哪两步之后,素材不用再交代一遍</span></div>
+              <div style="font-size:13px;color:var(--text-body);line-height:1.6;">"接着上一步的课程级框架..."<br><span style="color:var(--text-muted);">→ 说清接在哪一份东西后面,主线和分工不用再交代一遍</span></div>
             </div>
             <div style="padding:10px;border-radius:6px;background:rgba(var(--blue-rgb),0.08);border-left:3px solid var(--accent-blue);">
               <div style="font-weight:bold;color:var(--accent-blue);font-size:13px;margin-bottom:4px;">🎯 任务明确</div>
-              <div style="font-size:13px;color:var(--text-body);line-height:1.6;">"把「登录注册与用户体系」(第 3 章,12 学时)从讲授式改成项目式"<br><span style="color:var(--text-muted);">→ <b style="color:var(--accent-blue);">做什么</b>:改哪个模块、改多大范围,一句话定死</span></div>
+              <div style="font-size:13px;color:var(--text-body);line-height:1.6;">"把分工表里「登录注册与用户体系」这一段(12 学时)细化成能直接上课的方案"<br><span style="color:var(--text-muted);">→ <b style="color:var(--accent-blue);">做哪一段</b>:从分工表里点名,不重新选模块、不重新想项目</span></div>
             </div>
             <div style="padding:10px;border-radius:6px;background:rgba(var(--orange2-rgb),0.08);border-left:3px solid var(--accent-orange2);">
               <div style="font-weight:bold;color:var(--accent-orange2);font-size:13px;margin-bottom:4px;">📋 输出约束</div>
-              <div style="font-size:13px;color:var(--text-body);line-height:1.6;">"四部分 + 表格列名 + A/B/C 分层 + 模块内评价"<br><span style="color:var(--text-muted);">→ <b style="color:var(--accent-orange2);">给什么</b>:结构和口径都定死,交给它填</span></div>
+              <div style="font-size:13px;color:var(--text-body);line-height:1.6;">"四部分 + 表格列名 + A/B/C 三档 + 本段评价"<br><span style="color:var(--text-muted);">→ <b style="color:var(--accent-orange2);">给什么</b>:结构和口径都定死,交给它填</span></div>
             </div>
           </div>
         </div>
@@ -5006,11 +5171,11 @@
 
       <div style="display:flex;flex-direction:column;gap:12px;">
         <div class="why-card">
-          <div class="why-head"><span class="why-badge">!</span>这一步与前两步的关系</div>
-          <div class="why-item"><span class="why-k">诊断报告</span><span class="why-t">告诉你<b>改哪个模块</b>--表格第 1 行(已按匹配度从低到高排):登录注册与用户体系,12 学时,不是全改</span></div>
-          <div class="why-item"><span class="why-k">学情报告</span><span class="why-t">告诉你<b>方案要满足什么</b>--大作业得分率 39.9%、待提升 39.2%,这些都变成下面的约束</span></div>
-          <div class="why-item"><span class="why-k">本步输出</span><span class="why-t">为下一步<b>资源生成</b>提供素材--方案里写了什么活动,下一步就配什么资源</span></div>
-          <div class="why-item"><span class="why-k">衔接</span><span class="why-t">在<b>同一对话</b>里继续,AI 有前两步的上下文;但关键结论仍要写成要求,不能只靠记忆</span></div>
+          <div class="why-head"><span class="why-badge">!</span>这一段要接住什么</div>
+          <div class="why-item"><span class="why-k">诊断报告</span><span class="why-t">这一段的<b>现状与差距</b>--教材还在本地存字符串、手写无盐 MD5,企业要 Token 加加盐哈希</span></div>
+          <div class="why-item"><span class="why-k">学情报告</span><span class="why-t"><b>这一段要满足什么</b>--大作业得分率 39.9%、待提升 39.2%,这些都变成下面的约束</span></div>
+          <div class="why-item"><span class="why-k">课程框架</span><span class="why-t">这一段<b>在主线里负责什么</b>、前一段讲到哪、后一段要接什么--不重新发明项目</span></div>
+          <div class="why-item"><span class="why-k">衔接</span><span class="why-t">在<b>同一对话</b>里继续,AI 有前几步的上下文;但关键结论仍要写成要求,不能只靠记忆</span></div>
         </div>
 
         <div class="why-card">
@@ -5025,12 +5190,12 @@
 
         <div class="why-card">
           <div class="why-head"><span class="why-badge">?</span>输出为什么是这四部分</div>
-          <div class="why-item"><span class="why-k">1 教学目标</span><span class="why-t"><b>定方向</b>--知识+能力+素养三维目标,每条都要在本模块 12 学时内达得到,并能<b>对应到具体检查点</b></span></div>
-          <div class="why-item"><span class="why-k">2 项目主题</span><span class="why-t"><b>找载体</b>--项目本身要有<b>用户私有数据</b>,登录才是必需的而不是外挂的练习;同时设计<b>分层选题</b>(A/B/C 级)照顾不同层次学生</span></div>
+          <div class="why-item"><span class="why-k">1 教学目标</span><span class="why-t"><b>定方向</b>--知识+能力+素养三条,要能<b>对上课程目标</b>,并在 12 学时内达得到、能对应到检查点</span></div>
+          <div class="why-item"><span class="why-k">2 本段任务</span><span class="why-t"><b>接主线</b>--这一段在作品里推进什么、学生交什么,A/B/C 三档各做到哪一步。不再另选项目</span></div>
           <div class="why-item"><span class="why-k">3 教学活动</span><span class="why-t"><b>拆课时</b>--12 学时拆成 6 次课,每次课教师做什么+学生做什么+用什么工具+<b>检查点与验收标准</b>,直接能上课</span></div>
-          <div class="why-item"><span class="why-k">4 评价方式</span><span class="why-t"><b>闭环</b>--模块内过程性 60%+终结性 40%,把原来「考勤+交作业」的形式性评分换成任务检查点+当堂验收。写清是<b>模块内</b>,不是整门课的口径</span></div>
-          <div class="why-item"><span class="why-k">逻辑链</span><span class="why-t">定方向 → 找载体 → 拆课时 → 闭环</span></div>
-          <div class="why-item"><span class="why-k">少一块就断</span><span class="why-t">没有 ①,课时不知道往哪教;没有 ③,目标落不到每节课;没有 ④,做完不算「学会」,还是老一套考勤加交作业</span></div>
+          <div class="why-item"><span class="why-k">4 本段评价</span><span class="why-t"><b>闭环</b>--按课程框架的比例落到这一段:过程性 60%(检查点+当堂验收+互评) + 终结性 40%(本段作品)</span></div>
+          <div class="why-item"><span class="why-k">逻辑链</span><span class="why-t">定方向 → 接主线 → 拆课时 → 闭环</span></div>
+          <div class="why-item"><span class="why-k">少一块就断</span><span class="why-t">没有 ①,课时不知道往哪教;没有 ③,目标落不到每次课;没有 ④,做完不算「学会」,还是老一套考勤加交作业</span></div>
         </div>
 
         <div class="why-card why-orange">
@@ -5054,38 +5219,38 @@
     <div style="display:grid;grid-template-columns:58% 42%;gap:16px;align-items:stretch;">
       <div style="display:flex;flex-direction:column;">
         <div class="pt-head tpl"><span class="pt-tag tpl">📝 学员模板</span><span class="pt-note">替换橙色【请填…】,填你自己的课程信息</span></div>
-        <div class="prompt-box" id="p-upgrade-do" style="margin-top:14px;flex:1;"><span style="color:var(--accent-blue);font-weight:bold;">接着前面的诊断和学情,把<span class="ph">【请填诊断第 1 个模块名 + 学时,如「登录注册与用户体系」(第 3 章,12 学时)】</span>从讲授式改成项目式。只改这一个模块,其他模块不动。</span>
-<span class="ph">【这一句可以删;写上它为什么最该改,AI 会更聚焦】</span>
+        <div class="prompt-box" id="p-upgrade-do" style="margin-top:14px;flex:1;"><span style="color:var(--accent-blue);font-weight:bold;">接着上一步的课程级框架,把模块分工表里<span class="ph">【请填你要细化的那一段 + 学时,如「登录注册与用户体系」(第 3 章,12 学时)】</span>细化成能直接上课的方案。只做这一段,其他段不动。</span>
+<span class="ph">【这一句可以删;写上这一段在主线里负责什么,AI 会更聚焦】</span>
 
 方案必须满足(把上一步提炼的四条,改写成"能验收的要求"):
-- 前置基础:<span class="ph">【请填,如"第 2 个模块已用 12 学时讲过 Kotlin"】</span> → <span class="ph">【请填要求,如"本模块不开语法专题,用到时只做 5 分钟以内回顾"】</span>
+- 前置基础:<span class="ph">【请填,如"前置模块已用 12 学时讲过 Kotlin"】</span> → <span class="ph">【请填要求,如"这一段不开语法专题,用到时只做 5 分钟以内回顾"】</span>
 - 最薄弱环节:<span class="ph">【请填最弱维度 + 得分率】</span> → <span class="ph">【请填要求,如"12 学时拆成 6 次课,每次课设一个检查点,当堂验收"】</span>
 - 分层比例:<span class="ph">【请填各档占比】</span> → <span class="ph">【请填要求,如"分 A/B/C 三级:最弱一档照步骤做出能跑的最小片段,最强一档只给需求自己做"】</span>
 - 关键发现:<span class="ph">【请填一条异常现象,如"出勤满但产出低",或你自己的课堂观察】</span> → <span class="ph">【请填要求,如"过程分只按检查点给、考勤不单独计分,每次课讲授压到 15 分钟"】</span>
 
-请按以下四部分输出升级版教学方案:
-1. 教学目标(3条:知识目标 + 能力目标 + 素养目标;每条都要在本模块学时内达得到,并能对应到具体检查点)
-2. 项目主题(名称 + 200字简介;项目本身必须有"用户私有数据",让登录成为必需而不是外挂练习;给出 A/B/C 三级分层选题)
+请按以下四部分输出这一段的实施方案:
+1. 本段教学目标(3条:知识 + 能力 + 素养;要能对上课程目标,并在这一段学时内达得到、能对应到具体检查点)
+2. 本段任务:在主线作品里推进哪一段、学生交付什么;A/B/C 三档分别做到哪一步
 3. 分课时教学设计表格:按学时拆成每次课 2 学时,写清 课时 | 教师活动 | 学生活动 | 工具 / 资源 | 检查点与验收标准
-4. 模块内的评价方式:过程性 60%(按检查点逐项给分,含当堂验收和互评) + 终结性 40%(模块作品)
+4. 本段评价:按课程级框架的比例落到这一段--过程性 60%(按检查点逐项给分,含当堂验收和互评) + 终结性 40%(本段作品)
 
-全部保存到「课程焕新/03_教学设计」目录(没有就新建)。
+全部保存到「课程焕新/03_教学设计」目录(没有就新建),文件名带「本段」。
 <button class="copy-btn" onclick="copyPrompt('p-upgrade-do',this)">复制</button></div>
       </div>
 
       <div style="display:flex;flex-direction:column;gap:12px;">
         <div class="card" style="margin:0;flex:1;">
           <h4>📋 操作步骤</h4>
-          <div class="step"><div class="num">1</div><div class="text">在原对话中继续,复制<strong>提示词模板</strong>,把两处先填掉:改<strong>哪个模块</strong>(诊断表格第 1 个),再把四处事实改写成<strong>能验收的要求</strong></div></div>
+          <div class="step"><div class="num">1</div><div class="text">在原对话中继续,复制<strong>提示词模板</strong>,把两处先填掉:细化<strong>哪一段</strong>(从模块分工表里点名),再把四处事实改写成<strong>能验收的要求</strong></div></div>
           <div class="step"><div class="num">2</div><div class="text">按回车发送</div></div>
-          <div class="step"><div class="num">3</div><div class="text">确认输出:教学目标(3条) + 项目主题(含 A/B/C 三级) + 分课时表格(按模块学时拆,带检查点) + 模块内评价</div></div>
-          <div class="step"><div class="num">4</div><div class="text">检查输出--每个检查点能不能<strong>当堂验</strong>?A/B/C 三级是不是各有活干?评价是不是模块内的口径?</div></div>
-          <div class="step"><div class="num">5</div><div class="text">如果不满意,可以追问调整(如"项目主题换成更简单的""评价项增加课堂表现")</div></div>
+          <div class="step"><div class="num">3</div><div class="text">确认输出:本段教学目标(3条) + 本段任务(A/B/C 三档) + 分课时表格(带检查点) + 本段评价</div></div>
+          <div class="step"><div class="num">4</div><div class="text">检查输出--每个检查点能不能<strong>当堂验</strong>?A/B/C 三档是不是各有活干?这一段接不接得上主线?</div></div>
+          <div class="step"><div class="num">5</div><div class="text">如果不满意,可以追问调整(如"本段任务再简单些""评价项增加课堂表现")</div></div>
         </div>
 
         <div class="warn-box" style="margin:0;">
           <div class="title">💡 关键提醒</div>
-          <div class="text">• 每条要求都要能<strong>验收</strong>--"注意分层"没用,"任务分 A/B/C 三级、各有一档交付物"才算<br>• 写在"→"后面的是要求,前面是事实;只写事实,AI 会当背景读过去<br>• 要求里<strong>别出现具体班号</strong>--学情来自上一届,下一轮还没分班:写"哪类学生怎么教",不写"哪个班怎么教"<br>• 在你自己的对话中继续即可,诊断和学情的上下文它已经有了</div>
+          <div class="text">• 每条要求都要能<strong>验收</strong>--"注意分层"没用,"任务分 A/B/C 三级、各有一档交付物"才算<br>• 写在"→"后面的是要求,前面是事实;只写事实,AI 会当背景读过去<br>• 要求里<strong>别出现具体班号</strong>--学情来自上一届,下一轮还没分班:写"哪类学生怎么教",不写"哪个班怎么教"<br>• 这一段<strong>不重新选项目</strong>--项目和分工在上一步定过了,这里只填这一段怎么上</div>
         </div>
       </div>
     </div>
@@ -5095,7 +5260,7 @@
   <div class="ask-card">
     <span class="ask-q">💬 卡住了?照着这样追问 AI:</span>
     <div class="ask-grid">
-      <div class="ask-row"><span class="ask-sym">项目主题不贴近学生</span><span class="ask-say">换成更贴近中职学生日常生活的项目,并设计 A/B/C 三级分层选题</span><button class="ask-cp" onclick="copyText(this.previousElementSibling,this)">复制</button></div>
+      <div class="ask-row"><span class="ask-sym">这一段接不上主线</span><span class="ask-say">这一段要在主线作品里推进一段并交出东西,请按模块分工表重写,不要另起一个项目</span><button class="ask-cp" onclick="copyText(this.previousElementSibling,this)">复制</button></div>
       <div class="ask-row"><span class="ask-sym">没照顾薄弱学生</span><span class="ask-say">请针对最薄弱环节和待提升学生,增加针对性教学活动</span><button class="ask-cp" onclick="copyText(this.previousElementSibling,this)">复制</button></div>
       <div class="ask-row"><span class="ask-sym">评价不具体</span><span class="ask-say">请列出每个评价项的评分标准和权重</span><button class="ask-cp" onclick="copyText(this.previousElementSibling,this)">复制</button></div>
       <div class="ask-row"><span class="ask-sym">检查点不能当堂验</span><span class="ask-say">每个检查点写清看什么、过了没过,不要只写"完成某界面";验收标准要能当场判定</span><button class="ask-cp" onclick="copyText(this.previousElementSibling,this)">复制</button></div>
@@ -5104,12 +5269,12 @@
 
   <!-- 🎯 实操增强:成果验收清单 -->
   <div class="check-list">
-    <div class="title">✅ 成果验收:我做出升级方案了吗?</div>
+    <div class="title">✅ 成果验收:这一段细化出来了吗?</div>
     <ul>
-      <li>拿到了升级版教学方案(四部分)</li>
-      <li>有<strong>分层选题</strong>(A/B/C 级),照顾不同层次学生</li>
-      <li>分课时表格写清了教师活动 / 学生活动 / 工具资源</li>
-      <li>有<strong>过程性评价</strong>(占比 ≥50%)</li>
+      <li>拿到了这一段的实施方案(四部分)</li>
+      <li>本段任务<strong>接在主线作品上</strong>,A/B/C 三档各做到哪一步写清了</li>
+      <li>分课时表格每行都有教师活动 / 学生活动 / 工具资源 / <strong>检查点与验收标准</strong></li>
+      <li><strong>过程分挂在检查点上</strong>,考勤不单独计分</li>
     </ul>
   </div>
 
@@ -5117,18 +5282,18 @@
   <div class="tier-box">
     <div class="tier tier-basic">
       <span class="tier-tag">🟢 基础</span>
-      <p>按提示词模板生成四部分教学方案即可,重点确认四个部分都齐。</p>
+      <p>按提示词模板生成四部分方案即可,重点确认四个部分都齐。</p>
     </div>
     <div class="tier tier-adv">
       <span class="tier-tag">🔵 进阶</span>
-      <p>追问 AI 针对你学情的<code>薄弱环节</code>做针对性设计(如结对编程、当场验收、分层选题),让方案真正落地。</p>
+      <p>追问 AI 针对你学情的<code>薄弱环节</code>做针对性设计(如结对编程、当场验收、分层任务),让这一段真能落地。</p>
     </div>
   </div>
 </section>
 
 <!-- ========== 7.3 实操3:结果分析 ========== -->
 <section class="slide" id="upgrade-check">
-  <h2>7.3 🔍 实操 3 结果分析</h2>
+  <h2>7.4 🔍 实操 3 结果分析</h2>
   <div class="highlight" style="margin-bottom:14px;">
     💡 拿到教学设计方案后怎么用?<br>
     <span style="display:inline-flex;gap:8px;margin-top:8px;flex-wrap:wrap;">
@@ -5154,15 +5319,15 @@
       <div style="padding:10px 12px;border-bottom:1px solid rgba(var(--white-rgb),0.05);background:rgba(var(--red-rgb),0.03);font-size:13px;color:var(--text-muted);">缺失 → <span style="color:var(--accent-green);"><code>"请补充教学目标"</code></span></div>
       <!-- 行2 -->
       <div style="padding:10px 12px;display:flex;align-items:center;font-size:16px;color:var(--accent-green);border-bottom:1px solid rgba(var(--white-rgb),0.05);background:rgba(var(--green-rgb),0.03);">☑</div>
-      <div style="padding:10px 12px;border-bottom:1px solid rgba(var(--white-rgb),0.05);background:rgba(var(--green-rgb),0.03);"><strong style="font-size:14px;color:var(--text-body);">第二部分:项目主题</strong><br><span style="font-size:13px;color:var(--text-muted);">有没有? 名称+简介+分层选题</span></div>
-      <div style="padding:10px 12px;border-bottom:1px solid rgba(var(--white-rgb),0.05);background:rgba(var(--red-rgb),0.03);font-size:13px;color:var(--text-muted);">缺失 → <span style="color:var(--accent-green);"><code>"请补充项目主题和分层选题设计"</code></span></div>
+      <div style="padding:10px 12px;border-bottom:1px solid rgba(var(--white-rgb),0.05);background:rgba(var(--green-rgb),0.03);"><strong style="font-size:14px;color:var(--text-body);">第二部分:本段任务</strong><br><span style="font-size:13px;color:var(--text-muted);">有没有? 接得上主线作品 + A/B/C 三档各做到哪一步</span></div>
+      <div style="padding:10px 12px;border-bottom:1px solid rgba(var(--white-rgb),0.05);background:rgba(var(--red-rgb),0.03);font-size:13px;color:var(--text-muted);">缺失 → <span style="color:var(--accent-green);"><code>"请按模块分工表补本段任务和 A/B/C 三档"</code></span></div>
       <!-- 行3 -->
       <div style="padding:10px 12px;display:flex;align-items:center;font-size:16px;color:var(--accent-green);border-bottom:1px solid rgba(var(--white-rgb),0.05);background:rgba(var(--green-rgb),0.03);">☑</div>
       <div style="padding:10px 12px;border-bottom:1px solid rgba(var(--white-rgb),0.05);background:rgba(var(--green-rgb),0.03);"><strong style="font-size:14px;color:var(--text-body);">第三部分:分课时教学设计表格</strong><br><span style="font-size:13px;color:var(--text-muted);">有没有? 按每次课 2 学时拆,行数对得上学时,<strong>五列</strong>齐全(课时/教师/学生/工具/<strong>检查点与验收标准</strong>)</span></div>
       <div style="padding:10px 12px;border-bottom:1px solid rgba(var(--white-rgb),0.05);background:rgba(var(--red-rgb),0.03);font-size:13px;color:var(--text-muted);">缺失 → <span style="color:var(--accent-green);"><code>"请补充分课时教学设计表格"</code></span></div>
       <!-- 行4 -->
       <div style="padding:10px 12px;display:flex;align-items:center;font-size:16px;color:var(--accent-green);background:rgba(var(--green-rgb),0.03);">☑</div>
-      <div style="padding:10px 12px;background:rgba(var(--green-rgb),0.03);"><strong style="font-size:14px;color:var(--text-body);">第四部分:模块内评价方式</strong><br><span style="font-size:13px;color:var(--text-muted);">有没有? 过程性 60%(检查点+当堂验收+互评) + 终结性 40%(模块作品)</span></div>
+      <div style="padding:10px 12px;background:rgba(var(--green-rgb),0.03);"><strong style="font-size:14px;color:var(--text-body);">第四部分:本段评价</strong><br><span style="font-size:13px;color:var(--text-muted);">有没有? 过程性 60%(检查点+当堂验收+互评) + 终结性 40%(本段作品)</span></div>
       <div style="padding:10px 12px;background:rgba(var(--red-rgb),0.03);font-size:13px;color:var(--text-muted);">缺失 → <span style="color:var(--accent-green);"><code>"请补充评价方式"</code></span></div>
     </div>
   </div>
@@ -5178,8 +5343,8 @@
           <div style="font-size:13px;color:var(--text-muted);margin-top:4px;">⚠ 只有一条知识目标 → <span style="color:var(--accent-green);"><code>"请补充能力目标和素养目标"</code></span></div>
         </div>
         <div style="padding:10px;border-radius:6px;background:rgba(var(--blue-rgb),0.06);border-left:3px solid var(--accent-blue);">
-          <div style="font-size:14px;color:var(--text-body);"><strong>项目主题</strong>：项目是否<strong>真的用得上本模块的知识</strong>(不是外挂的练习)?是否设计了分层选题(A/B/C级)?</div>
-          <div style="font-size:13px;color:var(--text-muted);margin-top:4px;">⚠ 项目太宏大/脱离学生 → <span style="color:var(--accent-green);"><code>"换成更贴近学生日常生活的项目,并设计A/B/C三级分层选题"</code></span></div>
+          <div style="font-size:14px;color:var(--text-body);"><strong>本段任务</strong>：这一段是否<strong>接在主线作品上</strong>(不是另起一个项目)?A/B/C 三档是否各有明确完成度?</div>
+          <div style="font-size:13px;color:var(--text-muted);margin-top:4px;">⚠ 又冒出一个新项目 → <span style="color:var(--accent-green);"><code>"按模块分工表重写本段任务,不要另起项目"</code></span></div>
         </div>
       </div>
       <div style="display:flex;flex-direction:column;gap:10px;">
@@ -5188,7 +5353,7 @@
           <div style="font-size:13px;color:var(--text-muted);margin-top:4px;">⚠ 检查点写成"完成某界面" → <span style="color:var(--accent-green);"><code>"检查点改成能当场判定对错的:登录成功、Token 拿到了、密码没被明文存"</code></span></div>
         </div>
         <div style="padding:10px;border-radius:6px;background:rgba(var(--purple-rgb),0.06);border-left:3px solid var(--accent-purple);">
-          <div style="font-size:14px;color:var(--text-body);"><strong>模块内评价</strong>：过程分是否真的挂在<strong>检查点</strong>上?A/B/C 三级是否各有交付物?</div>
+          <div style="font-size:14px;color:var(--text-body);"><strong>本段评价</strong>：过程分是否真的挂在<strong>检查点</strong>上?A/B/C 三档是否各有交付物?</div>
           <div style="font-size:13px;color:var(--text-muted);margin-top:4px;">⚠ 还是"考勤+交作业" → <span style="color:var(--accent-green);"><code>"过程分按检查点逐项给,列出每项的验收标准和权重"</code></span></div>
         </div>
       </div>
@@ -5202,8 +5367,8 @@
     <p style="margin:4px 0 10px;font-size:14px;color:var(--text-muted);">在原对话中直接追问,AI 会基于已有上下文调整,不用重新开始:</p>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
       <div style="padding:10px;border-radius:6px;background:rgba(var(--orange-rgb),0.06);border-left:3px solid var(--accent-orange);">
-        <div style="font-size:13px;color:var(--text-body);"><strong>项目主题不合适</strong></div>
-        <div style="font-size:13px;color:var(--accent-green);margin-top:2px;">→ <code>"换成与XX行业更贴近的项目"</code></div>
+        <div style="font-size:13px;color:var(--text-body);"><strong>本段任务接不上主线</strong></div>
+        <div style="font-size:13px;color:var(--accent-green);margin-top:2px;">→ <code>"按模块分工表重写本段任务,不要另起项目"</code></div>
       </div>
       <div style="padding:10px;border-radius:6px;background:rgba(var(--orange-rgb),0.06);border-left:3px solid var(--accent-orange);">
         <div style="font-size:13px;color:var(--text-body);"><strong>课时活动太笼统</strong></div>
@@ -5218,7 +5383,7 @@
         <div style="font-size:13px;color:var(--accent-green);margin-top:2px;">→ <code>"请根据学情报告,在第X课时增加针对性干预"</code></div>
       </div>
     </div>
-    <div style="margin-top:10px;padding:8px 12px;border-radius:6px;background:rgba(var(--green-rgb),0.06);border:1px solid rgba(var(--green-rgb),0.2);font-size:14px;color:var(--text-body);text-align:center;">✅ 追问到四项检查全部通过 → 方案<strong style="color:var(--accent-green);">可定稿</strong>,进入第四步资源生成</div>
+    <div style="margin-top:10px;padding:8px 12px;border-radius:6px;background:rgba(var(--green-rgb),0.06);border:1px solid rgba(var(--green-rgb),0.2);font-size:14px;color:var(--text-body);text-align:center;">✅ 追问到四项检查全部通过 → <strong>这一段</strong>可定稿,进入第四步资源生成</div>
   </div>
 </section>
 
@@ -5262,7 +5427,7 @@
   </div>
 
   <div class="highlight" style="margin-bottom:16px;">
-    💡 第三步产出了<strong>教学设计方案</strong>(目标重构+活动设计+评价方式),第四步把方案落地为<strong>可直接上课使用的文件</strong>--教案、PPT、练习题、实训案例。
+    💡 第三步产出了两份东西:<strong>课程级框架</strong>(主线+目标+分工+评价)和<strong>这一段的实施方案</strong>(分课时设计)。第四步拿<strong>这一段</strong>落地为<strong>可直接上课使用的文件</strong>--教案、PPT、练习题、实训案例。
   </div>
 
   <!-- 上区:4 种资源 2×2 网格 -->
