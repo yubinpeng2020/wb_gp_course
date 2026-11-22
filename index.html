@@ -5542,29 +5542,31 @@
   <div class="card" style="border-left:4px solid var(--accent-green);margin-bottom:18px;">
     <h4>👨‍🏫 第一阶段:讲师演示</h4>
 
+    <div style="padding:14px 16px;background:rgba(var(--sky-rgb),0.04);border-radius:10px;border:1px solid rgba(var(--sky-rgb),0.15);margin-bottom:16px;">
+        <h4 style="margin:0 0 10px;font-size:15px;color:var(--accent-purple);">🔎 用三要素拆解这条提示词</h4>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;">
+          <div style="padding:10px;border-radius:6px;background:rgba(var(--green-rgb),0.08);border-left:3px solid var(--accent-green);">
+            <div style="font-weight:bold;color:var(--accent-green);font-size:13px;margin-bottom:4px;">🎭 角色设定</div>
+            <div style="font-size:13px;color:var(--text-body);line-height:1.6;">"请按上面的教学设计方案,生成以下 4 种配套教学资源"<br><span style="color:var(--text-muted);">→ 接第四步的方案往下做,不重新设计课程</span></div>
+          </div>
+          <div style="padding:10px;border-radius:6px;background:rgba(var(--blue-rgb),0.08);border-left:3px solid var(--accent-blue);">
+            <div style="font-weight:bold;color:var(--accent-blue);font-size:13px;margin-bottom:4px;">🎯 任务明确</div>
+            <div style="font-size:13px;color:var(--text-body);line-height:1.6;">"生成 4 种教学资源:教案、PPT、练习题、实训案例"<br><span style="color:var(--text-muted);">→ 4 个并列任务,每个指定文件类型</span></div>
+          </div>
+          <div style="padding:10px;border-radius:6px;background:rgba(var(--orange2-rgb),0.08);border-left:3px solid var(--accent-orange2);">
+            <div style="font-weight:bold;color:var(--accent-orange2);font-size:13px;margin-bottom:4px;">📋 输出约束</div>
+            <div style="font-size:13px;color:var(--text-body);line-height:1.6;">"教案含教学过程+板书设计,PPT 8-10页蓝色调,练习题5道分层..."<br><span style="color:var(--text-muted);">→ 每种资源指定具体内容和格式</span></div>
+          </div>
+        </div>
+        <div style="margin-top:8px;font-size:13px;color:var(--text-muted);line-height:1.6;">
+          💡 前三步的结果已在同一对话中,AI 有<span style="color:var(--accent-purple);">上下文记忆</span>,不需要复述教学设计内容。这步的关键是<strong>把升级方案落地为可上课用的资源</strong>。
+        </div>
+      </div>
+
     <div style="display:grid;grid-template-columns:58% 42%;gap:16px;">
       <div>
         <!-- 三要素拆解 -->
-        <div style="padding:12px 14px;background:rgba(var(--sky-rgb),0.04);border-radius:8px;border:1px solid rgba(var(--sky-rgb),0.15);">
-          <h4 style="margin:0 0 10px;font-size:15px;color:var(--accent-purple);">🔎 用三要素拆解这条提示词</h4>
-          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;">
-            <div style="padding:10px;border-radius:6px;background:rgba(var(--green-rgb),0.08);border-left:3px solid var(--accent-green);">
-              <div style="font-weight:bold;color:var(--accent-green);font-size:13px;margin-bottom:4px;">🎭 角色设定</div>
-              <div style="font-size:13px;color:var(--text-body);line-height:1.6;">"请按上面确定的教学设计方案(我自己的课程、我自己的项目主题)..."<br><span style="color:var(--text-muted);">→ 说清这次要做什么 + 锁住改的是谁的课</span></div>
-            </div>
-            <div style="padding:10px;border-radius:6px;background:rgba(var(--blue-rgb),0.08);border-left:3px solid var(--accent-blue);">
-              <div style="font-weight:bold;color:var(--accent-blue);font-size:13px;margin-bottom:4px;">🎯 任务明确</div>
-              <div style="font-size:13px;color:var(--text-body);line-height:1.6;">"生成 4 种教学资源:教案、PPT、练习题、实训案例"<br><span style="color:var(--text-muted);">→ 4 个并列任务,每个指定文件类型</span></div>
-            </div>
-            <div style="padding:10px;border-radius:6px;background:rgba(var(--orange2-rgb),0.08);border-left:3px solid var(--accent-orange2);">
-              <div style="font-weight:bold;color:var(--accent-orange2);font-size:13px;margin-bottom:4px;">📋 输出约束</div>
-              <div style="font-size:13px;color:var(--text-body);line-height:1.6;">"教案含教学过程+板书设计,PPT 8-10页蓝色调,练习题5道分层..."<br><span style="color:var(--text-muted);">→ 每种资源指定具体内容和格式</span></div>
-            </div>
-          </div>
-          <div style="margin-top:8px;font-size:13px;color:var(--text-muted);line-height:1.6;">
-            💡 前三步的结果已在同一对话中,AI 有<span style="color:var(--accent-purple);">上下文记忆</span>,不需要复述教学设计内容。这步的关键是<strong>把升级方案落地为可上课用的资源</strong>。
-          </div>
-        </div>
+        
 
         <div class="pt-head"><span class="pt-tag demo">👨‍🏫 演示用</span><span class="pt-note">填的是讲师的课,别复制到你的账号</span></div>
         <div class="prompt-box" id="p-resource-all" style="margin-top:14px;"><span style="color:var(--accent-blue);font-weight:bold;">请按上面的教学设计方案,生成以下 4 种配套教学资源:</span>
@@ -5575,6 +5577,12 @@
 4. 实训案例资料包(2 个 Word 文档):
    - 学生任务书:项目背景(约 200 字,贴近中职学生日常生活)、学习目标(3 条:知识+能力+素养)、任务要求(分步骤,每步写清做什么+交付什么)、提交规范(文件命名+格式+截止时间)
    - 教师指导书:解题思路(分步骤提示)、参考方案要点(关键步骤指引)、评分标准(每项任务配分值+评分细则)、常见问题预判(3 个学生可能遇到的坑+应对建议)
+
+必须满足:
+- 内容来自上面的教学设计方案,不重新设计课程--这一步是把方案落成资源,不是再出一版方案
+- 4 份资源互相对得上:教案里的活动 = PPT 的流程 = 练习题考的知识点 = 任务书要交的步骤
+- 每份都能直接拿去上课:教案有时间标注、练习题每题有答案和评分标准、任务书有截止时间
+- 评分沿用方案里的口径:过程分主体挂检查点,考勤照计但压到最低
 
 全部保存到「课程焕新/04_教学资源」目录(没有就新建)。
 <button class="copy-btn" onclick="copyPrompt('p-resource-all',this)">复制</button></div>
@@ -5626,10 +5634,20 @@
    - 学生任务书:项目背景(约 200 字,贴近中职学生日常生活)、学习目标(3 条:知识+能力+素养)、任务要求(分步骤,每步写清做什么+交付什么)、提交规范(文件命名+格式+截止时间)
    - 教师指导书:解题思路(分步骤提示)、参考方案要点(关键步骤指引)、评分标准(每项任务配分值+评分细则)、常见问题预判(3 个学生可能遇到的坑+应对建议)
 
+必须满足:
+- 内容来自上面的教学设计方案,不重新设计课程--这一步是把方案落成资源,不是再出一版方案
+- 4 份资源互相对得上:教案里的活动 = PPT 的流程 = 练习题考的知识点 = 任务书要交的步骤
+- 每份都能直接拿去上课:教案有时间标注、练习题每题有答案和评分标准、任务书有截止时间
+- 评分沿用方案里的口径:过程分主体挂检查点,考勤照计但压到最低
+
 全部保存到「课程焕新/04_教学资源」目录(没有就新建)。
 <button class="copy-btn" onclick="copyPrompt('p-resource-all2',this)">复制</button></div>
 
-        <div class="card" style="margin-top:14px;">
+        
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:12px;">
+<div class="card" style="margin:0;flex:1;">
           <h4>📋 操作步骤</h4>
           <div class="step"><div class="num">1</div><div class="text">在你的 WorkBuddy 对话中继续(不要新开一条)</div></div>
           <div class="step"><div class="num">2</div><div class="text">复制提示词,粘贴到输入框,按回车发送</div></div>
@@ -5637,28 +5655,6 @@
           <div class="step"><div class="num">4</div><div class="text">打开文件检查内容--AI 给的是初稿,务必过一遍+改一遍</div></div>
           <div class="step"><div class="num">5</div><div class="text">改稿用<strong>人机双写</strong>:右键文件<strong style="color:var(--accent-orange);font-size:1.2em;">「用 WorkBuddy 打开」</strong>,框选要改的地方直接下指令,不用复制粘贴</div></div>
           <div class="step"><div class="num">6</div><div class="text">不满意可以追问调整(如"练习题增加实操题""PPT 换成绿色调")</div></div>
-        </div>
-      </div>
-
-      <div style="display:flex;flex-direction:column;gap:12px;">
-        <div class="card" style="border-left:4px solid var(--accent-green);margin:0;flex:1;">
-          <h4>✅ 检查清单</h4>
-          <ul style="margin:6px 0;padding-left:18px;font-size:13px;color:var(--text-muted);line-height:2;">
-            <li>教案是否含<strong>教学目标+重难点+过程+板书</strong>?</li>
-            <li>PPT 是否<strong>8-10 页</strong>?内容是否与教学设计一致?</li>
-            <li>练习题是否<strong>分层</strong>(基础+应用+拓展)?答案准确?</li>
-            <li>实训案例是否含<strong>学生任务书+教师指导书</strong>?</li>
-            <li>所有文件是否保存到<strong>04_教学资源</strong>目录?</li>
-          </ul>
-        </div>
-        <div class="card" style="border-left:4px solid var(--accent-red);margin:0;flex:1;">
-          <h4>⚠️ 常见问题</h4>
-          <ul style="margin:6px 0;padding-left:18px;font-size:13px;color:var(--text-muted);line-height:2;">
-            <li>资源太多等不及 → 删掉不需要的资源类型,只生成 2-3 种</li>
-            <li>PPT 不满意 → 追问<strong>"PPT 第 X 页改为..."</strong>,或右键打开后<strong>框选该页用人机双写改</strong></li>
-            <li>练习题太简单 → 追问<strong>"增加 2 道综合应用题"</strong></li>
-            <li>实训案例不贴近学生 → 追问<strong>"项目背景换成中职生更熟悉的场景"</strong></li>
-          </ul>
         </div>
       </div>
 
@@ -5670,17 +5666,25 @@
       <div class="ask-row"><span class="ask-sym">练习题太简单</span><span class="ask-say">增加 2 道综合应用题</span><button class="ask-cp" onclick="copyText(this.previousElementSibling,this)">复制</button></div>
       <div class="ask-row"><span class="ask-sym">实训案例不贴近学生</span><span class="ask-say">项目背景换成中职生更熟悉的场景</span><button class="ask-cp" onclick="copyText(this.previousElementSibling,this)">复制</button></div>
       <div class="ask-row"><span class="ask-sym">教案缺环节</span><span class="ask-say">请在教案中补充板书设计和时间标注</span><button class="ask-cp" onclick="copyText(this.previousElementSibling,this)">复制</button></div>
+      <div class="ask-row"><span class="ask-sym">四份对不上</span><span class="ask-say">按教学设计方案重出第 X 份，让活动和步骤跟前几份一致</span><button class="ask-cp" onclick="copyText(this.previousElementSibling,this)">复制</button></div>
+      <div class="ask-row"><span class="ask-sym">资源太多等不及</span><span class="ask-say">只生成我最需要的 2 种，其余先不做</span><button class="ask-cp" onclick="copyText(this.previousElementSibling,this)">复制</button></div>
     </div>
   </div>
 
   <!-- 🎯 实操增强：成果验收清单 -->
   <div class="check-list">
-    <div class="title">✅ 成果验收:我生成教学资源了吗?</div>
+    <div class="title">✅ 成果验收:这四份资源能直接上课了吗?</div>
     <ul>
-      <li>拿到了 4 种资源:教案 / PPT / 练习题 / 实训案例</li>
-      <li>教案有<strong>时间标注</strong>,PPT 是 <strong>8-10 页蓝色调</strong></li>
-      <li>练习题<strong>分层</strong>(基础/应用/拓展),实训案例含<strong>坑预判</strong></li>
-      <li>文件都保存到了 04_教学资源 目录,能<strong>分享/上传腾讯文档</strong></li>
+      <li>四份齐全:教案 / PPT / 练习题 / 实训案例(<strong>两个 Word</strong>:学生任务书 + 教师指导书)</li>
+      <li>教案四块齐全:教学目标 + 重难点 + 教学过程(导入→讲授→实践→总结)+ <strong>板书设计</strong>,全程标了时间</li>
+      <li>PPT <strong>8-10 页</strong>,含封面 / 目标 / 项目介绍 / 分课时流程 / 评价标准 / 总结,整体一个色调</li>
+      <li>练习题 <strong>5 道且分层</strong>(2 基础 + 2 应用 + 1 拓展),<strong>每题都有参考答案和评分标准</strong></li>
+      <li>学生任务书四样齐:背景约 200 字 / 学习目标 3 条 / 任务要求分步写清做什么交什么 / 提交规范</li>
+      <li>教师指导书四样齐:解题思路 / 参考方案要点 / <strong>评分标准带分值和细则</strong> / 常见问题预判 3 个</li>
+      <li><strong>四份对得上</strong>:教案的活动 = PPT 的流程 = 练习题的知识点 = 任务书的步骤</li>
+      <li>没有另起一套方案--内容跟着第四步的教学设计走</li>
+      <li>评分沿用方案口径:过程分主体挂检查点,<strong>考勤照计但压到最低</strong></li>
+      <li>文件都存到 <strong>04_教学资源</strong> 目录,能分享 / 上传腾讯文档</li>
     </ul>
   </div>
 
@@ -5700,8 +5704,7 @@
         <div class="title">💡 关键提醒</div>
         <div class="text">
           • 学员跟做版提示词与演示版<strong>完全一致</strong>--因为你在自己的对话中继续,AI 已有你的课程信息上下文<br>
-          • 不需要填课程信息,直接复制粘贴即可<br>
-          • 可只保留部分资源类型,删掉不需要的行
+          • 不需要填课程信息,直接复制粘贴即可
         </div>
       </div>
     </div>
