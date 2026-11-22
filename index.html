@@ -4721,12 +4721,49 @@
     <div class="text"><strong>全不全 ✓</strong>(六部分齐) → <strong>实不实 ✓</strong>(每部分落到数字) → <strong>算得对 ✓</strong>(三个数自己复算过) → <strong>合不合理 ✓</strong>(关键信息已提炼,建议挑得出能用的)。下一步进入教学设计升级,把课程诊断和学情数据转化为具体的教学方案。</div>
   </div>
 
+  <!-- 这份报告能推什么、不能推什么 -->
+  <div class="card" style="margin-top:16px;border-left:4px solid var(--accent-sky);">
+    <h4 style="color:var(--accent-sky2);">🧭 上一届的数据,能推什么、不能推什么</h4>
+    <p style="margin:6px 0 12px;font-size:13.5px;color:var(--text-muted);">这份报告回头看的是已结课的那一届。往前推下一轮方案时,只有一类结论能用。</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:stretch;">
+      <div style="padding:13px 15px;border-radius:10px;background:rgba(var(--green-rgb),0.07);border:1px solid rgba(var(--green-rgb),0.28);border-top:3px solid rgba(var(--green-rgb),0.65);">
+        <div style="font-size:14.5px;font-weight:800;color:var(--accent-green);margin-bottom:9px;">✔ 能推--对课程</div>
+        <div style="font-size:13px;line-height:1.95;color:var(--text-body);">
+          · 哪个环节漏了:<strong>期末大作业得分率 39.9%</strong>,整门课没练过"独立做"<br>
+          · 评分哪儿失衡:<strong>考勤占总评 46.6%</strong>,却几乎不区分任何人<br>
+          · 哪类学生缺什么:<strong>27 人当堂能做、独立做不出</strong>--缺的是"没有步骤"的练习
+        </div>
+      </div>
+      <div style="padding:13px 15px;border-radius:10px;background:rgba(var(--red-rgb),0.07);border:1px solid rgba(var(--red-rgb),0.24);border-top:3px solid rgba(var(--red-rgb),0.6);">
+        <div style="font-size:14.5px;font-weight:800;color:var(--accent-red);margin-bottom:9px;">✕ 不能推--对人或班</div>
+        <div style="font-size:13px;line-height:1.95;color:var(--text-body);">
+          · 下一届哪个班会弱:<strong>下一轮是另一批学生</strong>,谁强谁弱现在不知道<br>
+          · 哪几个学生会掉队:<strong>名单上那 38 人已经结课了</strong>,不在这门课里<br>
+          · 第几周会崩:<strong>没有周次进度</strong>,报告自己标了"无法证实"
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:13px;font-size:13px;color:var(--text-muted);">同一个发现,两种写法:</div>
+    <div style="margin-top:6px;display:flex;flex-direction:column;gap:6px;">
+      <div style="display:flex;align-items:flex-start;gap:9px;padding:7px 11px;border-radius:7px;background:rgba(var(--red-rgb),0.06);border-left:2px solid rgba(var(--red-rgb),0.5);font-size:13px;line-height:1.6;">
+        <span style="color:var(--accent-red);font-weight:800;">✕</span>
+        <span><b>「2 班多安排当堂动手」</b><span style="color:var(--text-muted);"> -- 下一届 2 班是谁,还不知道</span></span>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:9px;padding:7px 11px;border-radius:7px;background:rgba(var(--green-rgb),0.06);border-left:2px solid rgba(var(--green-rgb),0.5);font-size:13px;line-height:1.6;">
+        <span style="color:var(--accent-green);font-weight:800;">✓</span>
+        <span><b>「每课时讲授压到 15 分钟,当堂动手留够」</b><span style="color:var(--text-muted);"> -- 对哪个班都成立</span></span>
+      </div>
+    </div>
+    <div style="margin-top:12px;padding:9px 13px;border-radius:8px;background:rgba(var(--purple-rgb),0.09);border:1px solid rgba(var(--purple-rgb),0.22);font-size:13.5px;color:var(--text-body);text-align:center;">
+      <strong style="color:var(--accent-purple-pale);">数据用来改课程,不用来标记人。</strong>把要求写成对谁都成立的机制,弱班自然被兜住。
+    </div>
+  </div>
+
   <div class="warn-box" style="margin-top:14px;">
     <div class="title">⚠ 注意</div>
     <div class="text">
       • 演示用的是上一轮已结课的成绩--换你自己<strong>上一轮的成绩</strong>(记得先脱敏)<br>
-      • AI 分析的是<strong>数据层面的学情</strong>,课堂表现、学习态度等需要老师自己补充<br>
-      • 学情报告是<strong>教学设计的输入</strong>,不是最终结论--老师结合实际情况判断
+      • AI 分析的是<strong>数据层面的学情</strong>,课堂表现、学习态度等需要老师自己补充
     </div>
   </div>
 </section>
@@ -4982,7 +5019,7 @@
           <div class="why-item"><span class="why-k">贴结论</span><span class="why-t">写「得分率 39.9%」--AI <b>知道了</b>,但不知道该做什么,照样给你一个跟 39.9% 无关的方案</span></div>
           <div class="why-item"><span class="why-k">写要求</span><span class="why-t">写「每个课时设检查点、当堂验收」--这是<b>能验收的动作</b>,AI 必须落进表格里才交得出来</span></div>
           <div class="why-item"><span class="why-k">一一对应</span><span class="why-t">基础弱→用到时讲透;得分率低→每课时检查点;待提升多→A/B/C 三级;出勤高产出低→讲授压到 15 分钟。一条事实对一条<b>要求</b></span></div>
-          <div class="why-item"><span class="why-k">不写班级</span><span class="why-t">学情是<b>上一届</b>已结课的班,下一轮还没分班。写"2 班多安排动手",等于把上一届的班当目标班。可以写<b>哪类学生怎么教</b>,不能写<b>哪个班怎么教</b></span></div>
+          <div class="why-item"><span class="why-k">不写班级</span><span class="why-t">学情是<b>上一届</b>的班,下一轮是另一批学生。可以写<b>哪类学生怎么教</b>,不能写<b>哪个班怎么教</b></span></div>
           <div class="why-item"><span class="why-k">不写 AI 建议</span><span class="why-t">上一轮 AI 提的建议<b>不再贴回来</b>--那是它自己说的,贴回来等于自己批改自己,空泛会被放大</span></div>
           <div class="why-item"><span class="why-k">唯一注意</span><span class="why-t">要求要能验收。写「注意分层」没用,写「任务分 A/B/C 三级,各有一档交付物」才行</span></div>
         </div>
