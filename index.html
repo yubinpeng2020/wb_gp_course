@@ -5147,7 +5147,7 @@
     <div style="display:grid;grid-template-columns:46% 54%;gap:16px;align-items:stretch;">
       <div style="display:flex;flex-direction:column;">
         <div class="pt-head"><span class="pt-tag demo">👨‍🏫 演示用</span><span class="pt-note">填的是讲师的课,别复制到你的账号;橙色底纹那几处就是要换成你自己的</span></div>
-        <div class="prompt-box" id="p-upgrade-demo" style="margin-top:14px;flex:1;"><span style="color:var(--accent-blue);font-weight:bold;">接着上一步的课程级框架,把模块分工表里<span class="pm">「登录注册与用户体系」</span>(第 3 章,<span class="pm">12 学时</span>)这一段细化成能直接上课的方案。只做这一段,其他段不动。</span>
+        <div class="prompt-box" id="p-upgrade-demo" style="margin-top:14px;flex:1;"><span style="color:var(--accent-blue);font-weight:bold;">接着上一步的课程级框架,把模块分工表里<span class="pm">负责登录和用户身份的那一段</span>(教材第 3 章,<span class="pm">12 学时</span>)细化成能直接上课的方案。只做这一段,其他段不动。</span>
 <span class="pk">这一段在主线里负责"能登录、能区分谁是谁";企业登录要 Token + 加盐哈希,教材还在本地存字符串、手写无盐 MD5 → 这一段得把这个差距真做出来,不能做个能登录的界面就算完。</span>
 
 方案必须满足(每条都要在方案里找得到对应位置):
@@ -5174,7 +5174,7 @@
             </div>
             <div style="padding:10px;border-radius:6px;background:rgba(var(--blue-rgb),0.08);border-left:3px solid var(--accent-blue);">
               <div style="font-weight:bold;color:var(--accent-blue);font-size:13px;margin-bottom:4px;">🎯 任务明确</div>
-              <div style="font-size:13px;color:var(--text-body);line-height:1.6;">"把分工表里「登录注册与用户体系」这一段(12 学时)细化成能直接上课的方案"<br><span style="color:var(--text-muted);">→ <b style="color:var(--accent-blue);">做哪一段</b>:从分工表里点名,不重新选模块、不重新想项目</span></div>
+              <div style="font-size:13px;color:var(--text-body);line-height:1.6;">"把分工表里负责登录和用户身份的那一段(12 学时)细化成能直接上课的方案"<br><span style="color:var(--text-muted);">→ <b style="color:var(--accent-blue);">做哪一段</b>:从分工表里点名,不重新选模块、不重新想项目</span></div>
             </div>
             <div style="padding:10px;border-radius:6px;background:rgba(var(--orange2-rgb),0.08);border-left:3px solid var(--accent-orange2);">
               <div style="font-weight:bold;color:var(--accent-orange2);font-size:13px;margin-bottom:4px;">📋 输出约束</div>
@@ -5234,7 +5234,7 @@
     <div style="display:grid;grid-template-columns:58% 42%;gap:16px;align-items:stretch;">
       <div style="display:flex;flex-direction:column;">
         <div class="pt-head tpl"><span class="pt-tag tpl">📝 学员模板</span><span class="pt-note">替换橙色【请填…】,填你自己的课程信息</span></div>
-        <div class="prompt-box" id="p-upgrade-do" style="margin-top:14px;flex:1;"><span style="color:var(--accent-blue);font-weight:bold;">接着上一步的课程级框架,把模块分工表里<span class="ph">【请填你要细化的那一段 + 学时,如「登录注册与用户体系」(第 3 章,12 学时)】</span>细化成能直接上课的方案。只做这一段,其他段不动。</span>
+        <div class="prompt-box" id="p-upgrade-do" style="margin-top:14px;flex:1;"><span style="color:var(--accent-blue);font-weight:bold;">接着上一步的课程级框架,把模块分工表里<span class="ph">【请填你要细化的那一段:你分工表里的模块名 + 学时】</span>细化成能直接上课的方案。只做这一段,其他段不动。</span>
 <span class="ph">【这一句可以删;写上这一段在主线里负责什么,AI 会更聚焦】</span>
 
 方案必须满足(把上一步提炼的四条,改写成"能验收的要求"):
