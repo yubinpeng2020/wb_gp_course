@@ -4969,20 +4969,20 @@
     <div style="display:grid;grid-template-columns:46% 54%;gap:16px;align-items:stretch;">
       <div style="display:flex;flex-direction:column;">
         <div class="pt-head"><span class="pt-tag demo">👨‍🏫 演示用</span><span class="pt-note">填的是讲师的课,别复制到你的账号;橙色底纹那几处就是要换成你自己的</span></div>
-        <div class="prompt-box" id="p-upgrade-demo" style="margin-top:14px;flex:1;"><span style="color:var(--accent-blue);font-weight:bold;">接着前面的诊断和学情,把<span class="pm">「登录注册与用户体系」</span>(第 3 章,<span class="pm">12 学时</span>)从讲授式改成项目式。</span>
+        <div class="prompt-box" id="p-upgrade-demo" style="margin-top:14px;flex:1;"><span style="color:var(--accent-blue);font-weight:bold;">接着前面的诊断和学情,把<span class="pm">「登录注册与用户体系」</span>(第 3 章,<span class="pm">12 学时</span>)从讲授式改成项目式。只改这一个模块,其他模块不动。</span>
 <span class="pk">诊断表格按匹配度从低到高排,第 1 行就是它:企业登录要 Token + 加盐哈希,教材还在本地存字符串、手写无盐 MD5 → 项目得把这个差距真做出来,不能做个能登录的界面就算完。</span>
 
-方案必须满足(每条都从学情推出来,不是泛泛要求):
-- 学生基础:<span style="color:var(--accent-orange2);"><span class="pm">只有 C 语言底子</span></span> → <span class="pk">Kotlin 的类、接口、空安全在项目里用到时讲透,不默认已会</span>
-- 最薄弱环节:<span style="color:var(--accent-orange2);"><span class="pm">期末大作业得分率 39.9%、日常作业 56.6%</span></span> → <span class="pk">每个课时设一个检查点,当堂验收,不攒到期末</span>
-- 分层比例:<span style="color:var(--accent-orange2);"><span class="pm">待提升 39.2%</span></span> → <span class="pk">任务分 A/B/C 三级,从"照步骤做"到"自己想"各有一档</span>
-- 关键发现:<span style="color:var(--accent-orange2);"><span class="pm">18 人全勤,作业和大作业却都不及格;同一份教案,2 班大作业均分 14.4、1 班 17.6</span></span> → <span class="pk">到教室不算数,动手才算:过程分挂检查点(不挂考勤),每课时讲授压到 15 分钟内</span>
+方案必须满足(每条都要在方案里找得到对应位置):
+- 前置基础:<span style="color:var(--accent-orange2);"><span class="pm">第 2 个模块已用 12 学时讲过 Kotlin</span></span> → <span class="pk">本模块不开语法专题,用到类、接口、空安全只做 5 分钟以内回顾</span>
+- 最薄弱环节:<span style="color:var(--accent-orange2);"><span class="pm">期末大作业得分率 39.9%</span></span> → <span class="pk">12 学时拆成 6 次课,每次课设一个检查点,当堂验收,不攒到期末</span>
+- 分层比例:<span style="color:var(--accent-orange2);"><span class="pm">待提升 39.2%</span></span> → <span class="pk">任务分 A/B/C 三级:最弱一档照步骤做出能跑的最小片段,最强一档只给需求、自己定实现路径</span>
+- 关键发现:<span style="color:var(--accent-orange2);"><span class="pm">18 人全勤,作业和大作业却都不及格;同一份教案,2 班大作业均分 14.4、1 班 17.6</span></span> → <span class="pk">到教室不算数,动手才算:过程分只按检查点给,考勤不单独计分;每次课讲授压到 15 分钟内</span>
 
 请按以下四部分输出升级版教学方案:
-1. 教学目标(3条:知识目标 + 能力目标 + 素养目标)
-2. 项目主题(名称 + 200字简介,贴近学生日常生活;给出 A/B/C 三级分层选题)
-3. 分课时教学设计表格,列名:课时 | 教师活动 | 学生活动 | 工具 / 资源 | 检查点与验收标准(按该模块 12 学时拆,每周 4 学时)
-4. 模块内的评价方式:过程性 60%(检查点 + 当堂验收 + 互评) + 终结性 40%(模块作品)
+1. 教学目标(3条:知识目标 + 能力目标 + 素养目标;每条都要在本模块 12 学时内达得到,并能对应到具体检查点)
+2. 项目主题(名称 + 200字简介;项目本身必须有"用户私有数据",让登录成为必需而不是外挂练习;给出 A/B/C 三级分层选题)
+3. 分课时教学设计表格:6 行(每次课 2 学时,每周 4 学时),列名 课时 | 教师活动 | 学生活动 | 工具 / 资源 | 检查点与验收标准
+4. 模块内的评价方式:过程性 60%(按检查点逐项给分,含当堂验收和互评) + 终结性 40%(模块作品)
 <button class="copy-btn" onclick="copyPrompt('p-upgrade-demo',this)">复制</button></div>
 
         <div style="padding:14px 16px;background:rgba(var(--sky-rgb),0.04);border-radius:10px;border:1px solid rgba(var(--sky-rgb),0.15);">
@@ -5016,8 +5016,8 @@
         <div class="why-card">
           <div class="why-head"><span class="why-badge">?</span>为什么把四条写成"必须满足",而不是贴上结论</div>
           <div class="why-item"><span class="why-k">贴结论</span><span class="why-t">写「得分率 39.9%」--AI <b>知道了</b>,但不知道该做什么,照样给你一个跟 39.9% 无关的方案</span></div>
-          <div class="why-item"><span class="why-k">写要求</span><span class="why-t">写「每个课时设检查点、当堂验收」--这是<b>能验收的动作</b>,AI 必须落进表格里才交得出来</span></div>
-          <div class="why-item"><span class="why-k">一一对应</span><span class="why-t">基础弱→用到时讲透;得分率低→每课时检查点;待提升多→A/B/C 三级;出勤高产出低→讲授压到 15 分钟。一条事实对一条<b>要求</b></span></div>
+          <div class="why-item"><span class="why-k">写要求</span><span class="why-t">写「每次课设检查点、当堂验收」--这是<b>能验收的动作</b>,AI 必须落进表格里才交得出来</span></div>
+          <div class="why-item"><span class="why-k">一一对应</span><span class="why-t">前置讲过→不开语法专题;得分率低→每次课检查点;待提升多→A/B/C 三级;出勤高产出低→过程分只按检查点。一条事实对一条<b>要求</b></span></div>
           <div class="why-item"><span class="why-k">不写班级</span><span class="why-t">学情是<b>上一届</b>的班,下一轮是另一批学生。可以写<b>哪类学生怎么教</b>,不能写<b>哪个班怎么教</b></span></div>
           <div class="why-item"><span class="why-k">不写 AI 建议</span><span class="why-t">上一轮 AI 提的建议<b>不再贴回来</b>--那是它自己说的,贴回来等于自己批改自己,空泛会被放大</span></div>
           <div class="why-item"><span class="why-k">唯一注意</span><span class="why-t">要求要能验收。写「注意分层」没用,写「任务分 A/B/C 三级,各有一档交付物」才行</span></div>
@@ -5025,9 +5025,9 @@
 
         <div class="why-card">
           <div class="why-head"><span class="why-badge">?</span>输出为什么是这四部分</div>
-          <div class="why-item"><span class="why-k">1 教学目标</span><span class="why-t"><b>定方向</b>--知识+能力+素养三维目标,明确升级后学生要达到什么水平</span></div>
-          <div class="why-item"><span class="why-k">2 项目主题</span><span class="why-t"><b>找载体</b>--项目式教学的核心,选一个贴近生活的 App 让学生在做中学,同时设计<b>分层选题</b>(A/B/C 级)照顾不同层次学生</span></div>
-          <div class="why-item"><span class="why-k">3 教学活动</span><span class="why-t"><b>拆课时</b>--按模块 12 学时拆,每课时教师做什么+学生做什么+用什么工具+<b>检查点与验收标准</b>,直接能上课</span></div>
+          <div class="why-item"><span class="why-k">1 教学目标</span><span class="why-t"><b>定方向</b>--知识+能力+素养三维目标,每条都要在本模块 12 学时内达得到,并能<b>对应到具体检查点</b></span></div>
+          <div class="why-item"><span class="why-k">2 项目主题</span><span class="why-t"><b>找载体</b>--项目本身要有<b>用户私有数据</b>,登录才是必需的而不是外挂的练习;同时设计<b>分层选题</b>(A/B/C 级)照顾不同层次学生</span></div>
+          <div class="why-item"><span class="why-k">3 教学活动</span><span class="why-t"><b>拆课时</b>--12 学时拆成 6 次课,每次课教师做什么+学生做什么+用什么工具+<b>检查点与验收标准</b>,直接能上课</span></div>
           <div class="why-item"><span class="why-k">4 评价方式</span><span class="why-t"><b>闭环</b>--模块内过程性 60%+终结性 40%,把原来「考勤+交作业」的形式性评分换成任务检查点+当堂验收。写清是<b>模块内</b>,不是整门课的口径</span></div>
           <div class="why-item"><span class="why-k">逻辑链</span><span class="why-t">定方向 → 找载体 → 拆课时 → 闭环</span></div>
           <div class="why-item"><span class="why-k">少一块就断</span><span class="why-t">没有 ①,课时不知道往哪教;没有 ③,目标落不到每节课;没有 ④,做完不算「学会」,还是老一套考勤加交作业</span></div>
@@ -5054,20 +5054,20 @@
     <div style="display:grid;grid-template-columns:58% 42%;gap:16px;align-items:stretch;">
       <div style="display:flex;flex-direction:column;">
         <div class="pt-head tpl"><span class="pt-tag tpl">📝 学员模板</span><span class="pt-note">替换橙色【请填…】,填你自己的课程信息</span></div>
-        <div class="prompt-box" id="p-upgrade-do" style="margin-top:14px;flex:1;"><span style="color:var(--accent-blue);font-weight:bold;">接着前面的诊断和学情,把<span class="ph">【请填诊断第 1 个模块名 + 学时,如「登录注册与用户体系」(第 3 章,12 学时)】</span>从讲授式改成项目式。</span>
+        <div class="prompt-box" id="p-upgrade-do" style="margin-top:14px;flex:1;"><span style="color:var(--accent-blue);font-weight:bold;">接着前面的诊断和学情,把<span class="ph">【请填诊断第 1 个模块名 + 学时,如「登录注册与用户体系」(第 3 章,12 学时)】</span>从讲授式改成项目式。只改这一个模块,其他模块不动。</span>
 <span class="ph">【这一句可以删;写上它为什么最该改,AI 会更聚焦】</span>
 
-方案必须满足(把 6.3 提炼的四条,改写成"能验收的要求"):
-- 学生基础:<span class="ph">【请填,如"只有 C 语言底子"】</span> → <span class="ph">【请填要求,如"Kotlin 的类、接口、空安全在项目里用到时讲透,不默认已会"】</span>
-- 最薄弱环节:<span class="ph">【请填最弱维度 + 得分率】</span> → <span class="ph">【请填要求,如"每个课时设一个检查点,当堂验收,不攒到期末"】</span>
-- 分层比例:<span class="ph">【请填各档占比】</span> → <span class="ph">【请填要求,如"任务分 A/B/C 三级,从照步骤做到自己想各有一档"】</span>
-- 关键发现:<span class="ph">【请填一条异常现象,如"出勤满但产出低",或你自己的课堂观察】</span> → <span class="ph">【请填要求,如"过程分挂检查点不挂考勤,每课时讲授压到 15 分钟"】</span>
+方案必须满足(把上一步提炼的四条,改写成"能验收的要求"):
+- 前置基础:<span class="ph">【请填,如"第 2 个模块已用 12 学时讲过 Kotlin"】</span> → <span class="ph">【请填要求,如"本模块不开语法专题,用到时只做 5 分钟以内回顾"】</span>
+- 最薄弱环节:<span class="ph">【请填最弱维度 + 得分率】</span> → <span class="ph">【请填要求,如"12 学时拆成 6 次课,每次课设一个检查点,当堂验收"】</span>
+- 分层比例:<span class="ph">【请填各档占比】</span> → <span class="ph">【请填要求,如"分 A/B/C 三级:最弱一档照步骤做出能跑的最小片段,最强一档只给需求自己做"】</span>
+- 关键发现:<span class="ph">【请填一条异常现象,如"出勤满但产出低",或你自己的课堂观察】</span> → <span class="ph">【请填要求,如"过程分只按检查点给、考勤不单独计分,每次课讲授压到 15 分钟"】</span>
 
 请按以下四部分输出升级版教学方案:
-1. 教学目标(3条:知识目标 + 能力目标 + 素养目标)
-2. 项目主题(名称 + 200字简介,贴近学生日常生活;给出 A/B/C 三级分层选题)
-3. 分课时教学设计表格,列名:课时 | 教师活动 | 学生活动 | 工具 / 资源 | 检查点与验收标准(按该模块学时拆)
-4. 模块内的评价方式:过程性 60%(检查点 + 当堂验收 + 互评) + 终结性 40%(模块作品)
+1. 教学目标(3条:知识目标 + 能力目标 + 素养目标;每条都要在本模块学时内达得到,并能对应到具体检查点)
+2. 项目主题(名称 + 200字简介;项目本身必须有"用户私有数据",让登录成为必需而不是外挂练习;给出 A/B/C 三级分层选题)
+3. 分课时教学设计表格:按学时拆成每次课 2 学时,写清 课时 | 教师活动 | 学生活动 | 工具 / 资源 | 检查点与验收标准
+4. 模块内的评价方式:过程性 60%(按检查点逐项给分,含当堂验收和互评) + 终结性 40%(模块作品)
 
 全部保存到「课程焕新/03_教学设计」目录(没有就新建)。
 <button class="copy-btn" onclick="copyPrompt('p-upgrade-do',this)">复制</button></div>
@@ -5158,7 +5158,7 @@
       <div style="padding:10px 12px;border-bottom:1px solid rgba(var(--white-rgb),0.05);background:rgba(var(--red-rgb),0.03);font-size:13px;color:var(--text-muted);">缺失 → <span style="color:var(--accent-green);"><code>"请补充项目主题和分层选题设计"</code></span></div>
       <!-- 行3 -->
       <div style="padding:10px 12px;display:flex;align-items:center;font-size:16px;color:var(--accent-green);border-bottom:1px solid rgba(var(--white-rgb),0.05);background:rgba(var(--green-rgb),0.03);">☑</div>
-      <div style="padding:10px 12px;border-bottom:1px solid rgba(var(--white-rgb),0.05);background:rgba(var(--green-rgb),0.03);"><strong style="font-size:14px;color:var(--text-body);">第三部分:分课时教学设计表格</strong><br><span style="font-size:13px;color:var(--text-muted);">有没有? 按模块学时拆,<strong>五列</strong>齐全(课时/教师/学生/工具/<strong>检查点与验收标准</strong>)</span></div>
+      <div style="padding:10px 12px;border-bottom:1px solid rgba(var(--white-rgb),0.05);background:rgba(var(--green-rgb),0.03);"><strong style="font-size:14px;color:var(--text-body);">第三部分:分课时教学设计表格</strong><br><span style="font-size:13px;color:var(--text-muted);">有没有? 按每次课 2 学时拆,行数对得上学时,<strong>五列</strong>齐全(课时/教师/学生/工具/<strong>检查点与验收标准</strong>)</span></div>
       <div style="padding:10px 12px;border-bottom:1px solid rgba(var(--white-rgb),0.05);background:rgba(var(--red-rgb),0.03);font-size:13px;color:var(--text-muted);">缺失 → <span style="color:var(--accent-green);"><code>"请补充分课时教学设计表格"</code></span></div>
       <!-- 行4 -->
       <div style="padding:10px 12px;display:flex;align-items:center;font-size:16px;color:var(--accent-green);background:rgba(var(--green-rgb),0.03);">☑</div>
@@ -5174,11 +5174,11 @@
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
       <div style="display:flex;flex-direction:column;gap:10px;">
         <div style="padding:10px;border-radius:6px;background:rgba(var(--green-rgb),0.06);border-left:3px solid var(--accent-green);">
-          <div style="font-size:14px;color:var(--text-body);"><strong>教学目标</strong>：是否涵盖知识+能力+素养三维?</div>
+          <div style="font-size:14px;color:var(--text-body);"><strong>教学目标</strong>：是否涵盖知识+能力+素养三维?每条能不能对应到检查点?</div>
           <div style="font-size:13px;color:var(--text-muted);margin-top:4px;">⚠ 只有一条知识目标 → <span style="color:var(--accent-green);"><code>"请补充能力目标和素养目标"</code></span></div>
         </div>
         <div style="padding:10px;border-radius:6px;background:rgba(var(--blue-rgb),0.06);border-left:3px solid var(--accent-blue);">
-          <div style="font-size:14px;color:var(--text-body);"><strong>项目主题</strong>：是否贴近学生生活?是否设计了分层选题(A/B/C级)?</div>
+          <div style="font-size:14px;color:var(--text-body);"><strong>项目主题</strong>：项目是否<strong>真的用得上本模块的知识</strong>(不是外挂的练习)?是否设计了分层选题(A/B/C级)?</div>
           <div style="font-size:13px;color:var(--text-muted);margin-top:4px;">⚠ 项目太宏大/脱离学生 → <span style="color:var(--accent-green);"><code>"换成更贴近学生日常生活的项目,并设计A/B/C三级分层选题"</code></span></div>
         </div>
       </div>
