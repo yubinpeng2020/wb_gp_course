@@ -5014,25 +5014,35 @@
 
 全部保存到「课程焕新/03_教学设计」目录(没有就新建),文件名带「课程级」。
 <button class="copy-btn" onclick="copyPrompt('p-course-demo',this)">复制</button></div>
-      </div>
 
-      <div style="display:flex;flex-direction:column;gap:12px;">
         <div style="padding:14px 16px;background:rgba(var(--sky-rgb),0.04);border-radius:10px;border:1px solid rgba(var(--sky-rgb),0.15);">
           <h4 style="margin:0 0 10px;font-size:15px;color:var(--accent-purple);">🔎 用三要素拆解这条提示词</h4>
           <div style="display:grid;grid-template-columns:1fr;gap:9px;">
             <div style="padding:10px;border-radius:6px;background:rgba(var(--green-rgb),0.08);border-left:3px solid var(--accent-green);">
               <div style="font-weight:bold;color:var(--accent-green);font-size:13px;margin-bottom:4px;">🎭 角色设定</div>
-              <div style="font-size:13px;color:var(--text-body);line-height:1.6;">"接着前面的诊断和学情,为整门课做总体设计"<br><span style="color:var(--text-muted);">→ 接在前两步之后,这一轮管的是<strong>整门课</strong>,不是某一个模块</span></div>
+              <div style="font-size:13px;color:var(--text-body);line-height:1.6;">"接着前面的诊断和学情,为整门课做总体设计"<br><span style="color:var(--text-muted);">→ 这一轮管的是<strong>整门课</strong>,不是某一个模块</span></div>
             </div>
             <div style="padding:10px;border-radius:6px;background:rgba(var(--blue-rgb),0.08);border-left:3px solid var(--accent-blue);">
               <div style="font-weight:bold;color:var(--accent-blue);font-size:13px;margin-bottom:4px;">🎯 任务明确</div>
-              <div style="font-size:13px;color:var(--text-body);line-height:1.6;">"先定项目主线,再让模块顺序跟主线对齐"<br><span style="color:var(--text-muted);">→ <b style="color:var(--accent-blue);">定什么</b>:定主线,顺便把诊断里的顺序重新排一遍</span></div>
+              <div style="font-size:13px;color:var(--text-body);line-height:1.6;">"先定项目主线,再让模块顺序跟主线对齐"<br><span style="color:var(--text-muted);">→ <b style="color:var(--accent-blue);">定什么</b>:定主线,顺便把诊断里的模块顺序重排一遍</span></div>
             </div>
             <div style="padding:10px;border-radius:6px;background:rgba(var(--orange2-rgb),0.08);border-left:3px solid var(--accent-orange2);">
               <div style="font-weight:bold;color:var(--accent-orange2);font-size:13px;margin-bottom:4px;">📋 输出约束</div>
               <div style="font-size:13px;color:var(--text-body);line-height:1.6;">"四部分框架 + 只要框架,不展开到课时"<br><span style="color:var(--text-muted);">→ <b style="color:var(--accent-orange2);">到哪一层</b>:上层先定死,下层才有依据</span></div>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:12px;">
+        <div class="why-card">
+          <div class="why-head"><span class="why-badge">?</span>这五条要求,各从哪来</div>
+          <div class="why-item"><span class="why-k">1 一条主线</span><span class="why-t">项目式的<b>定义</b>--项目是主线,知识点按项目需要拉进来,模块不各配一个练习</span></div>
+          <div class="why-item"><span class="why-k">2 可运行</span><span class="why-t">学情:<b>27 人当堂能做、独立做不出</b>,18 人 0 分。只讲不练、只交文档,等于把"做不出来"全推到期末</span></div>
+          <div class="why-item"><span class="why-k">3 基础独立</span><span class="why-t">诊断:<b>Kotlin 12 学时是全部模块的前提</b>,原文"不先上,后面十几周都在抄自己看不懂的代码"</span></div>
+          <div class="why-item"><span class="why-k">4 能分层</span><span class="why-t">学情:<b>待提升 39.2%</b>。同一个作品三档完成度,最弱一档也得交得出东西</span></div>
+          <div class="why-item"><span class="why-k">5 分散计分</span><span class="why-t">学情:大作业 40% <b>一次性判生死</b>,18 人 0 分;考勤占 46.6% 却不区分人</span></div>
+          <div class="why-item"><span class="why-k">少一条就退</span><span class="why-t">缺 ①,退回八个小练习;缺 ②,项目只剩文档;缺 ⑤,模块改完,总评还是老样子</span></div>
         </div>
 
         <div class="why-card">
@@ -5044,10 +5054,25 @@
           <div class="why-item"><span class="why-k">少一样就散</span><span class="why-t">没有 ①,模块各做各的;没有 ③,下一步不知道这段该做什么,只能重新发明一个项目</span></div>
         </div>
 
+        <div class="why-card">
+          <div class="why-head"><span class="why-badge">?</span>模块分工表,每行答上三句</div>
+          <div class="why-item"><span class="why-k">用前一段</span><span class="why-t">这一段要用到前一段留下的什么--用不上,说明顺序排错了</span></div>
+          <div class="why-item"><span class="why-k">留后一段</span><span class="why-t">这一段要留下什么给下一段--留不下,下一段没法开工</span></div>
+          <div class="why-item"><span class="why-k">进最终版</span><span class="why-t">这段学生交的东西,能不能直接拼进最终作品--拼不进,就是外挂的练习</span></div>
+        </div>
+
+        <div class="why-card">
+          <div class="why-head"><span class="why-badge">?</span>两份东西,别写成一份</div>
+          <div class="why-item"><span class="why-k">这一页</span><span class="why-t"><b>一页纸的框架</b>--作品是什么、模块怎么分工、分怎么记。整门课的账</span></div>
+          <div class="why-item"><span class="why-k">下一步</span><span class="why-t"><b>一段的课时表</b>--6 次课怎么上、每次课检查什么。一段的账</span></div>
+          <div class="why-item"><span class="why-k">写细了</span><span class="why-t">框架里出现"第几次课""第 3 课时"→ 写串了,那是下一步的活</span></div>
+          <div class="why-item"><span class="why-k">写越了</span><span class="why-t">下一步又重新选项目、改主线 → 也是写串了,项目在这一页已经定过</span></div>
+        </div>
+
         <div class="why-card why-orange">
           <div class="why-head"><span class="why-badge">!</span>写法要点:只要框架,不要细节</div>
-          <div class="why-item"><span class="why-k">不加细节</span><span class="why-t">这一轮的产物是<b>一页纸</b>。写到课时、写到每张 PPT,后面模块级就没得做了,而且它会越写越糙</span></div>
-          <div class="why-item"><span class="why-k">五条要求</span><span class="why-t">每一条都咬住诊断或学情里的一个具体问题,不写"注重实践""加强互动"这类放之四海皆准的话</span></div>
+          <div class="why-item"><span class="why-k">不加细节</span><span class="why-t">这一轮的产物是<b>一页纸</b>。写到课时、写到每张 PPT,下一步就没得做了,而且它会越写越糙</span></div>
+          <div class="why-item"><span class="why-k">不写空话</span><span class="why-t">五条要求每条咬住诊断或学情里的一个具体问题,不写"注重实践""加强互动"这类放之四海皆准的话</span></div>
         </div>
       </div>
     </div>
