@@ -5418,9 +5418,8 @@
 
   <!-- 过渡:角色定位 -->
   <div class="card" style="border-left:4px solid var(--accent-purple);margin-bottom:16px;">
-    <h4>🎭 进入第四步前,先搞清楚:你和 AI 各负责什么?</h4>
-    <p style="margin:4px 0 12px;font-size:14px;color:var(--text-muted);">前三步 AI 帮你完成了诊断、分析、方案设计。第四步 AI 要生成教案/PPT/习题等资源了--这时候最容易出现"直接拿AI产出上课"的坑。</p>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+    <h4>🎭 分工:AI 出初稿,老师审、老师拍板</h4>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:12px;">
       <div style="padding:12px;border-radius:8px;background:rgba(var(--blue-rgb),0.06);border:1px solid rgba(var(--blue-rgb),0.2);">
         <div style="font-size:15px;font-weight:bold;color:var(--accent-blue);margin-bottom:8px;">🤖 AI 负责</div>
         <ul style="margin:0;padding-left:18px;font-size:13px;color:var(--text-body);line-height:2;">
@@ -5452,7 +5451,7 @@
   </div>
 
   <div class="highlight" style="margin-bottom:16px;">
-    💡 第三步产出了两份东西:<strong>课程级框架</strong>(主线+目标+分工+评价)和<strong>这一段的实施方案</strong>(分课时设计)。第四步拿<strong>这一段</strong>落地为<strong>可直接上课使用的文件</strong>--教案、PPT、练习题、实训案例。
+    💡 第四步的输入是第三步产出的<strong>这一段实施方案</strong>(分课时设计),不是课程级框架;输出是<strong>能直接上课的文件</strong>--教案、PPT、练习题、实训案例。
   </div>
 
   <!-- 上区:4 种资源 2×2 网格 -->
@@ -5474,7 +5473,7 @@
       <div class="text" style="font-size:14px;">
         <strong style="color:var(--accent-purple);">解决:课堂演示与视觉呈现</strong><br>
         课堂讲授核心载体。AI 生成初版后微调即可用,比从零排版快数倍。
-        <div style="margin-top:8px;padding:10px 12px;border-radius:8px;background:rgba(var(--purple-rgb),0.08);border:1px solid rgba(var(--purple-rgb),0.2);font-size:13px;color:var(--text-muted);line-height:1.7;">📋 <strong style="color:var(--accent-purple);">产出长这样</strong>：<br>🎬 封面页 → 🎯 教学目标页 → 📱 项目介绍(含分层选题 A/B/C) → 📅 4个分课时教学流程页 → 📊 评价标准页 → ✨ 总结页<br><span style="color:var(--accent-purple);">现代简洁 · 蓝色调 · 一键生成</span></div>
+        <div style="margin-top:8px;padding:10px 12px;border-radius:8px;background:rgba(var(--purple-rgb),0.08);border:1px solid rgba(var(--purple-rgb),0.2);font-size:13px;color:var(--text-muted);line-height:1.7;">📋 <strong style="color:var(--accent-purple);">产出长这样</strong>：<br>🎬 封面页 → 🎯 教学目标页 → 📱 项目介绍(含分层选题 A/B/C) → 📅 4个分课时教学流程页 → 📊 评价标准页 → ✨ 总结页<br><span style="color:var(--accent-purple);">现代简洁 · 蓝色调</span></div>
       <div class="tap-summary">
   <div class="tap-summary-open">💡 <strong>一句话：</strong>PPT：课堂演示载体，初版微调即可用</div>
 </div>
@@ -5506,29 +5505,16 @@
     </div>
   </div>
 
-  <!-- 中区:交互式课件 -->
+  <!-- 第 5 种可选形式:HTML 交互课件 -->
   <div class="card" style="border-left:4px solid var(--accent-purple);">
-    <h4 style="color:var(--accent-purple);">✨ 新颖形式:交互式课件</h4>
-    <div style="display:grid;grid-template-columns:58% 42%;gap:16px;">
-      <div class="text" style="font-size:14px;">
-        <p style="margin:0 0 10px 0;">除了传统 PPT,还可用 WorkBuddy 生成 <strong>HTML 交互课件</strong>,浏览器打开即可操作互动。学生能直接拖动、调整参数,而不仅是看静态图片。</p>
-
-        <div class="step" style="margin-bottom:6px;"><div class="num">1</div><div class="text">WorkBuddy 生成 HTML 交互代码(如"帮我用 HTML+CSS+JS 做一个光的折射模拟实验")</div></div>
-        <div class="step" style="margin-bottom:6px;"><div class="num">2</div><div class="text">WorkBuddy 自动保存为 .html 文件到工作目录</div></div>
-        <div class="step" style="margin-bottom:10px;"><div class="num">3</div><div class="text">双击用浏览器打开,即可实时操作互动</div></div>
-
-        <div style="padding:8px 12px;background:rgba(var(--purple-rgb),0.1);border-radius:6px;font-size:13px;">
-          <strong>💡 适用场景</strong>:物理/化学实验模拟、算法执行可视化、数据看板交互等需要动态演示的知识点。浏览器全屏(F11)体验更佳。
-        </div>
-      </div>
-
-      <div style="padding:12px 14px;border-radius:8px;background:rgba(var(--purple-rgb),0.08);border:1px solid rgba(var(--purple-rgb),0.2);font-size:13px;color:var(--text-muted);line-height:1.8;display:flex;flex-direction:column;justify-content:center;">
-        🖥️ <strong style="color:var(--accent-purple);">你现在正在看的这个课件,就是用 WorkBuddy 生成的 HTML 交互课件！</strong><br><br>
-        🌌 深色赛博风主题<br>
-        📑 左侧导航章节跳转<br>
-        🔍 图片点击放大<br>
-        📏 字体缩放 A-/A+<br><br>
-        <span style="color:var(--accent-purple);">一条提示词 → 浏览器打开即用</span>
+    <h4 style="color:var(--accent-purple);">✨ 第 5 种可选:HTML 交互课件 <span style="font-size:13px;color:var(--text-muted);font-weight:normal;">(浏览器打开,不是 PPT)</span></h4>
+    <div class="text" style="font-size:14px;">
+      <strong style="color:var(--accent-purple);">解决:必须让学生动手操作的知识点</strong><br>
+      实验模拟、算法执行可视化、调参数看结果这类知识点,PPT 只能放静态截图。让 WorkBuddy 直接生成网页,浏览器打开就能拖、能改参数。
+      <div style="margin-top:10px;padding:10px 12px;border-radius:8px;background:rgba(var(--purple-rgb),0.08);border:1px solid rgba(var(--purple-rgb),0.2);font-size:13px;color:var(--text-muted);line-height:1.9;">
+        📋 <strong style="color:var(--accent-purple);">一句话就能出</strong>:「用 HTML+CSS+JS 做一个光的折射模拟实验」<br>
+        → 自动存成 <code>.html</code> 文件 → 双击用浏览器打开(F11 全屏,体验更好)<br>
+        <span style="color:var(--text-muted2);">你现在翻的这份课件,就是这一类产物。</span>
       </div>
     </div>
   </div>
@@ -5713,36 +5699,46 @@
 
 <!-- ========== 8.3 避坑指南 ========== -->
 <section class="slide" id="resource-pitfall">
-  <h2>8.3 🚨 课程升级避坑指南</h2>
-  <div style="display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:20px;">
-    <div class="warn-box">
-      <div class="title">1 不要让 AI 替你决定教学理念</div>
-      <div class="text">
-        理念是老师的--项目式、混合式、翻转课堂,<strong>你要自己选</strong><br>
-        AI 只是帮你落地,不是替你决策
+  <h2>8.3 ⚠️ 课程升级避坑指南</h2>
+
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:18px; align-items:start;">
+
+    <div class="warn-box" style="margin:0;">
+      <div class="title">1 先定理念,再交给 AI</div>
+      <div class="text" style="font-size:14px;line-height:1.9;">
+        <strong style="color:var(--accent-red2);">坑:</strong>上来就说"帮我设计一门项目式教学的课"<br>
+        <strong style="color:var(--accent-red2);">塌在哪:</strong>给的项目和你的人才培养方案、实训条件都对不上,改起来比自己写还慢<br>
+        <strong style="color:var(--accent-green);">怎么绕:</strong>自己先写三句--学生最后要交出什么、分几段、每段练什么
       </div>
     </div>
-    <div class="warn-box">
-      <div class="title">2 不要一次性升级太多模块</div>
-      <div class="text">
-        先改<strong>1-2 个模块试点</strong>,收集学生反馈后再扩展<br>
-        大改不如小改,改了不如验证了再改
+
+    <div class="warn-box" style="margin:0;">
+      <div class="title">2 一次只改一段</div>
+      <div class="text" style="font-size:14px;line-height:1.9;">
+        <strong style="color:var(--accent-red2);">坑:</strong>一口气把整门课都升级完<br>
+        <strong style="color:var(--accent-red2);">塌在哪:</strong>上到一半发现某段学时不够,课表已经排定,回头改要重排整学期<br>
+        <strong style="color:var(--accent-green);">怎么绕:</strong>先按 7.3 的做法只细化一段,真上过一次课再往下推
       </div>
     </div>
-    <div class="warn-box">
-      <div class="title">3 不要忽略学情</div>
-      <div class="text">
-        AI 不知道你的学生是谁--在提示词里补一句<strong>这一届的具体情况</strong>(如"这班连 Java 基础都不扎实"),AI 会据此调整教学策略(如分步引导 vs 开放式项目)<br>
-        学段/年级这类档案信息会自动带入,不用重复;但这一届学生的具体短板,AI 不可能知道,要你说
+
+    <div class="warn-box" style="margin:0;">
+      <div class="title">3 学情要自己补</div>
+      <div class="text" style="font-size:14px;line-height:1.9;">
+        <strong style="color:var(--accent-red2);">坑:</strong>默认 AI 知道你的学生是谁<br>
+        <strong style="color:var(--accent-red2);">塌在哪:</strong>它按平均水平排任务,这班连循环都没写过,第一周就整班卡住<br>
+        <strong style="color:var(--accent-green);">怎么绕:</strong>提示词加一句本届短板(如"40 人里 30 人没写过循环")
       </div>
     </div>
-    <div class="warn-box">
-      <div class="title">4 升级后要测试效果</div>
-      <div class="text">
-        收集学生反馈,迭代优化<br>
-        <strong>一轮升级不是终点,是起点</strong>
+
+    <div class="warn-box" style="margin:0;">
+      <div class="title">4 上完一轮才算验证</div>
+      <div class="text" style="font-size:14px;line-height:1.9;">
+        <strong style="color:var(--accent-red2);">坑:</strong>方案做出来就归档,当成果交<br>
+        <strong style="color:var(--accent-red2);">塌在哪:</strong>检查点判不出来、三档学生的实际分布和预估差很远,下一轮照着错<br>
+        <strong style="color:var(--accent-green);">怎么绕:</strong>每个检查点记一行实际通过人数,一轮下来就知道哪条线定高了
       </div>
     </div>
+
   </div>
 </section>
 
