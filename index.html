@@ -1673,7 +1673,8 @@
   <div class="nav-title">第 8 章 · 资源生成</div>
   <a href="#resource-intro">8.1 教学资源生成概览</a>
   <a href="#resource-demo" title="8.2 实操4(演示→跟做)"><span class="nav-op">实操</span>8.2 实操4(演示→跟做)</a>
-  <a href="#resource-pitfall">8.3 课程升级避坑指南</a>
+  <a href="#resource-check">8.3 实操4 结果分析</a>
+  <a href="#resource-pitfall">8.4 课程升级避坑指南</a>
   <div class="sep"></div>
   <div class="nav-title">第 9 章 · 拓展与总结</div>
   <a href="#extend">9.1 回去能做什么</a>
@@ -5580,12 +5581,17 @@
       </div>
 
       <div style="display:flex;flex-direction:column;gap:12px;">
-        <div class="card" style="border-left:4px solid var(--accent-orange);margin:0;flex:1;">
-          <h4>📸 示例结果参考</h4>
-          <div class="step-img" style="text-align:center;"><!-- 截图占位:资源生成结果 --><img src="images/wb_resource_result.png" alt="资源生成结果示例" class="zoom-img" style="max-width:80%;margin:0 auto;" onerror="imgMissing(this)"></div>
-          <p style="margin:8px 0 0;text-align:center;">AI 自动调用文档工具,逐个生成:教案(Word) → PPT(8-10页) → 练习题(5道) → 实训案例(2个Word),全部保存到「课程焕新/04_教学资源」目录</p>
+        <div class="card" style="border-left:4px solid var(--accent-orange);margin:0;">
+          <h4>📸 演示会产出这四份</h4>
+          <div style="display:flex;flex-direction:column;gap:7px;margin-top:8px;font-size:13px;line-height:1.7;">
+            <div style="padding:7px 10px;border-radius:6px;background:rgba(var(--blue-rgb),0.08);border:1px solid rgba(var(--blue-rgb),0.2);"><strong style="color:var(--accent-blue);">教案.docx</strong>　目标 / 重难点 / 教学过程 / 板书,每个环节标了时间</div>
+            <div style="padding:7px 10px;border-radius:6px;background:rgba(var(--purple-rgb),0.08);border:1px solid rgba(var(--purple-rgb),0.2);"><strong style="color:var(--accent-purple);">课件.pptx</strong>　8-10 页,封面 / 目标 / 项目介绍 / 分课时流程 / 评价标准 / 总结</div>
+            <div style="padding:7px 10px;border-radius:6px;background:rgba(var(--orange2-rgb),0.08);border:1px solid rgba(var(--orange2-rgb),0.2);"><strong style="color:var(--accent-orange2);">练习题.docx</strong>　5 道(2 基础 + 2 应用 + 1 拓展),带答案和评分标准</div>
+            <div style="padding:7px 10px;border-radius:6px;background:rgba(var(--green-rgb),0.08);border:1px solid rgba(var(--green-rgb),0.2);"><strong style="color:var(--accent-green);">学生任务书 + 教师指导书.docx</strong>　学生做什么 / 老师怎么带 / 怎么判分</div>
+          </div>
+          <p style="margin:10px 0 0;font-size:12px;color:var(--text-muted2);">全部存到「课程焕新/04_教学资源」目录 -- 目录不存在时 AI 会自己新建</p>
         </div>
-        <div class="card" style="border-left:4px solid var(--accent-purple);margin:0;flex:1;">
+        <div class="card" style="border-left:4px solid var(--accent-purple);margin:0;">
           <h4>☁️ 产物分享与云端同步</h4>
           <p style="margin:6px 0;font-size:13px;color:var(--text-muted);line-height:1.8;">生成文件后,在右侧结果区点击产物右上角的<strong>分享图标</strong>——这就是<strong style="color:var(--accent-orange);">连接器</strong>在实战中的用法(3.4 节提到的能力,这里动手体验):</p>
           <ul style="margin:0;padding-left:16px;font-size:13px;color:var(--text-muted);line-height:1.8;">
@@ -5659,7 +5665,7 @@
 
   <!-- 🎯 实操增强：成果验收清单 -->
   <div class="check-list">
-    <div class="title">✅ 成果验收:这四份资源能直接上课了吗?</div>
+    <div class="title">✅ 成果验收:四份文件齐了吗?每份该有的块都有吗?<span style="font-size:13px;color:var(--text-muted2);font-weight:normal;margin-left:8px;">实操 4 的产物,查完再进 8.3</span></div>
     <ul>
       <li>四份齐全:教案 / PPT / 练习题 / 实训案例(<strong>两个 Word</strong>:学生任务书 + 教师指导书)</li>
       <li>教案四块齐全:教学目标 + 重难点 + 教学过程(导入→讲授→实践→总结)+ <strong>板书设计</strong>,全程标了时间</li>
@@ -5697,9 +5703,141 @@
   </div>
 </section>
 
-<!-- ========== 8.3 避坑指南 ========== -->
+<!-- ========== 8.3 实操4:结果分析 ========== -->
+<section class="slide" id="resource-check">
+  <h2>8.3 🔍 实操 4 结果分析</h2>
+  <div class="highlight" style="margin-bottom:14px;">
+    💡 拿到这四份文件后怎么用?<br>
+    <span style="display:block;font-size:13px;color:var(--text-muted2);margin-top:2px;">📌 8.2 页末清单管"有没有";这一页管"能不能用"--四份各自能上课,四份之间还对得上</span>
+    <span style="display:inline-flex;gap:8px;margin-top:8px;flex-wrap:wrap;">
+      <span style="background:rgba(var(--green-rgb),0.15);border:1px solid rgba(var(--green-rgb),0.4);border-radius:20px;padding:4px 14px;font-size:13px;color:var(--accent-green);">1 齐不齐</span>
+      <span style="color:var(--accent-green);font-size:16px;align-self:center;">→</span>
+      <span style="background:rgba(var(--blue-rgb),0.15);border:1px solid rgba(var(--blue-rgb),0.4);border-radius:20px;padding:4px 14px;font-size:13px;color:var(--accent-blue);">2 实不实</span>
+      <span style="color:var(--accent-green);font-size:16px;align-self:center;">→</span>
+      <span style="background:rgba(var(--orange-rgb),0.15);border:1px solid rgba(var(--orange-rgb),0.4);border-radius:20px;padding:4px 14px;font-size:13px;color:var(--accent-orange);">3 对不对得上</span>
+      <span style="color:var(--accent-green);font-size:16px;align-self:center;">→</span>
+      <span style="background:rgba(var(--purple-rgb),0.15);border:1px solid rgba(var(--purple-rgb),0.4);border-radius:20px;padding:4px 14px;font-size:13px;color:var(--accent-purple);">4 改了要同步</span>
+    </span>
+  </div>
+
+  <!-- 第一步:齐不齐 -->
+  <div class="card" style="border-left:4px solid var(--accent-green);margin-bottom:16px;">
+    <h4>第一步:齐不齐--五份文件都在吗?<span style="font-size:14px;color:var(--accent-green);margin-left:10px;background:rgba(var(--green-rgb),0.1);padding:2px 10px;border-radius:12px;">完整性</span><span style="font-size:13px;color:var(--text-muted2);margin-left:6px;">查"有没有"</span></h4>
+    <p style="margin:4px 0 10px;font-size:13px;color:var(--text-muted2);">📌 生成出来是 4 类、5 个文件(实训案例是任务书 + 指导书两份)。缺哪份、缺哪块,就按右列原话追问,不用重来:</p>
+    <div style="display:grid;grid-template-columns:auto 1fr 1fr;gap:0;border-radius:8px;overflow:hidden;">
+      <div style="padding:8px 12px;background:rgba(var(--green-rgb),0.1);font-size:13px;font-weight:bold;color:var(--accent-green);border-bottom:1px solid rgba(var(--white-rgb),0.05);"></div>
+      <div style="padding:8px 12px;background:rgba(var(--green-rgb),0.1);font-size:13px;font-weight:bold;color:var(--accent-green);border-bottom:1px solid rgba(var(--white-rgb),0.05);">📋 文件 · 该有几块</div>
+      <div style="padding:8px 12px;background:rgba(var(--red-rgb),0.1);font-size:13px;font-weight:bold;color:var(--accent-red2);border-bottom:1px solid rgba(var(--white-rgb),0.05);">⚠ 缺了怎么说</div>
+
+      <div style="padding:10px 12px;display:flex;align-items:center;font-size:16px;color:var(--accent-blue);border-bottom:1px solid rgba(var(--white-rgb),0.05);background:rgba(var(--green-rgb),0.03);">☑</div>
+      <div style="padding:10px 12px;border-bottom:1px solid rgba(var(--white-rgb),0.05);background:rgba(var(--green-rgb),0.03);"><strong style="font-size:14px;color:var(--text-body);">教案.docx</strong><br><span style="font-size:13px;color:var(--text-muted);">四块 + 时间标注:目标 / 重难点 / 教学过程 / 板书</span></div>
+      <div style="padding:10px 12px;border-bottom:1px solid rgba(var(--white-rgb),0.05);background:rgba(var(--red-rgb),0.03);font-size:13px;color:var(--text-muted);">缺板书或没标时间 → <span style="color:var(--accent-green);"><code>"教案补上板书设计,每个环节标出用时"</code></span></div>
+
+      <div style="padding:10px 12px;display:flex;align-items:center;font-size:16px;color:var(--accent-purple);border-bottom:1px solid rgba(var(--white-rgb),0.05);background:rgba(var(--green-rgb),0.03);">☑</div>
+      <div style="padding:10px 12px;border-bottom:1px solid rgba(var(--white-rgb),0.05);background:rgba(var(--green-rgb),0.03);"><strong style="font-size:14px;color:var(--text-body);">课件.pptx</strong><br><span style="font-size:13px;color:var(--text-muted);">8-10 页:封面 / 目标 / 项目介绍 / 分课时流程 / 评价标准 / 总结</span></div>
+      <div style="padding:10px 12px;border-bottom:1px solid rgba(var(--white-rgb),0.05);background:rgba(var(--red-rgb),0.03);font-size:13px;color:var(--text-muted);">不够 8 页 → <code>"PPT 补到 8 页以上"</code>;超 10 页 → <code>"删到 10 页以内"</code></div>
+
+      <div style="padding:10px 12px;display:flex;align-items:center;font-size:16px;color:var(--accent-orange2);border-bottom:1px solid rgba(var(--white-rgb),0.05);background:rgba(var(--green-rgb),0.03);">☑</div>
+      <div style="padding:10px 12px;border-bottom:1px solid rgba(var(--white-rgb),0.05);background:rgba(var(--green-rgb),0.03);"><strong style="font-size:14px;color:var(--text-body);">练习题.docx</strong><br><span style="font-size:13px;color:var(--text-muted);">5 道 = 2 基础 + 2 应用 + 1 拓展,每题带答案 + 评分标准</span></div>
+      <div style="padding:10px 12px;border-bottom:1px solid rgba(var(--white-rgb),0.05);background:rgba(var(--red-rgb),0.03);font-size:13px;color:var(--text-muted);">有题没答案 → <span style="color:var(--accent-green);"><code>"每道题后面补参考答案和评分标准"</code></span></div>
+
+      <div style="padding:10px 12px;display:flex;align-items:center;font-size:16px;color:var(--accent-green);border-bottom:1px solid rgba(var(--white-rgb),0.05);background:rgba(var(--green-rgb),0.03);">☑</div>
+      <div style="padding:10px 12px;border-bottom:1px solid rgba(var(--white-rgb),0.05);background:rgba(var(--green-rgb),0.03);"><strong style="font-size:14px;color:var(--text-body);">学生任务书.docx</strong><br><span style="font-size:13px;color:var(--text-muted);">四样:项目背景 / 学习目标 3 条 / 任务要求分步 / 提交规范</span></div>
+      <div style="padding:10px 12px;border-bottom:1px solid rgba(var(--white-rgb),0.05);background:rgba(var(--red-rgb),0.03);font-size:13px;color:var(--text-muted);">任务写成一大段 → <span style="color:var(--accent-green);"><code>"任务要求按步骤拆开,每步写清做什么、交什么"</code></span></div>
+
+      <div style="padding:10px 12px;display:flex;align-items:center;font-size:16px;color:var(--accent-green);background:rgba(var(--green-rgb),0.03);">☑</div>
+      <div style="padding:10px 12px;background:rgba(var(--green-rgb),0.03);"><strong style="font-size:14px;color:var(--text-body);">教师指导书.docx</strong><br><span style="font-size:13px;color:var(--text-muted);">四样:解题思路 / 参考方案 / 评分分值细则 / 坑预判 3 个</span></div>
+      <div style="padding:10px 12px;background:rgba(var(--red-rgb),0.03);font-size:13px;color:var(--text-muted);">没有坑预判 → <span style="color:var(--accent-green);"><code>"补 3 个学生最容易踩的坑和应对建议"</code></span></div>
+    </div>
+  </div>
+
+  <!-- 第二步:实不实 -->
+  <div class="card" style="border-left:4px solid var(--accent-blue);margin-bottom:16px;">
+    <h4>第二步:实不实--每份都到"能直接上课"的程度了吗?<span style="font-size:14px;color:var(--accent-blue);margin-left:10px;background:rgba(var(--blue-rgb),0.1);padding:2px 10px;border-radius:12px;">质量</span><span style="font-size:13px;color:var(--text-muted2);margin-left:6px;">查"能不能用"</span></h4>
+    <p style="margin:4px 0 10px;font-size:13px;color:var(--text-muted2);">📌 四份是齐了,但"齐"不等于"能用"。每份各有一个当场能判的硬指标:</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+      <div style="padding:10px 12px;border-radius:8px;background:rgba(var(--blue-rgb),0.06);border-left:3px solid var(--accent-blue);">
+        <div style="font-size:14px;color:var(--text-body);"><strong>教案</strong>：把每个环节的时间<strong>加起来</strong>,等于本段学时吗?</div>
+        <div style="font-size:13px;color:var(--text-muted);margin-top:4px;">⚠ 导入 5 + 讲授 15 + 实践 20 + 总结 5 = 45 分钟,却按 2 学时(90 分钟)排课 → <span style="color:var(--accent-green);"><code>"教案按每次课 90 分钟重排各环节用时"</code></span></div>
+      </div>
+      <div style="padding:10px 12px;border-radius:8px;background:rgba(var(--purple-rgb),0.06);border-left:3px solid var(--accent-purple);">
+        <div style="font-size:14px;color:var(--text-body);"><strong>PPT</strong>：每一页都能在教案里<strong>找到对应环节</strong>吗?</div>
+        <div style="font-size:13px;color:var(--text-muted);margin-top:4px;">⚠ 多出"行业前景""技术发展史"这类教案里没有的页 → <span style="color:var(--accent-green);"><code>"删掉教案里没有的页,只留能对上环节的"</code></span></div>
+      </div>
+      <div style="padding:10px 12px;border-radius:8px;background:rgba(var(--orange2-rgb),0.06);border-left:3px solid var(--accent-orange2);">
+        <div style="font-size:14px;color:var(--text-body);"><strong>练习题</strong>：<strong>自己先做一遍</strong>--答案对不对、分打不打得出来?</div>
+        <div style="font-size:13px;color:var(--text-muted);margin-top:4px;">⚠ 答案写得含糊、评分标准是"酌情给分",或者考了本段没教的知识点 → <span style="color:var(--accent-green);"><code>"第 X 题答案写具体,评分标准给到可判定的点"</code></span></div>
+      </div>
+      <div style="padding:10px 12px;border-radius:8px;background:rgba(var(--green-rgb),0.06);border-left:3px solid var(--accent-green);">
+        <div style="font-size:14px;color:var(--text-body);"><strong>实训案例</strong>：找个没听过这节课的同事,<strong>照着任务书做一遍</strong>。</div>
+        <div style="font-size:13px;color:var(--text-muted);margin-top:4px;">⚠ 他卡在哪一步,就是任务书没写清那一步 → <span style="color:var(--accent-green);"><code>"第 X 步补上具体命令和预期结果"</code></span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 第三步:对不对得上 -->
+  <div class="card" style="border-left:4px solid var(--accent-orange);margin-bottom:16px;">
+    <h4>第三步:对不对得上--四份互相咬合吗?<span style="font-size:14px;color:var(--accent-orange);margin-left:10px;background:rgba(var(--orange-rgb),0.1);padding:2px 10px;border-radius:12px;">横向核对</span><span style="font-size:13px;color:var(--text-muted2);margin-left:6px;">查"咬不咬得合"</span></h4>
+    <p style="margin:4px 0 10px;font-size:13px;color:var(--text-muted2);">📌 前两步是一份一份看,这一步是横着看:本段讲的每个活动,四份里都要出现。数量对不上、顺序不一样,就是脱钩了。</p>
+    <div style="display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:0;border-radius:8px;overflow:hidden;">
+      <div style="padding:8px 12px;background:rgba(var(--orange-rgb),0.1);font-size:13px;font-weight:bold;color:var(--accent-orange);border-bottom:1px solid rgba(var(--white-rgb),0.05);">本段的一个活动</div>
+      <div style="padding:8px 12px;background:rgba(var(--orange-rgb),0.1);font-size:13px;font-weight:bold;color:var(--accent-orange);border-bottom:1px solid rgba(var(--white-rgb),0.05);">教案</div>
+      <div style="padding:8px 12px;background:rgba(var(--orange-rgb),0.1);font-size:13px;font-weight:bold;color:var(--accent-orange);border-bottom:1px solid rgba(var(--white-rgb),0.05);">PPT</div>
+      <div style="padding:8px 12px;background:rgba(var(--orange-rgb),0.1);font-size:13px;font-weight:bold;color:var(--accent-orange);border-bottom:1px solid rgba(var(--white-rgb),0.05);">练习题 / 任务书</div>
+
+      <div style="padding:10px 12px;font-size:13px;color:var(--text-body);border-bottom:1px solid rgba(var(--white-rgb),0.05);background:rgba(var(--orange-rgb),0.03);">① 本段要教的那个功能(讲师课为登录与 Token)</div>
+      <div style="padding:10px 12px;font-size:13px;color:var(--text-muted);border-bottom:1px solid rgba(var(--white-rgb),0.05);background:rgba(var(--orange-rgb),0.03);">讲授环节里有它</div>
+      <div style="padding:10px 12px;font-size:13px;color:var(--text-muted);border-bottom:1px solid rgba(var(--white-rgb),0.05);background:rgba(var(--orange-rgb),0.03);">有一页讲它</div>
+      <div style="padding:10px 12px;font-size:13px;color:var(--text-muted);border-bottom:1px solid rgba(var(--white-rgb),0.05);background:rgba(var(--orange-rgb),0.03);">练习题考了 / 任务书要求交</div>
+
+      <div style="padding:10px 12px;font-size:13px;color:var(--text-body);border-bottom:1px solid rgba(var(--white-rgb),0.05);background:rgba(var(--orange-rgb),0.03);">② 本段要学生动手做的那个任务</div>
+      <div style="padding:10px 12px;font-size:13px;color:var(--text-muted);border-bottom:1px solid rgba(var(--white-rgb),0.05);background:rgba(var(--orange-rgb),0.03);">实践环节里有它</div>
+      <div style="padding:10px 12px;font-size:13px;color:var(--text-muted);border-bottom:1px solid rgba(var(--white-rgb),0.05);background:rgba(var(--orange-rgb),0.03);">流程页里有它</div>
+      <div style="padding:10px 12px;font-size:13px;color:var(--text-muted);border-bottom:1px solid rgba(var(--white-rgb),0.05);background:rgba(var(--orange-rgb),0.03);">任务书里是一步、不是一段</div>
+
+      <div style="padding:10px 12px;font-size:13px;color:var(--text-body);border-bottom:1px solid rgba(var(--white-rgb),0.05);background:rgba(var(--orange-rgb),0.03);">③ 本段的检查点(每次课判定什么)</div>
+      <div style="padding:10px 12px;font-size:13px;color:var(--text-muted);border-bottom:1px solid rgba(var(--white-rgb),0.05);background:rgba(var(--orange-rgb),0.03);">教学过程里标了</div>
+      <div style="padding:10px 12px;font-size:13px;color:var(--text-muted);border-bottom:1px solid rgba(var(--white-rgb),0.05);background:rgba(var(--orange-rgb),0.03);">评价标准页能对上</div>
+      <div style="padding:10px 12px;font-size:13px;color:var(--text-muted);border-bottom:1px solid rgba(var(--white-rgb),0.05);background:rgba(var(--orange-rgb),0.03);">指导书的评分标准同一套</div>
+
+      <div style="padding:10px 12px;font-size:13px;color:var(--text-body);background:rgba(var(--orange-rgb),0.03);">④ 本段的交付物(学生要交什么)</div>
+      <div style="padding:10px 12px;font-size:13px;color:var(--text-muted);background:rgba(var(--orange-rgb),0.03);">总结环节点名了</div>
+      <div style="padding:10px 12px;font-size:13px;color:var(--text-muted);background:rgba(var(--orange-rgb),0.03);">总结页点名了</div>
+      <div style="padding:10px 12px;font-size:13px;color:var(--text-muted);background:rgba(var(--orange-rgb),0.03);">提交规范里写明了</div>
+    </div>
+    <div style="margin-top:10px;padding:8px 12px;border-radius:6px;background:rgba(var(--red2-rgb),0.06);border-left:3px solid var(--accent-red);font-size:13px;color:var(--text-muted);">⚠ 哪一格空着或对不上,<strong style="color:var(--accent-red);">一律以教案为准</strong>重出另外几份 -- <span style="color:var(--accent-green);"><code>"以教案为准,把 PPT 第 X 页、练习题第 X 题、任务书第 X 步统一到教案的流程上"</code></span></div>
+  </div>
+
+  <!-- 第四步:改了要同步 -->
+  <div class="card" style="border-left:4px solid var(--accent-purple);margin-bottom:16px;">
+    <h4>第四步:改了要同步--改一份,另外三份跟着改<span style="font-size:14px;color:var(--accent-purple);margin-left:10px;background:rgba(var(--purple-rgb),0.1);padding:2px 10px;border-radius:12px;">迭代</span><span style="font-size:13px;color:var(--text-muted2);margin-left:6px;">查"改完还咬不咬得合"</span></h4>
+    <p style="margin:4px 0 10px;font-size:13px;color:var(--text-muted2);">📌 资源生成最容易返工的一步:只改了教案,PPT 和任务书还是旧的。改之前先说清连带哪几份:</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+      <div style="padding:10px 12px;border-radius:6px;background:rgba(var(--purple-rgb),0.06);border-left:3px solid var(--accent-purple);">
+        <div style="font-size:13px;color:var(--text-body);"><strong>教案加了一个活动</strong></div>
+        <div style="font-size:13px;color:var(--text-muted);margin-top:4px;">→ PPT 加一页流程 + 任务书加一步 + 练习题加一题</div>
+      </div>
+      <div style="padding:10px 12px;border-radius:6px;background:rgba(var(--purple-rgb),0.06);border-left:3px solid var(--accent-purple);">
+        <div style="font-size:13px;color:var(--text-body);"><strong>教案砍了一个环节</strong></div>
+        <div style="font-size:13px;color:var(--text-muted);margin-top:4px;">→ PPT 删对应页 + 任务书删对应步 + 练习题删对应题</div>
+      </div>
+      <div style="padding:10px 12px;border-radius:6px;background:rgba(var(--purple-rgb),0.06);border-left:3px solid var(--accent-purple);">
+        <div style="font-size:13px;color:var(--text-body);"><strong>练习题换了考点</strong></div>
+        <div style="font-size:13px;color:var(--text-muted);margin-top:4px;">→ 教案的实践环节 + PPT 的流程页要跟着换</div>
+      </div>
+      <div style="padding:10px 12px;border-radius:6px;background:rgba(var(--purple-rgb),0.06);border-left:3px solid var(--accent-purple);">
+        <div style="font-size:13px;color:var(--text-body);"><strong>任务书改了提交格式</strong></div>
+        <div style="font-size:13px;color:var(--text-muted);margin-top:4px;">→ 指导书的评分标准、教案的总结环节要跟着改</div>
+      </div>
+    </div>
+    <div style="margin-top:10px;padding:8px 12px;border-radius:6px;background:rgba(var(--purple-rgb),0.08);border:1px solid rgba(var(--purple-rgb),0.25);font-size:13px;color:var(--text-body);">💬 一句话让 AI 一次改齐:<span style="color:var(--accent-green);"><code>"按改后的教案,把 PPT、练习题、任务书同步改一遍,改完列出改了哪几处"</code></span></div>
+    <div style="margin-top:10px;padding:8px 12px;border-radius:6px;background:rgba(var(--green-rgb),0.06);border:1px solid rgba(var(--green-rgb),0.2);font-size:14px;color:var(--text-body);text-align:center;">✅ 四份各自能上课、四份之间又对得上 → 这一步定稿,可以带去教室</div>
+  </div>
+</section>
+
+<!-- ========== 8.4 避坑指南 ========== -->
 <section class="slide" id="resource-pitfall">
-  <h2>8.3 ⚠️ 课程升级避坑指南</h2>
+  <h2>8.4 ⚠️ 课程升级避坑指南</h2>
 
   <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:18px; align-items:start;">
 
