@@ -4993,6 +4993,24 @@
   <div class="card" style="border-left:4px solid var(--accent-green);margin-bottom:18px;">
     <h4>👨‍🏫 第一阶段:讲师演示</h4>
 
+    <div style="padding:14px 16px;background:rgba(var(--sky-rgb),0.04);border-radius:10px;border:1px solid rgba(var(--sky-rgb),0.15);margin-bottom:16px;">
+      <h4 style="margin:0 0 10px;font-size:15px;color:var(--accent-purple);">🔎 用三要素拆解这条提示词</h4>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;">
+        <div style="padding:10px;border-radius:6px;background:rgba(var(--green-rgb),0.08);border-left:3px solid var(--accent-green);">
+          <div style="font-weight:bold;color:var(--accent-green);font-size:13px;margin-bottom:4px;">🎭 角色设定</div>
+          <div style="font-size:13px;color:var(--text-body);line-height:1.6;">"接着前面的诊断和学情,为整门课做总体设计"<br><span style="color:var(--text-muted);">→ 这一轮管的是<strong>整门课</strong>,不是某一个模块</span></div>
+        </div>
+        <div style="padding:10px;border-radius:6px;background:rgba(var(--blue-rgb),0.08);border-left:3px solid var(--accent-blue);">
+          <div style="font-weight:bold;color:var(--accent-blue);font-size:13px;margin-bottom:4px;">🎯 任务明确</div>
+          <div style="font-size:13px;color:var(--text-body);line-height:1.6;">"先定项目主线,再让模块顺序跟主线对齐"<br><span style="color:var(--text-muted);">→ <b style="color:var(--accent-blue);">定什么</b>:定主线,顺便把诊断里的模块顺序重排一遍</span></div>
+        </div>
+        <div style="padding:10px;border-radius:6px;background:rgba(var(--orange2-rgb),0.08);border-left:3px solid var(--accent-orange2);">
+          <div style="font-weight:bold;color:var(--accent-orange2);font-size:13px;margin-bottom:4px;">📋 输出约束</div>
+          <div style="font-size:13px;color:var(--text-body);line-height:1.6;">"四部分框架 + 只要框架,不展开到课时"<br><span style="color:var(--text-muted);">→ <b style="color:var(--accent-orange2);">到哪一层</b>:上层先定死,下层才有依据</span></div>
+        </div>
+      </div>
+    </div>
+
     <div style="display:grid;grid-template-columns:46% 54%;gap:16px;align-items:stretch;">
       <div style="display:flex;flex-direction:column;">
         <div class="pt-head"><span class="pt-tag demo">👨‍🏫 演示用</span><span class="pt-note">填的是讲师的课,别复制到你的账号;橙色底纹那几处就是要换成你自己的</span></div>
@@ -5015,23 +5033,7 @@
 全部保存到「课程焕新/03_教学设计」目录(没有就新建),文件名带「课程级」。
 <button class="copy-btn" onclick="copyPrompt('p-course-demo',this)">复制</button></div>
 
-        <div style="padding:14px 16px;background:rgba(var(--sky-rgb),0.04);border-radius:10px;border:1px solid rgba(var(--sky-rgb),0.15);">
-          <h4 style="margin:0 0 10px;font-size:15px;color:var(--accent-purple);">🔎 用三要素拆解这条提示词</h4>
-          <div style="display:grid;grid-template-columns:1fr;gap:9px;">
-            <div style="padding:10px;border-radius:6px;background:rgba(var(--green-rgb),0.08);border-left:3px solid var(--accent-green);">
-              <div style="font-weight:bold;color:var(--accent-green);font-size:13px;margin-bottom:4px;">🎭 角色设定</div>
-              <div style="font-size:13px;color:var(--text-body);line-height:1.6;">"接着前面的诊断和学情,为整门课做总体设计"<br><span style="color:var(--text-muted);">→ 这一轮管的是<strong>整门课</strong>,不是某一个模块</span></div>
-            </div>
-            <div style="padding:10px;border-radius:6px;background:rgba(var(--blue-rgb),0.08);border-left:3px solid var(--accent-blue);">
-              <div style="font-weight:bold;color:var(--accent-blue);font-size:13px;margin-bottom:4px;">🎯 任务明确</div>
-              <div style="font-size:13px;color:var(--text-body);line-height:1.6;">"先定项目主线,再让模块顺序跟主线对齐"<br><span style="color:var(--text-muted);">→ <b style="color:var(--accent-blue);">定什么</b>:定主线,顺便把诊断里的模块顺序重排一遍</span></div>
-            </div>
-            <div style="padding:10px;border-radius:6px;background:rgba(var(--orange2-rgb),0.08);border-left:3px solid var(--accent-orange2);">
-              <div style="font-weight:bold;color:var(--accent-orange2);font-size:13px;margin-bottom:4px;">📋 输出约束</div>
-              <div style="font-size:13px;color:var(--text-body);line-height:1.6;">"四部分框架 + 只要框架,不展开到课时"<br><span style="color:var(--text-muted);">→ <b style="color:var(--accent-orange2);">到哪一层</b>:上层先定死,下层才有依据</span></div>
-            </div>
-          </div>
-        </div>
+        
       </div>
 
       <div style="display:flex;flex-direction:column;gap:12px;">
@@ -5061,15 +5063,7 @@
           <div class="why-item"><span class="why-k">进最终版</span><span class="why-t">这段学生交的东西,能不能直接拼进最终作品--拼不进,就是外挂的练习</span></div>
         </div>
 
-        <div class="why-card">
-          <div class="why-head"><span class="why-badge">?</span>两份东西,别写成一份</div>
-          <div class="why-item"><span class="why-k">这一页</span><span class="why-t"><b>一页纸的框架</b>--作品是什么、模块怎么分工、分怎么记。整门课的账</span></div>
-          <div class="why-item"><span class="why-k">下一步</span><span class="why-t"><b>一段的课时表</b>--6 次课怎么上、每次课检查什么。一段的账</span></div>
-          <div class="why-item"><span class="why-k">写细了</span><span class="why-t">框架里出现"第几次课""第 3 课时"→ 写串了,那是下一步的活</span></div>
-          <div class="why-item"><span class="why-k">写越了</span><span class="why-t">下一步又重新选项目、改主线 → 也是写串了,项目在这一页已经定过</span></div>
-        </div>
-
-        <div class="why-card why-orange">
+                <div class="why-card why-orange">
           <div class="why-head"><span class="why-badge">!</span>写法要点:只要框架,不要细节</div>
           <div class="why-item"><span class="why-k">不加细节</span><span class="why-t">这一轮的产物是<b>一页纸</b>。写到课时、写到每张 PPT,下一步就没得做了,而且它会越写越糙</span></div>
           <div class="why-item"><span class="why-k">不写空话</span><span class="why-t">五条要求每条咬住诊断或学情里的一个具体问题,不写"注重实践""加强互动"这类放之四海皆准的话</span></div>
@@ -5117,7 +5111,7 @@
 
         <div class="warn-box" style="margin:0;">
           <div class="title">💡 关键提醒</div>
-          <div class="text">• 这一轮<strong>只要框架</strong>,别让它展开到课时--课时留给 7.3<br>• 你的课不是软件课也行:把"作品"换成你课里的<strong>产品 / 案例 / 服务</strong><br>• 模块分工表是下一步的输入,现在写得含糊,下一步就没法开工</div>
+          <div class="text">• 这一轮<strong>只要框架</strong>,别让它展开到课时--课时留给 7.3<br>• 你的课不是软件课也行:把"作品"换成你课里的<strong>产品 / 案例 / 服务</strong></div>
         </div>
       </div>
     </div>
