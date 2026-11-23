@@ -3370,6 +3370,40 @@
 </div>
     </div>
   </div>
+  <!-- 分工总纲:四步都是这个关系 -->
+  <div class="card" style="border-left:4px solid var(--accent-purple); margin:0 0 16px 0;">
+    <h4>🎭 这四步,AI 干什么、老师干什么</h4>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:12px;">
+      <div style="padding:12px;border-radius:8px;background:rgba(var(--blue-rgb),0.06);border:1px solid rgba(var(--blue-rgb),0.2);">
+        <div style="font-size:15px;font-weight:bold;color:var(--accent-blue);margin-bottom:8px;">🤖 AI 负责</div>
+        <ul style="margin:0;padding-left:18px;font-size:13px;color:var(--text-body);line-height:2;">
+          <li>快速生成初稿(教学方案/教案/课件/习题)</li>
+          <li>基于数据做客观分析(课程诊断/学情报告)</li>
+          <li>提供多种可选方案供教师挑选</li>
+          <li>按追问指令迭代调整</li>
+        </ul>
+        <div style="margin-top:10px;padding:8px 10px;border-radius:6px;background:rgba(var(--red-rgb),0.08);border-left:3px solid var(--accent-red2);font-size:13px;color:var(--accent-red2);">
+          ⚠ 给的是初稿不是终稿 -- 数据、答案、结论都要自己验一遍
+        </div>
+      </div>
+      <div style="padding:12px;border-radius:8px;background:rgba(var(--orange-rgb),0.06);border:1px solid rgba(var(--orange-rgb),0.2);">
+        <div style="font-size:15px;font-weight:bold;color:var(--accent-orange);margin-bottom:8px;">👨‍🏫 教师负责</div>
+        <ul style="margin:0;padding-left:18px;font-size:13px;color:var(--text-body);line-height:2;">
+          <li>把控方向：教学目标是否符合人才培养方案?</li>
+          <li>核实内容：知识点是否准确?是否过时?</li>
+          <li>补充校情：本校学生特点/实训条件/课程衔接</li>
+          <li>最终拍板：方案能不能进课堂,老师说了算</li>
+        </ul>
+        <div style="margin-top:10px;padding:8px 10px;border-radius:6px;background:rgba(var(--red-rgb),0.08);border-left:3px solid var(--accent-red2);font-size:13px;color:var(--accent-red2);">
+          ⚠ 四步的产物都要老师改过才能用 -- 包括诊断报告和教学设计方案
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:12px;padding:10px 12px;border-radius:8px;background:rgba(var(--green-rgb),0.06);border:1px solid rgba(var(--green-rgb),0.2);text-align:center;font-size:14px;color:var(--accent-green);">
+      <strong>✅ 协作流程：AI 出初稿 → 老师审阅修改 → 再让 AI 迭代 → 老师最终拍板</strong>
+    </div>
+  </div>
+
   <div class="card" style="border-left:4px solid var(--accent-blue); margin:0;">
     <h4>📋 学习节奏</h4>
     <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:16px; margin-top:6px;">
@@ -5417,42 +5451,12 @@
 <section class="slide" id="resource-intro">
   <h2>8.1 📦 教学资源生成概览--4 种资源各司其职</h2>
 
-  <!-- 过渡:角色定位 -->
-  <div class="card" style="border-left:4px solid var(--accent-purple);margin-bottom:16px;">
-    <h4>🎭 分工:AI 出初稿,老师审、老师拍板</h4>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:12px;">
-      <div style="padding:12px;border-radius:8px;background:rgba(var(--blue-rgb),0.06);border:1px solid rgba(var(--blue-rgb),0.2);">
-        <div style="font-size:15px;font-weight:bold;color:var(--accent-blue);margin-bottom:8px;">🤖 AI 负责</div>
-        <ul style="margin:0;padding-left:18px;font-size:13px;color:var(--text-body);line-height:2;">
-          <li>快速生成初稿(教学方案/教案/课件/习题)</li>
-          <li>基于数据做客观分析(课程诊断/学情报告)</li>
-          <li>提供多种可选方案供教师挑选</li>
-          <li>按追问指令迭代调整</li>
-        </ul>
-        <div style="margin-top:10px;padding:8px 10px;border-radius:6px;background:rgba(var(--red-rgb),0.08);border-left:3px solid var(--accent-red2);font-size:13px;color:var(--accent-red2);">
-          ⚠ AI 给的是初稿不是终稿，比如练习题答案要自己做一遍验证
-        </div>
-      </div>
-      <div style="padding:12px;border-radius:8px;background:rgba(var(--orange-rgb),0.06);border:1px solid rgba(var(--orange-rgb),0.2);">
-        <div style="font-size:15px;font-weight:bold;color:var(--accent-orange);margin-bottom:8px;">👨‍🏫 教师负责</div>
-        <ul style="margin:0;padding-left:18px;font-size:13px;color:var(--text-body);line-height:2;">
-          <li>把控方向：教学目标是否符合人才培养方案?</li>
-          <li>核实内容：知识点是否准确?是否过时?</li>
-          <li>补充校情：本校学生特点/实训条件/课程衔接</li>
-          <li>最终拍板：方案能不能进课堂,老师说了算</li>
-        </ul>
-        <div style="margin-top:10px;padding:8px 10px;border-radius:6px;background:rgba(var(--red-rgb),0.08);border-left:3px solid var(--accent-red2);font-size:13px;color:var(--accent-red2);">
-          ⚠ 教案/PPT 是框架不是成品,切忌直接拿 AI 产出上课--至少过一遍+改一遍
-        </div>
-      </div>
-    </div>
-    <div style="margin-top:12px;padding:10px 12px;border-radius:8px;background:rgba(var(--green-rgb),0.06);border:1px solid rgba(var(--green-rgb),0.2);text-align:center;font-size:14px;color:var(--accent-green);">
-      <strong>✅ 协作流程：AI 出初稿 → 老师审阅修改 → 再让 AI 迭代 → 老师最终拍板</strong>
-    </div>
-  </div>
-
   <div class="highlight" style="margin-bottom:16px;">
     💡 第四步的输入是第三步产出的<strong>这一段实施方案</strong>(分课时设计),不是课程级框架;输出是<strong>能直接上课的文件</strong>--教案、PPT、练习题、实训案例。
+  </div>
+
+  <div style="margin-bottom:16px;padding:11px 14px;border-radius:8px;background:rgba(var(--orange-rgb),0.08);border-left:3px solid var(--accent-orange);font-size:14px;color:var(--text-body);line-height:1.8;">
+    ⚠ <strong style="color:var(--accent-orange);">这一步最容易出的问题:生成完直接拿去上课。</strong>四份文件每一份都要过一遍、改一遍 -- 怎么查在 8.3。
   </div>
 
   <!-- 上区:4 种资源 2×2 网格 -->
