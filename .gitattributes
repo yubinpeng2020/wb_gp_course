@@ -1,0 +1,7 @@
+# Windows 批处理与 PowerShell 脚本必须保留原始的 CRLF + GBK 字节，
+# 否则从 GitHub 下载 zip 解压后中文注释变乱码、问号方块满天飞。
+*.bat  -text
+*.ps1  -text
+
+# macOS 双击脚本用 LF
+*.command text eol=lf

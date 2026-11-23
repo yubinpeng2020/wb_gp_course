@@ -1055,8 +1055,35 @@
     padding: 4px 0 4px 26px; position: relative;
   }
   .check-list li::before {
-    content: '☐'; position: absolute; left: 0; top: 4px;
-    color: var(--accent-green); font-size: 16px;
+    content: ''; position: absolute; left: 1px; top: 7px;
+    width: 14px; height: 14px; box-sizing: border-box; border-radius: 4px;
+    border: 1.5px solid rgba(var(--green-rgb),0.6);
+    background: rgba(var(--green-rgb),0.06);
+    transition: background .15s, border-color .15s;
+  }
+  /* 成果验收清单：可勾选 + 本地保存 */
+  .check-list { position: relative; }
+  .check-list .title { padding-right: 112px; }
+  .check-list .ck-reset {
+    position: absolute; top: 11px; right: 13px; font-family: inherit;
+    font-size: 12px; font-weight: 700; line-height: 1; padding: 6px 11px;
+    border-radius: 999px; cursor: pointer; white-space: nowrap;
+    background: rgba(var(--green-rgb),0.12); border: 1px solid rgba(var(--green-rgb),0.45);
+    color: var(--accent-green); transition: background .15s;
+  }
+  .check-list .ck-reset:hover { background: rgba(var(--green-rgb),0.26); }
+  .check-list li {
+    cursor: pointer; border-radius: 6px;
+    transition: background .15s, color .15s;
+  }
+  .check-list li:hover { background: rgba(var(--green-rgb),0.09); }
+  .check-list li:focus-visible { outline: 2px solid rgba(var(--green-rgb),0.6); outline-offset: 2px; }
+  .check-list li.ck-on { color: var(--text-muted); background: rgba(var(--green-rgb),0.06); }
+  .check-list li.ck-on::before {
+    content: '✓'; color: #fff; border-color: var(--accent-green);
+    background: var(--accent-green);
+    font-size: 11px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
   }
   /* 分层练习 */
   .tier-box { display: flex; gap: 14px; margin: 12px 0;
@@ -3596,7 +3623,7 @@
 
   <div class="card" style="margin-top:18px;border-left:4px solid var(--accent-orange);">
     <h4>📌 演示案例:手机编程应用(存量课程)</h4>
-    <div style="font-size:13.5px;color:var(--text-body);margin-top:6px;line-height:1.75;">这本教材的技术栈停在 <span class="hl-lg key">2018 年</span>,比今天落后 <span class="hl-lg warn">8 个大版本</span>--存量课程可能存在类似问题,这一站就拿它当样本。</div>
+    <div style="font-size:13.5px;color:var(--text-body);margin-top:6px;line-height:1.75;">这本教材的技术栈停在 <span class="hl-lg key">2018 年</span>,比现在落后 <span class="hl-lg warn">8 个大版本</span>--存量课程可能存在类似问题,这一站就拿它当样本。</div>
     <div style="display:flex;gap:16px;align-items:flex-start;margin-top:12px;">
       <div style="flex:1;min-width:0;">
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
@@ -3635,7 +3662,7 @@
     <div style="margin-top:8px;font-size:11.5px;color:var(--text-muted);line-height:1.6;">📄 课程规划取自《2024 级信息安全技术应用专业人才培养方案》第 24、28 页(课程编码 01131110C,资料包里给了这两页的摘录);教材选用取自教材本身和出版社的教学大纲。</div>
   </div>
 </section>
-<!-- 演讲备注:好,用户档案设好了。现在进入第一个实操--课程诊断。课程诊断就是让 AI 帮你找出你的课程里哪些模块最需要升级。逻辑很简单:你告诉 AI 你教什么课、用什么教材,AI 联网搜索这个行业最新的需求和技术趋势,然后对比你的课程内容,找出匹配度最低的模块。本次演示我用真实案例--就是我自己教的「手机编程应用」这门课。这门课教的是 Android 原生开发,Java 加 XML,用的教材是 2021 年出版的《Android项目实战--博学谷》,已经 5 年了。但注意,5 年是书的年龄;书里标的工具链是 Android Studio 3.2 + Android 9,那是 2018 年的东西,到今天 8 年了,落后 8 个大版本。判断一门课老不老,看的不是书什么时候印的,是它用的工具链是哪一年的。我们来看看 AI 能不能诊断出这门课的问题。
+<!-- 演讲备注:好,用户档案设好了。现在进入第一个实操--课程诊断。课程诊断就是让 AI 帮你找出你的课程里哪些模块最需要升级。逻辑很简单:你告诉 AI 你教什么课、用什么教材,AI 联网搜索这个行业最新的需求和技术趋势,然后对比你的课程内容,找出匹配度最低的模块。本次演示我用真实案例--就是我自己教的「手机编程应用」这门课。这门课教的是 Android 原生开发,Java 加 XML,用的教材是 2021 年出版的《Android项目实战--博学谷》,已经 5 年了。但注意,5 年是书的年龄;书里标的工具链是 Android Studio 3.2 + Android 9,那是 2018 年的东西,到现在 8 年了,落后 8 个大版本。判断一门课老不老,看的不是书什么时候印的,是它用的工具链是哪一年的。我们来看看 AI 能不能诊断出这门课的问题。
 【这块案例卡怎么讲--不要一带而过】卡上分两栏,分的是**来源**,不是知识点:左边课程规划,学校定的,查培养方案;右边教材选用,出版社编的,查教材和大纲。为什么这么分?因为这两样在现实里就是两个人、两个时间点定的,放在一起看才发现对不上--5.3 那张对照表就是把这两栏逐条比一遍。讲的时候先让学员把三件事记住:教材五年没换、工具链还停在 2018 年(落后 8 个大版本)、学生能抄不能做。然后停十秒,让他们在心里猜:这门课你觉得哪几个模块最该改?不用说出来,自己有个数就行。等 AI 出诊断结果时,再让他们对照--AI 看出来的,和你猜的,是不是一回事?差在哪?这个落差才是他们要带走的东西。只夸"AI 真厉害"没用,得让他们先有自己的判断,落差才谈得起来。
 【三件事不在一个层级】教材五年没换、工具链停在 2018 年,是**教材侧的事实**,是诊断的线索;学生能抄不能做才是这门课的**痛点**,是事实结出的后果。别把事实当痛点讲--等 AI 出报告时正好对照:第二部分（教材评估）讲事实,第三部分（诊断表格）才落到痛点上,层级要对得上。
 【课程信息以培养方案为准】这一页的 4 学分、72 学时(理论 0 + 实训 72)、第 4 学期、前序课程 C 语言程序设计,都是从培养方案第 24、28 页抄来的。不要凭印象说"这门课 67 学时"--学分学时年年可能调,一定翻当年的方案。学员资料包里给了这两页的摘录 PDF(只摘了与本课程直接相关的两页,别的课程的学分学时没给),还有一张课程信息卡,让他们照这个格式查自己的课。 -->
@@ -5452,7 +5479,7 @@
   <h2>8.1 📦 教学资源生成概览--4 种资源各司其职</h2>
 
   <div class="highlight" style="margin-bottom:16px;">
-    💡 第四步的输入是第三步产出的<strong>这一段实施方案</strong>(分课时设计),不是课程级框架;输出是<strong>能直接上课的文件</strong>--教案、PPT、练习题、实训案例。
+    💡 第四步接着 <span style="color:var(--accent-green);font-weight:700;background:rgba(var(--green-rgb),0.14);border-bottom:2px solid rgba(var(--green-rgb),0.55);padding:0 3px;border-radius:3px;">7.3 的那一个模块</span>往下做:输入是<span style="color:var(--accent-green);font-weight:700;background:rgba(var(--green-rgb),0.14);border-bottom:2px solid rgba(var(--green-rgb),0.55);padding:0 3px;border-radius:3px;">这一段实施方案</span>(分课时设计),不是课程级框架;输出是<span style="color:var(--accent-green);font-weight:700;background:rgba(var(--green-rgb),0.14);border-bottom:2px solid rgba(var(--green-rgb),0.55);padding:0 3px;border-radius:3px;">这一个模块</span>能直接上课的文件--教案、PPT、练习题、实训案例。整门课的资源不是一次生成,是把这一步<span style="color:var(--accent-green);font-weight:700;background:rgba(var(--green-rgb),0.14);border-bottom:2px solid rgba(var(--green-rgb),0.55);padding:0 3px;border-radius:3px;">按模块重复</span>。
   </div>
 
   <div style="margin-bottom:16px;padding:11px 14px;border-radius:8px;background:rgba(var(--orange-rgb),0.08);border-left:3px solid var(--accent-orange);font-size:14px;color:var(--text-body);line-height:1.8;">
@@ -5466,7 +5493,7 @@
       <div class="text" style="font-size:14px;">
         <strong style="color:var(--accent-blue);">解决:教学规范与备查</strong><br>
         学校教学检查必备。AI 自动生成标准格式教案,含教学目标、重难点、教学过程、板书设计。
-        <div style="margin-top:8px;padding:10px 12px;border-radius:8px;background:rgba(var(--blue-rgb),0.08);border:1px solid rgba(var(--blue-rgb),0.2);font-size:13px;color:var(--text-muted);line-height:1.7;">📋 <strong style="color:var(--accent-blue);">产出长这样</strong>：<br>┌ 导入(5min) 🔗 展示「汕职备忘录」App截图,抛出问题<br>├ 讲授(15min) 📖 ListView组件用法+代码演示<br>├ 实践(20min) 💻 学生搭建备忘录列表页面<br>└ 总结(5min) ✅ 回顾知识点+板书设计草图</div>
+        <div style="margin-top:8px;padding:10px 12px;border-radius:8px;background:rgba(var(--blue-rgb),0.08);border:1px solid rgba(var(--blue-rgb),0.2);font-size:13px;color:var(--text-muted);line-height:1.7;">📋 <strong style="color:var(--accent-blue);">产出长这样</strong>：<br>┌ 导入(10min) 🔗 展示教材登录页,当场读出明文密码<br>├ 讲授(15min) 📖 一句话正确写法 + 一个错误写法<br>├ 实践(50min) 💻 学生把本地存储改成 DataStore<br>└ 总结(15min) ✅ 对照破绽清单逐条验收</div>
       <div class="tap-summary">
   <div class="tap-summary-open">💡 <strong>一句话：</strong>教案：教学规范与备查，学校检查必备</div>
 </div>
@@ -5478,7 +5505,7 @@
       <div class="text" style="font-size:14px;">
         <strong style="color:var(--accent-purple);">解决:课堂演示与视觉呈现</strong><br>
         课堂讲授核心载体。AI 生成初版后微调即可用,比从零排版快数倍。
-        <div style="margin-top:8px;padding:10px 12px;border-radius:8px;background:rgba(var(--purple-rgb),0.08);border:1px solid rgba(var(--purple-rgb),0.2);font-size:13px;color:var(--text-muted);line-height:1.7;">📋 <strong style="color:var(--accent-purple);">产出长这样</strong>：<br>🎬 封面页 → 🎯 教学目标页 → 📱 项目介绍(含分层选题 A/B/C) → 📅 4个分课时教学流程页 → 📊 评价标准页 → ✨ 总结页<br><span style="color:var(--accent-purple);">现代简洁 · 蓝色调</span></div>
+        <div style="margin-top:8px;padding:10px 12px;border-radius:8px;background:rgba(var(--purple-rgb),0.08);border:1px solid rgba(var(--purple-rgb),0.2);font-size:13px;color:var(--text-muted);line-height:1.7;">📋 <strong style="color:var(--accent-purple);">产出长这样</strong>：<br>🎬 封面页 → 🎯 教学目标页 → 📱 项目介绍(含分层选题 A/B/C) → 📅 6 个分课时教学流程页 → 📊 评价标准页 → ✨ 总结页<br><span style="color:var(--accent-purple);">现代简洁 · 蓝色调</span></div>
       <div class="tap-summary">
   <div class="tap-summary-open">💡 <strong>一句话：</strong>PPT：课堂演示载体，初版微调即可用</div>
 </div>
@@ -5490,7 +5517,7 @@
       <div class="text" style="font-size:14px;">
         <strong style="color:var(--accent-orange2);">解决:学习效果检验</strong><br>
         基础题+应用题+拓展题分层设计,AI 自动生成题目、参考答案和评分标准。
-        <div style="margin-top:8px;padding:10px 12px;border-radius:8px;background:rgba(var(--orange2-rgb),0.08);border:1px solid rgba(var(--orange2-rgb),0.2);font-size:13px;color:var(--text-muted);line-height:1.7;">📋 <strong style="color:var(--accent-orange2);">产出长这样</strong>：<br>🟢 <strong>基础题</strong>：创建备忘录列表,用 ListView 展示 5 条记录<br>🟡 <strong>应用题</strong>：添加长按删除功能 + 确认弹窗<br>🔴 <strong>拓展题</strong>：接入本地数据库,实现数据持久化<br>每题含 ✅ 参考答案 + 📏 评分细则</div>
+        <div style="margin-top:8px;padding:10px 12px;border-radius:8px;background:rgba(var(--orange2-rgb),0.08);border:1px solid rgba(var(--orange2-rgb),0.2);font-size:13px;color:var(--text-muted);line-height:1.7;">📋 <strong style="color:var(--accent-orange2);">产出长这样</strong>：<br>🟢 <strong>基础题</strong>：用 DataStore 存一条 Token,App 重启后能读回来<br>🟡 <strong>应用题</strong>：把无盐 MD5 改成加盐哈希,并说明盐为什么不能写死在代码里<br>🔴 <strong>拓展题</strong>：Token 过期后自动跳回登录页,写出判断条件<br>每题含 ✅ 参考答案 + 📏 评分细则</div>
       <div class="tap-summary">
   <div class="tap-summary-open">💡 <strong>一句话：</strong>练习题：分层检验，附答案+评分标准</div>
 </div>
@@ -5502,7 +5529,7 @@
       <div class="text" style="font-size:14px;">
         <strong style="color:var(--accent-green);">解决:学生实操落地</strong><br>
         项目式教学核心载体。学生任务书明确"做什么",教师指导书明确"怎么带"。
-        <div style="margin-top:8px;padding:10px 12px;border-radius:8px;background:rgba(var(--green-rgb),0.08);border:1px solid rgba(var(--green-rgb),0.2);font-size:13px;color:var(--text-muted);line-height:1.7;">📋 <strong style="color:var(--accent-green);">产出长这样</strong>：<br>🎓 <strong>学生任务书</strong>：项目背景「汕职备忘录」App → 分步任务(搭建UI → 增删功能 → 数据持久化) → 提交规范<br>👨‍🏫 <strong>教师指导书</strong>：解题思路 + 参考方案 + 评分标准 + ⚠️ 3个常见坑预判</div>
+        <div style="margin-top:8px;padding:10px 12px;border-radius:8px;background:rgba(var(--green-rgb),0.08);border:1px solid rgba(var(--green-rgb),0.2);font-size:13px;color:var(--text-muted);line-height:1.7;">📋 <strong style="color:var(--accent-green);">产出长这样</strong>：<br>🎓 <strong>学生任务书</strong>：项目背景「手机编程应用」→ 分步任务(登录页 → 存 Token → 加盐哈希 → 记住登录) → 提交规范<br>👨‍🏫 <strong>教师指导书</strong>：解题思路 + 参考方案 + 评分标准 + ⚠️ 3个常见坑预判</div>
       <div class="tap-summary">
   <div class="tap-summary-open">💡 <strong>一句话：</strong>实训案例：学生动手落地，任务书+指导书</div>
 </div>
@@ -5515,14 +5542,85 @@
     <h4 style="color:var(--accent-purple);">✨ 第 5 种可选:HTML 交互课件 <span style="font-size:13px;color:var(--text-muted);font-weight:normal;">(浏览器打开,不是 PPT)</span></h4>
     <div class="text" style="font-size:14px;">
       <strong style="color:var(--accent-purple);">解决:必须让学生动手操作的知识点</strong><br>
-      实验模拟、算法执行可视化、调参数看结果这类知识点,PPT 只能放静态截图。让 WorkBuddy 直接生成网页,浏览器打开就能拖、能改参数。
+      哈希怎么变、Token 什么时候失效这类知识点,PPT 只能放静态截图。让 WorkBuddy 直接生成网页,浏览器打开就能改参数、看结果。
       <div style="margin-top:10px;padding:10px 12px;border-radius:8px;background:rgba(var(--purple-rgb),0.08);border:1px solid rgba(var(--purple-rgb),0.2);font-size:13px;color:var(--text-muted);line-height:1.9;">
-        📋 <strong style="color:var(--accent-purple);">一句话就能出</strong>:「用 HTML+CSS+JS 做一个光的折射模拟实验」<br>
+        📋 <strong style="color:var(--accent-purple);">一句话就能出</strong>:「用 HTML+CSS+JS 做一个<span style="color:var(--accent-green);font-weight:700;background:rgba(var(--green-rgb),0.14);border-bottom:2px solid rgba(var(--green-rgb),0.55);padding:0 3px;border-radius:3px;">加盐哈希演示页</span>:输入密码和盐,<span style="color:var(--accent-green);font-weight:700;background:rgba(var(--green-rgb),0.14);border-bottom:2px solid rgba(var(--green-rgb),0.55);padding:0 3px;border-radius:3px;">实时显示哈希值</span>;<span style="color:var(--accent-green);font-weight:700;background:rgba(var(--green-rgb),0.14);border-bottom:2px solid rgba(var(--green-rgb),0.55);padding:0 3px;border-radius:3px;">改一个字符,整串都变</span>」<br>
         → 自动存成 <code>.html</code> 文件 → 双击用浏览器打开(F11 全屏,体验更好)<br>
-        <span style="color:var(--text-muted2);">你现在翻的这份课件,就是这一类产物。</span>
+        <span style="color:var(--text-muted2);">学生自己改盐、改密码,亲眼看着哈希整串变--PPT 放不了这个。你现在翻的这份课件,就是同一类产物。</span>
+      </div>
+      <div style="margin-top:10px;padding:9px 12px;border-radius:8px;background:rgba(var(--green-rgb),0.07);border:1px dashed rgba(var(--green-rgb),0.5);">
+        <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:13px;color:var(--text-body);line-height:1.7;">
+          <span style="font-weight:700;color:var(--accent-green);">🧪 现场试一下</span>
+          <span>密码 <input id="hsPwd" type="text" value="123456" autocomplete="off" style="width:92px;padding:3px 7px;border-radius:5px;border:1px solid rgba(var(--green-rgb),0.5);background:rgba(var(--overlay2-rgb),0.9);color:var(--text-strong);font-size:13px;font-family:inherit;outline:none;"></span>
+          <span>盐 <input id="hsSalt" type="text" value="zhiyuan2021" autocomplete="off" style="width:108px;padding:3px 7px;border-radius:5px;border:1px solid rgba(var(--green-rgb),0.5);background:rgba(var(--overlay2-rgb),0.9);color:var(--text-strong);font-size:13px;font-family:inherit;outline:none;"></span>
+          <span style="color:var(--text-muted);">→ sha256(盐 | 密码) =</span>
+        </div>
+        <div id="hsOut" style="margin-top:5px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;color:var(--accent-green);word-break:break-all;line-height:1.6;"></div>
+        <div style="margin-top:2px;font-size:12px;color:var(--text-muted2);">改一个字符,整串都变;每人一个盐,同样的密码也长出不同的串。</div>
       </div>
     </div>
   </div>
+<script>
+(function(){
+  function sha256Hex(msg){
+    function R(x,n){return (x>>>n)|(x<<(32-n));}
+    var K=[0x428a2f98,0x71374491,0xb5c0fbcf,0xe9b5dba5,0x3956c25b,0x59f111f1,0x923f82a4,0xab1c5ed5,
+      0xd807aa98,0x12835b01,0x243185be,0x550c7dc3,0x72be5d74,0x80deb1fe,0x9bdc06a7,0xc19bf174,
+      0xe49b69c1,0xefbe4786,0x0fc19dc6,0x240ca1cc,0x2de92c6f,0x4a7484aa,0x5cb0a9dc,0x76f988da,
+      0x983e5152,0xa831c66d,0xb00327c8,0xbf597fc7,0xc6e00bf3,0xd5a79147,0x06ca6351,0x14292967,
+      0x27b70a85,0x2e1b2138,0x4d2c6dfc,0x53380d13,0x650a7354,0x766a0abb,0x81c2c92e,0x92722c85,
+      0xa2bfe8a1,0xa81a664b,0xc24b8b70,0xc76c51a3,0xd192e819,0xd6990624,0xf40e3585,0x106aa070,
+      0x19a4c116,0x1e376c08,0x2748774c,0x34b0bcb5,0x391c0cb3,0x4ed8aa4a,0x5b9cca4f,0x682e6ff3,
+      0x748f82ee,0x78a5636f,0x84c87814,0x8cc70208,0x90befffa,0xa4506ceb,0xbef9a3f7,0xc67178f2];
+    var H=[0x6a09e667,0xbb67ae85,0x3c6ef372,0xa54ff53a,0x510e527f,0x9b05688c,0x1f83d9ab,0x5be0cd19];
+    var b=[],i,c;
+    for(i=0;i<msg.length;i++){
+      c=msg.charCodeAt(i);
+      if(c<128){b.push(c);}
+      else if(c<2048){b.push(192|(c>>6),128|(c&63));}
+      else if(c<0xD800||c>=0xE000){b.push(224|(c>>12),128|((c>>6)&63),128|(c&63));}
+      else{i++;var c2=msg.charCodeAt(i),cp=0x10000+(((c&0x3FF)<<10)|(c2&0x3FF));
+        b.push(240|(cp>>18),128|((cp>>12)&63),128|((cp>>6)&63),128|(cp&63));}
+    }
+    var len=b.length*8;
+    b.push(0x80);
+    while(b.length%64!==56){b.push(0);}
+    b.push(0,0,0,0,(len>>>24)&255,(len>>>16)&255,(len>>>8)&255,len&255);
+    var w=new Array(64);
+    for(var off=0;off<b.length;off+=64){
+      for(i=0;i<16;i++){w[i]=(b[off+i*4]<<24)|(b[off+i*4+1]<<16)|(b[off+i*4+2]<<8)|b[off+i*4+3];}
+      for(i=16;i<64;i++){
+        var s0=R(w[i-15],7)^R(w[i-15],18)^(w[i-15]>>>3);
+        var s1=R(w[i-2],17)^R(w[i-2],19)^(w[i-2]>>>10);
+        w[i]=(w[i-16]+s0+w[i-7]+s1)|0;
+      }
+      var a=H[0],bb=H[1],cc=H[2],d=H[3],e=H[4],f=H[5],g=H[6],h=H[7];
+      for(i=0;i<64;i++){
+        var S1=R(e,6)^R(e,11)^R(e,25);
+        var ch=(e&f)^((~e)&g);
+        var t1=(h+S1+ch+K[i]+w[i])|0;
+        var S0=R(a,2)^R(a,13)^R(a,22);
+        var mj=(a&bb)^(a&cc)^(bb&cc);
+        var t2=(S0+mj)|0;
+        h=g;g=f;f=e;e=(d+t1)|0;d=cc;cc=bb;bb=a;a=(t1+t2)|0;
+      }
+      H[0]=(H[0]+a)|0;H[1]=(H[1]+bb)|0;H[2]=(H[2]+cc)|0;H[3]=(H[3]+d)|0;
+      H[4]=(H[4]+e)|0;H[5]=(H[5]+f)|0;H[6]=(H[6]+g)|0;H[7]=(H[7]+h)|0;
+    }
+    return H.map(function(x){return (x>>>0).toString(16).padStart(8,'0');}).join('');
+  }
+  function upd(){
+    var p=document.getElementById('hsPwd'),s=document.getElementById('hsSalt'),o=document.getElementById('hsOut');
+    if(!p||!s||!o){return;}
+    o.textContent=sha256Hex(s.value+'|'+p.value);
+  }
+  ['hsPwd','hsSalt'].forEach(function(id){
+    var el=document.getElementById(id);
+    if(el){el.addEventListener('input',upd);}
+  });
+  upd();
+})();
+</script>
 </section>
 
 <!-- ========== 8.2 实操4:资源生成(演示+跟做) ========== -->
@@ -5538,7 +5636,7 @@
         <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;">
           <div style="padding:10px;border-radius:6px;background:rgba(var(--green-rgb),0.08);border-left:3px solid var(--accent-green);">
             <div style="font-weight:bold;color:var(--accent-green);font-size:13px;margin-bottom:4px;">🎭 角色设定</div>
-            <div style="font-size:13px;color:var(--text-body);line-height:1.6;">"请按上面的教学设计方案,生成以下 4 种配套教学资源"<br><span style="color:var(--text-muted);">→ 接第四步的方案往下做,不重新设计课程</span></div>
+            <div style="font-size:13px;color:var(--text-body);line-height:1.6;">"请按上面的教学设计方案,生成以下 4 种配套教学资源"<br><span style="color:var(--text-muted);">→ 接第三步的方案往下做,不重新设计课程</span></div>
           </div>
           <div style="padding:10px;border-radius:6px;background:rgba(var(--blue-rgb),0.08);border-left:3px solid var(--accent-blue);">
             <div style="font-weight:bold;color:var(--accent-blue);font-size:13px;margin-bottom:4px;">🎯 任务明确</div>
@@ -5546,7 +5644,7 @@
           </div>
           <div style="padding:10px;border-radius:6px;background:rgba(var(--orange2-rgb),0.08);border-left:3px solid var(--accent-orange2);">
             <div style="font-weight:bold;color:var(--accent-orange2);font-size:13px;margin-bottom:4px;">📋 输出约束</div>
-            <div style="font-size:13px;color:var(--text-body);line-height:1.6;">"教案含教学过程+板书设计,PPT 8-10页蓝色调,练习题5道分层..."<br><span style="color:var(--text-muted);">→ 每种资源指定具体内容和格式</span></div>
+            <div style="font-size:13px;color:var(--text-body);line-height:1.6;">"教案含教学过程+板书设计,PPT 12-14页一次课一页,练习题5道分层..."<br><span style="color:var(--text-muted);">→ 每种资源指定具体内容和格式</span></div>
           </div>
         </div>
         <div style="margin-top:8px;font-size:13px;color:var(--text-muted);line-height:1.6;">
@@ -5560,20 +5658,22 @@
         
 
         <div class="pt-head"><span class="pt-tag demo">👨‍🏫 演示用</span><span class="pt-note">填的是讲师的课,别复制到你的账号</span></div>
-        <div class="prompt-box" id="p-resource-all" style="margin-top:14px;"><span style="color:var(--accent-blue);font-weight:bold;">请按上面的教学设计方案,生成以下 4 种配套教学资源:</span>
+        <div class="prompt-box" id="p-resource-all" style="margin-top:14px;"><span style="color:var(--accent-blue);font-weight:bold;">请按上面的教学设计方案,生成以下 4 种<span style="color:var(--accent-green);font-weight:700;background:rgba(var(--green-rgb),0.22);border-bottom:2px solid var(--accent-green);padding:0 3px;border-radius:3px;white-space:nowrap;">配套教学资源</span>:</span>
 
-1. 教案(Word 文档):教学目标、教学重点难点、教学过程(导入→讲授→实践→总结)、板书设计,标准教案格式含时间标注
-2. 课件 PPT(PPT 文件):8-10 页,含封面、教学目标、项目介绍、分课时教学流程、评价标准、总结,现代简洁蓝色调
-3. 练习题(Word 文档):5 道题(2 基础+2 应用+1 拓展),每题含题目、参考答案、评分标准
-4. 实训案例资料包(2 个 Word 文档):
-   - 学生任务书:项目背景(约 200 字,贴近中职学生日常生活)、学习目标(3 条:知识+能力+素养)、任务要求(分步骤,每步写清做什么+交付什么)、提交规范(文件命名+格式+截止时间)
+1. 教案(Word 文档,6-8 页):教学目标、教学重点难点、教学过程(导入→讲授→实践→验收)、板书设计,标准教案格式;方案里的每一次课都要出,不要只出第一次;四个环节各标分钟数,加起来等于每次课的时长
+2. 课件 PPT(PPT 文件,12-14 页,一次课一页):含封面、教学目标、项目介绍、分课时教学流程、评价标准、总结,现代简洁蓝色调;每个课时页只放四个环节的要点、时间与本次课的验收标准,不展开学生活动;需要截图的地方留占位并写明截什么,架构图、流程图这类示意图一律不放
+3. 练习题(Word 文档,2-4 页):覆盖方案里除口述验收以外的所有检查点;5 道题(2 基础+2 应用+1 拓展),合计 100 分,每题标分值并附参考答案与评分细则;卷末注明这一卷 100 分是独立的一套尺子,进总评以每次课当堂验收为准
+4. 实训案例资料包(2 个 Word 文档,各 2-4 页):
+   - 学生任务书:项目背景(约 200 字,一段写完,贴合作品主线的场景)、学习目标(3 条:知识+能力+素养)、任务要求(分步骤,每步写清做什么+交付什么)、提交规范(文件命名+格式+截止时间)
    - 教师指导书:解题思路(分步骤提示)、参考方案要点(关键步骤指引)、评分标准(每项任务配分值+评分细则)、常见问题预判(3 个学生可能遇到的坑+应对建议)
 
 必须满足:
-- 内容来自上面的教学设计方案,不重新设计课程--这一步是把方案落成资源,不是再出一版方案
-- 4 份资源互相对得上:教案里的活动 = PPT 的流程 = 练习题考的知识点 = 任务书要交的步骤
-- 每份都能直接拿去上课:教案有时间标注、练习题每题有答案和评分标准、任务书有截止时间
-- 评分沿用方案里的口径:过程分主体挂检查点,考勤照计但压到最低
+- 内容来自上面的教学设计方案,<span style="color:var(--accent-green);font-weight:700;background:rgba(var(--green-rgb),0.22);border-bottom:2px solid var(--accent-green);padding:0 3px;border-radius:3px;white-space:nowrap;">不重新设计课程</span>--这一步是把方案落成资源,不是再出一版方案
+- 4 份资源<span style="color:var(--accent-green);font-weight:700;background:rgba(var(--green-rgb),0.22);border-bottom:2px solid var(--accent-green);padding:0 3px;border-radius:3px;white-space:nowrap;">互相对得上</span>,并在最后附一张对照表:一次课一行,方案有几次课就几行,列为 教案的环节 ｜ PPT 的页码 ｜ 练习题的题号 ｜ 任务书的步骤;某个检查点是口述验收、没有对应笔试题,题号一栏写「—(走口述)」,不要留空
+- 每份都能<span style="color:var(--accent-green);font-weight:700;background:rgba(var(--green-rgb),0.22);border-bottom:2px solid var(--accent-green);padding:0 3px;border-radius:3px;white-space:nowrap;">直接拿去上课</span>:教案四个环节都标分钟数、练习题每题有答案和评分标准、任务书有截止时间
+- <b>学生任务书和练习题是直接发给学生的</b>:不出现检查点编号,不出现「方案」「把方案落成资源」这类说法,能脱离其他文件单独看懂
+- 文件名统一用「课程名_模块_类型_日期」,例如「手机编程应用_M5用户身份_教案_2026-11-23.docx」,不用「新建文档」「文档1」这样的默认名
+- 评分<span style="color:var(--accent-green);font-weight:700;background:rgba(var(--green-rgb),0.22);border-bottom:2px solid var(--accent-green);padding:0 3px;border-radius:3px;white-space:nowrap;">沿用方案里的口径</span>:过程分主体挂检查点,考勤照计但压到最低
 
 全部保存到「课程焕新/04_教学资源」目录(没有就新建)。
 <button class="copy-btn" onclick="copyPrompt('p-resource-all',this)">复制</button></div>
@@ -5589,7 +5689,7 @@
           <h4>📸 演示会产出这四份</h4>
           <div style="display:flex;flex-direction:column;gap:7px;margin-top:8px;font-size:13px;line-height:1.7;">
             <div style="padding:7px 10px;border-radius:6px;background:rgba(var(--blue-rgb),0.08);border:1px solid rgba(var(--blue-rgb),0.2);"><strong style="color:var(--accent-blue);">教案.docx</strong>　目标 / 重难点 / 教学过程 / 板书,每个环节标了时间</div>
-            <div style="padding:7px 10px;border-radius:6px;background:rgba(var(--purple-rgb),0.08);border:1px solid rgba(var(--purple-rgb),0.2);"><strong style="color:var(--accent-purple);">课件.pptx</strong>　8-10 页,封面 / 目标 / 项目介绍 / 分课时流程 / 评价标准 / 总结</div>
+            <div style="padding:7px 10px;border-radius:6px;background:rgba(var(--purple-rgb),0.08);border:1px solid rgba(var(--purple-rgb),0.2);"><strong style="color:var(--accent-purple);">课件.pptx</strong>　12-14 页、一次课一页,封面 / 目标 / 项目介绍 / 分课时流程 / 评价标准 / 总结</div>
             <div style="padding:7px 10px;border-radius:6px;background:rgba(var(--orange2-rgb),0.08);border:1px solid rgba(var(--orange2-rgb),0.2);"><strong style="color:var(--accent-orange2);">练习题.docx</strong>　5 道(2 基础 + 2 应用 + 1 拓展),带答案和评分标准</div>
             <div style="padding:7px 10px;border-radius:6px;background:rgba(var(--green-rgb),0.08);border:1px solid rgba(var(--green-rgb),0.2);"><strong style="color:var(--accent-green);">学生任务书 + 教师指导书.docx</strong>　学生做什么 / 老师怎么带 / 怎么判分</div>
           </div>
@@ -5609,7 +5709,7 @@
 
       <div class="warn-box" style="margin-top:0;grid-column:1 / -1;">
         <div class="title">⚠ 重要:不要复制示例提示词!</div>
-        <div class="text">示例提示词用的是讲师的课程,如果直接复制到你的 WorkBuddy,会污染你的账号记忆。请用下面的<strong>提示词模板</strong>,在你的对话中继续即可。</div>
+        <div class="text">示例提示词用的是讲师的课程,如果直接复制到你的 WorkBuddy,会污染你的账号记忆。请用下面的<strong>提示词模板</strong>,在你的对话中继续即可。<br>这一步生成资源的那一个模块,<strong>必须就是你在 7.3 定下的那一个</strong>--换了模块(比如照搬示例里的课),教案、PPT、练习题就跟你的课程骨架对不上,回去也用不了。</div>
       </div>
     </div>
   </div>
@@ -5620,24 +5720,13 @@
 
     <div style="display:grid;grid-template-columns:58% 42%;gap:16px;">
       <div>
-        <div class="pt-head tpl"><span class="pt-tag tpl">📝 学员模板</span><span class="pt-note">直接复制就能用,不用改</span></div>
-        <div class="prompt-box" id="p-resource-all2" style="margin-top:14px;"><span style="color:var(--accent-blue);font-weight:bold;">请按上面确定的教学设计方案(我自己的课程、我自己的项目主题),生成以下 4 种配套教学资源:</span>
-
-1. 教案(Word 文档):教学目标、教学重点难点、教学过程(导入→讲授→实践→总结)、板书设计,标准教案格式含时间标注
-2. 课件 PPT(PPT 文件):8-10 页,含封面、教学目标、项目介绍、分课时教学流程、评价标准、总结,现代简洁蓝色调
-3. 练习题(Word 文档):5 道题(2 基础+2 应用+1 拓展),每题含题目、参考答案、评分标准
-4. 实训案例资料包(2 个 Word 文档):
-   - 学生任务书:项目背景(约 200 字,贴近中职学生日常生活)、学习目标(3 条:知识+能力+素养)、任务要求(分步骤,每步写清做什么+交付什么)、提交规范(文件命名+格式+截止时间)
-   - 教师指导书:解题思路(分步骤提示)、参考方案要点(关键步骤指引)、评分标准(每项任务配分值+评分细则)、常见问题预判(3 个学生可能遇到的坑+应对建议)
-
-必须满足:
-- 内容来自上面的教学设计方案,不重新设计课程--这一步是把方案落成资源,不是再出一版方案
-- 4 份资源互相对得上:教案里的活动 = PPT 的流程 = 练习题考的知识点 = 任务书要交的步骤
-- 每份都能直接拿去上课:教案有时间标注、练习题每题有答案和评分标准、任务书有截止时间
-- 评分沿用方案里的口径:过程分主体挂检查点,考勤照计但压到最低
-
-全部保存到「课程焕新/04_教学资源」目录(没有就新建)。
-<button class="copy-btn" onclick="copyPrompt('p-resource-all2',this)">复制</button></div>
+        <div class="pt-head tpl"><span class="pt-tag tpl">📝 学员跟做</span><span class="pt-note">提示词不用另写,用的就是上面那份</span></div>
+        <div style="margin-top:14px;padding:14px 16px;border-radius:10px;background:rgba(var(--orange2-rgb),0.07);border:1px solid rgba(var(--orange2-rgb),0.28);font-size:14px;color:var(--text-body);line-height:1.9;">
+          <div style="margin-bottom:9px;"><strong style="color:var(--accent-orange2);">换的不是措辞,是上下文。</strong>提示词一个字不改,在你自己<b>第三步那一段方案</b>的对话里接着发--AI 读到的就是你的课。</div>
+          <div style="margin-bottom:9px;">真要动,只动<b>保存目录</b>一处(讲师版写的是「课程焕新/04_教学资源」),其余都是通用的。</div>
+          <div>发出去之后逐个查这 5 个文件:<span style="color:var(--accent-green);font-weight:700;background:rgba(var(--green-rgb),0.10);border-bottom:1.5px solid rgba(var(--green-rgb),0.6);padding:0 2px;border-radius:3px;white-space:nowrap;">教案的活动</span>、<span style="color:var(--accent-green);font-weight:700;background:rgba(var(--green-rgb),0.10);border-bottom:1.5px solid rgba(var(--green-rgb),0.6);padding:0 2px;border-radius:3px;white-space:nowrap;">PPT 的流程</span>、<span style="color:var(--accent-green);font-weight:700;background:rgba(var(--green-rgb),0.10);border-bottom:1.5px solid rgba(var(--green-rgb),0.6);padding:0 2px;border-radius:3px;white-space:nowrap;">练习题考的点</span>、<span style="color:var(--accent-green);font-weight:700;background:rgba(var(--green-rgb),0.10);border-bottom:1.5px solid rgba(var(--green-rgb),0.6);padding:0 2px;border-radius:3px;white-space:nowrap;">任务书要交的步骤</span>,<b>四样对得上</b>才算过。</div>
+        </div>
+        
 
         
       </div>
@@ -5660,7 +5749,7 @@
     <div class="ask-grid">
       <div class="ask-row"><span class="ask-sym">PPT 某页不满意</span><span class="ask-say">PPT 第 X 页改为...</span><button class="ask-cp" onclick="copyText(this.previousElementSibling,this)">复制</button></div>
       <div class="ask-row"><span class="ask-sym">练习题太简单</span><span class="ask-say">增加 2 道综合应用题</span><button class="ask-cp" onclick="copyText(this.previousElementSibling,this)">复制</button></div>
-      <div class="ask-row"><span class="ask-sym">实训案例不贴近学生</span><span class="ask-say">项目背景换成中职生更熟悉的场景</span><button class="ask-cp" onclick="copyText(this.previousElementSibling,this)">复制</button></div>
+      <div class="ask-row"><span class="ask-sym">实训案例不贴近学生</span><span class="ask-say">项目背景换成你课程主线的场景</span><button class="ask-cp" onclick="copyText(this.previousElementSibling,this)">复制</button></div>
       <div class="ask-row"><span class="ask-sym">教案缺环节</span><span class="ask-say">请在教案中补充板书设计和时间标注</span><button class="ask-cp" onclick="copyText(this.previousElementSibling,this)">复制</button></div>
       <div class="ask-row"><span class="ask-sym">四份对不上</span><span class="ask-say">按教学设计方案重出第 X 份，让活动和步骤跟前几份一致</span><button class="ask-cp" onclick="copyText(this.previousElementSibling,this)">复制</button></div>
       <div class="ask-row"><span class="ask-sym">资源太多等不及</span><span class="ask-say">只生成我最需要的 2 种，其余先不做</span><button class="ask-cp" onclick="copyText(this.previousElementSibling,this)">复制</button></div>
@@ -5672,14 +5761,16 @@
     <div class="title">✅ 成果验收:四份文件齐了吗?每份该有的块都有吗?<span style="font-size:13px;color:var(--text-muted2);font-weight:normal;margin-left:8px;">实操 4 的产物,查完再进 8.3</span></div>
     <ul>
       <li>四份齐全:教案 / PPT / 练习题 / 实训案例(<strong>两个 Word</strong>:学生任务书 + 教师指导书)</li>
-      <li>教案四块齐全:教学目标 + 重难点 + 教学过程(导入→讲授→实践→总结)+ <strong>板书设计</strong>,全程标了时间</li>
-      <li>PPT <strong>8-10 页</strong>,含封面 / 目标 / 项目介绍 / 分课时流程 / 评价标准 / 总结,整体一个色调</li>
-      <li>练习题 <strong>5 道且分层</strong>(2 基础 + 2 应用 + 1 拓展),<strong>每题都有参考答案和评分标准</strong></li>
+      <li>教案四块齐全:教学目标 + 重难点 + 教学过程(导入→讲授→实践→<strong>验收</strong>)+ <strong>板书设计</strong>,四个环节都标了分钟数、加起来等于每次课的时长;<strong>方案里每一次课都出了</strong>,不是只出第一次</li>
+      <li>PPT <strong>12-14 页、一次课一页</strong>,含封面 / 目标 / 项目介绍 / 分课时流程 / 评价标准 / 总结,整体一个色调;课时页只放四段要点、时间与本课验收标准;<strong>要截图的地方留了占位</strong>并写清截什么,示意图没乱放</li>
+      <li>练习题 <strong>5 道且分层</strong>(2 基础 + 2 应用 + 1 拓展),<strong>合计 100 分</strong>,每题标了分值并附参考答案和评分细则</li>
       <li>学生任务书四样齐:背景约 200 字 / 学习目标 3 条 / 任务要求分步写清做什么交什么 / 提交规范</li>
       <li>教师指导书四样齐:解题思路 / 参考方案要点 / <strong>评分标准带分值和细则</strong> / 常见问题预判 3 个</li>
-      <li><strong>四份对得上</strong>:教案的活动 = PPT 的流程 = 练习题的知识点 = 任务书的步骤</li>
-      <li>没有另起一套方案--内容跟着第四步的教学设计走</li>
+      <li><strong>四份对得上</strong>:教案的活动 = PPT 的流程 = 练习题的知识点 = 任务书的步骤,<strong>并附了对照表</strong>按课时一行逐行对齐,口述验收那一行写「—(走口述)」不留空</li>
+      <li><strong>学生材料能单独看懂</strong>:任务书和练习题里没有检查点编号、没有「方案」这类说法,不靠别的文件也能读</li>
+      <li>没有另起一套方案--内容跟着第三步的教学设计走</li>
       <li>评分沿用方案口径:过程分主体挂检查点,<strong>考勤照计但压到最低</strong></li>
+      <li>文件名<strong>带课程名与日期</strong>,不是「新建文档」这类默认名;任务书与指导书各 2-4 页</li>
       <li>文件都存到 <strong>04_教学资源</strong> 目录,能分享 / 上传腾讯文档</li>
     </ul>
   </div>
@@ -5734,15 +5825,15 @@
       <div style="padding:8px 12px;background:rgba(var(--red-rgb),0.1);font-size:13px;font-weight:bold;color:var(--accent-red2);border-bottom:1px solid rgba(var(--white-rgb),0.05);">⚠ 缺了怎么说</div>
 
       <div style="padding:10px 12px;display:flex;align-items:center;font-size:16px;color:var(--accent-blue);border-bottom:1px solid rgba(var(--white-rgb),0.05);background:rgba(var(--green-rgb),0.03);">☑</div>
-      <div style="padding:10px 12px;border-bottom:1px solid rgba(var(--white-rgb),0.05);background:rgba(var(--green-rgb),0.03);"><strong style="font-size:14px;color:var(--text-body);">教案.docx</strong><br><span style="font-size:13px;color:var(--text-muted);">四块 + 时间标注:目标 / 重难点 / 教学过程 / 板书</span></div>
+      <div style="padding:10px 12px;border-bottom:1px solid rgba(var(--white-rgb),0.05);background:rgba(var(--green-rgb),0.03);"><strong style="font-size:14px;color:var(--text-body);">教案.docx</strong><br><span style="font-size:13px;color:var(--text-muted);">四块 + 分钟数:目标 / 重难点 / 教学过程(含验收) / 板书</span></div>
       <div style="padding:10px 12px;border-bottom:1px solid rgba(var(--white-rgb),0.05);background:rgba(var(--red-rgb),0.03);font-size:13px;color:var(--text-muted);">缺板书或没标时间 → <span style="color:var(--accent-green);"><code>"教案补上板书设计,每个环节标出用时"</code></span></div>
 
       <div style="padding:10px 12px;display:flex;align-items:center;font-size:16px;color:var(--accent-purple);border-bottom:1px solid rgba(var(--white-rgb),0.05);background:rgba(var(--green-rgb),0.03);">☑</div>
-      <div style="padding:10px 12px;border-bottom:1px solid rgba(var(--white-rgb),0.05);background:rgba(var(--green-rgb),0.03);"><strong style="font-size:14px;color:var(--text-body);">课件.pptx</strong><br><span style="font-size:13px;color:var(--text-muted);">8-10 页:封面 / 目标 / 项目介绍 / 分课时流程 / 评价标准 / 总结</span></div>
-      <div style="padding:10px 12px;border-bottom:1px solid rgba(var(--white-rgb),0.05);background:rgba(var(--red-rgb),0.03);font-size:13px;color:var(--text-muted);">不够 8 页 → <code>"PPT 补到 8 页以上"</code>;超 10 页 → <code>"删到 10 页以内"</code></div>
+      <div style="padding:10px 12px;border-bottom:1px solid rgba(var(--white-rgb),0.05);background:rgba(var(--green-rgb),0.03);"><strong style="font-size:14px;color:var(--text-body);">课件.pptx</strong><br><span style="font-size:13px;color:var(--text-muted);">12-14 页、一次课一页:封面 / 目标 / 项目介绍 / 分课时流程 / 评价标准 / 总结</span></div>
+      <div style="padding:10px 12px;border-bottom:1px solid rgba(var(--white-rgb),0.05);background:rgba(var(--red-rgb),0.03);font-size:13px;color:var(--text-muted);">不够 12 页 → <code>"PPT 补到 12 页以上"</code>;超 14 页 → <code>"删到 14 页以内"</code></div>
 
       <div style="padding:10px 12px;display:flex;align-items:center;font-size:16px;color:var(--accent-orange2);border-bottom:1px solid rgba(var(--white-rgb),0.05);background:rgba(var(--green-rgb),0.03);">☑</div>
-      <div style="padding:10px 12px;border-bottom:1px solid rgba(var(--white-rgb),0.05);background:rgba(var(--green-rgb),0.03);"><strong style="font-size:14px;color:var(--text-body);">练习题.docx</strong><br><span style="font-size:13px;color:var(--text-muted);">5 道 = 2 基础 + 2 应用 + 1 拓展,每题带答案 + 评分标准</span></div>
+      <div style="padding:10px 12px;border-bottom:1px solid rgba(var(--white-rgb),0.05);background:rgba(var(--green-rgb),0.03);"><strong style="font-size:14px;color:var(--text-body);">练习题.docx</strong><br><span style="font-size:13px;color:var(--text-muted);">5 道 = 2 基础 + 2 应用 + 1 拓展,合计 100 分,每题带答案 + 评分标准</span></div>
       <div style="padding:10px 12px;border-bottom:1px solid rgba(var(--white-rgb),0.05);background:rgba(var(--red-rgb),0.03);font-size:13px;color:var(--text-muted);">有题没答案 → <span style="color:var(--accent-green);"><code>"每道题后面补参考答案和评分标准"</code></span></div>
 
       <div style="padding:10px 12px;display:flex;align-items:center;font-size:16px;color:var(--accent-green);border-bottom:1px solid rgba(var(--white-rgb),0.05);background:rgba(var(--green-rgb),0.03);">☑</div>
@@ -5762,15 +5853,15 @@
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
       <div style="padding:10px 12px;border-radius:8px;background:rgba(var(--blue-rgb),0.06);border-left:3px solid var(--accent-blue);">
         <div style="font-size:14px;color:var(--text-body);"><strong>教案</strong>：把每个环节的时间<strong>加起来</strong>,等于本段学时吗?</div>
-        <div style="font-size:13px;color:var(--text-muted);margin-top:4px;">⚠ 导入 5 + 讲授 15 + 实践 20 + 总结 5 = 45 分钟,却按 2 学时(90 分钟)排课 → <span style="color:var(--accent-green);"><code>"教案按每次课 90 分钟重排各环节用时"</code></span></div>
+        <div style="font-size:13px;color:var(--text-muted);margin-top:4px;">⚠ 导入 5 + 讲授 15 + 实践 20 + 验收 5 = 45 分钟,却按 2 学时(90 分钟)排课 → <span style="color:var(--accent-green);"><code>"教案按每次课 90 分钟重排各环节用时"</code></span></div>
       </div>
       <div style="padding:10px 12px;border-radius:8px;background:rgba(var(--purple-rgb),0.06);border-left:3px solid var(--accent-purple);">
         <div style="font-size:14px;color:var(--text-body);"><strong>PPT</strong>：每一页都能在教案里<strong>找到对应环节</strong>吗?</div>
         <div style="font-size:13px;color:var(--text-muted);margin-top:4px;">⚠ 多出"行业前景""技术发展史"这类教案里没有的页 → <span style="color:var(--accent-green);"><code>"删掉教案里没有的页,只留能对上环节的"</code></span></div>
       </div>
       <div style="padding:10px 12px;border-radius:8px;background:rgba(var(--orange2-rgb),0.06);border-left:3px solid var(--accent-orange2);">
-        <div style="font-size:14px;color:var(--text-body);"><strong>练习题</strong>：<strong>自己先做一遍</strong>--答案对不对、分打不打得出来?</div>
-        <div style="font-size:13px;color:var(--text-muted);margin-top:4px;">⚠ 答案写得含糊、评分标准是"酌情给分",或者考了本段没教的知识点 → <span style="color:var(--accent-green);"><code>"第 X 题答案写具体,评分标准给到可判定的点"</code></span></div>
+        <div style="font-size:14px;color:var(--text-body);"><strong>练习题</strong>：<strong>自己先做一遍</strong>--答案对不对、分打不打得出来?题看不看得懂?</div>
+        <div style="font-size:13px;color:var(--text-muted);margin-top:4px;">⚠ 答案含糊、评分标准是"酌情给分"、考了本段没教的知识点,或者题里冒出"检查点""方案"这类学生看不懂的说法 → <span style="color:var(--accent-green);"><code>"第 X 题答案写具体,评分标准给到可判定的点"</code></span></div>
       </div>
       <div style="padding:10px 12px;border-radius:8px;background:rgba(var(--green-rgb),0.06);border-left:3px solid var(--accent-green);">
         <div style="font-size:14px;color:var(--text-body);"><strong>实训案例</strong>：找个没听过这节课的同事,<strong>照着任务书做一遍</strong>。</div>
@@ -5782,7 +5873,7 @@
   <!-- 第三步:对不对得上 -->
   <div class="card" style="border-left:4px solid var(--accent-orange);margin-bottom:16px;">
     <h4>第三步:对不对得上--四份互相咬合吗?<span style="font-size:14px;color:var(--accent-orange);margin-left:10px;background:rgba(var(--orange-rgb),0.1);padding:2px 10px;border-radius:12px;">横向核对</span><span style="font-size:13px;color:var(--text-muted2);margin-left:6px;">查"咬不咬得合"</span></h4>
-    <p style="margin:4px 0 10px;font-size:13px;color:var(--text-muted2);">📌 前两步是一份一份看,这一步是横着看:本段讲的每个活动,四份里都要出现。数量对不上、顺序不一样,就是脱钩了。</p>
+    <p style="margin:4px 0 10px;font-size:13px;color:var(--text-muted2);">📌 前两步是一份一份看,这一步是横着看:本段讲的每个活动,四份里都要出现。数量对不上、顺序不一样,就是脱钩了。交付时本该带一张这样的对照表;没带就让它补一张。</p>
     <div style="display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:0;border-radius:8px;overflow:hidden;">
       <div style="padding:8px 12px;background:rgba(var(--orange-rgb),0.1);font-size:13px;font-weight:bold;color:var(--accent-orange);border-bottom:1px solid rgba(var(--white-rgb),0.05);">本段的一个活动</div>
       <div style="padding:8px 12px;background:rgba(var(--orange-rgb),0.1);font-size:13px;font-weight:bold;color:var(--accent-orange);border-bottom:1px solid rgba(var(--white-rgb),0.05);">教案</div>
@@ -5805,7 +5896,7 @@
       <div style="padding:10px 12px;font-size:13px;color:var(--text-muted);border-bottom:1px solid rgba(var(--white-rgb),0.05);background:rgba(var(--orange-rgb),0.03);">指导书的评分标准同一套</div>
 
       <div style="padding:10px 12px;font-size:13px;color:var(--text-body);background:rgba(var(--orange-rgb),0.03);">④ 本段的交付物(学生要交什么)</div>
-      <div style="padding:10px 12px;font-size:13px;color:var(--text-muted);background:rgba(var(--orange-rgb),0.03);">总结环节点名了</div>
+      <div style="padding:10px 12px;font-size:13px;color:var(--text-muted);background:rgba(var(--orange-rgb),0.03);">验收环节点名了</div>
       <div style="padding:10px 12px;font-size:13px;color:var(--text-muted);background:rgba(var(--orange-rgb),0.03);">总结页点名了</div>
       <div style="padding:10px 12px;font-size:13px;color:var(--text-muted);background:rgba(var(--orange-rgb),0.03);">提交规范里写明了</div>
     </div>
@@ -5889,6 +5980,11 @@
   <h2>9.1 🌟 回去能做什么</h2>
   <div class="highlight" style="margin-bottom:14px;">
     💡 这次课教了 4 个核心场景(诊断→学情→升级→生成),以下 6 个场景覆盖中职教师高频日常需求。<strong>每条提示词符合三要素(角色+任务+输出),复制改用即可。</strong>
+  </div>
+
+  <!-- 🔁 回去怎么把四步法用完整门课 -->
+  <div style="margin-bottom:14px;padding:10px 14px;border-radius:8px;background:rgba(var(--blue-rgb),0.07);border-left:3px solid var(--accent-blue);font-size:13.5px;color:var(--text-body);line-height:1.75;">
+    🔁 <strong style="color:var(--accent-blue);">整门课怎么推完</strong>：课程级框架只做一次 → 每个模块都跑两步(出这一段的分课时方案 → 出这一段的教学资源) → 换模块时新开对话,把框架和上一个模块的产出一起交回去
   </div>
 
   <!-- 🎯 实操增强：当场练 -->
@@ -6224,6 +6320,7 @@ navLinks.forEach(link => {
 })();
 
 document.addEventListener('keydown', e => {
+  if (e.target && (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA')) return;
   if (e.key === 'ArrowRight' || e.key === 'PageDown') {
     next();
   } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
@@ -6254,6 +6351,66 @@ showSlide(initId);
 
 // 字体档位初始化(档位在脚本开头已从 localStorage 恢复)
 updateFontHint();
+
+// ========== 成果验收清单：点击勾选 + 本地保存 ==========
+(function(){
+  const KEY = 'wb-check';
+  let store = null, mem = {};
+  try {
+    const raw = localStorage.getItem(KEY);
+    store = raw ? JSON.parse(raw) : {};
+    if (!store || typeof store !== 'object') store = {};
+  } catch(e){ store = null; }
+
+  const persist = () => {
+    if (!store) return;
+    try { localStorage.setItem(KEY, JSON.stringify(store)); }
+    catch(e){ store = null; }
+  };
+
+  document.querySelectorAll('.check-list').forEach(list => {
+    const sec = list.closest('section.slide');
+    const sid = (sec && sec.id) || 'slide';
+    const sibs = Array.from((sec || document).querySelectorAll('.check-list'));
+    const ns = sid + ':' + sibs.indexOf(list);   // 按「哪一页的第几张清单」存，改版不串号
+
+    const items = Array.from(list.querySelectorAll('li'));
+    items.forEach((item, k) => {
+      const key = ns + '.' + k;
+      const on = store ? !!store[key] : !!mem[key];
+      if (on) item.classList.add('ck-on');
+      item.setAttribute('role', 'checkbox');
+      item.setAttribute('aria-checked', on ? 'true' : 'false');
+      item.addEventListener('click', () => {
+        const now = !item.classList.contains('ck-on');
+        item.classList.toggle('ck-on', now);
+        item.setAttribute('aria-checked', now ? 'true' : 'false');
+        if (store) store[key] = now; else mem[key] = now;
+        persist();
+      });
+    });
+
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'ck-reset';
+    btn.textContent = '↺ 重置勾选';
+    btn.title = store ? '清空这张清单的勾选(记录保存在本机浏览器)'
+                      : '浏览器不允许本地保存，勾选仅在本次有效';
+    btn.addEventListener('click', e => {
+      e.stopPropagation();
+      items.forEach((item, k) => {
+        item.classList.remove('ck-on');
+        item.setAttribute('aria-checked', 'false');
+        if (store) delete store[ns + '.' + k]; else delete mem[ns + '.' + k];
+      });
+      persist();
+      const old = btn.textContent;
+      btn.textContent = '✓ 已重置';
+      setTimeout(() => { btn.textContent = old; }, 1200);
+    });
+    list.appendChild(btn);
+  });
+})();
 
 // Copy button
 function copyText(el, btn){

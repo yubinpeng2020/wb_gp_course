@@ -18,6 +18,25 @@ python3 -m http.server 8000
 
 打开 http://localhost:8000
 
+## 课堂上给学生看（局域网）
+
+想让学生用自己的电脑看，用下面两个脚本之一：双击就行，不需要装任何东西。
+
+| 系统 | 双击这个 | 靠什么起服务 |
+| --- | --- | --- |
+| macOS | `启动课件服务.command` | 系统自带的 python3（没有则回退 ruby） |
+| Windows | `启动课件服务.bat` | 系统自带的 PowerShell，零依赖 |
+
+启动后窗口里会打出一行 `http://192.168.x.x:8000/`，把这一行发到学生群里，学生在浏览器里打开即可（手机也行）。
+关掉那个窗口 = 停止服务。想换端口：`./启动课件服务.command 9000`、`启动课件服务.bat 9000`。
+
+学生打不开时按这个顺序排查：
+
+1. 先在自己的电脑上试 `http://127.0.0.1:8000/`，能打开说明服务没问题；
+2. 确认学生和你在同一个 Wi-Fi / 同一网段（校园网常做设备隔离，这时改连手机热点）；
+3. Windows 上如果提示「防火墙没放行」，关掉窗口，右键 `启动课件服务.bat` → 以管理员身份运行；
+4. macOS 上第一次运行若被拦截，系统设置 → 网络 → 防火墙，允许「终端」接入。
+
 ## 使用说明
 
 - `←` / `→` 或 `PageUp` / `PageDown` 翻页
@@ -31,20 +50,11 @@ python3 -m http.server 8000
 index.html      课件主文件（单文件，样式与脚本内嵌）
 images/         课件截图与图标资源
 .nojekyll       跳过 GitHub Pages 的 Jekyll 处理
+启动课件服务.command / .bat / server.ps1   局域网服务（macOS / Windows）
 ```
 
 ## 更新课件
 
-课件源文件位于本地：
+`index.html` 就是唯一的工作副本，直接改它、直接在这里提交，不再从别处同步。
 
-```
-03_课件成品/Part2_实操网页课件/Part2_WorkBuddy实操网页课件.html
-```
-
-同步到本仓库：
-
-```bash
-cp "../03_课件成品/Part2_实操网页课件/Part2_WorkBuddy实操网页课件.html" index.html
-rsync -a --exclude='.DS_Store' "../03_课件成品/Part2_实操网页课件/images/" images/
-git add -A && git commit -m "更新课件" && git push
-```
+（`03_课件成品/Part2_实操网页课件/` 是历史存档，已停止同步，不要再改那里。）
