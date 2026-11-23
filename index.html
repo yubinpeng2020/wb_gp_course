@@ -1701,7 +1701,7 @@
   <a href="#resource-intro">8.1 教学资源生成概览</a>
   <a href="#resource-demo" title="8.2 实操4(演示→跟做)"><span class="nav-op">实操</span>8.2 实操4(演示→跟做)</a>
   <a href="#resource-check">8.3 实操4 结果分析</a>
-  <a href="#resource-pitfall">8.4 课程升级避坑指南</a>
+  <a href="#resource-pitfall">8.4 从出稿到上课的坑</a>
   <div class="sep"></div>
   <div class="nav-title">第 9 章 · 拓展与总结</div>
   <a href="#extend">9.1 回去能做什么</a>
@@ -5939,9 +5939,10 @@
 
 <!-- ========== 8.4 避坑指南 ========== -->
 <section class="slide" id="resource-pitfall">
-  <h2>8.4 ⚠️ 课程升级避坑指南</h2>
+  <h2>8.4 ⚠️ 从出稿到上课,最容易塌的 6 个地方</h2>
+  <p style="margin:8px 0 0;font-size:13px;color:var(--text-muted2);line-height:1.7;">📌 这五份文件从生成到进教室,最容易塌在这 6 处。每条都能在 8.2 的提示词或 8.3 的清单里找到对应的那道保险--写提示词时顺手加上,比事后补救省事。</p>
 
-  <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:18px; align-items:start;">
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:16px; align-items:start;">
 
     <div class="warn-box" style="margin:0;">
       <div class="title">1 先定理念,再交给 AI</div>
@@ -5953,25 +5954,43 @@
     </div>
 
     <div class="warn-box" style="margin:0;">
-      <div class="title">2 一次只改一段</div>
+      <div class="title">2 它会顺手改你的课</div>
       <div class="text" style="font-size:14px;line-height:1.9;">
-        <strong style="color:var(--accent-red2);">坑:</strong>一口气把整门课都升级完<br>
-        <strong style="color:var(--accent-red2);">塌在哪:</strong>上到一半发现某段学时不够,课表已经排定,回头改要重排整学期<br>
-        <strong style="color:var(--accent-green);">怎么绕:</strong>先按 7.3 的做法只细化一段,真上过一次课再往下推
+        <strong style="color:var(--accent-red2);">坑:</strong>让它照方案落资源,它觉得哪块不合理,自己就改了<br>
+        <strong style="color:var(--accent-red2);">塌在哪:</strong>课时安排、检查点、分值和方案对不上,你还以为全是照方案做的<br>
+        <strong style="color:var(--accent-green);">怎么绕:</strong>提示词第一句写死"只按上面的教学设计方案落资源,不重新设计课程"
       </div>
     </div>
 
     <div class="warn-box" style="margin:0;">
-      <div class="title">3 学情要自己补</div>
+      <div class="title">3 四份各说各话</div>
       <div class="text" style="font-size:14px;line-height:1.9;">
-        <strong style="color:var(--accent-red2);">坑:</strong>默认 AI 知道你的学生是谁<br>
-        <strong style="color:var(--accent-red2);">塌在哪:</strong>它按平均水平排任务,这班连循环都没写过,第一周就整班卡住<br>
-        <strong style="color:var(--accent-green);">怎么绕:</strong>提示词加一句本届短板(如"40 人里 30 人没写过循环")
+        <strong style="color:var(--accent-red2);">坑:</strong>四份分开看都像样,摆在一起对不上<br>
+        <strong style="color:var(--accent-red2);">塌在哪:</strong>教案排 45 分钟、PPT 12 页塞了 9 个活动、练习卷考了还没教的点<br>
+        <strong style="color:var(--accent-green);">怎么绕:</strong>先让它出一张对照表(一次课一行),哪份对不上就只重出那一份
       </div>
     </div>
 
     <div class="warn-box" style="margin:0;">
-      <div class="title">4 上完一轮才算验证</div>
+      <div class="title">4 学生材料漏着内部说法</div>
+      <div class="text" style="font-size:14px;line-height:1.9;">
+        <strong style="color:var(--accent-red2);">坑:</strong>任务书和练习卷里留着"检查点 3""按方案""验收标准"<br>
+        <strong style="color:var(--accent-red2);">塌在哪:</strong>发下去学生就问"老师什么是检查点",你还得当场解释一遍<br>
+        <strong style="color:var(--accent-green);">怎么绕:</strong>发之前搜一遍这几个词,让它把内部编号和"方案"这类说法全去掉
+      </div>
+    </div>
+
+    <div class="warn-box" style="margin:0;">
+      <div class="title">5 两把尺子,分数解释不清</div>
+      <div class="text" style="font-size:14px;line-height:1.9;">
+        <strong style="color:var(--accent-red2);">坑:</strong>练习卷 100 分,方案里的总评是过程 60 + 期末 40<br>
+        <strong style="color:var(--accent-red2);">塌在哪:</strong>学生以为卷面分就是成绩,期末一算对不上,解释不清<br>
+        <strong style="color:var(--accent-green);">怎么绕:</strong>卷末写一句"这一卷 100 分是独立的一套尺子,进总评按方案口径折"
+      </div>
+    </div>
+
+    <div class="warn-box" style="margin:0;">
+      <div class="title">6 上完一轮才算验证</div>
       <div class="text" style="font-size:14px;line-height:1.9;">
         <strong style="color:var(--accent-red2);">坑:</strong>方案做出来就归档,当成果交<br>
         <strong style="color:var(--accent-red2);">塌在哪:</strong>检查点判不出来、三档学生的实际分布和预估差很远,下一轮照着错<br>
