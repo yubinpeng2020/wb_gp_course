@@ -44,6 +44,21 @@ python3 -m http.server 8000
 - 左侧导航可直接跳转到任意章节
 - 代码块右上角「复制」按钮可一键复制提示词
 
+## 拷到 U 盘带走
+
+双击 `打包到U盘.command`，会把课件拷到固定的 U 盘位置：
+
+```
+/Volumes/NO NAME/AI赋能中职科研能力提升培训/wb_gp_course
+```
+
+只拷运行要用的（约 28 MB）：`index.html` + `images/` + 三个启动脚本 + 自动生成的「使用说明.txt」。`.git`、`_备份_*.html`、`tools/` 都不拷。U 盘没插时会自动让你重新选目录。
+
+两个实现细节（踩过坑）：
+
+- U 盘是 **FAT32**，macOS 直接覆盖同名文件会报 `Operation not permitted`（rsync 先写临时名再 rename 这一步在 FAT32 上会失败）。所以脚本一律**先删再拷**，`index.html` 和 `images/` 每次整份重拷，顺带保证 U 盘上的图和源目录完全一致。
+- `chmod`、Finder 打开目录都会让 macOS 往 FAT32 写 `._xxx` 影子文件，在 Windows 上显示成看不懂的东西。拷完会统一清掉。
+
 ## 目录结构
 
 ```
@@ -51,6 +66,7 @@ index.html      课件主文件（单文件，样式与脚本内嵌）
 images/         课件截图与图标资源
 .nojekyll       跳过 GitHub Pages 的 Jekyll 处理
 启动课件服务.command / .bat / server.ps1   局域网服务（macOS / Windows）
+打包到U盘.command                           打包到固定 U 盘位置
 ```
 
 ## 更新课件
